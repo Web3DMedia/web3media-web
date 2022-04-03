@@ -76,9 +76,21 @@
         border-right: none;
     }
 }
-
+.hero-section-mesh {
+    width: 724px;
+    height: 650px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.2;
+    background: radial-gradient(36.28% 36.28% at 50% 50%, #FD8AFD 0%, rgba(222, 28, 28, 0) 100%),
+    radial-gradient(36.28% 36.28% at 50% 50%, rgba(41, 39, 160, 0.26) 0%, rgba(41, 39, 160, 0) 100%),
+    radial-gradient(36.28% 36.28% at 50% 50%, rgba(201, 129, 56, 0.47) 0%, rgba(255, 202, 148, 0) 100%);
+}
 .hero-section-text {
     text-align: center;
+    background-image: url(/images/HeroSectionUnderlayMesh.png);
 }
 .hero-section-text h3 {
     font-weight: 800;
@@ -228,5 +240,8 @@
         font-size: 16px;
         line-height: 15px;
         margin-bottom: 146px;
+    }
+    .hero-section-socials {
+        display: none;
     }
 }

@@ -1,5 +1,7 @@
 import React from 'react'
+import Image from 'next/image'
 import styles from '../styles/section styles/HeroSection.module.css'
+import mesh from '../images/HeroSectionUnderlayMesh.png'
 const HeroSection = () => {
     return (
         <div className={styles['hero-section-container']}>
@@ -10,6 +12,10 @@ const HeroSection = () => {
                 </div>
                 <div className={styles['ellipse-two']}>
                 </div>
+            </div>
+
+            <div className={styles['hero-section-mesh']}>
+
             </div>
 
             <div className={styles['hero-section-text']}>
