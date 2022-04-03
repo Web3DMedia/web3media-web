@@ -21,11 +21,11 @@ const HeroSection = () => {
 
             <div className={styles['hero-section-socials']}>
                 <ul>
-                    <li></li>
-                    <li>TW</li>
-                    <li>FB</li>
-                    <li>IG</li>
                     <li>LI</li>
+                    <li>IG</li>
+                    <li>FB</li>
+                    <li>TW</li>
+                    <li className={styles['socials-circle']}></li>
                 </ul>
             </div>
         </div>

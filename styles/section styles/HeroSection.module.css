@@ -1,6 +1,8 @@
 .hero-section-container {
     position: relative;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
 }
 .ellipse {
     padding: 0 0;
@@ -146,4 +148,85 @@
     font-size: 16px;
     line-height: 15px;
     margin-bottom: 146px;
+}
+.hero-section-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 80px;
+}
+.hero-section-socials ul {
+    padding-top: 542px;
+    display: flex;
+    flex-direction: column;
+}
+.hero-section-socials ul li{
+    font-weight: 400;
+    padding-top: 27px;
+    font-size: 16px;
+    line-height: 15px;
+    color:var(--W);
+    transform: rotate(270deg);
+}
+.hero-section-socials ul li:nth-child(5) {
+    padding: 6px;
+}
+.socials-circle {
+    margin: 16px 0 0 20px;
+    background: var(--GradientOne);
+    padding: 6px;
+    width: 2px;
+    border-radius: 50%;
+}
+@media (max-width: 1024px) {
+    .ellipse {
+        padding: 0 0;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        top: 45%;
+        transform: translate(-50%, -50%);
+    }
+    .hero-section-text h3 {
+        font-size: 32px;
+        line-height: 31px;
+        padding-top: 86px;
+    }
+    .hero-section-text h1 {
+        font-weight: 800;
+        font-size: 80px;
+        line-height: 88px;
+        background: var(--GradientOne);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        padding-bottom: 42px;
+        animation: colorchange 7s linear infinite;
+    }
+    .hero-section-text p {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        letter-spacing: 0.01em;
+        color: var(--W);
+        width: 85%;
+        margin: auto;
+        padding-bottom: 42px;
+    }
+    .hero-section-text button {
+        padding: 16px 33px;
+        background: none;
+        border: 1px solid;
+        border-image: linear-gradient(135deg, #FF6EFF 0%, #0AB7F6 100%);
+        background-clip: border-box;
+        color: var(--B5);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 15px;
+        margin-bottom: 146px;
+    }
 }
