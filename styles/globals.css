@@ -1,16 +1,33 @@
+@import url('./font/stylesheet.css');
+:root {
+  --Main: #FF6EFF;
+  --Secondary: #0AB7F6;
+  --GradientOne: linear-gradient(135deg, #FF6EFF 0%, #0AB7F6 100%);
+  --GradientTwo: linear-gradient(135deg, #0AB7F6 0%, #FF6EFF 100%);
+  --GradientThree: linear-gradient(135deg, #62FF8E 0%, #25B1FF 100%);
+  --B1: #000000;
+  --B2: #2D2C2C;
+  --B3: #818181;
+  --B4: #C4C4C4;
+  --B5: #D3D3D3;
+  --B6: #dfdfdf;
+  --B7:#D1D5DB;
+  --W: #FFFFFF;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'neue_machina';
 }
-
 a {
   color: inherit;
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-}
