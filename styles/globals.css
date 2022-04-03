@@ -1,16 +1,24 @@
-html,
-body {
+@import url('./font/stylesheet.css');
+
+* {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  box-sizing: border-box;
 }
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  font-family: 'neue_machina';
+}
+
 
 a {
   color: inherit;
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-}
+
