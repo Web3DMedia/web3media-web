@@ -4,7 +4,6 @@ import styles from '../styles/Home.module.css'
 //Components
 import Navbar from '../components/DesktopNavbar'
 import Container from '../components/Container'
-import MobileMenu from '../components/MobileMenu'
 
 //Sections
 import HeroSection from '../sections/HeroSection'
@@ -19,8 +18,6 @@ export default function Home() {
       </Head>
 
       <Navbar></Navbar>
-      {/* 
-      <MobileMenu></MobileMenu> */}
 
       <Container>
         <HeroSection></HeroSection>

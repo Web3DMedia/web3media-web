@@ -1,13 +1,16 @@
 .nav {
-    padding: 0px 71px 0px 80px ;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 0.5px solid var(--B2);
     background: var(--B1);
+    position: relative;
 }
 .nav-ul {
     display: flex;
+}
+.logo {
+    padding: 0 0 0 80px;
 }
 .nav-ul li {
     list-style: none;
@@ -16,17 +19,17 @@
     line-height: 17px;
     color: var(--B6);
     border-left: 0.5px solid var(--B2);
-    padding: 53px 44px;
+    padding: 47px 44px;
+    text-transform: uppercase;
 }
 .nav-ul li:last-child {
-    padding: 37px 0px 37px 34px;
+    padding: 37px 0px 0px 34px;
 }
 .nav-ul li span {
     display: flex;
-    margin: 10px;
+    margin: 10px 71px 10px 10px;
     width: 30px;
     height: 2px;
-    padding: 0px;
     background: var(--GradientOne);
 }
 .nav-ul li span:nth-child(2) {
@@ -35,9 +38,11 @@
 
 @media (max-width:1024px) {
 .nav {
-    padding: 0px 52px 0px 60px;
     border: none;
     }
+.logo {
+    padding: 0 0 0 60px;
+}
 .nav-ul li {
     display: none;
     border: none;
@@ -47,10 +52,12 @@
     display: block;
     }
 }
+.nav-ul li span {
+    margin: 10px 52px 10px 10px;
+}
 @media (max-width:500px) {
-.nav {
-    padding: 0px 11px 0px 20px;
-    border: none;
+.logo {
+    padding: 0 0 0 20px;
     }
 .nav-ul li {
     display: none;
@@ -60,4 +67,7 @@
     padding: 20px 0px 20px 34px;
     display: block;
     }
+.nav-ul li span {
+    margin: 10px 15px 10px 10px;
+}
 }

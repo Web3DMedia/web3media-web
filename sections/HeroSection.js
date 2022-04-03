@@ -20,9 +20,11 @@ const HeroSection = () => {
 
             <div className={styles['hero-section-text']}>
                 <h3>We are an</h3>
-                <h1>Ambitious Creative Web3 Studio</h1>
+                <h1>Ambitious Creative Web3 Studio.</h1>
                 <p>Giving financial freedom and access to designers, artists, blockchain talents and creative minds.</p>
-                <button>Our Superpowers</button>
+                <div className={styles['hero-section-text-button']}>
+                    <h6>Our Superpowers</h6>
+                </div>
             </div>
 
             <div className={styles['hero-section-socials']}>

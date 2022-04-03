@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import styles from '../styles/component styles/MobileMenu.module.css'
 
-const MobileMenu = () => {
+const MobileMenu = ({ closemenu }) => {
     const text = 'Demonstrating the principle of value for skills --'
     return (
         <div className={styles["mobile-menu-container"]}>
@@ -11,7 +11,7 @@ const MobileMenu = () => {
                     <Image src='/logo.svg' width={58.84} height={24} alt="logo" className={styles['mobile-logo']} />
                 </div>
 
-                <ul className={styles["mobile-menu-close"]}>
+                <ul onClick={() => closemenu(false)} className={styles["mobile-menu-close"]}>
                     <li>
                         <span></span>
                         <span></span>

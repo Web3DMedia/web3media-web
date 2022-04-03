@@ -26,6 +26,9 @@ body {
   margin: 0;
   font-family: 'neue_machina';
 }
+*::-webkit-scrollbar {
+  display: none;
+}
 a {
   color: inherit;
   text-decoration: none;
