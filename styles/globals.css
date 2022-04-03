@@ -1,4 +1,4 @@
-@import url('./font/stylesheet.css');
+@import url('/font/stylesheet.css');
 :root {
   --Main: #FF6EFF;
   --Secondary: #0AB7F6;

@@ -14,7 +14,7 @@ export default function Home() {
       <Head>
         <title>Web3Media</title>
         <meta name="description" content="Giving financial freedom and access to designers, artists, blockchain talents and creative minds." />
-        <link rel="icon" href="/logo.svg" />
+        <link rel="icon" href="/Logo.svg" />
       </Head>
 
       <Navbar></Navbar>

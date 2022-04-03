@@ -8,7 +8,7 @@ const MobileMenu = ({ closemenu }) => {
         <div className={styles["mobile-menu-container"]}>
             <div className={styles["mobile-menu-top"]}>
                 <div>
-                    <Image src='/logo.svg' width={58.84} height={24} alt="logo" className={styles['mobile-logo']} />
+                    <Image src='/images/Logo.svg' width={58.84} height={24} alt="logo" className={styles['mobile-logo']} />
                 </div>
 
                 <ul onClick={() => closemenu(false)} className={styles["mobile-menu-close"]}>

@@ -10,7 +10,7 @@ const DesktopNavbar = () => {
     return (
         <nav className={styles["nav"]}>
             <div className={styles['logo']}>
-                <Image src='/logo.svg' width={76} height={31} alt="logo" />
+                <Image src='/images/logo.svg' width={76} height={31} alt="logo" />
             </div>
 
             <ul className={styles["nav-ul"]}>
