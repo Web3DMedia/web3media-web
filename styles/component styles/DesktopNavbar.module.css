@@ -21,6 +21,7 @@
     border-left: 0.5px solid var(--B2);
     padding: 47px 44px;
     text-transform: uppercase;
+    font-family: 'pp_telegraf';
 }
 .nav-ul li:last-child {
     padding: 37px 0px 0px 34px;
