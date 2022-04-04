@@ -91,7 +91,9 @@ const CircleText = styled.div`
    position: absolute;
     width: 100%;
     color: var(--W);
-    top: 0px;
+        @media (max-width: 550px) {
+            top: 0px;
+        }
 `
 const CircleTextSpan = styled.div`
     position: absolute;
