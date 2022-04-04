@@ -1,24 +1,22 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head"
 
-//Components
-import Navbar from '../components/DesktopNavbar'
-import Container from '../components/Container'
-
-//Sections
-import HeroSection from '../sections/HeroSection'
+import DesktopNavbar from "../components/DesktopNavbar"
+import Container from "../components/Container"
+import HeroSection from "../components/HeroSection"
 
 export default function Home() {
   return (
-    <div className={styles['page-container']}>
+    <div>
       <Head>
         <title>Web3Media</title>
-        <meta name="description" content="Giving financial freedom and access to designers, artists, blockchain talents and creative minds." />
+        <meta
+          name="description"
+          content="Giving financial freedom and access to designers, artists, blockchain talents and creative minds."
+        />
         <link rel="icon" href="/Logo.svg" />
       </Head>
 
-      <Navbar></Navbar>
-
+      <DesktopNavbar />
       <Container>
         <HeroSection></HeroSection>
       </Container>
