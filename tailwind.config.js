@@ -46,12 +46,12 @@ module.exports = {
         Main: '#FF6EFF',
         Secondary: '#0AB7F6',
         B1: '#000000',
-        B2: '2D2C2C',
-        B3: '818181',
-        B4: 'C4C4C4',
-        B5: 'D3D3D3',
-        B6: 'dfdfdf',
-        B7: 'D1D5DB',
+        B2: '#2D2C2C',
+        B3: '#818181',
+        B4: '#C4C4C4',
+        B5: '#D3D3D3',
+        B6: '#dfdfdf',
+        B7: '#D1D5DB',
         W: '#FFFFFF'
       }
     }
