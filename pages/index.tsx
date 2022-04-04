@@ -6,7 +6,7 @@ import HeroSection from "../components/HeroSection"
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-B1 font-body">
       <Head>
         <title>Web3Media</title>
         <meta
