@@ -8,9 +8,13 @@ import MobileMenu from '../components/MobileMenu'
 
 const Navbar = styled.nav`
     border-bottom: 0.5px solid var(--B2);
-    background: var(--B1);
+    background: url(/images/background.png);
+    background-size: 650px;
+    background-position: center;
+    background-repeat: none;
     @media (max-width: 1024px) {
     border: none;
+    background-size: 300px;
   }
 `
 const Li = styled.li`

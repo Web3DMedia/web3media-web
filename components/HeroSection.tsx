@@ -1,6 +1,15 @@
 import React from "react"
 import styles from "../styles/section styles/HeroSection.module.css"
 import styled, { keyframes } from 'styled-components'
+const HeroSectionContainer = styled.div`
+   background: url(/images/background.png);
+    background-size: 650px;
+    background-position: center;
+    background-repeat: none;
+    @media (max-width: 1024px) {
+      background-size: 200px;
+    }
+`
 const rotateEllipseOne = keyframes`
     0% {
         border-bottom: 2px solid var(--W);
@@ -265,7 +274,7 @@ const SocialCircle = styled.div`
 `
 const HeroSection = () => {
   return (
-    <section className="relative m-auto flex justify-between h-screen overflow-hidden" >
+    <HeroSectionContainer className="relative m-auto flex justify-between h-screen overflow-hidden" >
       <EllipseContainer>
         <EllipseOne></EllipseOne>
         <EllipseTwo></EllipseTwo>
@@ -292,7 +301,7 @@ const HeroSection = () => {
           <SocialLinks>TW</SocialLinks>
           <SocialLinks> <SocialCircle></SocialCircle> </SocialLinks>
         </SocialContainer>
-    </section>
+    </HeroSectionContainer>
   )
 }
 
