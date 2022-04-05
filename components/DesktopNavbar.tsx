@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import Image from 'next/image'
-import styles from '../styles/component styles/DesktopNavbar.module.css'
 import styled from 'styled-components'
 
 //components

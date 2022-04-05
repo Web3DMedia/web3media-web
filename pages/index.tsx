@@ -1,10 +1,9 @@
 import Head from "next/head"
-import Image from "next/image"
 
+//components
 import DesktopNavbar from "../components/DesktopNavbar"
 import Container from "../components/Container"
 import HeroSection from "../components/HeroSection"
-import styled from 'styled-components'
 
 
 export default function Home() {

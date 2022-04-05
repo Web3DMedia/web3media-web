@@ -1,5 +1,4 @@
 import React from "react"
-import styles from "../styles/section styles/HeroSection.module.css"
 import styled, { keyframes } from 'styled-components'
 const HeroSectionContainer = styled.div`
    background: url(/images/background.png);
