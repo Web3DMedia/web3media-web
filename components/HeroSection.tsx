@@ -2,12 +2,17 @@ import React from "react"
 import styled, { keyframes } from 'styled-components'
 const HeroSectionContainer = styled.div`
    background: url(/images/background.png);
-    background-size: 650px;
+    background-size: 500px;
     background-position: center;
     background-repeat: none;
     @media (max-width: 1024px) {
-      background-size: 200px;
-    }
+    border: none;
+    background-size: 500px;
+  }
+    @media (max-width: 550px) {
+    border: none;
+    background-size: 300px;
+  }
 `
 const rotateEllipseOne = keyframes`
     0% {
