@@ -95,7 +95,7 @@ const CircleText = styled.div`
             top: 0px;
         }
 `
-const CircleTextSpan = styled.div`
+const CircleTextSpan = styled.span`
     position: absolute;
     top: -70px;
     left: 50%;

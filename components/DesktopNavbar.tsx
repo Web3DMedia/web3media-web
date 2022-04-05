@@ -6,14 +6,14 @@ import styled from 'styled-components'
 //components
 import MobileMenu from '../components/MobileMenu'
 
-const Navbar = styled.div`
+const Navbar = styled.nav`
     border-bottom: 0.5px solid var(--B2);
     background: var(--B1);
     @media (max-width: 1024px) {
     border: none;
   }
 `
-const Li = styled.div`
+const Li = styled.li`
     list-style: none;
     font-weight: 800;
     font-size: 16px;
