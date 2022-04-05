@@ -236,7 +236,7 @@ position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-right: 40px;
+  padding-right: 80px;
   right: 0;
   padding-top: 552px;
   display: flex;
