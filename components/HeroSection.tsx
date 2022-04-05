@@ -122,6 +122,14 @@ const Mesh = styled.div`
     background: radial-gradient(36.28% 36.28% at 50% 50%, #FD8AFD 0%, rgba(222, 28, 28, 0) 100%),
     radial-gradient(36.28% 36.28% at 50% 50%, rgba(41, 39, 160, 0.26) 0%, rgba(41, 39, 160, 0) 100%),
     radial-gradient(36.28% 36.28% at 50% 50%, rgba(201, 129, 56, 0.47) 0%, rgba(255, 202, 148, 0) 100%);
+    @media (max-width: 1024px) {
+      top:30%
+    }
+    @media (max-width: 550px) {
+      top: 25%;
+      width: 282px;
+      height: 342px;
+    }
 `
 const colorchange = keyframes`
     0% {
