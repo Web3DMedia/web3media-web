@@ -1,6 +1,6 @@
 
 import Image from 'next/image'
-import ProjectTxt from '../public/images/projectTxt.svg';
+import ProjectTxt from '../public/images/ProjectTxt.svg';
 import {projectsData} from '../public/data/projects'
 import CircularGradientBtn from './CircularGradientBtn';
 
@@ -31,7 +31,7 @@ const ProjectSection = () => {
                      </div>
                      <div className="flex justify-between flex-col lg:flex-row">
                         <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold lg:basis-1/2">{project.cardH2}</h2>
-                        <p className="flex flex-wrap  text-base lg:text-lg lg:basis-1/2">{project.cardP}</p>
+                        <p className="flex flex-wrap text-sm lg:text-base lg:basis-1/2">{project.cardP}</p>
                      </div>
                      <div className="my-5 flex xl:hidden">
                         <div className="cursor-pointer flex items-center">
