@@ -8,16 +8,11 @@ const slider = keyframes`
 const BackingSlider = styled.div`
 background: url(/images/background.png);
 background-size: 500px;
+padding-bottom:105px;
 background-position: center;
 background-repeat: none;
 box-sizing: border-box;
 overflow: hidden;
-@media (max-width: 1024px) {
-  background-size: 500px;
-}
-@media (max-width: 570px) {
-  background-size: 300px;
-}
 `
 const SliderContainer = styled.div`
 border-top: 0.5px solid var(--B2);
@@ -56,8 +51,8 @@ width: 50%;
 `
 const Slider = () => {
   return (
-      <BackingSlider>
-          <SliderContainer className='text-w flex'>
+<BackingSlider>
+  <SliderContainer className='text-w flex'>
     <SliderInnerContainer>
       <SlideImageOne>
 
@@ -143,7 +138,7 @@ const Slider = () => {
 
     </SliderInnerContainer>
   </SliderContainer>
-      </BackingSlider>
+</BackingSlider>
   )
 }
 
