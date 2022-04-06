@@ -3,10 +3,13 @@ import Head from "next/head"
 import DesktopNavbar from "../components/DesktopNavbar"
 import Container from "../components/Container"
 import HeroSection from "../components/HeroSection"
+import TeamSection from "../components/TeamSection"
+import Footer from "../components/Footer"
 
 export default function Home() {
+
   return (
-    <div>
+    <div className="bg-black">
       <Head>
         <title>Web3Media</title>
         <meta
@@ -19,6 +22,8 @@ export default function Home() {
       <DesktopNavbar />
       <Container>
         <HeroSection></HeroSection>
+        <TeamSection></TeamSection>
+        <Footer></Footer>
       </Container>
     </div>
   )

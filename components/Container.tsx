@@ -1,8 +1,7 @@
-import styles from '../styles/component styles/Container.module.css'
 
 const Container = ({ children }) => {
     return (
-        <div className={styles["container"]}>
+        <div className="bg-black max-w-1440 m-auto">
             {children}
         </div>
     )
