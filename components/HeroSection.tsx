@@ -9,11 +9,15 @@ const HeroSectionContainer = styled.div`
     @media (max-width: 1024px) {
     border: none;
     background-size: 500px;
+    padding-bottom: 250px;
+  }
+    @media (max-width: 900px) {
+    background-size: 300px;
     padding-bottom: 100px;
   }
-    @media (max-width: 550px) {
-    border: none;
+    @media (max-width: 550px) 
     background-size: 300px;
+    padding: 0;
      
   }
 `
@@ -69,17 +73,13 @@ const EllipseContainer = styled.div`
     transform: translate(-50%, -50%);
     @media (max-width: 1024px) {
         left: 50%;
-        top: 35%;
+        top: 330px;
      }
-     @media (max-width: 800px) {
-        left: 50%;
-        top: 42%;
-    }
     @media (max-width: 550px) {
         width: 168px;
         height: 314px;
         left: 50%;
-        top: 32%;
+        top: 275px;
     }
 `
 const EllipseOne = styled.div`
@@ -126,12 +126,12 @@ const Mesh = styled.div`
     radial-gradient(36.28% 36.28% at 50% 50%, rgba(41, 39, 160, 0.26) 0%, rgba(41, 39, 160, 0) 100%),
     radial-gradient(36.28% 36.28% at 50% 50%, rgba(201, 129, 56, 0.47) 0%, rgba(255, 202, 148, 0) 100%);
     @media (max-width: 1024px) {
-      top:30%
+      top:250px;
     }
     @media (max-width: 550px) {
-      top: 25%;
-      width: 282px;
-      height: 342px;
+      top: 200px;
+      width: 382px;
+      height: 442px;
     }
 `
 const colorchange = keyframes`
