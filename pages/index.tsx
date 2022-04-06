@@ -4,7 +4,7 @@ import Head from "next/head"
 import DesktopNavbar from "../components/DesktopNavbar"
 import Container from "../components/Container"
 import HeroSection from "../components/HeroSection"
-
+import Slider from '../components/Slider'
 
 export default function Home() {
   return (
@@ -22,6 +22,8 @@ export default function Home() {
       <Container>
         <HeroSection></HeroSection>
       </Container>
+
+      <Slider></Slider>
     </div>
   )
 }
