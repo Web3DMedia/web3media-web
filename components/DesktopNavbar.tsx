@@ -72,7 +72,7 @@ const DesktopNavbar = () => {
                 <Image src='/images/logo.svg' width={76} height={31} alt="logo" />
             </div>
 
-            <ul className='flex font-Navbar'>
+            <ul className='flex font-display'>
                 <Li >Early Access</Li>
                 <Li>Team</Li>
                 <Li>About</Li>

@@ -8,7 +8,7 @@ import Slider from '../components/Slider'
 
 export default function Home() {
   return (
-    <div className="bg-B1 font-body">
+    <div className="bg-b1 font-body">
       <Head>
         <title>Web3Media</title>
         <meta
