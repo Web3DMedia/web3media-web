@@ -6,8 +6,11 @@ const MobileMenuContainer = styled.div`
     @media (max-width: 1024px) {
         background: rgba(0, 0, 0, 0.6);
         backdrop-filter: blur(40px);
-        height: 100vh - calc(20px + 30px);
+        height: 100vh;
         z-index: 2;
+        width:100%;
+        position: fixed;
+        overflow-y: scroll;
   }
 `
 const MobileMenuClose = styled.div`
@@ -144,9 +147,9 @@ const MobileMenu = ({ closemenu }) => {
             <MobileMenuLine></MobileMenuLine>
 
             <ul className="mb-24">
-                <li className='list-inside list-disc text-2xl leading-7 pb-10 font-normal uppercase text-W md:list-none d:text-3xl md:leading-8 md:pb-10'>Instagram</li>
-                <li className='list-inside list-disc text-2xl leading-7 pb-10 font-normal uppercase text-W md:list-none d:text-3xl md:leading-8 md:pb-10'>Twitter</li>
-                <li className='list-inside list-disc text-2xl leading-7 pb-10 font-normal uppercase text-W md:list-none d:text-3xl md:leading-8 md:pb-10'>Linkedin</li>
+                <li className='list-inside list-disc text-2xl leading-7 pb-10 font-normal uppercase text-w md:list-none d:text-3xl md:leading-8 md:pb-10'>Instagram</li>
+                <li className='list-inside list-disc text-2xl leading-7 pb-10 font-normal uppercase text-w md:list-none d:text-3xl md:leading-8 md:pb-10'>Twitter</li>
+                <li className='list-inside list-disc text-2xl leading-7 pb-10 font-normal uppercase text-w md:list-none d:text-3xl md:leading-8 md:pb-10'>Linkedin</li>
             </ul>
 
             <Circle>

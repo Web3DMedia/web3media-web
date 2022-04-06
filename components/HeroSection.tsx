@@ -5,13 +5,16 @@ const HeroSectionContainer = styled.div`
     background-size: 500px;
     background-position: center;
     background-repeat: none;
+    padding-bottom: 150px;
     @media (max-width: 1024px) {
     border: none;
     background-size: 500px;
+    padding-bottom: 100px;
   }
     @media (max-width: 550px) {
     border: none;
     background-size: 300px;
+     
   }
 `
 const rotateEllipseOne = keyframes`
@@ -280,13 +283,13 @@ const SocialLinks = styled.li`
 const SocialCircle = styled.div`
     margin: 25px 0 0 25px;
     background: var(--GradientOne);
-    padding: 6px;
-    width: 2px;
+    padding: 3px;
+    width: 1px;
     border-radius: 50%;
 `
 const HeroSection = () => {
   return (
-    <HeroSectionContainer className="relative m-auto flex justify-between h-screen overflow-hidden" >
+    <HeroSectionContainer className="relative m-auto flex justify-between overflow-hidden" >
       <EllipseContainer>
         <EllipseOne></EllipseOne>
         <EllipseTwo></EllipseTwo>
