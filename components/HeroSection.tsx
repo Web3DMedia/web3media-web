@@ -289,7 +289,7 @@ const SocialCircle = styled.div`
 `
 const HeroSection = () => {
   return (
-    <HeroSectionContainer className="relative m-auto flex justify-between overflow-hidden" >
+    <HeroSectionContainer className="relative m-auto flex justify-between xl:h-screen overflow-hidden" >
       <EllipseContainer>
         <EllipseOne></EllipseOne>
         <EllipseTwo></EllipseTwo>
