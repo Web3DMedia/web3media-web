@@ -5,8 +5,9 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      heading: ["Neue Machina", "ui-sans-serif", "sans-serif"],
-      body: ["Neue Machina", "sans-serif"]
+      heading: ["Neue_Machina", "ui-sans-serif", "sans-serif"],
+      body: ["Neue_Machina", "sans-serif"],
+      display: ['pp_telegraf']
     },
 
     extend: {
@@ -40,7 +41,18 @@ module.exports = {
         red500: "#E43C31",
         red600: "#DF1508",
 
-        green400: "#13C725"
+        green400: "#13C725",
+
+        main: '#FF6EFF',
+        secondary: '#0AB7F6',
+        b1: '#000000',
+        b2: '#2D2C2C',
+        b3: '#818181',
+        b4: '#C4C4C4',
+        b5: '#D3D3D3',
+        b6: '#dfdfdf',
+        b7: '#D1D5DB',
+        w: '#FFFFFF'
       }
     }
   },

@@ -1,12 +1,15 @@
 import Head from "next/head"
 
+//components
 import DesktopNavbar from "../components/DesktopNavbar"
 import Container from "../components/Container"
 import HeroSection from "../components/HeroSection"
+import AboutSection from "../components/AboutSection"
+import Slider from '../components/Slider'
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-b1 font-body">
       <Head>
         <title>Web3Media</title>
         <meta
@@ -19,6 +22,12 @@ export default function Home() {
       <DesktopNavbar />
       <Container>
         <HeroSection></HeroSection>
+      </Container>
+
+      <Slider></Slider>
+
+      <Container>
+        <AboutSection></AboutSection>
       </Container>
     </div>
   )
