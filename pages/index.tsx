@@ -16,7 +16,7 @@ export default function Home() {
           name="description"
           content="Giving financial freedom and access to designers, artists, blockchain talents and creative minds."
         />
-        <link rel="icon" href="/Logo.svg" />
+        <link rel="icon" href="/images/logo.svg" />
       </Head>
 
       <DesktopNavbar />

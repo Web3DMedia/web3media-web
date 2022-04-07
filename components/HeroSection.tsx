@@ -231,8 +231,6 @@ const Button = styled.div`
   position: relative;
   width: 205px;
   margin: auto;
-  @media (max-width: 1024px) {}
-  @media (max-width: 550px) {}
   &::before {
     content: "";
     position: absolute;
