@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import Image from 'next/image'
 
 const AboutSectionContainer = styled.section`
-    justify-content: center;
     border-bottom: 0.5px solid var(--B2);
     background: url(/images/background.png);
     background-size: 500px;
@@ -29,7 +28,31 @@ padding:40px 0;
 line-height: 56px;
 width:83%;
 padding-bottom: 190px;
-color: var(--B3)
+color: var(--B3);
+ @media (max-width: 1024px) {
+font-weight: 800;
+font-size: 36px;
+line-height: 44px;
+width:75%;
+}
+@media (max-width: 780px) {
+width:100%;
+padding:0px 0;
+background: url(/images/planets.png);
+background-size: 340px;
+background-repeat: no-repeat;
+background-position: 10px -50px;
+} 
+@media (max-width: 550px) {
+font-weight: 800;
+width:100%;
+font-size: 28px;
+line-height: 34px;
+background-size: 500px;
+background-position: -50px -73px;
+background-repeat: no-repeat;
+  }
+
 `
 const WhiteText = styled.span`
 color: var(--W)
@@ -45,10 +68,17 @@ const Circle = styled.div`
     justify-content: center;
     align-items: center;
     margin: 0 auto 100px;
+    @media (
+        padding-top:30px;
+        max-width: 780px) {
+        width:100%;
+} 
     @media (max-width: 550px) {
-        width: 49px;
-        height: 47px;
-        margin: 0;
+        width: 90.76px;
+        height: 85px;
+        margin: 0 auto;
+        padding-left:0px;
+        padding-top:105px;
     }
 `
 const CircleImage = styled.div`
@@ -58,8 +88,8 @@ const CircleImage = styled.div`
     background-size: cover;
     border-radius: 50%;
     @media (max-width: 550px) {
-        width: 50px;
-        height: 50px;
+        width: 90.75px;
+        height: 85px;
     }
 `
 const CircleText = styled.div`
@@ -80,18 +110,18 @@ const CircleTextSpan = styled.span`
     @media (max-width: 550px){
         left: 50%;
         font-size: 8px;
-        top: -10px;
-        transform-origin: 0 35px;
+        top: 47px;
+        transform-origin: 0 62px;
     }
 `
 const AboutSection = () => {
     const text = 'Demonstrating the principle of value for skills --'
   return (
     <AboutSectionContainer>
-        <div className='flex w-4/5 m-auto pb-12'>
+        <div className='flex w-11/12 xl:w-4/5  m-auto pb-12 xl:pb-12'>
             <Image src='/images/Vectorblue.png' width={40} height={40} alt="earth" />
         </div>
-        <div className='flex w-4/5 m-auto'>
+        <div className='flex flex-col md:flex-row w-11/12 xl:w-4/5 m-auto'>
         <Text>
             We are on a mission to help these categories of <WhiteText>creative ninjas </WhiteText> 
             scale in the endeavours and take their place in the <WhiteText>universe.</WhiteText>
