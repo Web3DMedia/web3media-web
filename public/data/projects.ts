@@ -1,6 +1,6 @@
-import PapayasImage from '../images/papaya.png'
-import BlocassetImage from '../images/blocasset.png'
-import Space from '../images/space.png'
+import PapayasImage from '../images/papaya.jpg'
+import BlocassetImage from '../images/blocasset.jpg'
+import Space from '../images/rocket.jpg'
 import Arrow from '../images/arrowVector.svg'
 
 export const projectsData = [

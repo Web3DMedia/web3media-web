@@ -1,8 +1,6 @@
 import Head from "next/head"
 
-import DesktopNavbar from "../components/DesktopNavbar"
 import Container from "../components/Container"
-import HeroSection from "../components/HeroSection"
 import ProjectSection from "../components/ProjectSection"
 
 export default function Home() {
@@ -17,9 +15,7 @@ export default function Home() {
         <link rel="icon" href="/Logo.svg" />
       </Head>
 
-      <DesktopNavbar />
       <Container>
-        <HeroSection></HeroSection>
         <ProjectSection></ProjectSection>
       </Container>
     </div>
