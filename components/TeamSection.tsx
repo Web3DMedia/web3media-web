@@ -5,11 +5,12 @@ import DesignIcon from '../public/images/designIcon.svg'
 import AnimationIcon from '../public/images/animationIcon.svg'
 import ManagementIcon from '../public/images/managementIcon.svg'
 import TeamMembers from './TeamMembers'
+import { TeamSectionDiv } from '../styles/TeameMemberStyles'
 
 const TeamSection = () => {
 
    return (
-      <div className="text-white py-10 px-10 relative">
+      <TeamSectionDiv className="text-white py-10 px-10 relative">
          <div className="">
             <div className="xl:w-10/12">
                <Image src={TeamTxt} alt="team image"/>
@@ -43,7 +44,7 @@ const TeamSection = () => {
             </div>
             <TeamMembers/>
          </div>
-      </div>
+      </TeamSectionDiv>
    )
 }
 

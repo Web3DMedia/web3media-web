@@ -1,7 +1,14 @@
 import styled, {keyframes} from 'styled-components'
 import Image from 'next/image'
-import EarthGif from '../../public/images/Earth.gif'
-import ClementDark from '../../public/images/ClementDark.png'
+
+export const TeamSectionDiv = styled.div`
+   position: relative;
+   padding: 10px;
+   background: url(/images/background.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+`
 
 export const TeamWrapper = styled.div`
    width: 597px;
