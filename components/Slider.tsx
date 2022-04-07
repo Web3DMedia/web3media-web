@@ -61,11 +61,11 @@ const Slider = () => {
       </SlideImageContainer>
 
       <SlideImageContainer>
-        <Image src='/images/coinfund.png'  width={109} height={64} alt="coinfund"></Image>
+        <Image src='/images/coin-fund.png'  width={109} height={64} alt="coinfund"></Image>
       </SlideImageContainer>
 
       <SlideImageContainer>
-        <Image src='/images/atcapital.png'  width={109} height={64} alt="atcapital"></Image>
+        <Image src='/images/at-capital.png'  width={109} height={64} alt="atcapital"></Image>
       </SlideImageContainer>
 
       <SlideImageContainer>
@@ -77,11 +77,11 @@ const Slider = () => {
       </SlideImageContainer>
 
       <SlideImageContainer>
-        <Image src='/images/coinfund.png'  width={109} height={64} alt="coinfund"></Image>
+        <Image src='/images/coin-fund.png'  width={109} height={64} alt="coinfund"></Image>
       </SlideImageContainer> 
 
       <SlideImageContainer>
-        <Image src='/images/atcapital.png'  width={109} height={64} alt="atcapital"></Image>
+        <Image src='/images/at-capital.png'  width={109} height={64} alt="atcapital"></Image>
       </SlideImageContainer>
 
       <SlideImageContainer>

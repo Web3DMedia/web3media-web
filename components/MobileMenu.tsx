@@ -117,7 +117,7 @@ const MobileMenu = ({ closemenu }) => {
         <MobileMenuContainer className='p-8 text-left absolute block top-0 w-full overflow-hidden md:text-center xl:hidden'>
             <div className='flex justify-between items-center'>
                 <div>
-                    <Image src='/images/Logo.svg' width={58.84} height={24} alt="logo" className='hidden filter grayscale' />
+                    <Image src='/images/logo.svg' width={58.84} height={24} alt="logo" className='hidden filter grayscale' />
                 </div>
 
                 <ul onClick={() => closemenu(false)}>
@@ -154,7 +154,7 @@ const MobileMenu = ({ closemenu }) => {
 
             <Circle>
                 <CircleImage>
-                    <Image src='/images/Earth.gif' width={100} height={100} alt="earth" />
+                    <Image src='/images/earth.gif' width={100} height={100} alt="earth" />
                 </CircleImage>
                 <CircleText>
                     <p>
