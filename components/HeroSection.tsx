@@ -18,7 +18,6 @@ const HeroSectionContainer = styled.div`
     @media (max-width: 550px) 
     background-size: 300px;
     padding: 0;
-     
   }
 `
 const rotateEllipseOne = keyframes`
@@ -289,7 +288,7 @@ const SocialCircle = styled.div`
 `
 const HeroSection = () => {
   return (
-    <HeroSectionContainer className="relative m-auto flex justify-between overflow-hidden" >
+    <HeroSectionContainer className="relative m-auto flex justify-between xl:h-screen overflow-hidden" >
       <EllipseContainer>
         <EllipseOne></EllipseOne>
         <EllipseTwo></EllipseTwo>
