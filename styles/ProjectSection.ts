@@ -3,15 +3,20 @@ import styled from 'styled-components'
 export const ProjectWrapper = styled.div`
    height: 100vh;
    padding: 20px 0px;
-   background-image:url('/images/background.png');
+   background-image:url(/images/background.png);
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
+
+   @media screen and (max-width: 1920px){
+      height: 100%;
+   }
    
    @media screen and (max-width: 642px){
       height: 100%;
    }
 `
+
 
 export const ProjectCard = styled.div`
    cursor: pointer;
@@ -80,16 +85,18 @@ export const CardCenter = styled.div`
 export const CardBottom = styled.div`
    margin-top: 10px;
    position: absolute;
+   display: ${({onHover}) => onHover ? "flex":"none"};
    top: ${({onHover}) => onHover ? "100%":"10%"};
    left: 0;
    z-index: 2;
    padding: 0px 10px 0px 0px;
-   transition: top 0.3s ease-in-out;
+   transition: display 0.5s ease-in-out;
 
    @media screen and (max-width: 1024px){
       top: 100%;
       position: relative;
       margin-top: 20px;
       padding: 0px;
+      display: flex;
    }
 `

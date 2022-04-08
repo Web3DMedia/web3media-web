@@ -33,7 +33,7 @@ const BtnWrapper = styled.button`
 const CircularGradientBtn = ({img}) => {
    return (
       <BtnWrapper>
-         <Image src={img} alt="Circular"/>
+         <Image src={img} alt="Circular" width="10px" height="10px" />
       </BtnWrapper>
    )
 }
