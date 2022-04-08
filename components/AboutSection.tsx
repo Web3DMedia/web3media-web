@@ -36,23 +36,25 @@ line-height: 44px;
 width:75%;
 }
 @media (max-width: 780px) {
-width:100%;
+width:85%;
 padding:0px 0;
 background: url(/images/planets.png);
 background-size: 340px;
 background-repeat: no-repeat;
+font-size: 32px;
+line-height: 42px;
 background-position: 10px -50px;
 } 
 @media (max-width: 550px) {
 font-weight: 800;
+padding:30px 0;
 width:100%;
 font-size: 28px;
 line-height: 34px;
 background-size: 500px;
 background-position: -50px -73px;
 background-repeat: no-repeat;
-  }
-
+}
 `
 const WhiteText = styled.span`
 color: var(--W)
@@ -118,10 +120,10 @@ const AboutSection = () => {
     const text = 'Demonstrating the principle of value for skills --'
   return (
     <AboutSectionContainer>
-        <div className='flex w-11/12 xl:w-4/5  m-auto pb-12 xl:pb-12'>
-            <Image src='/images/Vectorblue.png' width={40} height={40} alt="earth" />
+        <div className='flex m-auto pb-12 xl:pb-12'>
+            <Image src='/images/vector-blue.png' width={40} height={40} alt="earth" />
         </div>
-        <div className='flex flex-col md:flex-row w-11/12 xl:w-4/5 m-auto'>
+        <div className='flex flex-col md:flex-row m-auto'>
         <Text>
             We are on a mission to help these categories of <WhiteText>creative ninjas </WhiteText> 
             scale in the endeavours and take their place in the <WhiteText>universe.</WhiteText>
@@ -129,7 +131,7 @@ const AboutSection = () => {
         
         <Circle>
             <CircleImage>
-                <Image src='/images/Earth.gif' width={100} height={100} alt="earth" />
+                <Image src='/images/earth.gif' width={100} height={100} alt="earth" />
             </CircleImage>
             <CircleText>
                 <p>
