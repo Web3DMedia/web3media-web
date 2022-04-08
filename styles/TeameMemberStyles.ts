@@ -1,8 +1,8 @@
 import styled, {keyframes} from 'styled-components'
-import Image from 'next/image'
 
 export const TeamSectionDiv = styled.div`
    position: relative;
+   width: 100%;
    padding: 10px;
    background: url(/images/background.png);
    background-repeat: no-repeat;
@@ -136,7 +136,7 @@ export const ThirdTeamDiv = styled.div`
 export const WorldDiv = styled.div`
    width: 79.23px;
    height: 79.23px;
-   background: url(/images/Earth.gif);
+   background: url(/images/earth.gif);
    background-position: center;
    background-repeat: no-repeat;
    background-size: contain;
@@ -175,7 +175,7 @@ export const FirstMemberOne = styled.div`
    height: 100%;
    border-radius: 100%;
    position: absolute;
-   animation: ${moveMemberOne} 5s linear infinite alternate; 
+   animation: ${moveMemberOne} 3s linear infinite alternate; 
 
    &::before{
       content: "";
@@ -185,10 +185,13 @@ export const FirstMemberOne = styled.div`
       top: 5%;
       left: 15%;
       border-radius: 50%;
-      background-image: url(${({img}) => img ? '/images/team/ClementDark.svg' : '/images/team/ClementColored.svg'});
+      background-image: url(/images/team/clement.png);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+      -webkit-filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
+      filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"};
+      transition: ease-in-out 1s filter ;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -209,7 +212,7 @@ export const FirstMemberTwo = styled.div`
    border-radius: 100%;
    position: absolute;
    background: transparent;
-   animation: ${moveMemberOne} 5s linear infinite alternate; 
+   animation: ${moveMemberOne} 3s linear infinite alternate; 
 
    &::before{
       content: "";
@@ -219,10 +222,13 @@ export const FirstMemberTwo = styled.div`
       top: 10%;
       left: 80%;
       border-radius: 50%;
-      background-image: url(${({img}) => img ? '/images/team/IosDark.svg' : '/images/team/IosColored.svg'});
+      background-image: url(/images/team/okwu.png);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+      -webkit-filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
+      filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"};
+      transition: ease-in-out 1s filter ;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -241,7 +247,7 @@ export const FirstMemberThree = styled.div`
    height: 100%;
    border-radius: 100%;
    position: absolute;
-   animation: ${moveMemberOne} 5s linear infinite alternate; 
+   animation: ${moveMemberOne} 3s linear infinite alternate; 
 
    &::before{
       content: "";
@@ -251,10 +257,13 @@ export const FirstMemberThree = styled.div`
       top: 50%;
       left: -4%;
       border-radius: 50%;
-      background-image: url(${({img}) => img ? '/images/team/SeyiDark.svg' : '/images/team/SeyiColored.svg'});
+      background-image: url(/images/team/seyi.png);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+      -webkit-filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
+      filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"};
+      transition: ease-in-out 1s filter ;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -273,7 +282,7 @@ export const FirstMemberFour = styled.div`
    height: 100%;
    border-radius: 100%;
    position: absolute;
-   animation: ${moveMemberOne} 5s linear infinite alternate; 
+   animation: ${moveMemberOne} 3s linear infinite alternate; 
 
    &::before{
       content: "";
@@ -284,10 +293,13 @@ export const FirstMemberFour = styled.div`
       left: 10%;
       border-radius: 50%;
       background-color: pin;
-      background-image: url(${({img}) => img ? '/images/team/FatimaDark.svg' : '/images/team/FatimaColored.svg'});
+      background-image: url(/images/team/fatima.png);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+      -webkit-filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
+      filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"};
+      transition: ease-in-out 1s filter ;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -306,7 +318,7 @@ export const FirstMemberFive = styled.div`
    height: 100%;
    border-radius: 100%;
    position: absolute;
-   animation: ${moveMemberOne} 5s linear infinite alternate; 
+   animation: ${moveMemberOne} 3s linear infinite alternate; 
 
    &::before{
       content: "";
@@ -316,10 +328,13 @@ export const FirstMemberFive = styled.div`
       top: 91%;
       left: 65%;
       border-radius: 50%;
-      background-image: url(${({img}) => img ? '/images/team/DanielDark.svg' : '/images/team/DanielColored.svg'});
+      background-image: url(/images/team/daniel.png);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+      -webkit-filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
+      filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"};
+      transition: ease-in-out 1s filter ;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -338,7 +353,7 @@ export const FirstMemberSix = styled.div`
    height: 100%;
    border-radius: 100%;
    position: absolute;
-   animation: ${moveMemberOne} 5s linear infinite alternate; 
+   animation: ${moveMemberOne} 3s linear infinite alternate; 
 
    &::before{
       content: "";
@@ -348,10 +363,13 @@ export const FirstMemberSix = styled.div`
       top: 40%;
       left: 95%;
       border-radius: 50%;
-      background-image: url(${({img}) => img ? '/images/team/FatimaDark.svg' : '/images/team/FatimaColored.svg'});
+      background-image: url(/images/team/fatima.png);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+      -webkit-filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
+      filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"};
+      transition: ease-in-out 1s filter ;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -370,7 +388,7 @@ export const SecondMemberOne = styled.div`
    height: 100%;
    border-radius: 100%;
    position: absolute;
-   animation: ${moveMemberTwo} 5s linear infinite alternate; 
+   animation: ${moveMemberTwo} 3s linear infinite alternate; 
 
    &::before{
       content: "";
@@ -380,10 +398,13 @@ export const SecondMemberOne = styled.div`
       top: 60%;
       left: -5%;
       border-radius: 50%;
-      background-image: url(${({img}) => img ? '/images/team/AbelDark.svg' : '/images/team/AbelColored.svg'});
+      background-image: url(/images/team/abel.png);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+      -webkit-filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
+      filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"};
+      transition: ease-in-out 1s filter ;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -402,7 +423,7 @@ export const SecondMemberTwo = styled.div`
    height: 100%;
    border-radius: 100%;
    position: absolute;
-   animation: ${moveMemberTwo} 5s linear infinite alternate; 
+   animation: ${moveMemberTwo} 3s linear infinite alternate; 
 
    &::before{
       content: "";
@@ -412,10 +433,13 @@ export const SecondMemberTwo = styled.div`
       top: 90%;
       left: 60%;
       border-radius: 50%;
-      background-image: url(${({img}) => img ? '/images/team/EllaDark.svg' : '/images/team/EllaColored.svg'});
+      background-image: url(/images/team/ella.png);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+      -webkit-filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
+      filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"};
+      transition: ease-in-out 1s filter ;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -434,7 +458,7 @@ export const SecondMemberThree = styled.div`
    height: 100%;
    border-radius: 100%;
    position: absolute;
-   animation: ${moveMemberTwo} 5s linear infinite alternate; 
+   animation: ${moveMemberTwo} 3s linear infinite alternate; 
 
    &::before{
       content: "";
@@ -444,10 +468,13 @@ export const SecondMemberThree = styled.div`
       top: 15%;
       left: 85%;
       border-radius: 50%;
-      background-image: url(${({img}) => img ? '/images/team/OluchiDark.svg' : '/images/team/OluchiColored.svg'});
+      background-image: url(/images/team/oluchi.png);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+      -webkit-filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
+      filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"};
+      transition: ease-in-out 1s filter ;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -466,7 +493,7 @@ export const ThirdMemberOne = styled.div`
    height: 100%;
    border-radius: 100%;
    position: absolute;
-   animation: ${moveMemberOne} 5s linear infinite alternate; 
+   animation: ${moveMemberOne} 3s linear infinite alternate; 
 
    &::before{
       content: "";
@@ -476,10 +503,13 @@ export const ThirdMemberOne = styled.div`
       top: 20%;
       left: -10%;
       border-radius: 50%;
-      background-image: url(${({img}) => img ? '/images/team/GloryDark.svg' : '/images/team/GloryColored.svg'});
+      background-image: url(/images/team/glory.png);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+      -webkit-filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
+      filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"};
+      transition: ease-in-out 1s filter ;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -498,7 +528,7 @@ export const ThirdMemberTwo = styled.div`
    height: 100%;
    border-radius: 100%;
    position: absolute;
-   animation: ${moveMemberOne} 5s linear infinite alternate; 
+   animation: ${moveMemberOne} 3s linear infinite alternate; 
 
    &::before{
       content: "";
@@ -508,10 +538,13 @@ export const ThirdMemberTwo = styled.div`
       top: 60%;
       left: 80%;
       border-radius: 50%;
-      background-image: url(${({img}) => img ? '/images/team/NecheDark.svg' : '/images/team/NecheColored.svg'});
+      background-image: url(/images/team/neche.png);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+      -webkit-filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
+      filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"};
+      transition: ease-in-out 1s filter ;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -523,8 +556,4 @@ export const ThirdMemberTwo = styled.div`
          width: 31.27px;
       }
    }
-`
-
-export const ImgContainer = styled(Image)`
-
 `

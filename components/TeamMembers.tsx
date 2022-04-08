@@ -17,15 +17,13 @@ import {
    SecondMemberThree,
    ThirdMemberOne,
    ThirdMemberTwo,
-   ImgContainer
 } from '../styles/TeameMemberStyles'
 
-import ClementDark from '../public/images/team images/ClementDark.svg'
 
 
 const TeamMembers = () => {
    const [myState, setMyState] = useState(false)
-   setTimeout(() => {setMyState(!myState)}, 5000);
+   setTimeout(() => {setMyState(!myState)}, 2000);
 
    return (
       <TeamWrapper>

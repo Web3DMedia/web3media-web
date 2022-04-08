@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Logo from '../public/Logo.svg'
 import Link from 'next/link'
-import ArrowVector from '../public/images/smallArrowVector.svg'
+import ArrowVector from '../public/images/small-arrow.svg'
 import {FaTwitter, FaInstagram, FaLinkedinIn} from 'react-icons/fa'
 
 const Footer = () => {

@@ -1,24 +1,24 @@
 import Image from 'next/image'
-import TeamTxt from '../public/images/TeamTxt.svg'
-import EngineeringIcon from '../public/images/engineeringIcon.svg'
-import DesignIcon from '../public/images/designIcon.svg'
-import AnimationIcon from '../public/images/animationIcon.svg'
-import ManagementIcon from '../public/images/managementIcon.svg'
+import TeamTxt from '../public/images/team-txt.svg'
+import EngineeringIcon from '../public/images/engineering-icon.svg'
+import DesignIcon from '../public/images/design-icon.svg'
+import AnimationIcon from '../public/images/animation-icon.svg'
+import ManagementIcon from '../public/images/management-icon.svg'
 import TeamMembers from './TeamMembers'
 import { TeamSectionDiv } from '../styles/TeameMemberStyles'
 
 const TeamSection = () => {
 
    return (
-      <TeamSectionDiv className="text-white py-10 px-10 relative">
-         <div className="">
+      <TeamSectionDiv >
+         <div className="pt-4">
             <div className="xl:w-10/12">
                <Image src={TeamTxt} alt="team image"/>
             </div>
-            <p className="hidden sm:flex sm:flex-wrap lg:w-5/6 xl:w-3/6 sm:text-lg lg:text-xl">
+            <p className="hidden sm:flex sm:flex-wrap lg:w-5/6 xl:w-3/6 sm:text-lg lg:text-xl text-white">
                A team of highly motivated super heroes with super powers in designs, art, animation, engineering and product.
             </p>
-            <p className="flex flex-wrap sm:hidden">
+            <p className="flex flex-wrap sm:hidden text-white">
                Explore some of our web3 projects
             </p>
          </div>
