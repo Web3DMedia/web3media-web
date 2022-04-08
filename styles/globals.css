@@ -3,7 +3,7 @@
 @tailwind components;
 
 @font-face {
-    font-family: 'neue_machina';
+    font-family: 'Neue Machina';
     src: url('/font/neuemachina-light-webfont.woff2') format('woff2'),
         url('/font/neuemachina-light-webfont.woff') format('woff');
     font-weight: 300;
@@ -11,7 +11,7 @@
 }
 
 @font-face {
-    font-family: 'neue_machina';
+    font-family: 'Neue Machina';
     src: url('/font/neuemachina-regular-webfont.woff2') format('woff2'),
         url('/font/neuemachina-regular-webfont.woff') format('woff');
     font-weight: 400;
@@ -20,7 +20,7 @@
 }
 
 @font-face {
-    font-family: 'neue_machina';
+    font-family: 'Neue Machina';
     src: url('/font/neuemachina-ultrabold-webfont.woff2') format('woff2'),
          url('/font/neuemachina-ultrabold-webfont.woff') format('woff');
     font-weight: 700;
