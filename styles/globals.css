@@ -1,16 +1,72 @@
-html,
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@font-face {
+    font-family: 'Neue_Machina';
+    src: url('/font/NeueMachina/neuemachina-light-webfont.woff2') format('woff2'),
+         url('/font/NeueMachina/neuemachina-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Neue_Machina';
+    src: url('/font/NeueMachina/neuemachina-regular-webfont.woff2') format('woff2'),
+         url('/font/NeueMachina/neuemachina-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Neue_Machina';
+    src: url('/font/NeueMachina/neuemachina-ultrabold-webfont.woff2') format('woff2'),
+         url('/font/NeueMachina/neuemachina-ultrabold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+  
+    font-family: 'pp_telegraf';
+    src: url('/font/PPTelegraf/pptelegraf-ultralight-webfont.woff2') format('woff2'),
+         url('/font/PPTelegraf/pptelegraf-ultralight-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+  
+    font-family: 'pp_telegraf';
+    src: url('/font/PPTelegraf/pptelegraf-regular-webfont.woff2') format('woff2'),
+         url('/font/PPTelegraf/pptelegraf-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+  
+    font-family: 'pp_telegraf';
+    src: url('/font/PPTelegraf/pptelegraf-ultrabold-webfont.woff2') format('woff2'),
+         url('/font/PPTelegraf/pptelegraf-ultrabold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root {
+  --Main: #FF6EFF;
+  --Secondary: #0AB7F6;
+  --GradientOne: linear-gradient(135deg, #FF6EFF 0%, #0AB7F6 100%);
+  --GradientTwo: linear-gradient(135deg, #0AB7F6 0%, #FF6EFF 100%);
+  --GradientThree: linear-gradient(135deg, #62FF8E 0%, #25B1FF 100%);
+  --B1: #000000;
+  --B2: #2D2C2C;
+  --B3: #818181;
+  --B4: #C4C4C4;
+  --B5: #D3D3D3;
+  --B6: #dfdfdf;
+  --B7:#D1D5DB;
+  --W: #FFFFFF;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: var(--B1);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
