@@ -53,12 +53,28 @@ module.exports = {
         368: '368px',
         423: '423px',
         600: '600px',
+<<<<<<< HEAD
+        1024: '1024px',
+        '50vh':'50vh',
+        '70vh':'70vh',
+        '80vh':'80vh',
+=======
         650: '650px',
+>>>>>>> origin/dev
       },
       minWidth: {
         628:'628px',
         720: '720px',
       },
+<<<<<<< HEAD
+      minHeight: {
+        423: '423px',
+      },
+      maxWidth:{
+        1440:'1440px'
+      },
+      
+=======
       maxWidth:{
         335:'335px',
         628:'628px',
@@ -82,6 +98,7 @@ module.exports = {
         w: '#FFFFFF'
 >>>>>>> origin/dev
       }
+>>>>>>> origin/dev
     }
   },
   plugins: []
