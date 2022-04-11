@@ -45,7 +45,7 @@ background-repeat: no-repeat;
 }
 `
 const WhiteText = styled.span`
-color: var(--W)
+color: var(--W);
 `
 const Circle = styled.div`
     padding-left:40px;
@@ -58,9 +58,8 @@ const Circle = styled.div`
     justify-content: center;
     align-items: center;
     margin: 0 auto 100px;
-    @media (
+    @media ( max-width: 780px) {
         padding-top:30px;
-        max-width: 780px) {
         width:100%;
 } 
     @media (max-width: 550px) {

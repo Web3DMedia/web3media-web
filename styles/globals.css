@@ -60,6 +60,10 @@
   --B7:#D1D5DB;
   --W: #FFFFFF;
 }
+
+*{
+    font-family: 'Neue Machina'
+}
 *::-webkit-scrollbar {
   display: none;
 }

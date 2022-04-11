@@ -10,7 +10,7 @@ const HeroSectionContainer = styled.div`
     @media (max-width: 900px) {
     padding-bottom: 100px
   }
-    @media (max-width: 550px) 
+    @media (max-width: 550px) {
     padding: 0;
   }
 `
@@ -36,7 +36,7 @@ const rotateEllipseOne = keyframes`
 `
 const rotateEllipseTwo = keyframes`
     0% {
-        border-top 2px solid var(--W);
+        border-top: 2px solid var(--W);
     }
     25% {
         border-left: 2px solid var(--W);
@@ -239,6 +239,7 @@ const Button = styled.div`
     linear-gradient(#fff 0 0);
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
+  }
 `
 const ButtonText = styled.h6`
   color: var(--B5);
