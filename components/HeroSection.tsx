@@ -5,7 +5,8 @@ const HeroSectionContainer = styled.div`
     background-size: 500px;
     background-position: center;
     background-repeat: none;
-    padding-bottom: 150px;
+    padding-bottom: 100px;
+    text-align:center;
     @media (max-width: 1024px) {
     border: none;
     background-size: 500px;
@@ -68,7 +69,7 @@ const EllipseContainer = styled.div`
     width: 657px;
     height: 790px;
     left: 50%;
-    top: 50%;
+    top: 390px;
     transform: translate(-50%, -50%);
     @media (max-width: 1024px) {
         left: 50%;
@@ -118,7 +119,7 @@ const Mesh = styled.div`
     height: 650px;
     position: absolute;
     left: 50%;
-    top: 35%;
+    top:350px;
     transform: translate(-50%, -50%);
     opacity: 0.17;
     background: radial-gradient(36.28% 36.28% at 50% 50%, #FD8AFD 0%, rgba(222, 28, 28, 0) 100%),
@@ -253,7 +254,7 @@ const ButtonText = styled.h6`
   font-size: 16px;
   line-height: 15px;`
 const SocialContainer = styled.ul`
-position: absolute;
+    position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -286,7 +287,7 @@ const SocialCircle = styled.div`
 `
 const HeroSection = () => {
   return (
-    <HeroSectionContainer className="relative m-auto flex justify-between xl:h-screen overflow-hidden" >
+    <HeroSectionContainer className="relative m-auto flex justify-center overflow-hidden" >
       <EllipseContainer>
         <EllipseOne></EllipseOne>
         <EllipseTwo></EllipseTwo>
@@ -294,7 +295,7 @@ const HeroSection = () => {
 
       <Mesh></Mesh>
 
-      <div className="text-center">
+      <div className="lg:pb-28 xl:pb-64">
         <FirstHeadingText>We are an</FirstHeadingText>
         <SecondHeadingText>Ambitious Creative Web3 Studio.</SecondHeadingText>
         <ThirdHeadingText>
@@ -306,6 +307,7 @@ const HeroSection = () => {
         </Button>
       </div>
 
+      <div>
         <SocialContainer>
           <SocialLinks>LI</SocialLinks>
           <SocialLinks>IG</SocialLinks>
@@ -313,6 +315,7 @@ const HeroSection = () => {
           <SocialLinks>TW</SocialLinks>
           <SocialLinks> <SocialCircle></SocialCircle> </SocialLinks>
         </SocialContainer>
+      </div>
     </HeroSectionContainer>
   )
 }

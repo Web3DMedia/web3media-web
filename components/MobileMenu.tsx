@@ -63,6 +63,13 @@ const MobileMenuLine = styled.div`
     background: var(--B3);
     height: 0.5px;
     margin-bottom: 60px;
+    position: relative;
+`
+
+const ImgContainer = styled.div`
+postion:absolute;
+margin-top:-75px;
+margin-bottom: 60px;
 `
 const Circle = styled.div`
     position: relative;
@@ -145,6 +152,11 @@ const MobileMenu = ({ closemenu }) => {
             </ul>
 
             <MobileMenuLine></MobileMenuLine>
+
+            
+            <ImgContainer>
+                <Image src='/images/mobile-menu-vector.png' width={30} height={30} />
+            </ImgContainer>
 
             <ul className="mb-24">
                 <li className='list-inside list-disc text-2xl leading-7 pb-10 font-normal uppercase text-w md:list-none d:text-3xl md:leading-8 md:pb-10'>Instagram</li>
