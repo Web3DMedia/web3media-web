@@ -289,7 +289,7 @@ const HeroSection = () => {
 
       <Mesh></Mesh>
 
-      <div className="lg:pb-28 xl:pb-64">
+      <div className="pb-40">
         <FirstHeadingText>We are an</FirstHeadingText>
         <SecondHeadingText>Ambitious Creative Web3 Studio.</SecondHeadingText>
         <ThirdHeadingText>

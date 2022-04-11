@@ -3,23 +3,25 @@
 @tailwind components;
 
 @font-face {
-    font-family: 'Neue_machina';
-    src: url('/font/neuemachina-light-webfont.woff2') format('woff2'),
-        url('/font/neuemachina-light-webfont.woff') format('woff');
+    font-family: 'Neue_Machina';
+    src: url('/font/NeueMachina/neuemachina-light-webfont.woff2') format('woff2'),
+        url('/font/NeueMachina/neuemachina-light-webfont.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
+
 @font-face {
-    font-family: 'Neue_machina';
-    src: url('/font/neuemachina-regular-webfont.woff2') format('woff2'),
-        url('/font/neuemachina-regular-webfont.woff') format('woff');
+    font-family: 'Neue_Machina';
+    src: url('/font/NeueMachina/neuemachina-regular-webfont.woff2') format('woff2'),
+        url('/font/NeueMachina/neuemachina-regular-webfont.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
+
 @font-face {
-    font-family: 'Neue_machina';
-    src: url('/font/neuemachina-ultrabold-webfont.woff2') format('woff2'),
-        url('/font/neuemachina-ultrabold-webfont.woff') format('woff');
+    font-family: 'Neue_Machina';
+    src: url('/font/NeueMachina/neuemachina-ultrabold-webfont.woff2') format('woff2'),
+        url('/font/NeueMachina/neuemachina-ultrabold-webfont.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
@@ -59,10 +61,6 @@
   --B6: #dfdfdf;
   --B7:#D1D5DB;
   --W: #FFFFFF;
-}
-
-*{
-    font-family: 'Neue Machina'
 }
 *::-webkit-scrollbar {
   display: none;

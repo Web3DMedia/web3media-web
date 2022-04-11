@@ -7,7 +7,6 @@ const ContainerContainer = styled.div`
     background-repeat: none;
     @media (max-width: 1024px) {
     border: none;
-    background-size: 500px;
   }
     @media (max-width: 550px) {
     border: none;

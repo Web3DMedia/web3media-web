@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     fontFamily: {
       heading: ["Neue_Machina", "ui-sans-serif", "sans-serif"],
-      body: ["Neue_machina", "sans-serif"],
+      body: ["Neue_Machina", "sans-serif"],
       display: ['pp_telegraf']
     },
 

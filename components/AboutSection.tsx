@@ -3,7 +3,9 @@ import styled from 'styled-components'
 import Image from 'next/image'
 
 const AboutSectionContainer = styled.section`
-    border-bottom: 0.5px solid var(--B2);
+    @media (max-width: 600px) {
+        padding-bottom: 80px;
+    }
 `
 const Text = styled.h1`
 background: url(/images/planets.png);
@@ -60,8 +62,7 @@ const Circle = styled.div`
     margin: 0 auto 100px;
     @media ( max-width: 780px) {
         padding-top:30px;
-        width:100%;
-} 
+    } 
     @media (max-width: 550px) {
         width: 90.76px;
         height: 85px;
@@ -97,7 +98,7 @@ const CircleTextSpan = styled.span`
     font-size: 10px;
     transform-origin: 0 70px;
     @media (max-width: 550px){
-        left: 50%;
+        left: 55%;
         font-size: 8px;
         top: 47px;
         transform-origin: 0 62px;
