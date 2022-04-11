@@ -7,7 +7,7 @@ const MobileMenuContainer = styled.div`
         background: rgba(0, 0, 0, 0.6);
         backdrop-filter: blur(40px);
         height: 100vh;
-        z-index: 2;
+        z-index: 7;
         width:100%;
         position: fixed;
         overflow-y: scroll;

@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-
 export const WaveContainer = styled.div`
    width: 100%;
    height: 160px;
@@ -24,8 +23,9 @@ export const PinkContainer = styled.div`
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
-   margin-bottom: 20px;
-
+   @media screen and (max-width:768px) {
+         background-repeat: no-repeat;
+   }
    @media screen and (max-width:640px){
       height: 120px;
    }
