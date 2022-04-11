@@ -86,7 +86,7 @@ const Circle = styled.div`
         margin: 0;
     }
 `
-const CircleImage = styled.div`
+const CircleImage = styled.div`gi
     position: absolute;
     width: 100px;
     height: 100px;
@@ -155,7 +155,7 @@ const MobileMenu = ({ closemenu }) => {
 
             
             <ImgContainer>
-                <Image src='/images/mobile-menu-vector.png' width={30} height={30} />
+                <Image src='/images/mobile-menu-vector.png' width={30} height={30} alt="mobile-vector-image"/>
             </ImgContainer>
 
             <ul className="mb-24">

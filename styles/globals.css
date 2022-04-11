@@ -3,51 +3,27 @@
 @tailwind components;
 
 @font-face {
-<<<<<<< HEAD
-    font-family: 'Neue Machina';
+    font-family: 'Neue_machina';
     src: url('/font/neuemachina-light-webfont.woff2') format('woff2'),
         url('/font/neuemachina-light-webfont.woff') format('woff');
-<<<<<<< HEAD
-=======
-=======
-    font-family: 'Neue_Machina';
-    src: url('/font/NeueMachina/neuemachina-light-webfont.woff2') format('woff2'),
-         url('/font/NeueMachina/neuemachina-light-webfont.woff') format('woff');
->>>>>>> origin/dev
->>>>>>> origin/dev
     font-weight: 300;
     font-style: normal;
 }
 @font-face {
-<<<<<<< HEAD
-    font-family: 'Neue Machina';
+    font-family: 'Neue_machina';
     src: url('/font/neuemachina-regular-webfont.woff2') format('woff2'),
         url('/font/neuemachina-regular-webfont.woff') format('woff');
-<<<<<<< HEAD
-=======
-=======
-    font-family: 'Neue_Machina';
-    src: url('/font/NeueMachina/neuemachina-regular-webfont.woff2') format('woff2'),
-         url('/font/NeueMachina/neuemachina-regular-webfont.woff') format('woff');
->>>>>>> origin/dev
->>>>>>> origin/dev
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
-<<<<<<< HEAD
-    font-family: 'Neue Machina';
+    font-family: 'Neue_machina';
     src: url('/font/neuemachina-ultrabold-webfont.woff2') format('woff2'),
         url('/font/neuemachina-ultrabold-webfont.woff') format('woff');
-=======
-    font-family: 'Neue_Machina';
-    src: url('/font/NeueMachina/neuemachina-ultrabold-webfont.woff2') format('woff2'),
-         url('/font/NeueMachina/neuemachina-ultrabold-webfont.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
 @font-face {
-  
     font-family: 'pp_telegraf';
     src: url('/font/PPTelegraf/pptelegraf-ultralight-webfont.woff2') format('woff2'),
          url('/font/PPTelegraf/pptelegraf-ultralight-webfont.woff') format('woff');
@@ -55,7 +31,6 @@
     font-style: normal;
 }
 @font-face {
-  
     font-family: 'pp_telegraf';
     src: url('/font/PPTelegraf/pptelegraf-regular-webfont.woff2') format('woff2'),
          url('/font/PPTelegraf/pptelegraf-regular-webfont.woff') format('woff');
@@ -63,11 +38,9 @@
     font-style: normal;
 }
 @font-face {
-  
     font-family: 'pp_telegraf';
     src: url('/font/PPTelegraf/pptelegraf-ultrabold-webfont.woff2') format('woff2'),
          url('/font/PPTelegraf/pptelegraf-ultrabold-webfont.woff') format('woff');
->>>>>>> origin/dev
     font-weight: 700;
     font-style: normal;
 }
@@ -87,17 +60,6 @@
   --B7:#D1D5DB;
   --W: #FFFFFF;
 }
-<<<<<<< HEAD
-
-*{
-  font-family: 'Neue Machina';
-}
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/dev
->>>>>>> origin/dev
 *::-webkit-scrollbar {
   display: none;
 }
