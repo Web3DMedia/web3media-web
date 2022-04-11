@@ -4,18 +4,6 @@ import Image from 'next/image'
 
 const AboutSectionContainer = styled.section`
     border-bottom: 0.5px solid var(--B2);
-    background: url(/images/background.png);
-    background-size: 500px;
-    background-position: center;
-    background-repeat: none;
-    @media (max-width: 1024px) {
-    border: none;
-    background-size: 500px;
-  }
-    @media (max-width: 550px) {
-    border: none;
-    background-size: 300px;
-  }
 `
 const Text = styled.h1`
 background: url(/images/planets.png);

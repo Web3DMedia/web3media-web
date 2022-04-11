@@ -1,5 +1,20 @@
 import styled from 'styled-components'
 
+export const VectorWaveContainer = styled.div`
+    postion: relative;
+    background: url(/images/background.png) !important;
+    background-size: 500px;
+    background-position: center;
+    background-repeat: none;
+    @media (max-width: 1024px) {
+    border: none;
+    background-size: 500px;
+  }
+    @media (max-width: 550px) {
+    border: none;
+    background-size: 300px;
+  }
+`
 export const WaveContainer = styled.div`
    width: 100%;
    height: 160px;
@@ -19,7 +34,7 @@ export const WaveContainer = styled.div`
 
 export const PinkContainer = styled.div`
    width: 100%;
-   height: 160px;
+   padding:80px 0;
    position: relative;
    background: black;
    background-image: url(/images/wave.svg) !important;

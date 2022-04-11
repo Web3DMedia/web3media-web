@@ -26,6 +26,7 @@ export default function Home() {
       </Head>
 
       <DesktopNavbar></DesktopNavbar>
+      
       <Container>
         <HeroSection></HeroSection>
       </Container>
@@ -48,6 +49,7 @@ export default function Home() {
         <TeamSection></TeamSection>
         <Footer></Footer>
      </Container>
+     
     </div>
   )
 }

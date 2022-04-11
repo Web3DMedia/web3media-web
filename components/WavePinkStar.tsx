@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { PinkContainer} from '../styles/WaveSectionStyles'
+import { PinkContainer, VectorWaveContainer} from '../styles/WaveSectionStyles'
 import PinkImage from '../public/images/pink-vector.svg'
 
 const WavePinkStar = () => {

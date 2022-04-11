@@ -1,23 +1,16 @@
 import React from "react"
 import styled, { keyframes } from 'styled-components'
 const HeroSectionContainer = styled.div`
-   background: url(/images/background.png);
-    background-size: 500px;
-    background-position: center;
-    background-repeat: none;
     padding-bottom: 100px;
     text-align:center;
     @media (max-width: 1024px) {
     border: none;
-    background-size: 500px;
     padding-bottom: 250px;
   }
     @media (max-width: 900px) {
-    background-size: 300px;
-    padding-bottom: 100px;
+    padding-bottom: 100px
   }
     @media (max-width: 550px) 
-    background-size: 300px;
     padding: 0;
   }
 `

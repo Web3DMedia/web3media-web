@@ -4,10 +4,6 @@ export const TeamSectionDiv = styled.div`
    position: relative;
    width: 100%;
    padding: 10px;
-   background: url(/images/background.png);
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-position: center;
 `
 
 export const TeamWrapper = styled.div`
