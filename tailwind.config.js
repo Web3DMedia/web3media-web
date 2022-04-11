@@ -41,6 +41,33 @@ module.exports = {
         red500: "#E43C31",
         red600: "#DF1508",
 
+<<<<<<< HEAD
+        green400: "#13C725"
+      },
+      width: {
+        335: '335px',
+        628:'628px',
+        720: '720px',
+      },
+      height: {
+        368: '368px',
+        423: '423px',
+        600: '600px',
+        650: '650px',
+      },
+      minWidth: {
+        628:'628px',
+        720: '720px',
+      },
+      maxWidth:{
+        335:'335px',
+        628:'628px',
+        720: '720px',
+        1440:'1440px'
+      },
+      minHeight: {
+        423: '423px',
+=======
         green400: "#13C725",
 
         main: '#FF6EFF',
@@ -53,6 +80,7 @@ module.exports = {
         b6: '#dfdfdf',
         b7: '#D1D5DB',
         w: '#FFFFFF'
+>>>>>>> origin/dev
       }
     }
   },
