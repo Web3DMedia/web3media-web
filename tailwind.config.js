@@ -5,8 +5,9 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      heading: ["Neue Machina", "ui-sans-serif", "sans-serif"],
-      body: ["Neue Machina", "sans-serif"]
+      heading: ["Neue_Machina", "ui-sans-serif", "sans-serif"],
+      body: ["Neue_Machina", "sans-serif"],
+      display: ['pp_telegraf']
     },
 
     extend: {
@@ -40,6 +41,7 @@ module.exports = {
         red500: "#E43C31",
         red600: "#DF1508",
 
+<<<<<<< HEAD
         green400: "#13C725"
       },
       width: {
@@ -51,15 +53,20 @@ module.exports = {
         368: '368px',
         423: '423px',
         600: '600px',
+<<<<<<< HEAD
         1024: '1024px',
         '50vh':'50vh',
         '70vh':'70vh',
         '80vh':'80vh',
+=======
+        650: '650px',
+>>>>>>> origin/dev
       },
       minWidth: {
         628:'628px',
         720: '720px',
       },
+<<<<<<< HEAD
       minHeight: {
         423: '423px',
       },
@@ -67,6 +74,31 @@ module.exports = {
         1440:'1440px'
       },
       
+=======
+      maxWidth:{
+        335:'335px',
+        628:'628px',
+        720: '720px',
+        1440:'1440px'
+      },
+      minHeight: {
+        423: '423px',
+=======
+        green400: "#13C725",
+
+        main: '#FF6EFF',
+        secondary: '#0AB7F6',
+        b1: '#000000',
+        b2: '#2D2C2C',
+        b3: '#818181',
+        b4: '#C4C4C4',
+        b5: '#D3D3D3',
+        b6: '#dfdfdf',
+        b7: '#D1D5DB',
+        w: '#FFFFFF'
+>>>>>>> origin/dev
+      }
+>>>>>>> origin/dev
     }
   },
   plugins: []
