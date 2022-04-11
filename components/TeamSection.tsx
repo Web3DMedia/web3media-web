@@ -22,25 +22,25 @@ const TeamSection = () => {
                Explore some of our web3 projects
             </p>
          </div>
-         <div className="relative h-50vh sm:h-80vh xl:h-screen flex flex-col items-center justify-center mt-5">
-            <div className="flex flex-col items-center w-28 h-20 absolute top-4 left-4 sm:top-2 sm:left-auto">
+         <div className="relative flex flex-col items-center justify-center mt-5 md:mt-20 h-600 lg:h-full md:p-36 lg:py-40">
+            <div className="flex flex-col items-center w-28 h-20 absolute top-4 -left-10 sm:top-2 md:-top-10 lg:-top-5 sm:left-auto">
                <Image src={EngineeringIcon} alt="icon"/>
-               <h3 className="mt-1">Engineering</h3>
+               <h3 className="mt-1 text-white">Engineering</h3>
             </div>
 
-            <div className="flex flex-col items-center w-28 h-20 absolute top-4 right-4 sm:top-1/2 sm:right-2">
+            <div className="flex flex-col items-center w-28 h-20 absolute top-4 -right-10 sm:top-1/2 sm:right-2 md:-right-24 xl:right-0">
                <Image src={DesignIcon} alt="icon"/>
-               <h3 className="mt-1">Design</h3>
+               <h3 className="mt-1 text-white">Design</h3>
             </div>
 
-            <div className="flex flex-col items-center w-28 h-20 absolute bottom-4 left-4 sm:-bottom-2 sm:left-auto">
+            <div className="flex flex-col items-center w-28 h-20 absolute bottom-4 -left-10 sm:-bottom-2 md:-bottom-14 lg:-bottom-5 sm:left-auto">
                <Image src={AnimationIcon} alt="icon"/>
-               <h3 className="mt-1">Animation</h3>
+               <h3 className="mt-1 text-white">Animation</h3>
             </div>
 
-            <div className="flex flex-col items-center w-28 h-20 absolute bottom-4 right-4 sm:top-1/2 sm:left-2">
+            <div className="flex flex-col items-center w-28 h-20 absolute bottom-4 -right-10 sm:top-1/2 sm:left-2 md:-left-24 xl:left-0">
                <Image src={ManagementIcon} alt="icon"/>
-               <h3 className="mt-1">Management</h3>
+               <h3 className="mt-1 text-white">Management</h3>
             </div>
             <TeamMembers/>
          </div>

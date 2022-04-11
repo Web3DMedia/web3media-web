@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const ProjectWrapper = styled.div`
-   height: 100vh;
+   height: 100%;
    padding: 20px 0px;
 
    @media screen and (max-width: 1920px){
@@ -76,6 +76,10 @@ export const CardCenter = styled.div`
       flex-direction: column;
       align-items:flex-start;
    }
+
+   @media screen and (max-width: 380px){
+      padding-left: 5px;
+   }
 `
 
 export const CardBottom = styled.div`
@@ -94,5 +98,9 @@ export const CardBottom = styled.div`
       margin-top: 20px;
       padding: 0px;
       display: flex;
+   }
+
+   @media screen and (max-width: 380px){
+      padding-left: 5px;
    }
 `
