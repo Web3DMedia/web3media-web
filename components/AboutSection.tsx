@@ -3,19 +3,9 @@ import styled from 'styled-components'
 import Image from 'next/image'
 
 const AboutSectionContainer = styled.section`
-    border-bottom: 0.5px solid var(--B2);
-    background: url(/images/background.png);
-    background-size: 500px;
-    background-position: center;
-    background-repeat: none;
-    @media (max-width: 1024px) {
-    border: none;
-    background-size: 500px;
-  }
-    @media (max-width: 550px) {
-    border: none;
-    background-size: 300px;
-  }
+    @media (max-width: 600px) {
+        padding-bottom: 80px;
+    }
 `
 const Text = styled.h1`
 background: url(/images/planets.png);
@@ -57,7 +47,7 @@ background-repeat: no-repeat;
 }
 `
 const WhiteText = styled.span`
-color: var(--W)
+color: var(--W);
 `
 const Circle = styled.div`
     padding-left:40px;
@@ -70,11 +60,9 @@ const Circle = styled.div`
     justify-content: center;
     align-items: center;
     margin: 0 auto 100px;
-    @media (
+    @media ( max-width: 780px) {
         padding-top:30px;
-        max-width: 780px) {
-        width:100%;
-} 
+    } 
     @media (max-width: 550px) {
         width: 90.76px;
         height: 85px;
@@ -110,7 +98,7 @@ const CircleTextSpan = styled.span`
     font-size: 10px;
     transform-origin: 0 70px;
     @media (max-width: 550px){
-        left: 50%;
+        left: 55%;
         font-size: 8px;
         top: 47px;
         transform-origin: 0 62px;

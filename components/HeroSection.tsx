@@ -1,23 +1,16 @@
 import React from "react"
 import styled, { keyframes } from 'styled-components'
 const HeroSectionContainer = styled.div`
-   background: url(/images/background.png);
-    background-size: 500px;
-    background-position: center;
-    background-repeat: none;
     padding-bottom: 100px;
     text-align:center;
     @media (max-width: 1024px) {
     border: none;
-    background-size: 500px;
     padding-bottom: 250px;
   }
     @media (max-width: 900px) {
-    background-size: 300px;
-    padding-bottom: 100px;
+    padding-bottom: 100px
   }
-    @media (max-width: 550px) 
-    background-size: 300px;
+    @media (max-width: 550px) {
     padding: 0;
   }
 `
@@ -43,7 +36,7 @@ const rotateEllipseOne = keyframes`
 `
 const rotateEllipseTwo = keyframes`
     0% {
-        border-top 2px solid var(--W);
+        border-top: 2px solid var(--W);
     }
     25% {
         border-left: 2px solid var(--W);
@@ -246,6 +239,7 @@ const Button = styled.div`
     linear-gradient(#fff 0 0);
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
+  }
 `
 const ButtonText = styled.h6`
   color: var(--B5);
@@ -295,7 +289,7 @@ const HeroSection = () => {
 
       <Mesh></Mesh>
 
-      <div className="lg:pb-28 xl:pb-64">
+      <div className="pb-40">
         <FirstHeadingText>We are an</FirstHeadingText>
         <SecondHeadingText>Ambitious Creative Web3 Studio.</SecondHeadingText>
         <ThirdHeadingText>
