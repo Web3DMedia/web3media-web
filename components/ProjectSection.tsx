@@ -1,6 +1,5 @@
-import {useState} from 'react'
 import Image from 'next/image'
-import ProjectTxt from '../public/images/ProjectTxt.svg';
+import ProjectTxt from '../public/images/project-txt.svg';
 import CircularGradientBtn from './CircularGradientBtn';
 import {
    ProjectWrapper,
@@ -9,11 +8,16 @@ import {
    CardCenter,
    CardBottom
 } from '../styles/ProjectSection'
+import { useState } from 'react';
+
+interface BottomProps {
+   onHover: boolean;
+}
 
 const ProjectSection = () => {
-   const [papayaHover, setPapayaHover] = useState(false)
-   const [blocassetHover, setBlocassetHover] = useState(false)
-   const [rocketHover, setRocketHover] = useState(false) 
+   const [papayaHover, setPapayaHover] = useState<boolean>(false)
+   const [blocassetHover, setBlocassetHover] = useState<boolean>(false)
+   const [rocketHover, setRocketHover] = useState<boolean>(false) 
 
    return (
       <ProjectWrapper>
@@ -25,8 +29,8 @@ const ProjectSection = () => {
          </div>
          <div className="flex flex-col items-center sm:flex-row overflow-x-scroll sm:h-650">
             <ProjectCard
-               onMouseEnter={() => setPapayaHover(true)}
-               onMouseLeave={() => setPapayaHover(false)}
+               onMouseEnter={() => {setPapayaHover(true)}}
+               onMouseLeave={() => {setPapayaHover(false)}}
             >  
                <ImageContainer>
                   <Image
@@ -44,17 +48,17 @@ const ProjectSection = () => {
                   </p>
                </CardCenter>
                <CardBottom onHover={papayaHover}>
-                  <div className="cursor-pointer flex items-center">
+                  <span className="cursor-pointer flex items-center">
                      <CircularGradientBtn img='/images/arrow-vector.svg'/>
                      <h2 className="ml-3 text-sm xl:text-base">View Site</h2>
-                  </div>
+                  </span>
                </CardBottom>
             </ProjectCard>
 
             <ProjectCard
-               onMouseEnter={() => setBlocassetHover(true)}
-               onMouseLeave={() => setBlocassetHover(false)}
-            >  
+               onMouseEnter={() => {setBlocassetHover(true)}}
+               onMouseLeave={() => {setBlocassetHover(false)}}
+            >
                <ImageContainer>
                   <Image
                      src='/images/blocasset.jpg'
@@ -75,12 +79,12 @@ const ProjectSection = () => {
                      <CircularGradientBtn img='/images/arrow-vector.svg'/>
                      <h2 className="ml-3 text-sm xl:text-base">View Site</h2>
                   </div>
-               </CardBottom>
+               </CardBottom> 
             </ProjectCard>
 
             <ProjectCard
-               onMouseEnter={() => setRocketHover(true)}
-               onMouseLeave={() => setRocketHover(false)}
+               onMouseEnter={() => {setRocketHover(true)}}
+               onMouseLeave={() => {setRocketHover(false)}}
             >  
                <ImageContainer>
                   <Image
