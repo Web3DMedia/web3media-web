@@ -9,7 +9,7 @@ export const WaveContainer = styled.div`
    background-repeat: repeat;
    background-position: center;
    @media screen and (max-width:768px) {
-         background-repeat: no-repeat;
+         background-repeat: repeat;
    }
    @media screen and (max-width:640px){
       height: 120px;
@@ -25,8 +25,9 @@ export const PinkContainer = styled.div`
    background-size: 500px, cover;
    background-repeat: repeat;
    background-position: center;
+   margin: 0;
    @media screen and (max-width:768px) {
-         background-repeat: no-repeat;
+         background-repeat: repeat;
    }
    @media screen and (max-width:640px){
       height: 120px;

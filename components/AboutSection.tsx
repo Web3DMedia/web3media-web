@@ -61,7 +61,7 @@ const Circle = styled.div`
     align-items: center;
     margin: 0 auto 100px;
     @media ( max-width: 780px) {
-        padding-top:30px;
+        padding-top:90px;
     } 
     @media (max-width: 550px) {
         width: 90.76px;
