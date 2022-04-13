@@ -173,7 +173,7 @@ export const moveMemberTwo = keyframes`
       transform: rotate(-20deg);
    }
 `
-export const FirstMemberOne = styled.div`
+export const FirstMemberOne = styled.div<{filterState:boolean}>`
    width:100%;
    height: 100%;
    border-radius: 100%;
@@ -192,8 +192,8 @@ export const FirstMemberOne = styled.div`
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
-      -webkit-filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
-      filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"};
+      -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
+      filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
       transition: ease-in-out 1s filter ;
 
       @media screen and (max-width:1024px){
@@ -209,7 +209,7 @@ export const FirstMemberOne = styled.div`
 
 `
 
-export const FirstMemberTwo = styled.div`
+export const FirstMemberTwo = styled.div<{filterState:boolean}>`
    width:100%;
    height: 100%;
    border-radius: 100%;
@@ -229,8 +229,8 @@ export const FirstMemberTwo = styled.div`
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
-      -webkit-filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
-      filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"};
+      -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
+      filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
       transition: ease-in-out 1s filter ;
 
       @media screen and (max-width:1024px){
@@ -245,7 +245,7 @@ export const FirstMemberTwo = styled.div`
    }
 `
 
-export const FirstMemberThree = styled.div`
+export const FirstMemberThree = styled.div<{filterState:boolean}>`
    width:100%;
    height: 100%;
    border-radius: 100%;
@@ -264,8 +264,8 @@ export const FirstMemberThree = styled.div`
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
-      -webkit-filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
-      filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"};
+      -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
+      filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
       transition: ease-in-out 1s filter ;
 
       @media screen and (max-width:1024px){
@@ -280,7 +280,7 @@ export const FirstMemberThree = styled.div`
    }
 `
 
-export const FirstMemberFour = styled.div`
+export const FirstMemberFour = styled.div<{filterState:boolean}>`
    width:100%;
    height: 100%;
    border-radius: 100%;
@@ -300,8 +300,8 @@ export const FirstMemberFour = styled.div`
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
-      -webkit-filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
-      filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"};
+      -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
+      filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
       transition: ease-in-out 1s filter ;
 
       @media screen and (max-width:1024px){
@@ -316,7 +316,7 @@ export const FirstMemberFour = styled.div`
    }
 `
 
-export const FirstMemberFive = styled.div`
+export const FirstMemberFive = styled.div<{filterState:boolean}>`
    width:100%;
    height: 100%;
    border-radius: 100%;
@@ -335,8 +335,8 @@ export const FirstMemberFive = styled.div`
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
-      -webkit-filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
-      filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"};
+      -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
+      filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
       transition: ease-in-out 1s filter ;
 
       @media screen and (max-width:1024px){
@@ -351,7 +351,7 @@ export const FirstMemberFive = styled.div`
    }
 `
 
-export const FirstMemberSix = styled.div`
+export const FirstMemberSix = styled.div<{filterState:boolean}>`
    width:100%;
    height: 100%;
    border-radius: 100%;
@@ -370,8 +370,8 @@ export const FirstMemberSix = styled.div`
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
-      -webkit-filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
-      filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"};
+      -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
+      filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
       transition: ease-in-out 1s filter ;
 
       @media screen and (max-width:1024px){
@@ -386,7 +386,7 @@ export const FirstMemberSix = styled.div`
    }
 `
 
-export const SecondMemberOne = styled.div`
+export const SecondMemberOne = styled.div<{filterState:boolean}>`
    width:100%;
    height: 100%;
    border-radius: 100%;
@@ -405,8 +405,8 @@ export const SecondMemberOne = styled.div`
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
-      -webkit-filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
-      filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"};
+      -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
+      filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
       transition: ease-in-out 1s filter ;
 
       @media screen and (max-width:1024px){
@@ -421,7 +421,7 @@ export const SecondMemberOne = styled.div`
    }
 `
 
-export const SecondMemberTwo = styled.div`
+export const SecondMemberTwo = styled.div<{filterState:boolean}>`
    width:100%;
    height: 100%;
    border-radius: 100%;
@@ -440,8 +440,8 @@ export const SecondMemberTwo = styled.div`
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
-      -webkit-filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
-      filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"};
+      -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
+      filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
       transition: ease-in-out 1s filter ;
 
       @media screen and (max-width:1024px){
@@ -456,7 +456,7 @@ export const SecondMemberTwo = styled.div`
    }
 `
 
-export const SecondMemberThree = styled.div`
+export const SecondMemberThree = styled.div<{filterState:boolean}>`
    width:100%;
    height: 100%;
    border-radius: 100%;
@@ -475,8 +475,8 @@ export const SecondMemberThree = styled.div`
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
-      -webkit-filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
-      filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"};
+      -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
+      filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
       transition: ease-in-out 1s filter ;
 
       @media screen and (max-width:1024px){
@@ -491,7 +491,7 @@ export const SecondMemberThree = styled.div`
    }
 `
 
-export const ThirdMemberOne = styled.div`
+export const ThirdMemberOne = styled.div<{filterState:boolean}>`
    width:100%;
    height: 100%;
    border-radius: 100%;
@@ -510,8 +510,8 @@ export const ThirdMemberOne = styled.div`
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
-      -webkit-filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
-      filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"};
+      -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
+      filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
       transition: ease-in-out 1s filter ;
 
       @media screen and (max-width:1024px){
@@ -526,7 +526,7 @@ export const ThirdMemberOne = styled.div`
    }
 `
 
-export const ThirdMemberTwo = styled.div`
+export const ThirdMemberTwo = styled.div<{filterState:boolean}>`
    width:100%;
    height: 100%;
    border-radius: 100%;
@@ -545,8 +545,8 @@ export const ThirdMemberTwo = styled.div`
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
-      -webkit-filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
-      filter: ${({img}) => img ? "grayscale(100%)":"grayscale(0)"};
+      -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
+      filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
       transition: ease-in-out 1s filter ;
 
       @media screen and (max-width:1024px){

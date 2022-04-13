@@ -82,11 +82,11 @@ export const CardCenter = styled.div`
    }
 `
 
-export const CardBottom = styled.div`
+export const CardBottom = styled.button<{onHover: boolean}>`
    margin-top: 10px;
    position: absolute;
-   display: ${({onHover}) => onHover ? "flex":"none"};
-   top: ${({onHover}) => onHover ? "100%":"10%"};
+   display: ${(props) => props.onHover ? "flex":"none"};
+   top: ${(props) => props.onHover ? "100%":"10%"};
    left: 0;
    z-index: 2;
    padding: 0px 10px 0px 0px;

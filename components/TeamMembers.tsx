@@ -28,21 +28,21 @@ const TeamMembers = () => {
    return (
       <TeamWrapper>
          <FirstTeamDiv>
-            <FirstMemberOne img={myState}/>
-            <FirstMemberTwo img={myState}/>
-            <FirstMemberThree img={myState}/>
-            <FirstMemberFour img={myState}/>
-            <FirstMemberFive img={myState}/>
-            <FirstMemberSix img={myState}/>
+            <FirstMemberOne filterState={myState}/>
+            <FirstMemberTwo filterState={myState}/>
+            <FirstMemberThree filterState={myState}/>
+            <FirstMemberFour filterState={myState}/>
+            <FirstMemberFive filterState={myState}/>
+            <FirstMemberSix filterState={myState}/>
          </FirstTeamDiv>
          <SecondTeamDiv>
-            <SecondMemberOne img={myState}/>
-            <SecondMemberTwo img={myState}/>
-            <SecondMemberThree img={myState}/>
+            <SecondMemberOne filterState={myState}/>
+            <SecondMemberTwo filterState={myState}/>
+            <SecondMemberThree filterState={myState}/>
          </SecondTeamDiv>
          <ThirdTeamDiv>
-            <ThirdMemberOne img={myState}/>
-            <ThirdMemberTwo img={myState}/>
+            <ThirdMemberOne filterState={myState}/>
+            <ThirdMemberTwo filterState={myState}/>
          </ThirdTeamDiv>
          <WorldDiv></WorldDiv>
       </TeamWrapper>

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import styled from 'styled-components'
 
-const BtnWrapper = styled.button`
+const BtnWrapper = styled.span`
    font-style: normal;
    font-weight: 400;
    font-size: 16px;
@@ -23,7 +23,6 @@ const BtnWrapper = styled.button`
       border-radius: 50%;
       border: 1.8px solid transparent;
       background: linear-gradient(135deg, #FF6EFF 0%, #0AB7F6 100%) border-box;
-      /* mask: linear-gradient(135deg, #FF6EFF 0%, #0AB7F6 100%); */
       -webkit-mask: linear-gradient(#fff 0 0) padding-box,
       linear-gradient(#fff 0 0);
       -webkit-mask-composite: destination-out;
