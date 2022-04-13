@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import ProjectTxt from '../public/images/ProjectTxt.svg';
+import ProjectTxt from '../public/images/project-txt.svg';
 import CircularGradientBtn from './CircularGradientBtn';
 import {
    ProjectWrapper,
@@ -56,6 +56,8 @@ const ProjectSection = () => {
             </ProjectCard>
 
             <ProjectCard
+               onMouseEnter={() => {setBlocassetHover(true)}}
+               onMouseLeave={() => {setBlocassetHover(false)}}
             >
                <ImageContainer>
                   <Image
@@ -81,6 +83,8 @@ const ProjectSection = () => {
             </ProjectCard>
 
             <ProjectCard
+               onMouseEnter={() => {setRocketHover(true)}}
+               onMouseLeave={() => {setRocketHover(false)}}
             >  
                <ImageContainer>
                   <Image

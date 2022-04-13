@@ -90,7 +90,7 @@ export const CardBottom = styled.button<{onHover: boolean}>`
    left: 0;
    z-index: 2;
    padding: 0px 10px 0px 0px;
-   transition: display 0.5s ease-in-out;
+   transition: all 1s ease-in-out;
 
    @media screen and (max-width: 1024px){
       top: 100%;
