@@ -43,7 +43,7 @@ export default function Home() {
         <ProjectSection></ProjectSection>
       </Container>
 
-    <WaveBlueStar></WaveBlueStar>
+      <WaveBlueStar></WaveBlueStar>
     
       <Container>
         <TeamSection></TeamSection>
