@@ -27,11 +27,12 @@ const ProjectSection = () => {
             </div>
             <h2 className="text-white font-light text-base sm:text-lg lg:text-2xl xl:text-3xl">Explore some of our web3 projects</h2>
          </div>
-         <div className="flex flex-col items-center sm:flex-row overflow-x-scroll sm:h-650">
+         <div className="flex flex-col items-center justify-center sm:justify-between sm:flex-row sm:overflow-x-scroll sm:h-650 w-full pl-2">
             <ProjectCard
                onMouseEnter={() => {setPapayaHover(true)}}
                onMouseLeave={() => {setPapayaHover(false)}}
             >  
+               <div className="z-[2] bg-black h-full w-full absolute left-0 top-0 hidden xl:flex"/>
                <ImageContainer>
                   <Image
                      src='/images/papaya.jpg'
@@ -59,6 +60,7 @@ const ProjectSection = () => {
                onMouseEnter={() => {setBlocassetHover(true)}}
                onMouseLeave={() => {setBlocassetHover(false)}}
             >
+               <div className="z-[2] bg-black h-full w-full absolute left-0 top-0 hidden xl:flex"/>
                <ImageContainer>
                   <Image
                      src='/images/blocasset.jpg'
@@ -85,7 +87,8 @@ const ProjectSection = () => {
             <ProjectCard
                onMouseEnter={() => {setRocketHover(true)}}
                onMouseLeave={() => {setRocketHover(false)}}
-            >  
+            > 
+               <div className="z-[2] bg-black h-full w-full absolute left-0 top-0 hidden xl:flex"/>
                <ImageContainer>
                   <Image
                      src='/images/rocket.jpg'
@@ -101,12 +104,13 @@ const ProjectSection = () => {
                      We have suites of digital blockchain products in the pipeline
                   </p>
                </CardCenter>
-               <CardBottom onHover={rocketHover}>
-                  <div className="cursor-pointer flex items-center">
-                     <CircularGradientBtn img='/images/arrow-vector.svg'/>
-                     <h2 className="ml-3 text-sm xl:text-base">Join our early access</h2>
-                  </div>
-               </CardBottom>
+
+                  <CardBottom onHover={rocketHover}>
+                     <div className="cursor-pointer flex items-center">
+                        <CircularGradientBtn img='/images/arrow-vector.svg'/>
+                        <h2 className="ml-3 text-sm xl:text-base">Join our early access</h2>
+                     </div>
+                  </CardBottom>
             </ProjectCard>
             
          </div>

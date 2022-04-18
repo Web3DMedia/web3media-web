@@ -71,6 +71,7 @@ export const CardCenter = styled.div`
    align-items: center;
    justify-content: space-between;
    width: 100%;
+   position: relative;
 
    @media screen and (max-width: 640px){
       flex-direction: column;
@@ -78,19 +79,19 @@ export const CardCenter = styled.div`
    }
 
    @media screen and (max-width: 380px){
-      padding-left: 5px;
+      padding-left: 20px;
    }
 `
 
 export const CardBottom = styled.button<{onHover: boolean}>`
    margin-top: 10px;
    position: absolute;
-   display: ${(props) => props.onHover ? "flex":"none"};
-   top: ${(props) => props.onHover ? "100%":"10%"};
+   /* display: ${(props) => props.onHover ? "flex":"none"}; */
+   top: ${(props) => props.onHover ? "100%":"0%"};
    left: 0;
-   z-index: 2;
+   z-index: 1;
    padding: 0px 10px 0px 0px;
-   transition: all 1s ease-in-out;
+   transition: top .5s ease-in-out;
 
    @media screen and (max-width: 1024px){
       top: 100%;
