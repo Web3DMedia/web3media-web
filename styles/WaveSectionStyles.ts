@@ -13,6 +13,7 @@ export const WaveContainer = styled.div`
    }
    @media screen and (max-width:640px){
       height: 120px;
+      margin-top: 20px;
    }
 `
 
@@ -31,5 +32,6 @@ export const PinkContainer = styled.div`
    }
    @media screen and (max-width:640px){
       height: 120px;
+      margin-bottom: 20px;
    }
 `
