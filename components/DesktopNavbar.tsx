@@ -28,10 +28,18 @@ const Li = styled.li`
     color: var(--B6);
     border-left: 0.5px solid var(--B2);
     padding: 47px 44px;
+    cursor: pointer;
     text-transform: uppercase;
-        &:last-child {
-            padding: 40px 0px 0px 34px;
-        }
+    &:hover {
+        font-size:18px;
+    }
+    &:last-child {
+        padding: 40px 0px 0px 34px;
+    }
+    &:last-child:hover {
+        font-size: 16px;
+    }
+
 
     @media (max-width: 1024px) {
     display: none;
