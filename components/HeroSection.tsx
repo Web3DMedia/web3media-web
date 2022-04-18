@@ -221,6 +221,7 @@ const ThirdHeadingText = styled.p`
 `
 const Button = styled.div`
   padding: 16px 33px;
+  cursor: pointer;
   margin-bottom: 146px;
   position: relative;
   width: 205px;
