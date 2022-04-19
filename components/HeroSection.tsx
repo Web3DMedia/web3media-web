@@ -238,8 +238,8 @@ const Button = styled.div`
     background: var(--GradientOne) border-box;
     -webkit-mask: linear-gradient(#fff 0 0) padding-box,
     linear-gradient(#fff 0 0);
-    -webkit-mask-composite: destination-out;
-    mask-composite: exclude;
+    mask-composite: destination-out;
+    -webkit-mask-composite: exclude;
   }
 `
 const ButtonText = styled.h6`
