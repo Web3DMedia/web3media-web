@@ -91,10 +91,8 @@ const DesktopNavbar = () => {
                 </Li>
             </ul>
 
-            {
-                showmenu &&
-                <MobileMenu closemenu={setShowmenu}></MobileMenu>
-            }
+            <MobileMenu slide={showmenu} closemenu={setShowmenu}></MobileMenu>
+            
         </Navbar>
     )
 }

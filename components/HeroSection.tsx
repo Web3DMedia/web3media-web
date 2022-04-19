@@ -84,7 +84,7 @@ const EllipseOne = styled.div`
     animation: ${rotateEllipseOne} linear infinite;
     transition: ease-in-out;
     animation-delay: 1s;
-    animation-duration: 4s;
+    animation-duration: 2s;
     position: absolute;
     @media (max-width: 550px) {
         width: 168px;
@@ -100,7 +100,7 @@ const EllipseTwo = styled.div`
     animation: ${rotateEllipseTwo} 3s linear infinite;
     transition: ease-in-out;
     animation-delay: 0.8s;
-    animation-duration: 4s;
+    animation-duration: 2s;
     @media (max-width: 550px) {
         width: 168px;
         height: 314px;
@@ -181,7 +181,7 @@ const SecondHeadingText = styled.h1`
     text-fill-color: transparent;
     padding-bottom: 42px ;
     animation: ${colorchange} 10s linear infinite;
-    transition: ease-in-out;
+    transition: animation ease-in-out;
     animation-delay: 0s;
     animation-duration: 10s;
     
