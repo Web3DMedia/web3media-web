@@ -17,40 +17,62 @@ const HeroSectionContainer = styled.div`
 const rotateEllipseOne = keyframes`
     0% {
         border-bottom: 2px solid var(--W);
+        border-right: none;
+        border-top: none;
+        border-left: none;
     }
     25% {
         border-right: 2px solid var(--W);
         border-bottom: none;
+        border-top: none;
+        border-left: none;
     }
     50% {
         border-top: 2px solid var(--W);
         border-right: none;
+        border-bottom: none;
+        border-left: none;
     }
     75% {
         border-left: 2px solid var(--W);
         border-top:none;
+        border-right:none;
+        border-bottom:none;
     }
     100% {
       border-left:none;
+      border-top:none;
+      border-right:none;
+      border-bottom: 2px solid var(--W);
     }
 `
 const rotateEllipseTwo = keyframes`
     0% {
         border-top: 2px solid var(--W);
+        border-right: none;
+        border-bottom: none;
+        border-left: none;
     }
     25% {
         border-left: 2px solid var(--W);
         border-top: none;
+        border-right: none;
+        border-bottom: none;
     }
     50% {
         border-bottom: 2px solid var(--W);
         border-top: none;
+        border-left: none;
+        border-right: none;
     }
     75% {
         border-right: 2px solid var(--W);
         border-bottom:none;
+        border-left:none;
+        border-top:none;
     }
     100% {
+      border-top: 2px solid var(--W);
       border-right:none;
     }
 `
@@ -82,9 +104,9 @@ const EllipseOne = styled.div`
     width: 383px;
     height: 715px;
     animation: ${rotateEllipseOne} linear infinite;
-    transition: ease-in-out;
-    animation-delay: 1s;
-    animation-duration: 2s;
+    transition: all 20s ease-in-out;
+    animation-delay: 1.4s;
+    animation-duration: 6s;
     position: absolute;
     @media (max-width: 550px) {
         width: 168px;
@@ -97,10 +119,10 @@ const EllipseTwo = styled.div`
     border-radius: 50%;
     width: 383px;
     height: 715px;
-    animation: ${rotateEllipseTwo} 3s linear infinite;
-    transition: ease-in-out;
+    animation: ${rotateEllipseTwo} linear infinite;
+    transition: all 20s ease-in-out;
     animation-delay: 0.8s;
-    animation-duration: 2s;
+    animation-duration: 6s;
     @media (max-width: 550px) {
         width: 168px;
         height: 314px;

@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import styled, {keyframes} from 'styled-components'
+import styled from 'styled-components'
 
 const MobileMenuContainer = styled.div<{slide:boolean}>`
     @media (max-width: 1024px) {
