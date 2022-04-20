@@ -1,13 +1,12 @@
 import React from "react"
 import styled, { keyframes } from 'styled-components'
+import Image from 'next/image'
+import Container from "../components/Container"
 const HeroSectionContainer = styled.div`
-    padding-bottom: 100px;
+    padding-bottom: 20px;
     text-align:center;
     @media (max-width: 1024px) {
     border: none;
-  }
-    @media (max-width: 900px) {
-    padding-bottom: 0px
   }
 `
 const rotateEllipseOne = keyframes`
@@ -145,31 +144,6 @@ const Mesh = styled.div`
       height: 442px;
     }
 `
-const colorchange = keyframes`
-    0% {
-        background: linear-gradient(135deg, #FF6EFF 0%, #0AB7F6 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
-    }
-
-    50% {
-        background: linear-gradient(135deg, #0AB7F6 0%, #FF6EFF 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
-    }
-
-    100% {
-        background: linear-gradient(135deg, #62FF8E 0%, #25B1FF 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
-    }
-`
 const FirstHeadingText = styled.h3`
     font-weight: 800;
     font-size: 40px;
@@ -188,20 +162,46 @@ const FirstHeadingText = styled.h3`
         padding-bottom: 16px;
     }
 `
+const colorchange = keyframes`
+    0% {
+      background: linear-gradient(135deg, #FF6EFF 0%, #0AB7F6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    25% {
+      background: linear-gradient(135deg, #0AB7F6 0%, #FF6EFF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;   
+    }
+    50% {
+      background: linear-gradient(135deg, #62FF8E 0%, #25B1FF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text; 
+    }
+    100% {
+      background: linear-gradient(135deg, #FF6EFF 0%, #0AB7F6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+        }
+`
 const SecondHeadingText = styled.h1`
     font-weight: 800;
     font-size: 112px;
     line-height: 100px;
+    background-image: linear-gradient(135deg, #FF6EFF 0%, #0AB7F6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    background: linear-gradient(135deg, #FF6EFF 0%, #0AB7F6 100%);
+    animation: ${colorchange} 10s linear infinite;
+    transition: animation 10s ease-in-out;
     text-fill-color: transparent;
     padding-bottom: 42px ;
-    animation: ${colorchange} 10s linear infinite;
-    transition: animation ease-in-out;
-    animation-delay: 0s;
-    animation-duration: 10s;
+    animation-delay: 9s;
+    animation-duration: 9s;
     
     @media (max-width: 1024px) {
         font-weight: 800;
@@ -238,34 +238,9 @@ const ThirdHeadingText = styled.p`
   }
 `
 const Button = styled.div`
-  padding: 16px 33px;
-  cursor: pointer;
-  margin-bottom: 146px;
-  position: relative;
-  width: 205px;
-  margin: auto;
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 16px;
-    border: 1.8px solid transparent;
-    background: var(--GradientOne) border-box;
-    -webkit-mask: linear-gradient(#fff 0 0) padding-box,
-    linear-gradient(#fff 0 0);
-    mask-composite: destination-out;
-    -webkit-mask-composite: exclude;
-  }
+padding:40px 200px;
+cursor:pointer;
 `
-const ButtonText = styled.h6`
-  color: var(--B5);
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 15px;`
 const SocialContainer = styled.ul`
   position: absolute;
   display: flex;
@@ -302,6 +277,7 @@ const SocialCircle = styled.div`
 const HeroSection = () => {
   return (
     <>
+    <Container>
     <HeroSectionContainer className="relative m-auto flex justify-center overflow-hidden" >
       <EllipseContainer>
         <EllipseOne></EllipseOne>
@@ -310,18 +286,21 @@ const HeroSection = () => {
 
       <Mesh></Mesh>
 
-      <div className="pb-40 2xl:w-1/2">
+      <div className="pb-40">
         <FirstHeadingText>We are an</FirstHeadingText>
         <SecondHeadingText>Ambitious Creative Web3 Studio.</SecondHeadingText>
         <ThirdHeadingText>
           Giving financial freedom and access to designers, artists, blockchain
           talents and creative minds.
         </ThirdHeadingText>
-        <Button>
-          <ButtonText>Our Superpowers</ButtonText>
-        </Button>
-      </div>
+
+            <div className="cursor-pointer flex justify-center m-auto hover:scale-125 w-122 h-14 lg:w-139 lg:h-19 2xl:w-228 xl:h-47">
+                <Image src='/images/our-superpowers-btn.svg' width={228} height={47} alt="logo" />
+            </div>
+
+          </div>
     </HeroSectionContainer>
+    </Container>
 
       <div className="relative text-w">
         <SocialContainer>

@@ -35,9 +35,10 @@ const Li = styled.li`
     }
     &:last-child {
         padding: 40px 0px 0px 34px;
+        cursor: auto;
     }
     &:last-child:hover {
-        font-size: 16px;
+        font-size: 0px;
     }
 
 
