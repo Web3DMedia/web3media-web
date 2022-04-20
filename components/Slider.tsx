@@ -14,6 +14,14 @@ background-repeat: none;
 box-sizing: border-box;
 overflow: hidden;
 `
+const SliderText = styled.h2`
+font-weight: 400;
+font-size: 18px;
+line-height: 40px;
+text-align: center;
+letter-spacing: 0.01em;
+color: var(--W)
+`
 const SliderContainer = styled.div`
 border-top: 0.5px solid var(--B2);
 border-bottom: 0.5px solid var(--B2);
@@ -26,10 +34,13 @@ position: relative;
 `
 const SliderInnerContainer = styled.div`
 display: block;
-top: 30%;
+top: 18%;
 width: 200%;
 position: absolute;
-animation: ${slider} 7s linear infinite;
+animation: ${slider} 17s linear infinite;
+&:hover {
+   animation-play-state: paused;
+}
 `
 const SlideImageContainer = styled.div`
 padding: 0 20px;
@@ -52,86 +63,64 @@ width: 50%;
 const Slider = () => {
   return (
 <BackingSlider>
+  <SliderText className='text-w text-center pb-6'>Backed by</SliderText>
   <SliderContainer className='text-w flex'>
     <SliderInnerContainer>
       <SlideImageOne>
 
       <SlideImageContainer>
-        <Image src='/images/gumi.png'  width={109} height={64} alt="gumi"></Image>
+        <Image src='/images/backed-by-1.png'  width={64} height={64} alt="gumi" objectFit='contain'></Image>
       </SlideImageContainer>
-
       <SlideImageContainer>
-        <Image src='/images/coin-fund.png'  width={109} height={64} alt="coinfund"></Image>
+        <Image src='/images/backed-by-2.png'  width={64} height={64} alt="gumi" objectFit='contain'></Image>
       </SlideImageContainer>
-
       <SlideImageContainer>
-        <Image src='/images/at-capital.png'  width={109} height={64} alt="atcapital"></Image>
+        <Image src='/images/backed-by-1.png'  width={64} height={64} alt="gumi" objectFit='contain'></Image>
       </SlideImageContainer>
-
       <SlideImageContainer>
-        <Image src='/images/bull.png'  width={109} height={64} alt="bull"></Image>  
-      </SlideImageContainer> 
-
-      <SlideImageContainer>
-        <Image src='/images/gumi.png'  width={109} height={64} alt="gumi"></Image>
+        <Image src='/images/backed-by-2.png'  width={64} height={64} alt="gumi" objectFit='contain'></Image>
       </SlideImageContainer>
-
       <SlideImageContainer>
-        <Image src='/images/coin-fund.png'  width={109} height={64} alt="coinfund"></Image>
-      </SlideImageContainer> 
-
-      <SlideImageContainer>
-        <Image src='/images/at-capital.png'  width={109} height={64} alt="atcapital"></Image>
+        <Image src='/images/backed-by-1.png'  width={64} height={64} alt="gumi" objectFit='contain'></Image>
       </SlideImageContainer>
-
       <SlideImageContainer>
-        <Image src='/images/bull.png'  width={109} height={64} alt="bull"></Image>  
+        <Image src='/images/backed-by-2.png'  width={64} height={64} alt="gumi" objectFit='contain'></Image>
       </SlideImageContainer>
-
       <SlideImageContainer>
-        <Image src='/images/gumi.png'  width={109} height={64} alt="gumi"></Image>
+        <Image src='/images/backed-by-1.png'  width={64} height={64} alt="gumi" objectFit='contain'></Image>
       </SlideImageContainer>
-
+      <SlideImageContainer>
+        <Image src='/images/backed-by-2.png'  width={64} height={64} alt="gumi" objectFit='contain'></Image>
+      </SlideImageContainer>
+      
     </SlideImageOne>
 
     
     <SlideImageOne>
 
       <SlideImageContainer>
-        <Image src='/images/gumi.png'  width={109} height={64} alt="gumi"></Image>
+        <Image src='/images/backed-by-1.png'  width={64} height={64} alt="gumi" objectFit='contain'></Image>
       </SlideImageContainer>
-
       <SlideImageContainer>
-        <Image src='/images/coin-fund.png'  width={109} height={64} alt="coinfund"></Image>
+        <Image src='/images/backed-by-2.png'  width={64} height={64} alt="gumi" objectFit='contain'></Image>
       </SlideImageContainer>
-
       <SlideImageContainer>
-        <Image src='/images/at-capital.png'  width={109} height={64} alt="atcapital"></Image>
+        <Image src='/images/backed-by-1.png'  width={64} height={64} alt="gumi" objectFit='contain'></Image>
       </SlideImageContainer>
-
       <SlideImageContainer>
-        <Image src='/images/bull.png'  width={109} height={64} alt="bull"></Image>  
-      </SlideImageContainer> 
-
-      <SlideImageContainer>
-        <Image src='/images/gumi.png'  width={109} height={64} alt="gumi"></Image>
+        <Image src='/images/backed-by-2.png'  width={64} height={64} alt="gumi" objectFit='contain'></Image>
       </SlideImageContainer>
-
       <SlideImageContainer>
-        <Image src='/images/coin-fund.png'  width={109} height={64} alt="coinfund"></Image>
-      </SlideImageContainer>   
-
-      <SlideImageContainer>
-        <Image src='/images/at-capital.png'  width={109} height={64} alt="atcapital"></Image>
+        <Image src='/images/backed-by-1.png'  width={64} height={64} alt="gumi" objectFit='contain'></Image>
       </SlideImageContainer>
-
       <SlideImageContainer>
-        <Image src='/images/bull.png'  width={109} height={64} alt="bull"></Image>  
+        <Image src='/images/backed-by-2.png'  width={64} height={64} alt="gumi" objectFit='contain'></Image>
       </SlideImageContainer>
-
-      
       <SlideImageContainer>
-        <Image src='/images/gumi.png'  width={109} height={64} alt="gumi"></Image>
+        <Image src='/images/backed-by-1.png'  width={64} height={64} alt="gumi" objectFit='contain'></Image>
+      </SlideImageContainer>
+      <SlideImageContainer>
+        <Image src='/images/backed-by-2.png'  width={64} height={64} alt="gumi" objectFit='contain'></Image>
       </SlideImageContainer>
 
     </SlideImageOne>
