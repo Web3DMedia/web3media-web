@@ -5,13 +5,9 @@ const HeroSectionContainer = styled.div`
     text-align:center;
     @media (max-width: 1024px) {
     border: none;
-    padding-bottom: 250px;
   }
     @media (max-width: 900px) {
-    padding-bottom: 100px
-  }
-    @media (max-width: 550px) {
-    padding: 0;
+    padding-bottom: 0px
   }
 `
 const rotateEllipseOne = keyframes`
@@ -271,13 +267,14 @@ const ButtonText = styled.h6`
   font-size: 16px;
   line-height: 15px;`
 const SocialContainer = styled.ul`
-    position: absolute;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-right: 80px;
-  right: 0;
-  padding-top: 552px;
+  right:0;
+  top: -290px;
+  padding-top: -20px;
   display: flex;
   flex-direction: column;
   @media (max-width: 1024px) {
@@ -304,6 +301,7 @@ const SocialCircle = styled.div`
 `
 const HeroSection = () => {
   return (
+    <>
     <HeroSectionContainer className="relative m-auto flex justify-center overflow-hidden" >
       <EllipseContainer>
         <EllipseOne></EllipseOne>
@@ -312,7 +310,7 @@ const HeroSection = () => {
 
       <Mesh></Mesh>
 
-      <div className="pb-40">
+      <div className="pb-40 2xl:w-1/2">
         <FirstHeadingText>We are an</FirstHeadingText>
         <SecondHeadingText>Ambitious Creative Web3 Studio.</SecondHeadingText>
         <ThirdHeadingText>
@@ -323,8 +321,9 @@ const HeroSection = () => {
           <ButtonText>Our Superpowers</ButtonText>
         </Button>
       </div>
+    </HeroSectionContainer>
 
-      <div>
+      <div className="relative text-w">
         <SocialContainer>
           <SocialLinks>LI</SocialLinks>
           <SocialLinks>IG</SocialLinks>
@@ -333,7 +332,7 @@ const HeroSection = () => {
           <SocialLinks> <SocialCircle></SocialCircle> </SocialLinks>
         </SocialContainer>
       </div>
-    </HeroSectionContainer>
+    </>
   )
 }
 

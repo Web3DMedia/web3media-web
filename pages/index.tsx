@@ -26,10 +26,8 @@ export default function Home() {
       </Head>
 
       <DesktopNavbar></DesktopNavbar>
-      
-      <Container>
+    
         <HeroSection></HeroSection>
-      </Container>
 
       <Slider></Slider>
 
