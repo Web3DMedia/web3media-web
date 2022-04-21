@@ -3,14 +3,20 @@ import styled, {keyframes} from 'styled-components'
 export const TeamSectionDiv = styled.div`
    position: relative;
    width: 100%;
-   padding: 10px;
    height: 100%;
    margin-bottom: 40px;
+`
 
-
-   @media screen and (max-width: 1024px){
-      padding: 30px
-   }
+export const TeamUnderlayMesh = styled.div`
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-image: url(/images/team-mesh.png), url(/images/underlay-mesh.png);
+   background-repeat: no-repeat, no-repeat;
+   background-position: top right, center top;
+   background-size: auto, auto;
 `
 
 export const TeamWrapper = styled.div`

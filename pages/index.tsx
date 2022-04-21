@@ -12,6 +12,9 @@ import HeroSection from "../components/HeroSection"
 import AboutSection from "../components/AboutSection"
 import Slider from '../components/Slider'
 
+import { ProjectsUnderLay } from "../styles/ProjectSection"
+import { TeamUnderlayMesh } from "../styles/TeameMemberStyles"
+
 export default function Home() {
 
   return (
@@ -40,16 +43,17 @@ export default function Home() {
       <WavePinkStar></WavePinkStar>
       
       <Container>
+        <ProjectsUnderLay/>
         <ProjectSection></ProjectSection>
       </Container>
+        <WaveBlueStar></WaveBlueStar>
 
-      <WaveBlueStar></WaveBlueStar>
-    
       <Container>
+        
+        <TeamUnderlayMesh/>
         <TeamSection></TeamSection>
         <Footer></Footer>
-     </Container>
-     
+      </Container>
     </div>
   )
 }

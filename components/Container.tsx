@@ -16,7 +16,7 @@ const ContainerContainer = styled.div`
 `
 const Container = ({ children }) => {
     return (
-        <ContainerContainer className='bg-b1' >
+        <ContainerContainer className='bg-b1 relative' >
             <div className='max-w-1440 m-auto px-6 md:px-20 xl:px-36'>
                 {children}
             </div>
