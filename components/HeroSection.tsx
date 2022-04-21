@@ -181,16 +181,16 @@ const SecondHeadingText = styled.h1`
     font-size: 112px;
     line-height: 100px;
     padding-bottom: 42px ;
-    background-image: linear-gradient(135deg, #FF6EFF 5%, #0AB7F6 25%, #0AB7F6 30%, #FF6EFF 60%, #62FF8E 70%, #25B1FF 100%);
+    background-image: linear-gradient(135deg, #FF6EFF 5%, #0AB7F6 25%, #0AB7F6 30%, #FF6EFF 55%, #62FF8E 70%, #25B1FF 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
     background-size: 300%;
     background-position: 0%;
-    -webkit-animation: ${colorchange} 10s ease-in-out 2s infinite normal;
-    animation: ${colorchange} 10s ease-in-out 2s infinite normal;
-    transition: background-position 4s ease-in-out;
+    -webkit-animation: ${colorchange} 20s ease-in-out 2s infinite normal;
+    animation: ${colorchange} 20s ease-in-out 2s infinite normal;
+    transition: background-position 5s ease-in-out;
     @media (max-width: 1024px) {
         font-weight: 800;
         font-size: 80px;
