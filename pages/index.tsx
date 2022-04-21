@@ -44,7 +44,7 @@ export default function Home() {
         <ProjectsUnderLay/>
         <ProjectSection></ProjectSection>
       </Container>
-        <WaveBlueStar></WaveBlueStar>
+      <WaveBlueStar></WaveBlueStar>
 
       <Container>
         

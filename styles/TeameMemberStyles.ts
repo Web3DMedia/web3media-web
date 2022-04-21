@@ -170,29 +170,58 @@ export const WorldDiv = styled.div`
 `
 
 export const moveMemberOne = keyframes`
-   0%{
-      transform: rotate(20deg);
+   0%{ 
+      transform: rotateZ(0deg);
+   }
+   25%{
+      transform: rotateZ(30deg);
+   }
+   50%{
+      transform: rotateZ(0deg)
+   }
+   75%{
+      transform: rotateZ(-30deg);
+   }
+   100%{
+      transform: rotateZ(0deg);
    }
 `
 export const moveMemberTwo = keyframes`
-   0%{
-      transform: rotate(-20deg);
+   0%{ 
+      transform: rotateZ(0deg);
+   }
+   25%{
+      transform: rotateZ(-30deg);
+   }
+   50%{
+      transform: rotateZ(0deg)
+   }
+   75%{
+      transform: rotateZ(30deg);
+   }
+   100%{
+      transform: rotateZ(0deg);
    }
 `
+
 export const FirstMemberOne = styled.div<{filterState:boolean}>`
    width:100%;
    height: 100%;
    border-radius: 100%;
    position: absolute;
-   animation: ${moveMemberOne} 3s linear infinite alternate; 
+   animation-name: ${moveMemberOne};
+   animation-duration: 10s;
+   animation-iteration-count: infinite;
+   animation-fill-mode: both;
+   animation-delay: 1s;
 
    &::before{
       content: "";
       position: absolute;
       width: 60px;
       height: 60px;
-      top: 5%;
-      left: 15%;
+      top: 10%;
+      left: 10%;
       border-radius: 50%;
       background-image: url(/images/team/clement.png);
       background-size: contain;
@@ -200,7 +229,7 @@ export const FirstMemberOne = styled.div<{filterState:boolean}>`
       background-position: center;
       -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
       filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
-      transition: ease-in-out 1s filter ;
+      transition: ease-in-out 2s filter ;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -221,15 +250,20 @@ export const FirstMemberTwo = styled.div<{filterState:boolean}>`
    border-radius: 100%;
    position: absolute;
    background: transparent;
-   animation: ${moveMemberOne} 3s linear infinite alternate; 
+   animation-name: ${moveMemberOne};
+   animation-duration: 10s;
+   animation-iteration-count: infinite;
+   animation-fill-mode: linear;
+   animation-delay: 1s;
+
 
    &::before{
       content: "";
       position: absolute;
       width: 60px;
       height: 60px;
-      top: 10%;
-      left: 80%;
+      top: 65%;
+      left: -1%;
       border-radius: 50%;
       background-image: url(/images/team/okwu.png);
       background-size: contain;
@@ -237,7 +271,7 @@ export const FirstMemberTwo = styled.div<{filterState:boolean}>`
       background-position: center;
       -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
       filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
-      transition: ease-in-out 1s filter ;
+      transition: ease-in-out 2s filter ;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -256,15 +290,19 @@ export const FirstMemberThree = styled.div<{filterState:boolean}>`
    height: 100%;
    border-radius: 100%;
    position: absolute;
-   animation: ${moveMemberOne} 3s linear infinite alternate; 
+   animation-name: ${moveMemberOne};
+   animation-duration: 10s;
+   animation-iteration-count: infinite;
+   animation-fill-mode: linear;
+   animation-delay: 1s;
 
    &::before{
       content: "";
       position: absolute;
       width: 60px;
       height: 60px;
-      top: 50%;
-      left: -4%;
+      top: 89%;
+      left: 25%;
       border-radius: 50%;
       background-image: url(/images/team/seyi.png);
       background-size: contain;
@@ -272,7 +310,7 @@ export const FirstMemberThree = styled.div<{filterState:boolean}>`
       background-position: center;
       -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
       filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
-      transition: ease-in-out 1s filter ;
+      transition: ease-in-out 2s filter ;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -291,15 +329,20 @@ export const FirstMemberFour = styled.div<{filterState:boolean}>`
    height: 100%;
    border-radius: 100%;
    position: absolute;
-   animation: ${moveMemberOne} 3s linear infinite alternate; 
+   animation-name: ${moveMemberOne};
+   animation-duration: 10s;
+   animation-iteration-count: infinite;
+   animation-fill-mode: linear;
+   animation-delay: 1s;
+
 
    &::before{
       content: "";
       position: absolute;
       width: 60px;
       height: 60px;
-      top: 80%;
-      left: 10%;
+      top: 90%;
+      left: 62%;
       border-radius: 50%;
       background-color: pin;
       background-image: url(/images/team/fatima.png);
@@ -308,7 +351,7 @@ export const FirstMemberFour = styled.div<{filterState:boolean}>`
       background-position: center;
       -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
       filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
-      transition: ease-in-out 1s filter ;
+      transition: ease-in-out 2s filter ;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -327,15 +370,19 @@ export const FirstMemberFive = styled.div<{filterState:boolean}>`
    height: 100%;
    border-radius: 100%;
    position: absolute;
-   animation: ${moveMemberOne} 3s linear infinite alternate; 
+   animation-name: ${moveMemberOne};
+   animation-duration: 10s;
+   animation-iteration-count: infinite;
+   animation-fill-mode: linear;
+   animation-delay: 1s;
 
    &::before{
       content: "";
       position: absolute;
       width: 60px;
       height: 60px;
-      top: 91%;
-      left: 65%;
+      top: 55%;
+      left: 92%;
       border-radius: 50%;
       background-image: url(/images/team/daniel.png);
       background-size: contain;
@@ -343,7 +390,7 @@ export const FirstMemberFive = styled.div<{filterState:boolean}>`
       background-position: center;
       -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
       filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
-      transition: ease-in-out 1s filter ;
+      transition: ease-in-out 2s filter ;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -362,15 +409,20 @@ export const FirstMemberSix = styled.div<{filterState:boolean}>`
    height: 100%;
    border-radius: 100%;
    position: absolute;
-   animation: ${moveMemberOne} 3s linear infinite alternate; 
+   animation-name: ${moveMemberOne};
+   animation-duration: 10s;
+   animation-iteration-count: infinite;
+   animation-fill-mode: linear;
+   animation-delay: 1s;
+
 
    &::before{
       content: "";
       position: absolute;
       width: 60px;
       height: 60px;
-      top: 40%;
-      left: 95%;
+      top: 20%;
+      left: 87%;
       border-radius: 50%;
       background-image: url(/images/team/fatima.png);
       background-size: contain;
@@ -378,7 +430,7 @@ export const FirstMemberSix = styled.div<{filterState:boolean}>`
       background-position: center;
       -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
       filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
-      transition: ease-in-out 1s filter ;
+      transition: ease-in-out 2s filter ;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -397,15 +449,19 @@ export const SecondMemberOne = styled.div<{filterState:boolean}>`
    height: 100%;
    border-radius: 100%;
    position: absolute;
-   animation: ${moveMemberTwo} 3s linear infinite alternate; 
+   animation-name: ${moveMemberTwo};
+   animation-duration: 10s;
+   animation-iteration-count: infinite;
+   animation-fill-mode: linear;
+   animation-delay: 1s;
 
    &::before{
       content: "";
       position: absolute;
       width: 60px;
       height: 60px;
-      top: 60%;
-      left: -5%;
+      top: 45%;
+      left: -8%;
       border-radius: 50%;
       background-image: url(/images/team/abel.png);
       background-size: contain;
@@ -413,7 +469,7 @@ export const SecondMemberOne = styled.div<{filterState:boolean}>`
       background-position: center;
       -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
       filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
-      transition: ease-in-out 1s filter ;
+      transition: ease-in-out 2s filter ;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -432,14 +488,18 @@ export const SecondMemberTwo = styled.div<{filterState:boolean}>`
    height: 100%;
    border-radius: 100%;
    position: absolute;
-   animation: ${moveMemberTwo} 3s linear infinite alternate; 
+   animation-name: ${moveMemberTwo};
+   animation-duration: 10s;
+   animation-iteration-count: infinite;
+   animation-fill-mode: linear;
+   animation-delay: 1s;
 
    &::before{
       content: "";
       position: absolute;
       width: 60px;
       height: 60px;
-      top: 90%;
+      top: 85%;
       left: 60%;
       border-radius: 50%;
       background-image: url(/images/team/ella.png);
@@ -448,7 +508,7 @@ export const SecondMemberTwo = styled.div<{filterState:boolean}>`
       background-position: center;
       -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
       filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
-      transition: ease-in-out 1s filter ;
+      transition: ease-in-out 2s filter ;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -467,15 +527,19 @@ export const SecondMemberThree = styled.div<{filterState:boolean}>`
    height: 100%;
    border-radius: 100%;
    position: absolute;
-   animation: ${moveMemberTwo} 3s linear infinite alternate; 
+   animation-name: ${moveMemberTwo};
+   animation-duration: 10s;
+   animation-iteration-count: infinite;
+   animation-fill-mode: linear;
+   animation-delay: 1s;
 
    &::before{
       content: "";
       position: absolute;
       width: 60px;
       height: 60px;
-      top: 15%;
-      left: 85%;
+      top: 8%;
+      left: 78%;
       border-radius: 50%;
       background-image: url(/images/team/oluchi.png);
       background-size: contain;
@@ -483,7 +547,7 @@ export const SecondMemberThree = styled.div<{filterState:boolean}>`
       background-position: center;
       -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
       filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
-      transition: ease-in-out 1s filter ;
+      transition: ease-in-out 2s filter ;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -502,15 +566,20 @@ export const ThirdMemberOne = styled.div<{filterState:boolean}>`
    height: 100%;
    border-radius: 100%;
    position: absolute;
-   animation: ${moveMemberOne} 3s linear infinite alternate; 
+   animation-name: ${moveMemberOne};
+   animation-duration: 10s;
+   animation-iteration-count: infinite;
+   animation-fill-mode: linear;
+   animation-delay: 1s;
+
 
    &::before{
       content: "";
       position: absolute;
       width: 60px;
       height: 60px;
-      top: 20%;
-      left: -10%;
+      top: 16%;
+      left: -7%;
       border-radius: 50%;
       background-image: url(/images/team/glory.png);
       background-size: contain;
@@ -518,7 +587,7 @@ export const ThirdMemberOne = styled.div<{filterState:boolean}>`
       background-position: center;
       -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
       filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
-      transition: ease-in-out 1s filter ;
+      transition: ease-in-out 2s filter ;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -537,15 +606,19 @@ export const ThirdMemberTwo = styled.div<{filterState:boolean}>`
    height: 100%;
    border-radius: 100%;
    position: absolute;
-   animation: ${moveMemberOne} 3s linear infinite alternate; 
+   animation-name: ${moveMemberOne};
+   animation-duration: 10s;
+   animation-iteration-count: infinite;
+   animation-fill-mode: linear;
+   animation-delay: 1s;
 
    &::before{
       content: "";
       position: absolute;
       width: 60px;
       height: 60px;
-      top: 60%;
-      left: 80%;
+      top: 62%;
+      left: 77%;
       border-radius: 50%;
       background-image: url(/images/team/neche.png);
       background-size: contain;
@@ -553,7 +626,7 @@ export const ThirdMemberTwo = styled.div<{filterState:boolean}>`
       background-position: center;
       -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
       filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
-      transition: ease-in-out 1s filter ;
+      transition: ease-in-out 2s filter ;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
