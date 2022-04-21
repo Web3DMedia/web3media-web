@@ -163,46 +163,34 @@ const FirstHeadingText = styled.h3`
     }
 `
 const colorchange = keyframes`
-    0% {
-      background: linear-gradient(135deg, #FF6EFF 0%, #0AB7F6 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    25% {
-      background: linear-gradient(135deg, #0AB7F6 0%, #FF6EFF 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;   
-    }
-    50% {
-      background: linear-gradient(135deg, #62FF8E 0%, #25B1FF 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text; 
-    }
-    100% {
-      background: linear-gradient(135deg, #FF6EFF 0%, #0AB7F6 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-        }
+0% {
+  background-position: 0 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+75% {
+  background-position: 100% 50%;
+}
+100% {
+  background-position: 0px 0px;
+}
 `
 const SecondHeadingText = styled.h1`
     font-weight: 800;
     font-size: 112px;
     line-height: 100px;
-    background-image: linear-gradient(135deg, #FF6EFF 0%, #0AB7F6 100%);
+    padding-bottom: 42px ;
+    background-image: linear-gradient(135deg, #FF6EFF 5%, #0AB7F6 25%, #0AB7F6 30%, #FF6EFF 60%, #62FF8E 70%, #25B1FF 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: ${colorchange} 10s linear infinite;
-    transition: animation 10s ease-in-out;
     text-fill-color: transparent;
-    padding-bottom: 42px ;
-    animation-delay: 9s;
-    animation-duration: 9s;
-    
+    background-size: 300%;
+    background-position: 0%;
+    -webkit-animation: ${colorchange} 10s ease-in-out 2s infinite normal;
+    animation: ${colorchange} 10s ease-in-out 2s infinite normal;
+    transition: background-position 4s ease-in-out;
     @media (max-width: 1024px) {
         font-weight: 800;
         font-size: 80px;
