@@ -1,7 +1,9 @@
 import React from "react"
 import styled, { keyframes } from 'styled-components'
 import Image from 'next/image'
-import Container from "../components/Container"
+
+const Container = styled.div`
+`
 const HeroSectionContainer = styled.div`
     padding-bottom: 20px;
     text-align:center;
@@ -265,7 +267,7 @@ const SocialCircle = styled.div`
 const HeroSection = () => {
   return (
     <>
-    <Container>
+    <Container className="m-auto px-6 md:px-20">
     <HeroSectionContainer className="relative m-auto flex justify-center overflow-hidden" >
       <EllipseContainer>
         <EllipseOne></EllipseOne>
