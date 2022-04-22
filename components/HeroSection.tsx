@@ -3,6 +3,10 @@ import styled, { keyframes } from 'styled-components'
 import Image from 'next/image'
 
 const Container = styled.div`
+   background: url(/images/background.png);
+    background-size: 500px;
+    background-position: center;
+    background-repeat: none;
     width: 65%;
     @media (max-width: 2000px) {
     width: 80%;
@@ -12,6 +16,14 @@ const Container = styled.div`
   }
    @media (max-width: 1440px) {
     width: 100%;
+  }
+  @media (max-width: 1024px) {
+    border: none;
+    background-size: 500px;
+  }
+    @media (max-width: 550px) {
+    border: none;
+    background-size: 300px;
   }
 `
 const HeroSectionContainer = styled.div`
