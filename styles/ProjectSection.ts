@@ -22,7 +22,7 @@ export const ProjectsUnderLay = styled.div`
    background-image: url(/images/projects-mesh.png);
    background-repeat: no-repeat;
    background-position: top right;
-   background-size: auto, auto;
+   background-size: auto;
 
    @media screen and (max-width: 640px){
       background-size: 300px, auto;
@@ -103,9 +103,14 @@ export const CardBottomTop = styled.div`
 export const CardBottomDiv = styled.div<{onHover: boolean}>`
    height:100px;
    width: 100%;
-   background: black;
+   background-color: black;
+   background-image: url(/images/background.png);
+   background-size: 100%;
+   background-position: center;
+   background-repeat: none;
    position: absolute;
    z-index: 3;
+   border: none;
    top: ${(props) => props.onHover ? "0%":"-230%"};
    left: 0;
    transition: .4s ease-in-out top;

@@ -6,7 +6,7 @@ const WavePinkStar = () => {
    return (
       <PinkContainer>
          <div className="w-full h-full max-w-1440 mx-auto px-6 md:px-20 xl:px-36 flex items-start justify-start">
-            <div className="absolute top-[110px]">
+            <div className="absolute top-[200px]">
                <Image
                   src={PinkImage}
                   alt="image"

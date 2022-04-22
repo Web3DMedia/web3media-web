@@ -44,12 +44,13 @@ export default function Home() {
           <ProjectSection></ProjectSection>
         </Container>
         <WaveBlueStar></WaveBlueStar>
-        <Container>
-          <TeamUnderlayMesh/>
-          <TeamSection></TeamSection>
-          <Footer></Footer>
-        </Container>
       </MeshWrapper>
+
+      <Container>
+        <TeamUnderlayMesh/>
+        <TeamSection></TeamSection>
+        <Footer></Footer>
+      </Container>
     </div>
   )
 }
