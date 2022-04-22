@@ -3,6 +3,16 @@ import styled, { keyframes } from 'styled-components'
 import Image from 'next/image'
 
 const Container = styled.div`
+    width: 65%;
+    @media (max-width: 2000px) {
+    width: 80%;
+  }
+   @media (max-width: 1600px) {
+    width: 90%;
+  }
+   @media (max-width: 1440px) {
+    width: 100%;
+  }
 `
 const HeroSectionContainer = styled.div`
     padding-bottom: 20px;
@@ -267,7 +277,7 @@ const SocialCircle = styled.div`
 const HeroSection = () => {
   return (
     <>
-    <Container className="m-auto px-6 md:px-20 xl:px-36">
+    <Container className="m-auto px-6 md:px-20">
     <HeroSectionContainer className="relative m-auto flex justify-center overflow-hidden" >
       <EllipseContainer>
         <EllipseOne></EllipseOne>
