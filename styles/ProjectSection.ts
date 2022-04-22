@@ -19,9 +19,9 @@ export const ProjectsUnderLay = styled.div`
    left: 0;
    width: 100%;
    height: 100%;
-   background-image: url(/images/projects-mesh.png), url(/images/underlay-mesh.png);
-   background-repeat: no-repeat, no-repeat;
-   background-position: top right, center right;
+   background-image: url(/images/projects-mesh.png);
+   background-repeat: no-repeat;
+   background-position: top right;
    background-size: auto, auto;
 
    @media screen and (max-width: 640px){
@@ -110,4 +110,14 @@ export const CardBottomDiv = styled.div<{onHover: boolean}>`
    left: 0;
    transition: .4s ease-in-out top;
    transition-delay: .15s;
+`
+
+
+export const MeshWrapper = styled.div`
+   width: 100%;
+   height: 100%;
+   background:  url(/images/underlay-mesh.png);
+   background-size:  contain;
+   background-position:  left center bottom;
+   background-repeat: none
 `
