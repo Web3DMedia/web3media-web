@@ -267,7 +267,7 @@ const SocialCircle = styled.div`
 const HeroSection = () => {
   return (
     <>
-    <Container className="m-auto px-6 md:px-20">
+    <Container className="m-auto px-6 md:px-20 xl:px-36">
     <HeroSectionContainer className="relative m-auto flex justify-center overflow-hidden" >
       <EllipseContainer>
         <EllipseOne></EllipseOne>
