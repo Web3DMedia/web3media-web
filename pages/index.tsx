@@ -12,6 +12,9 @@ import HeroSection from "../components/HeroSection"
 import AboutSection from "../components/AboutSection"
 import Slider from '../components/Slider'
 
+import { MeshWrapper, ProjectsUnderLay } from "../styles/ProjectSection"
+import { TeamUnderlayMesh } from "../styles/TeameMemberStyles"
+
 export default function Home() {
 
   return (
@@ -26,30 +29,29 @@ export default function Home() {
       </Head>
 
       <DesktopNavbar></DesktopNavbar>
-      
-      <Container>
+    
         <HeroSection></HeroSection>
-      </Container>
 
       <Slider></Slider>
+      
+      <MeshWrapper>
+        <Container>
+          <AboutSection></AboutSection>
+        </Container>
+        <WavePinkStar></WavePinkStar>
+        <Container>
+          <ProjectsUnderLay/>
+          <ProjectSection></ProjectSection>
+        </Container>
+        <WaveBlueStar></WaveBlueStar>
+      </MeshWrapper>
 
       <Container>
-        <AboutSection></AboutSection>
-      </Container>
-      
-      <WavePinkStar></WavePinkStar>
-      
-      <Container>
-        <ProjectSection></ProjectSection>
-      </Container>
-
-      <WaveBlueStar></WaveBlueStar>
-    
-      <Container>
+        <TeamUnderlayMesh/>
         <TeamSection></TeamSection>
         <Footer></Footer>
-     </Container>
-     
+      </Container>
     </div>
   )
 }
+

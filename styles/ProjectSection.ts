@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const ProjectWrapper = styled.div`
    height: 100%;
    padding: 20px 0px;
+   position: relative;
 
    @media screen and (max-width: 1920px){
       height: 100%;
@@ -12,32 +13,44 @@ export const ProjectWrapper = styled.div`
       height: 100%;
    }
 `
+export const ProjectsUnderLay = styled.div`
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-image: url(/images/projects-mesh.png);
+   background-repeat: no-repeat;
+   background-position: top right;
+   background-size: auto;
 
+   @media screen and (max-width: 640px){
+      background-size: 300px, auto;
+   }
+   @media screen and (max-width: 468px){
+      background-position: center, right top;
+      background-size: 200px, auto;
+   }
+`
 
-export const ProjectCard = styled.div`
+export const Card = styled.div`
    cursor: pointer;
    color: #FFFFFF;
    position: relative;
    margin: 0px 30px;
    width: 720px;
 
-   @media screen and (max-width: 1024px){
-      width: 628px;
-      margin: 0px 20px;
-
-   }
-
    @media screen and (max-width: 640px){
       width: 500px;
-      margin: 50px 0px;
+      margin: 50px auto;
    }
 
    @media screen and (max-width: 568px){
-      width: 335px;
-      margin: 20px 5px;
+      width: 350px;
+      margin: 20px auto;
    }
-
 `
+
 
 export const ImageContainer = styled.div`
    border-radius: 8px;
@@ -46,7 +59,6 @@ export const ImageContainer = styled.div`
    width: 720px;
    height: 423px;
    position: relative;
-   z-index: 3;
 
    @media screen and (max-width: 1024px){
       width: 628px;
@@ -63,7 +75,13 @@ export const ImageContainer = styled.div`
    }
 `
 
-export const CardCenter = styled.div`
+
+export const CardBottom = styled.div`
+   width: 100%;
+   position: relative;
+`
+
+export const CardBottomTop = styled.div`
    display: flex;
    flex-direction: row;
    margin: 10px auto 0;
@@ -71,6 +89,7 @@ export const CardCenter = styled.div`
    align-items: center;
    justify-content: space-between;
    width: 100%;
+   position: relative;
 
    @media screen and (max-width: 640px){
       flex-direction: column;
@@ -78,29 +97,32 @@ export const CardCenter = styled.div`
    }
 
    @media screen and (max-width: 380px){
-      padding-left: 5px;
+      padding-left: 20px;
    }
 `
-
-export const CardBottom = styled.button<{onHover: boolean}>`
-   margin-top: 10px;
+export const CardBottomDiv = styled.div<{onHover: boolean}>`
+   height:100px;
+   width: 100%;
+   background-color: black;
+   background-image: url(/images/background.png);
+   background-size: 100%;
+   background-position: center;
+   background-repeat: none;
    position: absolute;
-   display: ${(props) => props.onHover ? "flex":"none"};
-   top: ${(props) => props.onHover ? "100%":"10%"};
+   z-index: 3;
+   border: none;
+   top: ${(props) => props.onHover ? "0%":"-230%"};
    left: 0;
-   z-index: 2;
-   padding: 0px 10px 0px 0px;
-   transition: all 1s ease-in-out;
+   transition: .4s ease-in-out top;
+   transition-delay: .15s;
+`
 
-   @media screen and (max-width: 1024px){
-      top: 100%;
-      position: relative;
-      margin-top: 20px;
-      padding: 0px;
-      display: flex;
-   }
 
-   @media screen and (max-width: 380px){
-      padding-left: 5px;
-   }
+export const MeshWrapper = styled.div`
+   width: 100%;
+   height: 100%;
+   background:  url(/images/underlay-mesh.png);
+   background-size:  contain;
+   background-position:  left center bottom;
+   background-repeat: none
 `

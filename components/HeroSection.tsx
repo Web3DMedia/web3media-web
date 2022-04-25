@@ -1,56 +1,97 @@
 import React from "react"
 import styled, { keyframes } from 'styled-components'
+import Image from 'next/image'
+
+const Container = styled.div`
+   background: url(/images/background.png);
+    background-size: 500px;
+    background-position: center;
+    background-repeat: none;
+    width: 65%;
+    @media (max-width: 2000px) {
+    width: 80%;
+  }
+   @media (max-width: 1600px) {
+    width: 90%;
+  }
+   @media (max-width: 1440px) {
+    width: 100%;
+  }
+  @media (max-width: 1024px) {
+    border: none;
+    background-size: 500px;
+  }
+    @media (max-width: 550px) {
+    border: none;
+    background-size: 300px;
+  }
+`
 const HeroSectionContainer = styled.div`
-    padding-bottom: 100px;
+    padding-bottom: 20px;
     text-align:center;
     @media (max-width: 1024px) {
     border: none;
-    padding-bottom: 250px;
-  }
-    @media (max-width: 900px) {
-    padding-bottom: 100px
-  }
-    @media (max-width: 550px) {
-    padding: 0;
   }
 `
 const rotateEllipseOne = keyframes`
     0% {
         border-bottom: 2px solid var(--W);
+        border-right: none;
+        border-top: none;
+        border-left: none;
     }
     25% {
         border-right: 2px solid var(--W);
         border-bottom: none;
+        border-top: none;
+        border-left: none;
     }
     50% {
         border-top: 2px solid var(--W);
         border-right: none;
+        border-bottom: none;
+        border-left: none;
     }
     75% {
         border-left: 2px solid var(--W);
         border-top:none;
+        border-right:none;
+        border-bottom:none;
     }
     100% {
       border-left:none;
+      border-top:none;
+      border-right:none;
+      border-bottom: 2px solid var(--W);
     }
 `
 const rotateEllipseTwo = keyframes`
     0% {
         border-top: 2px solid var(--W);
+        border-right: none;
+        border-bottom: none;
+        border-left: none;
     }
     25% {
         border-left: 2px solid var(--W);
         border-top: none;
+        border-right: none;
+        border-bottom: none;
     }
     50% {
         border-bottom: 2px solid var(--W);
         border-top: none;
+        border-left: none;
+        border-right: none;
     }
     75% {
         border-right: 2px solid var(--W);
         border-bottom:none;
+        border-left:none;
+        border-top:none;
     }
     100% {
+      border-top: 2px solid var(--W);
       border-right:none;
     }
 `
@@ -82,9 +123,9 @@ const EllipseOne = styled.div`
     width: 383px;
     height: 715px;
     animation: ${rotateEllipseOne} linear infinite;
-    transition: ease-in-out;
-    animation-delay: 1s;
-    animation-duration: 2s;
+    transition: all 20s ease-in-out;
+    animation-delay: 1.4s;
+    animation-duration: 6s;
     position: absolute;
     @media (max-width: 550px) {
         width: 168px;
@@ -97,10 +138,10 @@ const EllipseTwo = styled.div`
     border-radius: 50%;
     width: 383px;
     height: 715px;
-    animation: ${rotateEllipseTwo} 3s linear infinite;
-    transition: ease-in-out;
+    animation: ${rotateEllipseTwo} linear infinite;
+    transition: all 20s ease-in-out;
     animation-delay: 0.8s;
-    animation-duration: 2s;
+    animation-duration: 6s;
     @media (max-width: 550px) {
         width: 168px;
         height: 314px;
@@ -127,31 +168,6 @@ const Mesh = styled.div`
       height: 442px;
     }
 `
-const colorchange = keyframes`
-    0% {
-        background: linear-gradient(135deg, #FF6EFF 0%, #0AB7F6 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
-    }
-
-    50% {
-        background: linear-gradient(135deg, #0AB7F6 0%, #FF6EFF 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
-    }
-
-    100% {
-        background: linear-gradient(135deg, #62FF8E 0%, #25B1FF 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
-    }
-`
 const FirstHeadingText = styled.h3`
     font-weight: 800;
     font-size: 40px;
@@ -170,21 +186,35 @@ const FirstHeadingText = styled.h3`
         padding-bottom: 16px;
     }
 `
+const colorchange = keyframes`
+0% {
+  background-position: 0 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+75% {
+  background-position: 100% 50%;
+}
+100% {
+  background-position: 0px 0px;
+}
+`
 const SecondHeadingText = styled.h1`
     font-weight: 800;
     font-size: 112px;
     line-height: 100px;
+    padding-bottom: 42px ;
+    background-image: linear-gradient(135deg, #FF6EFF 5%, #0AB7F6 25%, #0AB7F6 30%, #FF6EFF 55%, #62FF8E 70%, #25B1FF 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    background: linear-gradient(135deg, #FF6EFF 0%, #0AB7F6 100%);
     text-fill-color: transparent;
-    padding-bottom: 42px ;
-    animation: ${colorchange} 10s linear infinite;
-    transition: ease-in-out;
-    animation-delay: 0s;
-    animation-duration: 10s;
-    
+    background-size: 300%;
+    background-position: 0%;
+    -webkit-animation: ${colorchange} 20s ease-in-out 2s infinite normal;
+    animation: ${colorchange} 20s ease-in-out 2s infinite normal;
+    transition: background-position 5s ease-in-out;
     @media (max-width: 1024px) {
         font-weight: 800;
         font-size: 80px;
@@ -220,41 +250,18 @@ const ThirdHeadingText = styled.p`
   }
 `
 const Button = styled.div`
-  padding: 16px 33px;
-  margin-bottom: 146px;
-  position: relative;
-  width: 205px;
-  margin: auto;
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 16px;
-    border: 1.8px solid transparent;
-    background: var(--GradientOne) border-box;
-    -webkit-mask: linear-gradient(#fff 0 0) padding-box,
-    linear-gradient(#fff 0 0);
-    -webkit-mask-composite: destination-out;
-    mask-composite: exclude;
-  }
+padding:40px 200px;
+cursor:pointer;
 `
-const ButtonText = styled.h6`
-  color: var(--B5);
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 15px;`
 const SocialContainer = styled.ul`
-    position: absolute;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-right: 80px;
-  right: 0;
-  padding-top: 552px;
+  right:0;
+  top: -290px;
+  padding-top: -20px;
   display: flex;
   flex-direction: column;
   @media (max-width: 1024px) {
@@ -281,6 +288,8 @@ const SocialCircle = styled.div`
 `
 const HeroSection = () => {
   return (
+    <>
+    <Container className="m-auto px-6 md:px-20">
     <HeroSectionContainer className="relative m-auto flex justify-center overflow-hidden" >
       <EllipseContainer>
         <EllipseOne></EllipseOne>
@@ -296,12 +305,16 @@ const HeroSection = () => {
           Giving financial freedom and access to designers, artists, blockchain
           talents and creative minds.
         </ThirdHeadingText>
-        <Button>
-          <ButtonText>Our Superpowers</ButtonText>
-        </Button>
-      </div>
 
-      <div>
+            <div className="cursor-pointer flex justify-center m-auto hover:scale-125 w-122 h-14 lg:w-139 lg:h-19 2xl:w-228 xl:h-47">
+                <Image src='/images/our-superpowers-btn.svg' width={228} height={47} alt="logo" />
+            </div>
+
+          </div>
+    </HeroSectionContainer>
+    </Container>
+
+      <div className="relative text-w">
         <SocialContainer>
           <SocialLinks>LI</SocialLinks>
           <SocialLinks>IG</SocialLinks>
@@ -310,7 +323,7 @@ const HeroSection = () => {
           <SocialLinks> <SocialCircle></SocialCircle> </SocialLinks>
         </SocialContainer>
       </div>
-    </HeroSectionContainer>
+    </>
   )
 }
 

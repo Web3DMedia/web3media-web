@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
 
-const MobileMenuContainer = styled.div`
+const MobileMenuContainer = styled.div<{slide:boolean}>`
     @media (max-width: 1024px) {
         background: rgba(0, 0, 0, 0.6);
         backdrop-filter: blur(40px);
@@ -11,6 +11,10 @@ const MobileMenuContainer = styled.div`
         width:100%;
         position: fixed;
         overflow-y: scroll;
+        left: 110vw;
+        transition: all 1.4s ease-in-out;
+
+        ${({slide}) => slide ? 'left: 0;' : ''};
   }
 `
 const MobileMenuClose = styled.div`
@@ -118,10 +122,10 @@ const CircleTextSpan = styled.span`
         transform-origin: 0 35px;
     }
 `
-const MobileMenu = ({ closemenu }) => {
+const MobileMenu = ({ closemenu, slide }) => {
     const text = 'Demonstrating the principle of value for skills --'
     return (
-        <MobileMenuContainer className='p-8 text-left absolute block top-0 w-full overflow-hidden md:text-center xl:hidden'>
+        <MobileMenuContainer slide={slide} className='p-8 text-left absolute block top-0 w-full overflow-hidden md:text-center xl:hidden'>
             <div className='flex justify-between items-center'>
                 <div>
                     <Image src='/images/logo.svg' width={58.84} height={24} alt="logo" className='hidden filter grayscale' />
