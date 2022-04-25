@@ -2,13 +2,26 @@ import React from "react"
 import styled, { keyframes } from 'styled-components'
 import Image from 'next/image'
 
-const Container = styled.div`
-   background: url(/images/background.png);
+const HeroContainer = styled.div`
+    background: url(/images/background.png);
     background-size: 500px;
     background-position: center;
     background-repeat: none;
+    @media (max-width: 1024px) {
+    border: none;
+    background-size: 500px;
+  }
+    @media (max-width: 550px) {
+    border: none;
+    background-size: 300px;
+  }
+`
+const Container = styled.div`
+    width: 50%;
+  @media (max-width: 2580px) {
     width: 65%;
-    @media (max-width: 2000px) {
+  }
+  @media (max-width: 2000px) {
     width: 80%;
   }
    @media (max-width: 1600px) {
@@ -19,11 +32,7 @@ const Container = styled.div`
   }
   @media (max-width: 1024px) {
     border: none;
-    background-size: 500px;
-  }
-    @media (max-width: 550px) {
-    border: none;
-    background-size: 300px;
+
   }
 `
 const HeroSectionContainer = styled.div`
@@ -249,10 +258,6 @@ const ThirdHeadingText = styled.p`
     width: 80%;
   }
 `
-const Button = styled.div`
-padding:40px 200px;
-cursor:pointer;
-`
 const SocialContainer = styled.ul`
   position: absolute;
   display: flex;
@@ -288,31 +293,30 @@ const SocialCircle = styled.div`
 `
 const HeroSection = () => {
   return (
-    <>
-    <Container className="m-auto px-6 md:px-20">
-    <HeroSectionContainer className="relative m-auto flex justify-center overflow-hidden" >
-      <EllipseContainer>
-        <EllipseOne></EllipseOne>
-        <EllipseTwo></EllipseTwo>
-      </EllipseContainer>
+    <HeroContainer>
+      <Container className="m-auto px-6 md:px-20">
+        <HeroSectionContainer className="relative m-auto flex justify-center overflow-hidden" >
+        <EllipseContainer>
+          <EllipseOne></EllipseOne>
+          <EllipseTwo></EllipseTwo>
+        </EllipseContainer>
 
-      <Mesh></Mesh>
+          <Mesh></Mesh>
 
-      <div className="pb-40">
-        <FirstHeadingText>We are an</FirstHeadingText>
-        <SecondHeadingText>Ambitious Creative Web3 Studio.</SecondHeadingText>
-        <ThirdHeadingText>
-          Giving financial freedom and access to designers, artists, blockchain
-          talents and creative minds.
-        </ThirdHeadingText>
+        <div className="pb-40">
+          <FirstHeadingText>We are an</FirstHeadingText>
+          <SecondHeadingText>Ambitious Creative Web3 Studio.</SecondHeadingText>
+          <ThirdHeadingText>
+            Empowering and providing financial freedom for web3 designers, artists, blockchain talents, and creative minds
+          </ThirdHeadingText>
 
             <div className="cursor-pointer flex justify-center m-auto hover:scale-125 w-122 h-14 lg:w-139 lg:h-19 2xl:w-228 xl:h-47">
                 <Image src='/images/our-superpowers-btn.svg' width={228} height={47} alt="logo" />
             </div>
 
-          </div>
-    </HeroSectionContainer>
-    </Container>
+        </div>
+        </HeroSectionContainer>
+      </Container>
 
       <div className="relative text-w">
         <SocialContainer>
@@ -323,7 +327,7 @@ const HeroSection = () => {
           <SocialLinks> <SocialCircle></SocialCircle> </SocialLinks>
         </SocialContainer>
       </div>
-    </>
+    </HeroContainer>
   )
 }
 

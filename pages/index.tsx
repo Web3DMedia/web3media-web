@@ -23,14 +23,14 @@ export default function Home() {
         <title>Web3Media</title>
         <meta
           name="description"
-          content="Giving financial freedom and access to designers, artists, blockchain talents and creative minds."
+          content="Empowering and providing financial freedom for web3 designers, artists, blockchain talents, and creative minds"
         />
         <link rel="icon" href="/images/logo.svg" />
       </Head>
 
       <DesktopNavbar></DesktopNavbar>
     
-        <HeroSection></HeroSection>
+      <HeroSection></HeroSection>
 
       <Slider></Slider>
       
