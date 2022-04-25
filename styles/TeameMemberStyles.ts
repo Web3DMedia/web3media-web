@@ -112,6 +112,7 @@ export const SecondTeamDiv = styled.div`
    }
 `
 
+
 export const ThirdTeamDiv = styled.div`
    width: 196px;
    height: 196px;
@@ -172,35 +173,114 @@ export const WorldDiv = styled.div`
 export const moveMemberOne = keyframes`
    0%{ 
       transform: rotateZ(0deg);
+      -ms-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg); 
    }
    25%{
       transform: rotateZ(30deg);
+      -ms-transform: rotate(30deg);
+      -webkit-transform: rotate(30deg); 
    }
    50%{
-      transform: rotateZ(0deg)
+      transform: rotateZ(0deg);
+      -ms-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg); 
    }
    75%{
       transform: rotateZ(-30deg);
+      -ms-transform: rotate(-30deg);
+      -webkit-transform: rotate(-30deg); 
+
    }
    100%{
       transform: rotateZ(0deg);
+      -ms-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg); 
+   }
+`
+
+export const moveImageClockwise = keyframes`
+   0%{ 
+      transform: rotateZ(0deg);
+      -ms-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+   }
+   25%{
+      transform: rotateZ(-30deg);
+      -ms-transform: rotate(-30deg);
+      -webkit-transform: rotate(-30deg);
+   }
+   50%{
+      transform: rotateZ(0deg);
+      -ms-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+   }
+   75%{
+      transform: rotateZ(30deg);
+      -ms-transform: rotate(30deg);
+      -webkit-transform: rotate(30deg);
+
+   }
+   100%{
+      transform: rotateZ(0deg);
+      -ms-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
    }
 `
 export const moveMemberTwo = keyframes`
    0%{ 
       transform: rotateZ(0deg);
+      -ms-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg); 
    }
    25%{
       transform: rotateZ(-30deg);
+      -ms-transform: rotate(-30deg);
+      -webkit-transform: rotate(-30deg); 
    }
    50%{
-      transform: rotateZ(0deg)
+      transform: rotateZ(0deg);
+      -ms-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg); 
    }
    75%{
       transform: rotateZ(30deg);
+      -ms-transform: rotate(30deg);
+      -webkit-transform: rotate(30deg); 
    }
    100%{
       transform: rotateZ(0deg);
+      -ms-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg); 
+   }
+`
+
+export const moveImageAntiClockwise = keyframes`
+   0%{ 
+      transform: rotateZ(0deg);
+      -ms-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+   }
+   25%{
+      transform: rotateZ(30deg);
+      -ms-transform: rotate(30deg);
+      -webkit-transform: rotate(30deg);
+   }
+   50%{
+      transform: rotateZ(0deg);
+      -ms-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+   }
+   75%{
+      transform: rotateZ(-30deg);
+      -ms-transform: rotate(-30deg);
+      -webkit-transform: rotate(-30deg);
+
+   }
+   100%{
+      transform: rotateZ(0deg);
+      -ms-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
    }
 `
 
@@ -230,6 +310,11 @@ export const FirstMemberOne = styled.div<{filterState:boolean}>`
       -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
       filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
       transition: ease-in-out 2s filter ;
+      animation-name: ${moveImageClockwise};
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: both;
+      animation-delay: 1s;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -272,6 +357,11 @@ export const FirstMemberTwo = styled.div<{filterState:boolean}>`
       -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
       filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
       transition: ease-in-out 2s filter ;
+      animation-name: ${moveImageClockwise};
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: both;
+      animation-delay: 1s;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -311,6 +401,11 @@ export const FirstMemberThree = styled.div<{filterState:boolean}>`
       -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
       filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
       transition: ease-in-out 2s filter ;
+      animation-name: ${moveImageClockwise};
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: both;
+      animation-delay: 1s;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -352,6 +447,11 @@ export const FirstMemberFour = styled.div<{filterState:boolean}>`
       -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
       filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
       transition: ease-in-out 2s filter ;
+      animation-name: ${moveImageClockwise};
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: both;
+      animation-delay: 1s;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -391,6 +491,11 @@ export const FirstMemberFive = styled.div<{filterState:boolean}>`
       -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
       filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
       transition: ease-in-out 2s filter ;
+      animation-name: ${moveImageClockwise};
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: both;
+      animation-delay: 1s;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -431,6 +536,11 @@ export const FirstMemberSix = styled.div<{filterState:boolean}>`
       -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
       filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
       transition: ease-in-out 2s filter ;
+      animation-name: ${moveImageClockwise};
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: both;
+      animation-delay: 1s;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -470,6 +580,11 @@ export const SecondMemberOne = styled.div<{filterState:boolean}>`
       -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
       filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
       transition: ease-in-out 2s filter ;
+      animation-name: ${moveImageAntiClockwise};
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: both;
+      animation-delay: 1s;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -509,6 +624,11 @@ export const SecondMemberTwo = styled.div<{filterState:boolean}>`
       -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
       filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
       transition: ease-in-out 2s filter ;
+      animation-name: ${moveImageAntiClockwise};
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: both;
+      animation-delay: 1s;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -548,6 +668,11 @@ export const SecondMemberThree = styled.div<{filterState:boolean}>`
       -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
       filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
       transition: ease-in-out 2s filter ;
+      animation-name: ${moveImageAntiClockwise};
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: both;
+      animation-delay: 1s;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -588,6 +713,11 @@ export const ThirdMemberOne = styled.div<{filterState:boolean}>`
       -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
       filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
       transition: ease-in-out 2s filter ;
+      animation-name: ${moveImageClockwise};
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: both;
+      animation-delay: 1s;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
@@ -617,7 +747,7 @@ export const ThirdMemberTwo = styled.div<{filterState:boolean}>`
       position: absolute;
       width: 60px;
       height: 60px;
-      top: 62%;
+      top: 55%;
       left: 77%;
       border-radius: 50%;
       background-image: url(/images/team/neche.png);
@@ -627,6 +757,11 @@ export const ThirdMemberTwo = styled.div<{filterState:boolean}>`
       -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
       filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
       transition: ease-in-out 2s filter ;
+      animation-name: ${moveImageClockwise};
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: both;
+      animation-delay: 1s;
 
       @media screen and (max-width:1024px){
          width: 50.27px;
