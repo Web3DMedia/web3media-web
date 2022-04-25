@@ -6,7 +6,7 @@ import {FaTwitter, FaInstagram, FaLinkedinIn} from 'react-icons/fa'
 
 const Footer = () => {
    return (
-      <div className="text-white py-5 px-5 sm:border-t border-gray-400">
+      <div className="text-white py-5 px-5 border-t border-gray-300 mt-[100px] lg:mt-[150px] xl:mt-[200px]">
          <div className="flex items-center justify-between">
             <Image src={Logo} alt="logo" />
 
