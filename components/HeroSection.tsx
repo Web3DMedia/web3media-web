@@ -333,9 +333,21 @@ const HeroSection = () => {
               </SocialLinks>
             </a>
           </Link>
+          <Link href="https://www.instagram.com/web3d.media/" passHref>
+            <a target='_blank'>
+              <SocialLinks>
+                IG
+              </SocialLinks>
+            </a>
+          </Link>
 
-          <SocialLinks>IG</SocialLinks>
-          <SocialLinks>FB</SocialLinks>
+          <Link href="https://web.facebook.com/web3dmedia" passHref>
+            <a target='_blank'>
+              <SocialLinks>
+                FB
+              </SocialLinks>
+            </a>
+          </Link>
                    
           <Link href="https://twitter.com/web3Dmedia" passHref>
             <a target='_blank'>

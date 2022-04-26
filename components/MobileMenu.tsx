@@ -164,7 +164,11 @@ const MobileMenu = ({ closemenu, slide }) => {
             </ImgContainer>
 
             <ul className="mb-24">
-                <li className='list-inside list-disc text-2xl leading-7 pb-10 font-normal uppercase text-w md:list-none d:text-3xl md:leading-8 md:pb-10'>Instagram</li>
+                <Link href="https://www.linkedin.com/company/web3dmedia" passHref>
+                    <a target='_blank'>
+                        <li className='list-inside list-disc text-2xl leading-7 pb-10 font-normal uppercase text-w md:list-none d:text-3xl md:leading-8 md:pb-10'>Instagram</li>
+                    </a>
+                </Link>
 
                 <Link href="https://www.linkedin.com/company/web3dmedia" passHref>
                     <a target='_blank'>
