@@ -145,12 +145,12 @@ const MobileMenu = ({ closemenu, slide }) => {
             <ul className='pt-20 pb-20 md:pt-24 md:pb-32'>
                 <li className='flex flex-col pb-4'>
                     <MobileNavNumber>01</MobileNavNumber>
-                    <MobileNav>Early Access</MobileNav>
+                    <MobileNav  onClick={() => closemenu(false)}>Early Access</MobileNav>
                 </li>
                 <li className='flex flex-col pb-4'>
                     <MobileNavNumber>02</MobileNavNumber>
                     <MobileNav>
-                        <ScrollLink to="projects" spy={true} smooth={true} offset={-20} duration={900}>
+                        <ScrollLink to="projects" spy={true} smooth={true} offset={-20} duration={900} onClick={() => closemenu(false)}>
                             Projects
                         </ScrollLink>
                     </MobileNav>
@@ -158,7 +158,7 @@ const MobileMenu = ({ closemenu, slide }) => {
                 <li className='flex flex-col pb-4'>
                     <MobileNavNumber>03</MobileNavNumber>
                     <MobileNav>
-                        <ScrollLink to="teams" spy={true} smooth={true} offset={-20} duration={900}>
+                        <ScrollLink to="teams" spy={true} smooth={true} offset={-20} duration={900} onClick={() => closemenu(false)}>
                             Team
                         </ScrollLink>
                     </MobileNav>
