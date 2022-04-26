@@ -17,6 +17,14 @@ export const TeamUnderlayMesh = styled.div`
    background-repeat: no-repeat, no-repeat;
    background-position: top right, center top;
    background-size: auto, auto;
+
+   @media screen and (max-width: 640px){
+      background-size: 300px, auto;
+   }
+   @media screen and (max-width: 468px){
+      background-position: center, center top;
+      background-size: 200px, auto;
+   }
 `
 
 export const TeamWrapper = styled.div`
