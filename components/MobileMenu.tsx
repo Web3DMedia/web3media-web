@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
 import Link from 'next/link'
+import {Link as ScrollLink} from 'react-scroll';
 
 const MobileMenuContainer = styled.div<{slide:boolean}>`
     @media (max-width: 1024px) {
@@ -72,9 +73,9 @@ const MobileMenuLine = styled.div`
 `
 
 const ImgContainer = styled.div`
-postion:absolute;
-margin-top:-75px;
-margin-bottom: 60px;
+    position:absolute;
+    margin-top:-75px;
+    margin-bottom: 60px;
 `
 const Circle = styled.div`
     position: relative;
@@ -91,7 +92,7 @@ const Circle = styled.div`
         margin: 0;
     }
 `
-const CircleImage = styled.div`gi
+const CircleImage = styled.div`
     position: absolute;
     width: 100px;
     height: 100px;
@@ -148,11 +149,19 @@ const MobileMenu = ({ closemenu, slide }) => {
                 </li>
                 <li className='flex flex-col pb-4'>
                     <MobileNavNumber>02</MobileNavNumber>
-                    <MobileNav>Team</MobileNav>
+                    <MobileNav>
+                        <ScrollLink to="projects" spy={true} smooth={true} offset={-20} duration={900}>
+                            Projects
+                        </ScrollLink>
+                    </MobileNav>
                 </li>
                 <li className='flex flex-col pb-4'>
                     <MobileNavNumber>03</MobileNavNumber>
-                    <MobileNav>About</MobileNav>
+                    <MobileNav>
+                        <ScrollLink to="teams" spy={true} smooth={true} offset={-20} duration={900}>
+                            Team
+                        </ScrollLink>
+                    </MobileNav>
                 </li>
             </ul>
 

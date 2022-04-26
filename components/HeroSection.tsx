@@ -2,6 +2,7 @@ import React from "react"
 import styled, { keyframes } from 'styled-components'
 import Image from 'next/image'
 import Link from 'next/link'
+import {Link as ScrollLink} from 'react-scroll';
 
 const HeroContainer = styled.div`
     background: url(/images/background.png);
@@ -239,7 +240,6 @@ const SecondHeadingText = styled.h1`
     }
 `
 const Button = styled.button`
-trans
 `
 const ThirdHeadingText = styled.p`
   font-weight: 400;
@@ -315,9 +315,12 @@ const HeroSection = () => {
           </ThirdHeadingText>
 
             <Button>
-            <div className="cursor-pointer flex justify-center m-auto hover:scale-125 transition-transform w-122 h-14 lg:w-139 lg:h-19 2xl:w-228 xl:h-47 duration-700 ">
-                <Image src='/images/our-superpowers-btn.svg' width={228} height={47} alt="logo" />
-            </div>
+              <ScrollLink to="teams" spy={true} smooth={true} offset={-20} duration={900}>
+                <div className="cursor-pointer flex justify-center m-auto hover:scale-125 transition-transform w-122 h-14 lg:w-139 lg:h-19 2xl:w-228 xl:h-47 duration-700 ">
+                    <Image src='/images/our-superpowers-btn.svg' width={228} height={47} alt="logo" />
+                </div>
+              </ScrollLink>
+              
             </Button>
 
         </div>
@@ -336,7 +339,6 @@ const HeroSection = () => {
 
           <SocialLinks>IG</SocialLinks>
           <SocialLinks>FB</SocialLinks>
-                   
           <Link href="https://twitter.com/web3Dmedia" passHref>
             <a target='_blank'>
               <SocialLinks>

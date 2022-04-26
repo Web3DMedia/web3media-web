@@ -3,15 +3,21 @@ import Logo from '../public/images/logo.svg'
 import Link from 'next/link'
 import ArrowVector from '../public/images/small-arrow.svg'
 import {FaTwitter, FaInstagram, FaLinkedinIn} from 'react-icons/fa'
+import {animateScroll as scroll} from 'react-scroll';
 
 const Footer = () => {
+   const toggleHome = () => {
+      scroll.scrollToTop()
+   }
    return (
       <div className="text-white py-5 px-5 border-t border-gray-300 mt-[100px] lg:mt-[150px] xl:mt-[200px] relative w-full h-full z-[2]">
          <div className="flex items-center justify-between">
-            <Image src={Logo} alt="logo" />
+            <div className="cursor-pointer" onClick={toggleHome}>
+               <Image src={Logo} alt="logo" />
+            </div>
 
             <ul className="list-disc hidden sm:flex">
-               <Link href="https://twitter.com/web3Dmedia">
+               <Link href="https://www.instagram.com/web3d.media/">
                   <a target="_blank">
                      <li  className="mx-5 cursor-pointer">Instagram</li>
                   </a>
@@ -48,7 +54,7 @@ const Footer = () => {
                </Link>
             </div>
             <div className="mx-2 h-9 w-9 bg-zinc-600 rounded-full flex items-center justify-center">
-               <Link href="https://twitter.com/web3Dmedia">
+               <Link href="https://www.instagram.com/web3d.media/">
                   <a target="_blank">
                      <FaInstagram/>
                   </a>

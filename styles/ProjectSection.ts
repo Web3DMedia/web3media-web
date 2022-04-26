@@ -25,11 +25,11 @@ export const ProjectsUnderLay = styled.div`
    background-size: auto;
 
    @media screen and (max-width: 640px){
-      background-size: 300px, auto;
+      background-size: 300px;
    }
    @media screen and (max-width: 468px){
       background-position: center, right top;
-      background-size: 200px, auto;
+      background-size: 200px;
    }
 `
 
@@ -91,7 +91,7 @@ export const CardBottomTop = styled.div<{onHover: boolean}>`
    width: 100%;
    position: relative;
    opacity: ${props => props.onHover ? 0 : 1};
-   transition: opacity 0.4s ease-in-out;
+   transition: opacity 0.5s ease-in-out;
 
    @media screen and (max-width: 640px){
       flex-direction: column;
@@ -112,7 +112,7 @@ export const CardBottomDiv = styled.div<{onHover: boolean}>`
    border: none;
    top: ${(props) => props.onHover ? "0%":"-240%"};
    left: 0;
-   transition: .4s ease-in-out top;
+   transition: .5s ease-in-out top;
    transition-delay: .15s;
 `
 
@@ -140,8 +140,16 @@ export const BottomContent = styled.div`
 export const MeshWrapper = styled.div`
    width: 100%;
    height: 100%;
-   background:  url(/images/underlay-mesh.png);
+   background: url(/images/underlay-mesh.png);
    background-size:  contain;
    background-position:  left center bottom;
-   background-repeat: none
+   background-repeat: no-repeat;
+
+   @media screen and (max-width: 640px){
+      background-size: 300px;
+   }
+   @media screen and (max-width: 468px){
+      background-position: center right top;
+      
+   }
 `

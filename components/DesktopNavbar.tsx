@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
+import {Link as ScrollLink, animateScroll as scroll} from 'react-scroll';
 
 //components
 import MobileMenu from '../components/MobileMenu'
@@ -81,9 +82,17 @@ const DesktopNavbar = () => {
             </div>
 
             <ul className='flex font-display'>
-                <Li >Early Access</Li>
-                <Li>Team</Li>
-                <Li>About</Li>
+                <Li>Early Access</Li>
+                <Li>
+                    <ScrollLink to="projects" spy={true} smooth={true} offset={-20} duration={900}>
+                        Projects
+                    </ScrollLink>
+                </Li>
+                <Li>
+                    <ScrollLink to="teams" spy={true} smooth={true} offset={-20} duration={900}>
+                        Team
+                    </ScrollLink>
+                </Li>
                 <Li onClick={() => setShowmenu(true)}>
                     <HamMenu></HamMenu>
                     <HamMenu></HamMenu>

@@ -37,10 +37,10 @@ export default function Home() {
           <AboutSection></AboutSection>
         </Container>
         <WavePinkStar></WavePinkStar>
-        <div className="w-full max-w-[1920px] mx-auto relative">
+        <Container>
           <ProjectsUnderLay></ProjectsUnderLay>
           <ProjectSection></ProjectSection>
-        </div>
+        </Container>
         <WaveBlueStar></WaveBlueStar>
       </MeshWrapper>
 

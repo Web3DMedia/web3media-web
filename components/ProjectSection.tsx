@@ -20,7 +20,7 @@ const ProjectSection = () => {
 
    return (
       <ProjectWrapper id="projects">
-         <div className="pt-4 w-full max-w-[1140px] mx-auto px-7 md:px-[70px] xl:px-0">
+         <div className="pt-4 w-full">
             <SectionText headerTxt="Projects"/>
             <h2 className="text-white font-light text-base sm:text-lg lg:text-[24px] xl:text-[28px] leading-6 lg:leading-10">Explore some of our web3 projects</h2>
          </div>
