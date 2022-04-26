@@ -1,6 +1,7 @@
 import React from "react"
 import styled, { keyframes } from 'styled-components'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const HeroContainer = styled.div`
     background: url(/images/background.png);
@@ -325,10 +326,24 @@ const HeroSection = () => {
 
       <div className="relative text-w">
         <SocialContainer>
-          <SocialLinks>LI</SocialLinks>
+          <Link href="https://www.linkedin.com/company/web3dmedia" passHref>
+            <a target='_blank'>
+              <SocialLinks>
+                LI
+              </SocialLinks>
+            </a>
+          </Link>
+
           <SocialLinks>IG</SocialLinks>
           <SocialLinks>FB</SocialLinks>
-          <SocialLinks>TW</SocialLinks>
+                   
+          <Link href="https://twitter.com/web3Dmedia" passHref>
+            <a target='_blank'>
+              <SocialLinks>
+                TW
+              </SocialLinks>
+            </a>
+          </Link>
           <SocialLinks> <SocialCircle></SocialCircle> </SocialLinks>
         </SocialContainer>
       </div>
