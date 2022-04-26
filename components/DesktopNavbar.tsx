@@ -34,8 +34,7 @@ const Li = styled.li`
         font-size:18px;
     }
     &:last-child {
-        padding: 40px 0px 0px 34px;
-        cursor: auto;
+        display:none
     }
     &:last-child:hover {
         font-size: 0px;
