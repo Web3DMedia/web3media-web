@@ -237,6 +237,9 @@ const SecondHeadingText = styled.h1`
         padding-bottom: 20px;
     }
 `
+const Button = styled.button`
+trans
+`
 const ThirdHeadingText = styled.p`
   font-weight: 400;
   font-size: 28px;
@@ -310,9 +313,11 @@ const HeroSection = () => {
             Empowering and providing financial freedom for web3 designers, artists, blockchain talents, and creative minds
           </ThirdHeadingText>
 
-            <div className="cursor-pointer flex justify-center m-auto hover:scale-125 w-122 h-14 lg:w-139 lg:h-19 2xl:w-228 xl:h-47">
+            <Button>
+            <div className="cursor-pointer flex justify-center m-auto hover:scale-125 transition-transform w-122 h-14 lg:w-139 lg:h-19 2xl:w-228 xl:h-47">
                 <Image src='/images/our-superpowers-btn.svg' width={228} height={47} alt="logo" />
             </div>
+            </Button>
 
         </div>
         </HeroSectionContainer>
