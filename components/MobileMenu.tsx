@@ -175,19 +175,19 @@ const MobileMenu = ({ closemenu, slide }) => {
             <ul className="mb-24">
                 <Link href="https://www.linkedin.com/company/web3dmedia" passHref>
                     <a target='_blank'>
-                        <li className='list-inside list-disc text-2xl leading-7 pb-10 font-normal uppercase text-w md:list-none d:text-3xl md:leading-8 md:pb-10'>Instagram</li>
+                        <li className='list-inside list-disc text-2xl leading-7 pb-10 font-normal uppercase text-w md:list-none d:text-3xl md:leading-8 md:pb-10' onClick={() => closemenu(false)}>Instagram</li>
                     </a>
                 </Link>
 
                 <Link href="https://www.linkedin.com/company/web3dmedia" passHref>
                     <a target='_blank'>
-                        <li className='list-inside list-disc text-2xl leading-7 pb-10 font-normal uppercase text-w md:list-none d:text-3xl md:leading-8 md:pb-10'>Twitter</li>
+                        <li className='list-inside list-disc text-2xl leading-7 pb-10 font-normal uppercase text-w md:list-none d:text-3xl md:leading-8 md:pb-10' onClick={() => closemenu(false)}>Twitter</li>
                     </a>
                 </Link>
 
                 <Link href="https://www.linkedin.com/company/web3dmedia" passHref>
                     <a target='_blank'>
-                        <li className='list-inside list-disc text-2xl leading-7 pb-10 font-normal uppercase text-w md:list-none d:text-3xl md:leading-8 md:pb-10'>Linkedin</li>
+                        <li className='list-inside list-disc text-2xl leading-7 pb-10 font-normal uppercase text-w md:list-none d:text-3xl md:leading-8 md:pb-10' onClick={() => closemenu(false)}>Linkedin</li>
                     </a>
                 </Link>
             </ul>
