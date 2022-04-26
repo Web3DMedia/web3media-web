@@ -314,7 +314,7 @@ const HeroSection = () => {
           </ThirdHeadingText>
 
             <Button>
-            <div className="cursor-pointer flex justify-center m-auto hover:scale-125 transition-transform w-122 h-14 lg:w-139 lg:h-19 2xl:w-228 xl:h-47">
+            <div className="cursor-pointer flex justify-center m-auto hover:scale-125 transition-transform w-122 h-14 lg:w-139 lg:h-19 2xl:w-228 xl:h-47 duration-700 ">
                 <Image src='/images/our-superpowers-btn.svg' width={228} height={47} alt="logo" />
             </div>
             </Button>

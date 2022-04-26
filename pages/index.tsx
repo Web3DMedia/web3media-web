@@ -29,27 +29,25 @@ export default function Home() {
       </Head>
 
       <DesktopNavbar></DesktopNavbar>
-    
       <HeroSection></HeroSection>
 
       <Slider></Slider>
-      
       <MeshWrapper>
         <Container>
           <AboutSection></AboutSection>
         </Container>
         <WavePinkStar></WavePinkStar>
-        <Container>
-          <ProjectsUnderLay/>
+        <div className="w-full max-w-[1920px] mx-auto relative">
+          <ProjectsUnderLay></ProjectsUnderLay>
           <ProjectSection></ProjectSection>
-        </Container>
+        </div>
         <WaveBlueStar></WaveBlueStar>
       </MeshWrapper>
 
       <Container>
-        <TeamUnderlayMesh/>
         <TeamSection></TeamSection>
         <Footer></Footer>
+        <TeamUnderlayMesh/>
       </Container>
     </div>
   )

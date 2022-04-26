@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes }from 'styled-components'
 
 export const ProjectWrapper = styled.div`
    height: 100%;
@@ -81,7 +81,42 @@ export const CardBottom = styled.div`
    position: relative;
 `
 
-export const CardBottomTop = styled.div`
+export const CardBottomTop = styled.div<{onHover: boolean}>`
+   display: flex;
+   flex-direction: row;
+   margin: 10px auto 0;
+   z-index: 3;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+   position: relative;
+   opacity: ${props => props.onHover ? 0 : 1};
+   transition: opacity 0.4s ease-in-out;
+
+   @media screen and (max-width: 640px){
+      flex-direction: column;
+      align-items:flex-start;
+   }
+
+   @media screen and (max-width: 380px){
+      padding-left: 20px;
+   }
+`
+
+export const CardBottomDiv = styled.div<{onHover: boolean}>`
+   height:100px;
+   width: 100%;
+   background-color: transparent;
+   position: absolute;
+   z-index: 3;
+   border: none;
+   top: ${(props) => props.onHover ? "0%":"-240%"};
+   left: 0;
+   transition: .4s ease-in-out top;
+   transition-delay: .15s;
+`
+
+export const BottomContent = styled.div`
    display: flex;
    flex-direction: row;
    margin: 10px auto 0;
@@ -99,22 +134,6 @@ export const CardBottomTop = styled.div`
    @media screen and (max-width: 380px){
       padding-left: 20px;
    }
-`
-export const CardBottomDiv = styled.div<{onHover: boolean}>`
-   height:100px;
-   width: 100%;
-   background-color: black;
-   background-image: url(/images/background.png);
-   background-size: 100%;
-   background-position: center;
-   background-repeat: none;
-   position: absolute;
-   z-index: 3;
-   border: none;
-   top: ${(props) => props.onHover ? "0%":"-230%"};
-   left: 0;
-   transition: .4s ease-in-out top;
-   transition-delay: .15s;
 `
 
 

@@ -10,7 +10,7 @@ import SectionText from './SectionText'
 const TeamSection = () => {
 
    return (
-      <TeamSectionDiv >
+      <TeamSectionDiv id="teams">
          <div className="pt-4 w-full">
             <SectionText headerTxt="Team"/>
             <p className="hidden font-light sm:flex sm:flex-wrap sm:text-lg lg:text-[24px] lg:max-w-628 xl:text-[28px] text-white xl:max-w-[900px] leading-8">
