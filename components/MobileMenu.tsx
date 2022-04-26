@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
+import Link from 'next/link'
 
 const MobileMenuContainer = styled.div<{slide:boolean}>`
     @media (max-width: 1024px) {
@@ -164,8 +165,18 @@ const MobileMenu = ({ closemenu, slide }) => {
 
             <ul className="mb-24">
                 <li className='list-inside list-disc text-2xl leading-7 pb-10 font-normal uppercase text-w md:list-none d:text-3xl md:leading-8 md:pb-10'>Instagram</li>
-                <li className='list-inside list-disc text-2xl leading-7 pb-10 font-normal uppercase text-w md:list-none d:text-3xl md:leading-8 md:pb-10'>Twitter</li>
-                <li className='list-inside list-disc text-2xl leading-7 pb-10 font-normal uppercase text-w md:list-none d:text-3xl md:leading-8 md:pb-10'>Linkedin</li>
+
+                <Link href="https://www.linkedin.com/company/web3dmedia" passHref>
+                    <a target='_blank'>
+                        <li className='list-inside list-disc text-2xl leading-7 pb-10 font-normal uppercase text-w md:list-none d:text-3xl md:leading-8 md:pb-10'>Twitter</li>
+                    </a>
+                </Link>
+
+                <Link href="https://www.linkedin.com/company/web3dmedia" passHref>
+                    <a target='_blank'>
+                        <li className='list-inside list-disc text-2xl leading-7 pb-10 font-normal uppercase text-w md:list-none d:text-3xl md:leading-8 md:pb-10'>Linkedin</li>
+                    </a>
+                </Link>
             </ul>
 
             <Circle>
