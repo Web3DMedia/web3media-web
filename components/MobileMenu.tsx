@@ -16,9 +16,10 @@ const MobileMenuContainer = styled.div<{slide:boolean}>`
         overflow-y: scroll;
         left: 110vw;
         transition: all 1.4s ease-in-out;
+        display: block;
 
-        ${({slide}) => slide ? 'left: 0;' : ''};
-  }
+        ${({slide}) => slide ? 'left: 0;' : ''}
+    }
 `
 const MobileMenuClose = styled.div`
     display: flex;
