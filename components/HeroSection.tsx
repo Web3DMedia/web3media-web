@@ -278,11 +278,11 @@ const SocialContainer = styled.ul`
     }
 `
 const SocialLinks = styled.li`
-    font-weight: 400;
+    font-weight: 800;
     padding-top: 27px;
     font-size: 16px;
     line-height: 15px;
-    color:var(--W);
+    color:var(--B3);
     transform: rotate(270deg);
     &:nth-child(5) {
     padding: 6px;
@@ -323,7 +323,7 @@ const HeroSection = () => {
 
             <Button>
               <ScrollLink to="teams" spy={true} smooth={true} offset={-20} duration={900}>
-                <div className="cursor-pointer flex justify-center m-auto hover:scale-125 transition-transform w-122 h-14 lg:w-139 lg:h-19 2xl:w-228 xl:h-47 duration-700 ">
+                <div className="cursor-pointer flex justify-center m-auto hover:scale-105 transition-transform w-122 h-14 lg:w-139 lg:h-19 2xl:w-228 xl:h-47 duration-700 ">
                     <Image src='/images/our-superpowers-btn.svg' width={228} height={47} alt="logo" />
                 </div>
               </ScrollLink>
