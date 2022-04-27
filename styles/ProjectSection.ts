@@ -40,6 +40,29 @@ export const ProjectsUnderLay = styled.div`
    }
 `
 
+export const ProjectsDiv= styled.div`
+   width: 100%;
+   height: 650px;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   overflow-x: scroll;
+   scrollbar-width: none; /*Firefox*/
+   -ms-overflow-style: none; /*Internet Explorer*/
+   
+   &::-webkit-scrollbar{
+      width: 0px;
+      height: 0px;
+   }
+
+   @media screen and (max-width: 639px){
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+   }
+
+`
+
 export const Card = styled.div`
    cursor: pointer;
    color: #FFFFFF;
