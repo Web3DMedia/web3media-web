@@ -7,6 +7,7 @@ import {Link as ScrollLink} from 'react-scroll';
 const MobileMenuContainer = styled.div<{slide:boolean}>`
     display: none;
     @media (max-width: 1024px) {
+        display:block;
         background: rgba(0, 0, 0, 0.6);
         backdrop-filter: blur(40px);
         height: 100vh;
