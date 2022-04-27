@@ -135,7 +135,7 @@ const EllipseOne = styled.div`
     height: 715px;
     animation: ${rotateEllipseOne} linear infinite;
     transition: all 20s ease-in-out;
-    animation-delay: 1.4s;
+    animation-delay: 2s;
     animation-duration: 6s;
     position: absolute;
     @media (max-width: 550px) {
@@ -151,7 +151,7 @@ const EllipseTwo = styled.div`
     height: 715px;
     animation: ${rotateEllipseTwo} linear infinite;
     transition: all 20s ease-in-out;
-    animation-delay: 0.8s;
+    animation-delay: 2s;
     animation-duration: 6s;
     @media (max-width: 550px) {
         width: 168px;

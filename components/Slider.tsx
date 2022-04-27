@@ -19,8 +19,6 @@ letter-spacing: 0.01em;
 color: var(--W)
 `
 const SliderContainer = styled.div`
-border-top: 0.5px solid var(--B2);
-border-bottom: 0.5px solid var(--B2);
 padding: 20px 0;
 width:30%;
 margin: auto;
