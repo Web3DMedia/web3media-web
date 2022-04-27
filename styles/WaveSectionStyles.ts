@@ -5,15 +5,21 @@ export const WaveContainer = styled.div`
    border: none;
    position: relative;
    background-image: url(/images/wave.svg), url(/images/background.png) !important;
-   background-size: 100%, contain;
+   background-size: 100%, 500px;
    background-repeat: no-repeat, repeat;
    background-position: center, left top;
    margin: 0;
-
-   @media screen and (max-width:640px){
+    @media (max-width: 1024px) {
+        background-size: 100%, 500px;
+    }
+    @media screen and (max-width:640px){
       height: 120px;
       margin-top: 20px;
    }
+    @media (max-width: 550px) {
+        background-size: 100%, 300px;
+    }
+   
 `
 
 export const PinkContainer = styled.div`
@@ -22,13 +28,18 @@ export const PinkContainer = styled.div`
    border: none;
    position: relative;
    background-image: url(/images/background.png), url(/images/wave.svg);
-   background-size: contain, 100%;
+   background-size: 500px, 100%;
    background-repeat: repeat, no-repeat;
    background-position: center bottom,center;
    margin: 0;
-
-   @media screen and (max-width:640px){
+    @media (max-width: 1024px) {
+        background-size: 500px, 100%;
+    }
+    @media screen and (max-width:640px){
       height: 120px;
-      margin-bottom: 20px;
+      margin-top: 20px;
    }
+    @media (max-width: 550px) {
+        background-size: 500px, 100%;
+    }
 `
