@@ -7,7 +7,8 @@ import {
    Card,
    CardBottomTop,
    CardBottomDiv,
-   BottomContent
+   BottomContent,
+   ProjectsDiv
 } from '../styles/ProjectSection'
 import { useState } from 'react';
 import SectionText from './SectionText';
@@ -17,14 +18,13 @@ const ProjectSection = () => {
    const [papayaHover, setPapayaHover] = useState<boolean>(false)
    const [blocassetHover, setBlocassetHover] = useState<boolean>(false)
    const [rocketHover, setRocketHover] = useState<boolean>(false) 
-
    return (
       <ProjectWrapper id="projects" >
          <div className="pt-4 w-full">
             <SectionText headerTxt="Projects"/>
             <h2 className="text-white font-light text-base sm:text-lg lg:text-[24px] xl:text-[28px] leading-6 lg:leading-10">Explore some of our web3 projects</h2>
          </div>
-         <div className="flex flex-col items-center justify-center mt-5 sm:justify-start sm:flex-row sm:overflow-x-scroll sm:h-650 w-full">
+         <ProjectsDiv >
             <Card
                onMouseEnter={() => {setBlocassetHover(true)}}
                onMouseLeave={() => {setBlocassetHover(false)}}
@@ -162,7 +162,7 @@ const ProjectSection = () => {
                   </CardBottomDiv>
                </CardBottom>
             </Card>
-         </div>
+         </ProjectsDiv>
       </ProjectWrapper>
    )
 }
