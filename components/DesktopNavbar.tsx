@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
+import {Link as ScrollLink, animateScroll as scroll} from 'react-scroll';
 
 //components
 import MobileMenu from '../components/MobileMenu'
@@ -31,11 +32,14 @@ const Li = styled.li`
     cursor: pointer;
     text-transform: uppercase;
     &:hover {
-        font-size:18px;
+    background-image: linear-gradient(135deg, #FF6EFF 5%, #0AB7F6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
     }
     &:last-child {
-        padding: 40px 0px 0px 34px;
-        cursor: auto;
+        display:none
     }
     &:last-child:hover {
         font-size: 0px;
@@ -82,9 +86,17 @@ const DesktopNavbar = () => {
             </div>
 
             <ul className='flex font-display'>
-                <Li >Early Access</Li>
-                <Li>Team</Li>
-                <Li>About</Li>
+                <Li>Early Access</Li>
+                <Li>
+                    <ScrollLink to="projects" spy={true} smooth={true} offset={-20} duration={900}>
+                        Projects
+                    </ScrollLink>
+                </Li>
+                <Li>
+                    <ScrollLink to="teams" spy={true} smooth={true} offset={-20} duration={900}>
+                        Team
+                    </ScrollLink>
+                </Li>
                 <Li onClick={() => setShowmenu(true)}>
                     <HamMenu></HamMenu>
                     <HamMenu></HamMenu>

@@ -5,8 +5,8 @@ import PinkImage from '../public/images/pink-vector.svg'
 const WavePinkStar = () => {
    return (
       <PinkContainer>
-         <div className="w-full h-full max-w-1440 mx-auto px-6 md:px-20 xl:px-36 flex items-start justify-start">
-            <div className="absolute top-[200px]">
+         <div className="w-full px-6 max-w-[900px] lg:px-7 xl:max-w-[1240px] 2xl:max-w-[1440px] mx-auto">
+            <div className="absolute top-28 sm:top-24 md:top-36 lg:top-[150px] xl:top-[200px]">
                <Image
                   src={PinkImage}
                   alt="image"

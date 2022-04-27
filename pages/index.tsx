@@ -18,38 +18,36 @@ import { TeamUnderlayMesh } from "../styles/TeameMemberStyles"
 export default function Home() {
 
   return (
-    <div className="bg-b1 font-body">
+    <div className=" font-body w-full">
       <Head>
         <title>Web3Media</title>
         <meta
           name="description"
-          content="Giving financial freedom and access to designers, artists, blockchain talents and creative minds."
+          content="Empowering and providing financial freedom for web3 designers, artists, blockchain talents, and creative minds"
         />
         <link rel="icon" href="/images/logo.svg" />
       </Head>
 
       <DesktopNavbar></DesktopNavbar>
-    
-        <HeroSection></HeroSection>
+      <HeroSection></HeroSection>
 
       <Slider></Slider>
-      
       <MeshWrapper>
         <Container>
           <AboutSection></AboutSection>
         </Container>
         <WavePinkStar></WavePinkStar>
         <Container>
-          <ProjectsUnderLay/>
+          <ProjectsUnderLay></ProjectsUnderLay>
           <ProjectSection></ProjectSection>
         </Container>
         <WaveBlueStar></WaveBlueStar>
       </MeshWrapper>
 
       <Container>
-        <TeamUnderlayMesh/>
         <TeamSection></TeamSection>
         <Footer></Footer>
+        <TeamUnderlayMesh/>
       </Container>
     </div>
   )

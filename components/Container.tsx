@@ -6,18 +6,18 @@ const ContainerContainer = styled.div`
     background-position: center;
     background-repeat: none;
     @media (max-width: 1024px) {
-    border: none;
-    background-size: 500px;
-  }
+        border: none;
+        background-size: 500px;
+    }
     @media (max-width: 550px) {
-    border: none;
-    background-size: 300px;
-  }
+        border: none;
+        background-size: 300px;
+    }
 `
 const Container = ({ children }) => {
     return (
-        <ContainerContainer className='bg-b1 relative' >
-            <div className='max-w-1440 m-auto px-6 md:px-20 xl:px-36'>
+        <ContainerContainer className='bg-b1 relative ' >
+            <div className='w-full px-6 max-w-[900px] lg:px-7 xl:max-w-[1240px] 2xl:max-w-[1440px] mx-auto'>
                 {children}
             </div>
         </ContainerContainer>
