@@ -287,6 +287,13 @@ const SocialLinks = styled.li`
     &:nth-child(5) {
     padding: 6px;
 }
+    &:hover {
+    background-image: linear-gradient(135deg, #FF6EFF 5%, #0AB7F6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    }
 `
 const SocialCircle = styled.div`
     margin: 25px 0 0 25px;
