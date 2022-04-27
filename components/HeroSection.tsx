@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components'
 import Image from 'next/image'
 import Link from 'next/link'
 import {Link as ScrollLink} from 'react-scroll';
-import { EllipseContainer, EllipseOne, EllipseTwo } from "../pages";
+
 const HeroContainer = styled.div`
     background: url(/images/background.png);
     background-size: 500px;
@@ -43,6 +43,119 @@ const HeroSectionContainer = styled.div`
     @media (max-width: 1024px) {
     border: none;
   }
+`
+const rotateEllipseOne = keyframes`
+    0% {
+        border-bottom: 2px solid var(--W);
+        border-right: none;
+        border-top: none;
+        border-left: none;
+    }
+    25% {
+        border-right: 2px solid var(--W);
+        border-bottom: none;
+        border-top: none;
+        border-left: none;
+    }
+    50% {
+        border-top: 2px solid var(--W);
+        border-right: none;
+        border-bottom: none;
+        border-left: none;
+    }
+    75% {
+        border-left: 2px solid var(--W);
+        border-top:none;
+        border-right:none;
+        border-bottom:none;
+    }
+    100% {
+      border-left:none;
+      border-top:none;
+      border-right:none;
+      border-bottom: 2px solid var(--W);
+    }
+`
+const rotateEllipseTwo = keyframes`
+    0% {
+        border-top: 2px solid var(--W);
+        border-right: none;
+        border-bottom: none;
+        border-left: none;
+    }
+    25% {
+        border-left: 2px solid var(--W);
+        border-top: none;
+        border-right: none;
+        border-bottom: none;
+    }
+    50% {
+        border-bottom: 2px solid var(--W);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+    75% {
+        border-right: 2px solid var(--W);
+        border-bottom:none;
+        border-left:none;
+        border-top:none;
+    }
+    100% {
+      border-top: 2px solid var(--W);
+      border-right:none;
+    }
+`
+const EllipseContainer = styled.div`
+    padding: 0 0;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 657px;
+    height: 790px;
+    left: 50%;
+    top: 390px;
+    transform: translate(-50%, -50%);
+    @media (max-width: 1024px) {
+        left: 50%;
+        top: 330px;
+     }
+    @media (max-width: 550px) {
+        width: 168px;
+        height: 314px;
+        left: 50%;
+        top: 275px;
+    }
+`
+const EllipseOne = styled.div`
+    opacity: 0.3;
+    transform: matrix(0.23, -1.17, 0.72, -0.51, 0, 0) skew(-1deg);
+    border-radius: 50%;
+    width: 383px;
+    height: 715px;
+    animation: ${rotateEllipseOne} linear infinite;
+    animation-delay: 2s;
+    animation-duration: 6s;
+    position: absolute;
+    @media (max-width: 550px) {
+        width: 168px;
+        height: 314px;
+    }
+`
+const EllipseTwo = styled.div`
+    opacity: 0.1;
+    transform: matrix(-0.23, -1.17, -0.72, -0.51, 0, 0) skew(-1deg);
+    border-radius: 50%;
+    width: 383px;
+    height: 715px;
+    animation: ${rotateEllipseTwo} linear infinite;
+    animation-delay: 2s;
+    animation-duration: 6s;
+    @media (max-width: 550px) {
+        width: 168px;
+        height: 314px;
+    }
+
 `
 const Mesh = styled.div`
     width: 724px;
