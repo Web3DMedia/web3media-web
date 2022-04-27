@@ -13,11 +13,8 @@ const TeamSection = () => {
       <TeamSectionDiv id="teams">
          <div className="pt-4 w-full">
             <SectionText headerTxt="Team"/>
-            <p className="hidden font-light sm:flex sm:flex-wrap sm:text-lg lg:text-[24px] lg:max-w-628 xl:text-[28px] text-white xl:max-w-[900px] leading-8">
+            <p className="flex font-light sm:flex sm:flex-wrap sm:text-lg lg:text-[24px] lg:max-w-628 xl:text-[28px] text-white xl:max-w-[900px] leading-8">
                A team of highly motivated super heroes with super powers in designs, art, animation, engineering and product.
-            </p>
-            <p className="flex flex-wrap sm:hidden text-white text-[18px] leading-5">
-               Explore some of our web3 projects
             </p>
          </div>
          <div className="relative flex flex-col items-center justify-center w-full my-14 sm:my-16 md:my-20 h-600 lg:h-full md:p-28 lg:py-32">
