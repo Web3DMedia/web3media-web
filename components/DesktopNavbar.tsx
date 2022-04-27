@@ -32,7 +32,11 @@ const Li = styled.li`
     cursor: pointer;
     text-transform: uppercase;
     &:hover {
-        font-size:18px;
+            background-image: linear-gradient(135deg, #FF6EFF 5%, #0AB7F6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
     }
     &:last-child {
         display:none
