@@ -142,7 +142,7 @@ export const MeshWrapper = styled.div`
    height: 100%;
    background: url(/images/underlay-mesh.png);
    background-size:  contain;
-   background-position:  left center bottom;
+   background-position: left center bottom;
    background-repeat: no-repeat;
 
    @media screen and (max-width: 640px){

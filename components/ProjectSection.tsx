@@ -19,7 +19,7 @@ const ProjectSection = () => {
    const [rocketHover, setRocketHover] = useState<boolean>(false) 
 
    return (
-      <ProjectWrapper id="projects">
+      <ProjectWrapper id="projects" >
          <div className="pt-4 w-full">
             <SectionText headerTxt="Projects"/>
             <h2 className="text-white font-light text-base sm:text-lg lg:text-[24px] xl:text-[28px] leading-6 lg:leading-10">Explore some of our web3 projects</h2>

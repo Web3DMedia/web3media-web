@@ -4,7 +4,14 @@ import Link from 'next/link'
 import ArrowVector from '../public/images/small-arrow.svg'
 import {FaTwitter, FaInstagram, FaLinkedinIn} from 'react-icons/fa'
 import {animateScroll as scroll} from 'react-scroll';
+import styled from 'styled-components'
 
+
+const Separator = styled.div`
+   width: 2.5px;
+   background-color: #fff;
+   height:30px;
+`
 const Footer = () => {
    const toggleHome = () => {
       scroll.scrollToTop()
@@ -15,34 +22,38 @@ const Footer = () => {
             <div className="cursor-pointer" onClick={toggleHome}>
                <Image src={Logo} alt="logo" />
             </div>
-
-            <ul className="list-disc hidden sm:flex">
-               <Link href="https://www.instagram.com/web3d.media/">
+            <div className='items-center hidden sm:flex'>
+               <Link href="/">
                   <a target="_blank">
-                     <li  className="mx-5 cursor-pointer">Instagram</li>
+                     <span className="mx-4 cursor-pointer text-[#C4C4C4] font-extrabold">Legal</span>
                   </a>
                </Link>
-               <Link href="https://twitter.com/web3Dmedia">
-                  <a target="_blank">
-                     <li  className="mx-5 cursor-pointer">Twitter</li>
-                  </a>
-               </Link>
-               <Link href="https://www.linkedin.com/company/web3dmedia">
-                  <a target="_blank">
-                     <li  className="mx-5 cursor-pointer">Linkedin</li>
-                  </a>
-               </Link>
-            </ul>
+               <Separator/>
+               <ul className="list-disc hidden sm:flex">
+                  <Link href="https://www.instagram.com/web3d.media/">
+                     <a target="_blank">
+                        <span className="mx-4 cursor-pointer font-extrabold text-[#C4C4C4]">Instagram</span>
+                     </a>
+                  </Link>
+                  <Link href="https://twitter.com/web3Dmedia">
+                     <a target="_blank">
+                        <li  className="mx-4 cursor-pointer font-extrabold text-[#C4C4C4]">Twitter</li>
+                     </a>
+                  </Link>
+                  <Link href="https://www.linkedin.com/company/web3dmedia">
+                     <a target="_blank">
+                        <li  className="mx-4 cursor-pointer font-extrabold text-[#C4C4C4]">Linkedin</li>
+                     </a>
+                  </Link>
+               </ul>
+            </div>
          </div>
          <div className="flex flex-col my-5 sm:hidden">
-            <Link href="/about">
-               <a className="flex items-center justify-between text-lg my-3">About. <span><Image src={ArrowVector} alt="img"/></span></a>
+            <Link href="/">
+               <a className="flex items-center justify-between text-lg my-3">Legal. <span><Image src={ArrowVector} alt="img"/></span></a>
             </Link>
-            <Link href="/about">
+            <Link href="/">
                <a className="flex items-center justify-between text-lg my-3">Early access. <span><Image src={ArrowVector} alt="img"/></span></a>
-            </Link>
-            <Link href="/about">
-               <a className="flex items-center justify-between text-lg my-3">Team. <span><Image src={ArrowVector} alt="img"/></span></a>
             </Link>
          </div>
          <div className="flex items-center justify-center w-full sm:hidden">

@@ -18,7 +18,7 @@ import { TeamUnderlayMesh } from "../styles/TeameMemberStyles"
 export default function Home() {
 
   return (
-    <div className="bg-b1 font-body">
+    <div className=" font-body">
       <Head>
         <title>Web3Media</title>
         <meta
