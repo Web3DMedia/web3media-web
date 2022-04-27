@@ -13,6 +13,7 @@ import {
 import { useState } from 'react';
 import SectionText from './SectionText';
 import Link from 'next/link'
+import ProjectBtnIcon from '../public/images/project-btn-icon.svg'
 
 const ProjectSection = () => {
    const [papayaHover, setPapayaHover] = useState<boolean>(false)
@@ -49,8 +50,8 @@ const ProjectSection = () => {
                      </CardBottomTop>
                      <Link href="https://twitter.com/blocasset">
                         <a className="cursor-pointer flex items-center mt-5 xl:hidden" target="_blank">
-                           <CircularGradientBtn img='/images/arrow-vector.svg'/>
-                           <h2 className="ml-4 text-[14px] xl:text-[16px] font-normal">View Site</h2>
+                           <Image src={ProjectBtnIcon} alt="btn icon" width={50} height={50}/>
+                           <h2 className="ml-4 text-[14px] xl:text-[16px] font-normal">Coming Soon</h2>
                         </a>
                      </Link>
                   </div>
@@ -63,8 +64,8 @@ const ProjectSection = () => {
                      </BottomContent>
                      <Link href="https://twitter.com/blocasset">
                         <a className="cursor-pointer flex items-center mt-5" target="_blank">
-                           <CircularGradientBtn img='/images/arrow-vector.svg'/>
-                           <h2 className="ml-4 text-[14px] xl:text-[16px] font-normal">View Site</h2>
+                           <Image src={ProjectBtnIcon} alt="btn icon" width={50} height={50}/>
+                           <h2 className="ml-4 text-[14px] xl:text-[16px] font-normal">Coming Soon</h2>
                         </a>
                      </Link>
                   </CardBottomDiv>
@@ -95,8 +96,8 @@ const ProjectSection = () => {
                      </CardBottomTop>
                      <Link href='https://twitter.com/studiopapayas'>
                         <a className="cursor-pointer flex items-center mt-5 xl:hidden" target="_blank">
-                           <CircularGradientBtn img='/images/arrow-vector.svg'/>
-                           <h2 className="ml-4 text-[14px] xl:text-[16px] font-normal">View Site</h2>
+                           <Image src={ProjectBtnIcon} alt="btn icon" width={50} height={50}/>
+                           <h2 className="ml-4 text-[14px] xl:text-[16px] font-normal">Coming Soon</h2>
                         </a>
                      </Link>
                   </div>
@@ -109,8 +110,8 @@ const ProjectSection = () => {
                      </BottomContent>
                      <Link href="https://twitter.com/studiopapayas">
                         <a className="cursor-pointer flex items-center mt-5" target="_blank">
-                           <CircularGradientBtn img='/images/arrow-vector.svg'/>
-                           <h2 className="ml-4 text-[14px] xl:text-[16px] font-normal">View Site</h2>
+                           <Image src={ProjectBtnIcon} alt="btn icon" width={50} height={50}/>
+                           <h2 className="ml-4 text-[14px] xl:text-[16px] font-normal">Coming Soon</h2>
                         </a>
                      </Link>
                   </CardBottomDiv>
