@@ -153,12 +153,12 @@ export const ThirdTeamDiv = styled.div`
 `
 
 export const WorldDiv = styled.div`
-   width: 79.23px;
-   height: 79.23px;
+   width: 82px;
+   height: 82px;
    background: url(/images/earth.gif);
    background-position: center;
    background-repeat: no-repeat;
-   background-size: contain;
+   background-size: cover;
    position: absolute;
    top:50%;
    left: 50%;

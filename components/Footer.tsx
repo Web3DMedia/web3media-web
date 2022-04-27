@@ -8,9 +8,9 @@ import styled from 'styled-components'
 
 
 const Separator = styled.div`
-   width: 2.5px;
+   width: 2px;
    background-color: #fff;
-   height:30px;
+   height:20px;
 `
 const Footer = () => {
    const toggleHome = () => {
@@ -42,7 +42,7 @@ const Footer = () => {
                   </Link>
                   <Link href="https://www.linkedin.com/company/web3dmedia">
                      <a target="_blank">
-                        <li  className="mx-4 cursor-pointer font-extrabold text-[#C4C4C4]">Linkedin</li>
+                        <li  className="ml-4 cursor-pointer font-extrabold text-[#C4C4C4]">Linkedin</li>
                      </a>
                   </Link>
                </ul>

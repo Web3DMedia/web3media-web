@@ -27,7 +27,7 @@ const TeamSection = () => {
                <h3 className="mt-1 text-white text-[14px] lg:text-[16px] leading-[14px] sm:leading-4">Engineering</h3>
             </div>
 
-            <div className="flex flex-col items-center w-28 h-20 absolute top-4 -right-4 sm:top-1/2 sm:-right-5 md:-right-14  xl:right-0">
+            <div className="flex flex-col items-center w-28 h-20 absolute top-4 -right-4 sm:top-1/2 sm:-right-5 md:-right-1  xl:right-0">
                <Image src={DesignIcon} alt="icon"/>
                <h3 className="mt-1 text-white text-[14px] lg:text-[16px] leading-[14px] sm:leading-4">Design</h3>
             </div>
@@ -38,7 +38,7 @@ const TeamSection = () => {
             </div>
 
             <div 
-               className="flex flex-col items-center w-28 h-20 absolute bottom-4 -right-4 sm:top-1/2 sm:-left-5 md:-left-14 xl:left-0 duration-75"
+               className="flex flex-col items-center w-28 h-20 absolute bottom-4 -right-4 sm:top-1/2 sm:-left-5 md:-left-2 xl:left-0 duration-75"
             >
                <Image src={ManagementIcon} alt="icon"/>
                <h3 className="mt-1 text-white text-[14px] lg:text-[16px] leading-[14px] sm:leading-4">Management</h3>

@@ -14,11 +14,9 @@ const MobileMenuContainer = styled.div<{slide:boolean}>`
         width:100%;
         position: fixed;
         overflow-y: scroll;
-        left: 110vw;
+        right:${({slide}) => slide ? ' 0' : '-100%'};
         transition: all 1.4s ease-in-out;
         display: block;
-
-        ${({slide}) => slide ? 'left: 0;' : ''}
     }
 `
 const MobileMenuClose = styled.div`
