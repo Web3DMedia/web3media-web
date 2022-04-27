@@ -134,7 +134,7 @@ export const EllipseTwo = styled.div`
 export default function Home() {
 
   return (
-    <div className=" font-body">
+    <div className=" font-body w-full">
       <Head>
         <title>Web3Media</title>
         <meta

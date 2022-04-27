@@ -15,17 +15,24 @@ export const ProjectWrapper = styled.div`
 `
 export const ProjectsUnderLay = styled.div`
    position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
+   top: 20%;
+   right: 0;
+   width: 800px;
+   height: 300px;
    background-image: url(/images/projects-mesh.png);
    background-repeat: no-repeat;
    background-position: top right;
    background-size: auto;
 
+   @media screen and (max-width: 768px){
+      top: 10%;
+      width: 500px;
+   }
+
+
    @media screen and (max-width: 640px){
       background-size: 300px;
+      
    }
    @media screen and (max-width: 468px){
       background-position: center, right top;
@@ -33,12 +40,44 @@ export const ProjectsUnderLay = styled.div`
    }
 `
 
+export const ProjectsDiv= styled.div`
+   width: 100%;
+   height: 650px;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   overflow-x: scroll;
+   scrollbar-width: none; /*Firefox*/
+   -ms-overflow-style: none; /*Internet Explorer*/
+   
+   &::-webkit-scrollbar{
+      width: 0px;
+      height: 0px;
+   }
+
+   @media screen and (max-width: 639px){
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+   }
+
+`
+
 export const Card = styled.div`
    cursor: pointer;
    color: #FFFFFF;
    position: relative;
-   margin: 0px 30px;
+   margin: 0px 50px;
    width: 720px;
+   &:first-child{
+      margin-left: 0px;
+   }
+
+   @media screen and (max-width: 768px){
+      &:first-child{
+         margin: 0px auto;
+      } 
+   }
 
    @media screen and (max-width: 640px){
       width: 500px;
