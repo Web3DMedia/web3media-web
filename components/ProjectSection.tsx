@@ -21,7 +21,7 @@ const ProjectSection = () => {
    const [rocketHover, setRocketHover] = useState<boolean>(false) 
    return (
       <ProjectWrapper id="projects" >
-         <div className="pt-4 w-full">
+         <div className="pt-4 w-full mb-10 px-6 sm:px-0">
             <SectionText headerTxt="Projects"/>
             <h2 className="text-white font-light text-base sm:text-lg lg:text-[24px] xl:text-[28px] leading-6 lg:leading-10">Explore some of our web3 projects</h2>
          </div>
@@ -44,7 +44,7 @@ const ProjectSection = () => {
                   <div className="flex flex-col relative z-[2]">
                      <CardBottomTop onHover={blocassetHover}>
                         <h2 className="text-2xl lg:text-3xl xl:text-4xl font-extrabold lg:basis-1/2">Blocasset</h2>
-                        <p className="flex flex-wrap text-sm lg:text-base lg:basis-1/2">
+                        <p className="flex break-words text-sm lg:text-base lg:basis-1/2">
                            Think Freepik, Iconscout or Lottiefiles for Web3
                         </p>
                      </CardBottomTop>
@@ -58,7 +58,7 @@ const ProjectSection = () => {
                   <CardBottomDiv onHover={blocassetHover} className="hidden xl:block">
                      <BottomContent>
                         <h2 className="text-2xl lg:text-3xl xl:text-4xl font-extrabold lg:basis-1/2">Blocasset</h2>
-                        <p className="flex flex-wrap text-sm lg:text-base lg:basis-1/2">
+                        <p className="flex break-words text-sm lg:text-base lg:basis-1/2">
                            Think Freepik, Iconscout or Lottiefiles for Web3
                         </p>
                      </BottomContent>
@@ -90,7 +90,7 @@ const ProjectSection = () => {
                   <div className="flex flex-col relative z-[2]">
                      <CardBottomTop onHover={papayaHover}>
                         <h2 className="text-2xl lg:text-3xl xl:text-4xl font-extrabold lg:basis-1/2">Papayas Studio</h2>
-                        <p className="flex flex-wrap text-sm lg:text-base lg:basis-1/2">
+                        <p className="flex text-sm break-words lg:text-base lg:basis-1/2">
                            Web3 focused audio-visual animation and manga studio
                         </p>
                      </CardBottomTop>
@@ -104,7 +104,7 @@ const ProjectSection = () => {
                   <CardBottomDiv onHover={papayaHover} className="hidden xl:block">
                      <BottomContent>
                         <h2 className="text-2xl lg:text-3xl xl:text-4xl font-extrabold lg:basis-1/2">Papayas Studio</h2>
-                        <p className="flex flex-wrap text-sm lg:text-base lg:basis-1/2">
+                        <p className="flex text-sm break-words lg:text-base lg:basis-1/2">
                            Web3 focused audio-visual animation and manga studio
                         </p>
                      </BottomContent>
@@ -136,13 +136,13 @@ const ProjectSection = () => {
                   <div className="flex flex-col relative z-[2]">
                      <CardBottomTop onHover={rocketHover}>
                         <h2 className="text-2xl lg:text-3xl xl:text-4xl font-extrabold lg:basis-1/2">Coming Soon</h2>
-                        <p className="flex flex-wrap text-sm lg:text-base lg:basis-1/2">
+                        <p className="flex text-sm break-words lg:text-base lg:basis-1/2">
                            We have suites of digital blockchain products in the pipeline
                         </p>
                      </CardBottomTop>
                      <Link href="/">
                         <a className="cursor-pointer flex items-center mt-5 xl:hidden" target="_blank">
-                           <CircularGradientBtn img='/images/arrow-vector.svg'/>
+                           <Image src={ProjectBtnIcon} alt="btn icon" width={50} height={50}/>
                            <h2 className="ml-4 text-[14px] xl:text-[16px] font-normal">Join our early access</h2>
                         </a>
                      </Link>
@@ -150,13 +150,13 @@ const ProjectSection = () => {
                   <CardBottomDiv onHover={rocketHover} className="hidden xl:block">
                      <BottomContent>
                         <h2 className="text-2xl lg:text-3xl xl:text-4xl font-extrabold lg:basis-1/2">Coming Soon</h2>
-                        <p className="flex flex-wrap text-sm lg:text-base lg:basis-1/2">
+                        <p className="flex text-sm break-words lg:text-base lg:basis-1/2">
                            We have suites of digital blockchain products in the pipeline
                         </p>
                      </BottomContent>
                      <Link href="/">
                         <a className="cursor-pointer flex items-center mt-5">
-                           <CircularGradientBtn img='/images/arrow-vector.svg'/>
+                           <Image src={ProjectBtnIcon} alt="btn icon" width={50} height={50}/>
                            <h2 className="ml-4 text-[14px] xl:text-[16px] font-normal">Join our early access</h2>
                         </a>
                      </Link>

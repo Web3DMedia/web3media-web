@@ -14,6 +14,7 @@ import Slider from '../components/Slider'
 
 import { MeshWrapper, ProjectsUnderLay } from "../styles/ProjectSection"
 import { TeamUnderlayMesh } from "../styles/TeameMemberStyles"
+import ProjectContainer from "../components/ProjectContainer"
 
 export default function Home() {
 
@@ -37,10 +38,10 @@ export default function Home() {
           <AboutSection></AboutSection>
         </Container>
         <WavePinkStar></WavePinkStar>
-        <Container>
+        <ProjectContainer>
           <ProjectsUnderLay></ProjectsUnderLay>
           <ProjectSection></ProjectSection>
-        </Container>
+        </ProjectContainer>
         <WaveBlueStar></WaveBlueStar>
       </MeshWrapper>
 
