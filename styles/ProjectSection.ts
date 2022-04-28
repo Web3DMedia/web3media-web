@@ -46,6 +46,7 @@ export const ProjectsDiv= styled.div`
    display: flex;
    align-items: center;
    justify-content: flex-start;
+   margin-top: 50px;
    overflow-x: scroll;
    scrollbar-width: none; /*Firefox*/
    -ms-overflow-style: none; /*Internet Explorer*/
@@ -59,8 +60,28 @@ export const ProjectsDiv= styled.div`
       flex-direction: column;
       height: 100%;
       justify-content: center;
+      align-items: center;
    }
 
+   @media screen and (max-width: 395px){
+      padding-left: 20px;
+   }
+
+   @media screen and (max-width: 376px){
+      /* background-color: red; */
+      width: 100%;
+      margin:0 auto;
+      padding-left: 0px;
+      padding-right: 28px;
+   }
+
+   @media screen and (max-width: 365px){
+      padding-right: 20px;
+   }
+
+   @media screen and (max-width: 360px){
+      padding-right: 15px;
+   }
 `
 
 export const Card = styled.div`
@@ -86,7 +107,12 @@ export const Card = styled.div`
 
    @media screen and (max-width: 568px){
       width: 350px;
-      margin: 20px auto;
+      margin: 40px auto;
+   }
+
+   @media screen and (max-width: 375px){
+      width: 300px;
+      margin: 30px auto;
    }
 `
 
@@ -135,6 +161,7 @@ export const CardBottomTop = styled.div<{onHover: boolean}>`
    @media screen and (max-width: 640px){
       flex-direction: column;
       align-items:flex-start;
+      opacity: 1;
    }
 
    @media screen and (max-width: 380px){
