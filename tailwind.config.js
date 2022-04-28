@@ -9,8 +9,11 @@ module.exports = {
       body: ["Neue_Machina", "sans-serif"],
       display: ['pp_telegraf']
     },
-
     extend: {
+      screens:{
+        '3xl':'2000px',
+        '4xl':'2400px',
+      },
       colors: {
         primary: "#0251E1",
         black400: "#101010",

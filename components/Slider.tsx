@@ -25,7 +25,7 @@ margin: auto;
 box-sizing: border-box;
 position: relative;
 @media (max-width: 1024px) {
-    width:100%;
+    width:80%;
   }
     @media (max-width: 550px) {
     width:100%;
@@ -51,12 +51,12 @@ const Slider = () => {
         <Image src='/images/designers-dao.png'  width={276} height={92} alt="polygon studios" objectFit='contain'></Image>
       </SlideImageContainer>
 
-      <SlideImageContainer className='w-226 h-42 lg:w-186 lg:h-62 xl:w-2s76 xl:h-102'>
-        <Image src='/images/crevatal.png'  width={276} height={92} alt="crevatal" objectFit='contain'></Image>
+      <SlideImageContainer className='w-226 h-42 lg:w-186 lg:h-62 xl:w-254 xl:h-92'>
+        <Image src='/images/crevatal.png'  width={254} height={92} alt="crevatal" objectFit='contain'></Image>
       </SlideImageContainer>
 
-      <SlideImageContainer className='w-126 h-42 lg:w-186 lg:h-62 xl:w-276 xl:h-92'>
-        <Image src='/images/polygonstudios.png'  width={276} height={92} alt="Designers DAO" objectFit='contain'></Image>
+      <SlideImageContainer className='w-126 h-42 lg:w-186 lg:h-62 xl:w-125 xl:h-92'>
+        <Image src='/images/polygonstudios.png'  width={125} height={92} alt="Designers DAO" objectFit='contain'></Image>
       </SlideImageContainer>
       
   </SliderContainer>

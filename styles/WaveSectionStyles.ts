@@ -10,14 +10,14 @@ export const WaveContainer = styled.div`
    background-position: center, left top;
    margin: 0;
     @media (max-width: 1024px) {
-        background-size: 100%, 500px;
+        background-size: auto, 500px;
     }
     @media screen and (max-width:640px){
       height: 120px;
       margin-top: 20px;
    }
     @media (max-width: 550px) {
-        background-size: 100%, 300px;
+        background-size: auto, 300px;
     }
    
 `
@@ -33,13 +33,13 @@ export const PinkContainer = styled.div`
    background-position: center bottom,center;
    margin: 0;
     @media (max-width: 1024px) {
-        background-size: 500px, 100%;
+        background-size: 500px, auto;
     }
     @media screen and (max-width:640px){
       height: 120px;
       margin-top: 20px;
    }
     @media (max-width: 550px) {
-        background-size: 500px, 100%;
+        background-size: 500px, auto;
     }
 `
