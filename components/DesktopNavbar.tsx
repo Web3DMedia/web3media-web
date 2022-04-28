@@ -88,8 +88,8 @@ const DesktopNavbar = () => {
             <ul className='flex font-display'>
                 <Li>Early Access</Li>
                 <Li>
-                    <ScrollLink to="projects" spy={true} smooth={true} offset={-20} duration={900}>
-                        Projects
+                    <ScrollLink to="products" spy={true} smooth={true} offset={-20} duration={900}>
+                        Products
                     </ScrollLink>
                 </Li>
                 <Li>
