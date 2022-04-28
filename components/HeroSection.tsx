@@ -316,7 +316,7 @@ const HeroSection = () => {
           <FirstHeadingText>We are an</FirstHeadingText>
           <SecondHeadingText>Ambitious Creative Web3 Studio.</SecondHeadingText>
           <ThirdHeadingText>
-Creating, building and developing animations and creators resources for the new web.
+            Creating, building and developing animations and creators resources for the new web.
           </ThirdHeadingText>
 
             <Button>
