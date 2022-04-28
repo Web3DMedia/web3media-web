@@ -20,15 +20,15 @@ color: var(--W)
 `
 const SliderContainer = styled.div`
 padding: 20px 0;
-width:30%;
+width:100%;
 margin: auto;
 box-sizing: border-box;
 position: relative;
 @media (max-width: 1024px) {
-    width:40%;
+    width:100%;
   }
     @media (max-width: 550px) {
-    width:70%;
+    width:100%;
   }
 `
 const SlideImageContainer = styled.div`
@@ -47,16 +47,16 @@ const Slider = () => {
   <SliderText className='text-w text-center pb-6'>Backed by</SliderText>
   <SliderContainer className='text-w flex justify-center'>
 
-      <SlideImageContainer>
-        <Image src='/images/backed-by-1.png'  width={64} height={64} alt="polygon studios" objectFit='contain' className='w-40 h-40 lg:w-48 lg:h-48 2xl:w-64 xl:h-64'></Image>
+      <SlideImageContainer className='w-126 h-42 lg:w-186 lg:h-62 xl:w-276 xl:h-92'>
+        <Image src='/images/designers-dao.png'  width={276} height={92} alt="polygon studios" objectFit='contain'></Image>
       </SlideImageContainer>
 
-      <SlideImageContainer>
-        <Image src='/images/backed-by-2.png'  width={64} height={64} alt="crevatal" objectFit='contain'></Image>
+      <SlideImageContainer className='w-126 h-42 lg:w-186 lg:h-62 xl:w-276 xl:h-92'>
+        <Image src='/images/crevatals.png'  width={276} height={92} alt="crevatal" objectFit='contain'></Image>
       </SlideImageContainer>
 
-      <SlideImageContainer>
-        <Image src='/images/backed-by-3.png'  width={64} height={64} alt="Designers DAO" objectFit='contain'></Image>
+      <SlideImageContainer className='w-126 h-42 lg:w-186 lg:h-62 xl:w-276 xl:h-92'>
+        <Image src='/images/polygonstudios.png'  width={276} height={92} alt="Designers DAO" objectFit='contain'></Image>
       </SlideImageContainer>
       
   </SliderContainer>
