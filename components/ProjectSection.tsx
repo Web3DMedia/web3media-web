@@ -1,5 +1,7 @@
 import Image from 'next/image'
-import CircularGradientBtn from './CircularGradientBtn';
+import styled from 'styled-components'
+import CircleGraident from '../public/images/circle.svg' 
+import {FaLongArrowAltLeft, FaLongArrowAltRight} from 'react-icons/fa'
 import {
    ProjectWrapper,
    ImageContainer,
@@ -10,22 +12,95 @@ import {
    BottomContent,
    ProjectsDiv
 } from '../styles/ProjectSection'
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import SectionText from './SectionText';
 import Link from 'next/link'
 import ProjectBtnIcon from '../public/images/project-btn-icon.svg'
 
+const RightArrowBtn = styled.div`
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 5;
+   right: -60px;
+   top: 60%;
+   transform: translateY(-50%);
+   cursor: pointer;
+
+   @media screen and (max-width: 768px) {
+      right: -10px;
+      background: black;
+      border-radius: 50%;
+   }
+
+   @media screen and (max-width: 640px) {
+      display: none;
+   }
+`
+
+const LeftArrowBtn = styled.div`
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 5;
+   left: -60px;
+   top: 60%;
+   transform: translateY(-50%);
+   cursor: pointer;
+
+   @media screen and (max-width: 768px) {
+      left: -10px;
+      background: black;
+      border-radius: 50%;
+   }
+
+   @media screen and (max-width: 640px) {
+      display: none;
+   }
+`
+
 const ProjectSection = () => {
    const [papayaHover, setPapayaHover] = useState<boolean>(false)
    const [blocassetHover, setBlocassetHover] = useState<boolean>(false)
-   const [rocketHover, setRocketHover] = useState<boolean>(false) 
+   const [rocketHover, setRocketHover] = useState<boolean>(false)
+   const [isMoved, setIsMoved] = useState<boolean>(false) 
+   const projectsRef = useRef<HTMLDivElement>()
+
+   const handleClick = (direction: string) =>{
+      //To show arrow icon
+      setIsMoved(true)
+      
+
+      if(projectsRef.current){
+         const {scrollLeft, clientWidth} = projectsRef.current
+
+         const scrollTo = 
+            direction === "left" 
+            ? scrollLeft - clientWidth
+            : scrollLeft + clientWidth
+
+         projectsRef.current.scrollTo({left: scrollTo, behavior: "smooth"})
+      }
+   }
    return (
       <ProjectWrapper id="projects" >
          <div className="pt-4 w-full mb-10 px-6 sm:px-0">
             <SectionText headerTxt="Projects"/>
             <h2 className="text-white font-light text-base sm:text-lg lg:text-[24px] xl:text-[28px] leading-6 lg:leading-10">Explore some of our web3 projects</h2>
          </div>
-         <ProjectsDiv >
+         <LeftArrowBtn onClick={() => handleClick("left")}>
+            <Image src={CircleGraident} alt="img" width={50} height={50}/>
+            <FaLongArrowAltLeft color="white" className='absolute text-[22px]'/>
+         </LeftArrowBtn>
+
+         <RightArrowBtn onClick={() => handleClick("right")}>
+            <Image src={CircleGraident} alt="img"  width={50} height={50}/>
+            <FaLongArrowAltRight color="white" className='absolute text-[22px]'/>
+         </RightArrowBtn>
+
+         <ProjectsDiv ref={projectsRef}>
             <Card
                onMouseEnter={() => {setBlocassetHover(true)}}
                onMouseLeave={() => {setBlocassetHover(false)}}

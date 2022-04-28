@@ -286,11 +286,12 @@ const SocialLinks = styled.li`
     padding: 6px;
 }
     &:hover {
-    background-image: linear-gradient(135deg, #FF6EFF 5%, #0AB7F6 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
+      background-image: linear-gradient(135deg, #FF6EFF 5%, #0AB7F6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      border: none;
     }
 `
 const SocialCircle = styled.div`

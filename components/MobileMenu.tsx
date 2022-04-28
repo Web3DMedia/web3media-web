@@ -16,7 +16,7 @@ const MobileMenuContainer = styled.div<{slide:boolean}>`
         position: fixed;
         overflow-y: scroll;
         right:${({slide}) => slide ? ' 0' : '-100%'};
-        transition: all 1.4s ease-in-out;
+        transition: right 0.5s ease-in-out;
         display: block;
     }
 `

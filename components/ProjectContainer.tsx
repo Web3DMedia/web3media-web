@@ -19,7 +19,7 @@ const ContainerWrapper = styled.div`
 const ProjectContainer = ({children}) => {
    return (
       <ContainerWrapper>
-         <div className='relative w-full md:px-6 max-w-[900px] mx-auto lg:px-7 xl:max-w-[1240px] 2xl:max-w-[1440px]'>
+         <div className='relative w-full md:px-6 max-w-[900px] mx-auto lg:px-7 xl:max-w-[1240px] 2xl:max-w-[1440px] 3xl:max-w-[1920px] 4xl:max-w-[2000px]'>
             {children}
          </div>
       </ContainerWrapper>

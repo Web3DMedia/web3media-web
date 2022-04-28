@@ -7,9 +7,13 @@ import {animateScroll as scroll} from 'react-scroll';
 import styled from 'styled-components'
 
 
+const FooterContainer = styled.div`
+   border-top: 0.5px solid #D3D3D3;
+`
+
 const Separator = styled.div`
    width: 2px;
-   background-color: #fff;
+   background-color: #C4C4C4;
    height:20px;
 `
 const Footer = () => {
@@ -17,7 +21,7 @@ const Footer = () => {
       scroll.scrollToTop()
    }
    return (
-      <div className="text-white py-5 px-5 border-t border-gray-300 mt-[100px] lg:mt-[150px] xl:mt-[200px] relative w-full h-full z-[2]">
+      <FooterContainer className="text-white py-5 px-5 mt-[100px] lg:mt-[150px] xl:mt-[200px] relative w-full h-full z-[2]">
          <div className="flex items-center justify-between">
             <div className="cursor-pointer" onClick={toggleHome}>
                <Image src={Logo} alt="logo" />
@@ -80,9 +84,9 @@ const Footer = () => {
             </div>
          </div>
          <div className="my-5 w-full flex items-center justify-center sm:justify-start sm:my-6">
-            <p className="font-normal text-sm">2022 Web3D Media Inc. All rights reserved</p>
+            <p className="font-normal text-sm text-[#C4C4C4]">2022 Web3D Media Inc. All rights reserved</p>
          </div>
-      </div>
+      </FooterContainer>
    )
 }
 
