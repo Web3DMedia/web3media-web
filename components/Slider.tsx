@@ -25,7 +25,7 @@ margin: auto;
 box-sizing: border-box;
 position: relative;
 @media (max-width: 1024px) {
-    width:70%;
+    width:80%;
   }
     @media (max-width: 550px) {
     width:100%;
