@@ -10,15 +10,17 @@ const EarlyAccessContainer = styled.div`
         z-index: 7;
         width:100%;
         top:0;
+        left:0;
 `
 const EarlyAccessInnerContainer = styled.div`
     background: url(/images/background.png), black;
     background-size: 500px;
     border-radius:16px;
     display:flex;
+    align-items: center;
+    justify-content: center;
     flex-direction:column;
     width:556px;
-    margin:auto;
     padding: 72px 42px;
     position:absolute;
     top:50%;
@@ -27,12 +29,15 @@ const EarlyAccessInnerContainer = styled.div`
     @media (max-width: 550px) {
         width:350px;
         padding: 52px 20px;
+
     }
 `
 const MobileMenuClose = styled.div`
     display: flex;
+    position: absolute;
+    right: 10px;
     float: right;
-    margin: -10px;
+    top: 40px;
     width: 21px;
     height: 2px;
     cursor: pointer;
@@ -52,7 +57,7 @@ const FirstText = styled.h6`
     font-weight: 800;
     font-size: 36px;
     line-height: 38px;
-    padding-bottom:20px
+    padding-bottom:20px;
 `
 const SecondText = styled.h2`
     font-weight: 400;
@@ -75,7 +80,7 @@ const FirstLabel = styled.p`
 const Span = styled.span`
     font-weight: 400;
     font-size: 14px;
-    line-height: 15px:
+    line-height: 15px;
     z-index:2;
 `
 const Input = styled.input<{erros:boolean}>`
