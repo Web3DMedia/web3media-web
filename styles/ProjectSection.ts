@@ -64,16 +64,21 @@ export const ProjectsDiv= styled.div`
       align-items: center;
    }
 
+      @media screen and (max-width: 465px){
+         padding-left: 25px;
+      }
+
    @media screen and (max-width: 395px){
       padding-left: 20px;
    }
+
 
    @media screen and (max-width: 376px){
       /* background-color: red; */
       width: 100%;
       margin:0 auto;
       padding-left: 0px;
-      padding-right: 28px;
+      padding-right: 25px;
    }
 
    @media screen and (max-width: 365px){
@@ -113,7 +118,7 @@ export const Card = styled.div`
 
    @media screen and (max-width: 375px){
       width: 300px;
-      margin: 30px auto;
+      margin: 40px auto;
    }
 `
 
@@ -166,7 +171,7 @@ export const CardBottomTop = styled.div<{onHover: boolean}>`
    }
 
    @media screen and (max-width: 380px){
-      padding-left: 20px;
+      padding-left: 0px;
    }
 `
 
