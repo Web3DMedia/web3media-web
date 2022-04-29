@@ -143,20 +143,31 @@ const EarlyAccess = ({closeearlyaccess }) => {
     const [confirm, setConfirm] = useState(false)
     const [erros, setErrors] = useState(false)
     const [error, setError] = useState("")
+
     const handleSave = (e) => {
         e.preventDefault()
         if (emailLabel === "") {
-        setError('please enter a valid email address')
-        setErrors(true)
-        return true
+            setError('please enter a valid email address')
+            setErrors(true)
+            return true
         } else {
-        setConfirm(true)
-        setError('')
-        setNameLabel('')
-        setEmailLabel('')
-        return false
+            setConfirm(true)
+            setError('')
+            setNameLabel('')
+            setEmailLabel('')
+
+
+
+            fetch('/api/mail', { 
+                method: 'POST',
+                body: JSON.stringify({name:nameLabel,email:emailLabel}),  
+                headers:{
+                    'Content-Type': 'application/json'
+                }
+            })
+            return false
+        }
     }
-  }
     return (
     <EarlyAccessContainer>
         <EarlyAccessInnerContainer>
