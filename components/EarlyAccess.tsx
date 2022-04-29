@@ -36,9 +36,9 @@ const EarlyAccessInnerContainer = styled.div`
 const MobileMenuClose = styled.div`
     display: flex;
     position: absolute;
-    right: 10px;
+    right: 30px;
     float: right;
-    top: 40px;
+    top: 50px;
     width: 21px;
     height: 2px;
     cursor: pointer;
@@ -142,20 +142,22 @@ const EarlyAccess = ({closeearlyaccess }) => {
     const [erros, setErrors] = useState(false)
     const [error, setError] = useState("")
 
-    const handleSave = (e) => {
+    console.log('====================================');
+    console.log("33");
+    console.log('====================================');
+    const handleSave = (e: { preventDefault: () => void }) => {
         e.preventDefault()
-        if (emailLabel === "") {
-        setError('please enter a valid email address')
-        setErrors(true)
-        return true
-        } else {
-        setConfirm(true)
-        setError('')
+        if(emailLabel && nameLabel) {
+            setConfirm(true)
+
+        }
+        else {
+            setError('please enter a valid email address')
+            setErrors(true)
+        } 
         setNameLabel('')
         setEmailLabel('')
-        console.log(nameLabel)
     }
-  }
     return (
     <EarlyAccessContainer>
         <EarlyAccessInnerContainer>
@@ -174,10 +176,10 @@ const EarlyAccess = ({closeearlyaccess }) => {
 
             <form onSubmit={handleSave}>
                 <FirstLabel className='text-b4 font-display'>First name <Span className='text-main'>*</Span></FirstLabel>
-                <Input className='font-body' erros={undefined} type="text" placeholder='Enter your first name' onChange={e => setNameLabel(e.target.value)} value={nameLabel} ></Input>
+                <Input className='font-body' erros={undefined} type="text" placeholder='Enter your first name' onChange={(e) => setNameLabel(e.target.value)} value={nameLabel} ></Input>
             
                 <FirstLabel className={erros ? 'text-red-600 font-display' :'text-b4 font-display'}>Email address <Span className={erros ? 'text-red-600' :'text-main'}>*</Span></FirstLabel>
-                <Input className='font-body' erros={erros} placeholder='Enter email address' onChange={e => setEmailLabel(e.target.value)} value={emailLabel}></Input>
+                <Input className='font-body' erros={erros} placeholder='Enter email address' onChange={(e) => setEmailLabel(e.target.value)} value={emailLabel}></Input>
                 <p className='text-red-600 pt-2 ml-6 pb-11 font-body disabled:'>{error}</p>
 
                 {
@@ -214,6 +216,8 @@ const EarlyAccess = ({closeearlyaccess }) => {
             <h2 className='w-2/3 m-auto text-lg pb-36 font-body font-extrabold'>
                 Your response has been received, check your email to confirm your email address
             </h2>
+
+            <Image src='/images/close-confirm.png' width={156} height={56} alt="close confirmation" onClick={() => closeearlyaccess(false)}/>
         </div>
         }
         </EarlyAccessInnerContainer>

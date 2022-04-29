@@ -24,7 +24,7 @@ color: var(--W)
 `
 const SliderContainer = styled.div`
 opacity: 0.6;
-padding: 50px 0;
+padding: 20px 0;
 width:100%;
 margin: auto;
 box-sizing: border-box;
@@ -32,6 +32,7 @@ box-sizing: border-box;
     width:95%
   }
   @media (max-width: 550px) {
+    padding: 50px 0;
     position: absolute;
     margin-left: 20px;
     width:1400px;
@@ -56,7 +57,7 @@ animation: ${slider} 17s linear infinite;
 }`
 
 const SlideImageContainer = styled.div`
-  width:190px;
+  width:160px;
   display: inline-block;
   margin: 0 35px;
   @media (max-width: 1024px) {
