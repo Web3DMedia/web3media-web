@@ -202,7 +202,7 @@ const ProjectSection = () => {
             >
                <ImageContainer className="z-[4] bg-black">
                   <Image
-                     src='/images/rocket.jpg'
+                     src='/images/rocketImage.png'
                      alt="card image"
                      layout='fill'
                      loading='lazy'
