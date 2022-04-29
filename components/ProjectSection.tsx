@@ -17,9 +17,11 @@ import SectionText from './SectionText';
 import Link from 'next/link'
 import ProjectBtnIcon from '../public/images/project-btn-icon.svg'
 
-const RightArrowBtn = styled.div`
+const RightArrowBtn = styled.div<{onHover: boolean}>`
    position: absolute;
    display: flex;
+   transition: .5s ease-in-out opacity;
+   opacity: ${props => props.onHover ? 1 : 0};
    justify-content: center;
    align-items: center;
    z-index: 5;
@@ -39,9 +41,11 @@ const RightArrowBtn = styled.div`
    }
 `
 
-const LeftArrowBtn = styled.div`
+const LeftArrowBtn = styled.div<{onHover: boolean}>`
    position: absolute;
    display: flex;
+   transition: .5s ease-in-out opacity;
+   opacity: ${props => props.onHover ? 1 : 0};
    justify-content: center;
    align-items: center;
    z-index: 5;
@@ -62,6 +66,7 @@ const LeftArrowBtn = styled.div`
 `
 
 const ProjectSection = () => {
+   const [projectHover, setProjectsHover] = useState<boolean>(false)
    const [papayaHover, setPapayaHover] = useState<boolean>(false)
    const [blocassetHover, setBlocassetHover] = useState<boolean>(false)
    const [rocketHover, setRocketHover] = useState<boolean>(false)
@@ -84,21 +89,19 @@ const ProjectSection = () => {
          projectsRef.current.scrollTo({left: scrollTo, behavior: "smooth"})
       }
    }
-   return (
-      <ProjectWrapper id="projects" >
-         <div className="pt-4 w-full mb-10 px-6 sm:px-0">
-            <SectionText headerTxt="Projects"/>
-            <h2 className="text-white font-light text-base sm:text-lg lg:text-[24px] xl:text-[28px] leading-6 lg:leading-10">Explore some of our web3 projects</h2>
-         </div>
-         <LeftArrowBtn onClick={() => handleClick("left")}>
-            <Image src={CircleGraident} alt="img" width={50} height={50}/>
-            <FaLongArrowAltLeft color="white" className='absolute text-[22px]'/>
-         </LeftArrowBtn>
 
-         <RightArrowBtn onClick={() => handleClick("right")}>
-            <Image src={CircleGraident} alt="img"  width={50} height={50}/>
-            <FaLongArrowAltRight color="white" className='absolute text-[22px]'/>
-         </RightArrowBtn>
+   return (
+      <ProjectWrapper 
+         id="products" 
+         onMouseEnter={() => {setProjectsHover(true)}}
+         onMouseLeave={() => {setProjectsHover(false)}}
+      >
+         <div className="pt-4 w-full mb-10 px-6 sm:px-0">
+            <SectionText headerTxt="Products"/>
+            <h2 className="text-[#C4C4C4] font-light text-lg  lg:text-[24px] xl:text-[28px] leading-6 lg:leading-10 break-words">
+               Explore some of our web3 products
+            </h2>
+         </div>
 
          <ProjectsDiv ref={projectsRef}>
             <Card
@@ -115,11 +118,11 @@ const ProjectSection = () => {
                      
                   />
                </ImageContainer>
-               <CardBottom className="text-white" >
+               <CardBottom  >
                   <div className="flex flex-col relative z-[2]">
                      <CardBottomTop onHover={blocassetHover}>
-                        <h2 className="text-2xl lg:text-3xl xl:text-4xl font-extrabold lg:basis-1/2">Blocasset</h2>
-                        <p className="flex break-words text-sm lg:text-base lg:basis-1/2">
+                        <h2 className="text-2xl lg:text-3xl xl:text-4xl font-extrabold lg:basis-1/2 text-white">Blocasset</h2>
+                        <p className="flex break-words text-sm lg:text-base xl:text-lg lg:basis-1/2 text-[#C4C4C4]">
                            Think Freepik, Iconscout or Lottiefiles for Web3
                         </p>
                      </CardBottomTop>
@@ -132,15 +135,15 @@ const ProjectSection = () => {
                   </div>
                   <CardBottomDiv onHover={blocassetHover} className="hidden xl:block">
                      <BottomContent>
-                        <h2 className="text-2xl lg:text-3xl xl:text-4xl font-extrabold lg:basis-1/2">Blocasset</h2>
-                        <p className="flex break-words text-sm lg:text-base lg:basis-1/2">
+                        <h2 className="text-2xl lg:text-3xl xl:text-4xl font-extrabold lg:basis-1/2 text-white">Blocasset</h2>
+                        <p className="flex break-words text-sm lg:text-base xl:text-lg lg:basis-1/2 text-[#C4C4C4]">
                            Think Freepik, Iconscout or Lottiefiles for Web3
                         </p>
                      </BottomContent>
                      <Link href="https://twitter.com/blocasset">
                         <a className="cursor-pointer flex items-center mt-5" target="_blank">
                            <Image src={ProjectBtnIcon} alt="btn icon" width={50} height={50}/>
-                           <h2 className="ml-4 text-[14px] xl:text-[16px] font-normal">Coming Soon</h2>
+                           <h2 className="ml-4 text-[14px] xl:text-[16px] font-normal text-[#C4C4C4]">Coming Soon</h2>
                         </a>
                      </Link>
                   </CardBottomDiv>
@@ -164,29 +167,29 @@ const ProjectSection = () => {
                <CardBottom className="text-white">
                   <div className="flex flex-col relative z-[2]">
                      <CardBottomTop onHover={papayaHover}>
-                        <h2 className="text-2xl lg:text-3xl xl:text-4xl font-extrabold lg:basis-1/2">Papayas Studio</h2>
-                        <p className="flex text-sm break-words lg:text-base lg:basis-1/2">
+                        <h2 className="text-2xl lg:text-3xl xl:text-4xl font-extrabold lg:basis-1/2 text-white">Papayas Studio</h2>
+                        <p className="flex text-sm break-words lg:text-base xl:text-lg lg:basis-1/2 text-[#C4C4C4]">
                            Web3 focused audio-visual animation and manga studio
                         </p>
                      </CardBottomTop>
                      <Link href='https://twitter.com/studiopapayas'>
                         <a className="cursor-pointer flex items-center mt-5 xl:hidden" target="_blank">
                            <Image src={ProjectBtnIcon} alt="btn icon" width={50} height={50}/>
-                           <h2 className="ml-4 text-[14px] xl:text-[16px] font-normal">Coming Soon</h2>
+                           <h2 className="ml-4 text-[14px] xl:text-[16px] font-normal text-[#C4C4C4]">Coming Soon</h2>
                         </a>
                      </Link>
                   </div>
                   <CardBottomDiv onHover={papayaHover} className="hidden xl:block">
                      <BottomContent>
-                        <h2 className="text-2xl lg:text-3xl xl:text-4xl font-extrabold lg:basis-1/2">Papayas Studio</h2>
-                        <p className="flex text-sm break-words lg:text-base lg:basis-1/2">
+                        <h2 className="text-2xl lg:text-3xl xl:text-4xl font-extrabold lg:basis-1/2 text-white">Papayas Studio</h2>
+                        <p className="flex text-sm break-words lg:text-base xl:text-lg lg:basis-1/2 text-[#C4C4C4]">
                            Web3 focused audio-visual animation and manga studio
                         </p>
                      </BottomContent>
                      <Link href="https://twitter.com/studiopapayas">
                         <a className="cursor-pointer flex items-center mt-5" target="_blank">
                            <Image src={ProjectBtnIcon} alt="btn icon" width={50} height={50}/>
-                           <h2 className="ml-4 text-[14px] xl:text-[16px] font-normal">Coming Soon</h2>
+                           <h2 className="ml-4 text-[14px] xl:text-[16px] font-normal text-[#C4C4C4]">Coming Soon</h2>
                         </a>
                      </Link>
                   </CardBottomDiv>
@@ -210,29 +213,30 @@ const ProjectSection = () => {
                <CardBottom className="text-white">
                   <div className="flex flex-col relative z-[2]">
                      <CardBottomTop onHover={rocketHover}>
-                        <h2 className="text-2xl lg:text-3xl xl:text-4xl font-extrabold lg:basis-1/2">Coming Soon</h2>
-                        <p className="flex text-sm break-words lg:text-base lg:basis-1/2">
+                        <h2 className="text-2xl lg:text-3xl xl:text-4xl font-extrabold lg:basis-1/2 text-white">Coming Soon</h2>
+                        <p className="flex text-sm break-words lg:text-base xl:text-lg lg:basis-1/2 text-[#C4C4C4]">
                            We have suites of digital blockchain products in the pipeline
                         </p>
                      </CardBottomTop>
                      <Link href="/">
                         <a className="cursor-pointer flex items-center mt-5 xl:hidden" target="_blank">
                            <Image src={ProjectBtnIcon} alt="btn icon" width={50} height={50}/>
-                           <h2 className="ml-4 text-[14px] xl:text-[16px] font-normal">Join our early access</h2>
+                           <h2 className="ml-4 text-[14px] xl:text-[16px] font-normal text-[#C4C4C4]">Join our early access</h2>
                         </a>
                      </Link>
                   </div>
+
                   <CardBottomDiv onHover={rocketHover} className="hidden xl:block">
                      <BottomContent>
-                        <h2 className="text-2xl lg:text-3xl xl:text-4xl font-extrabold lg:basis-1/2">Coming Soon</h2>
-                        <p className="flex text-sm break-words lg:text-base lg:basis-1/2">
+                        <h2 className="text-2xl lg:text-3xl xl:text-4xl font-extrabold lg:basis-1/2 text-white">Coming Soon</h2>
+                        <p className="flex text-sm break-words lg:text-base xl:text-lg lg:basis-1/2 text-[#C4C4C4]">
                            We have suites of digital blockchain products in the pipeline
                         </p>
                      </BottomContent>
                      <Link href="/">
                         <a className="cursor-pointer flex items-center mt-5">
                            <Image src={ProjectBtnIcon} alt="btn icon" width={50} height={50}/>
-                           <h2 className="ml-4 text-[14px] xl:text-[16px] font-normal">Join our early access</h2>
+                           <h2 className="ml-4 text-[14px] xl:text-[16px] font-normal text-[#C4C4C4]">Join our early access</h2>
                         </a>
                      </Link>
                   </CardBottomDiv>
