@@ -73,6 +73,7 @@ const SecondText = styled.h2`
 const FirstLabel = styled.p`
     margin: -10px 10px 0px 20px;
     padding: 0 5px;
+    font-weight:800;
     font-size: 14px;
     line-height: 15px;
     background: black;
@@ -103,7 +104,8 @@ const Input = styled.input<{erros:boolean}>`
         margin-bottom: 0px;
     }
     ::placeholder {
-        color: ${({erros}) => erros ? 'red' :  'var(--B4)'};
+        color: ${({erros}) => erros ? 'red' :  'var(--B3)'};
+        font-weight: 200;
     }
     :-webkit-autofill,
     :-webkit-autofill:hover,
@@ -122,13 +124,9 @@ const Input = styled.input<{erros:boolean}>`
 `
 const Button = styled.button`
     width:476px;
-    height: 47px;
+    height: 56px;
     margin-top: 5px;
-    background: var(--B3);
     border-radius:16px;
-    :hover {
-        background: var(--Main)
-    }
     @media (max-width: 550px) {
         width: 310px;
     }
@@ -144,7 +142,7 @@ const EarlyAccess = ({closeearlyaccess }) => {
     const [erros, setErrors] = useState(false)
     const [error, setError] = useState("")
 
-    const handleSave = (e) => {
+    const handleSave = (e: { preventDefault: () => void }) => {
         e.preventDefault()
         if (emailLabel === "") {
             setError('please enter a valid email address')
@@ -155,50 +153,57 @@ const EarlyAccess = ({closeearlyaccess }) => {
             setError('')
             setNameLabel('')
             setEmailLabel('')
-
-
+            
 
             fetch('/api/mail', { 
                 method: 'POST',
-                body: JSON.stringify({name:nameLabel,email:emailLabel}),  
+                body: JSON.stringify({name:nameLabel,email:emailLabel}),
                 headers:{
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
                 }
             })
-            return false
-        }
+        }   
     }
     return (
     <EarlyAccessContainer>
         <EarlyAccessInnerContainer>
-{
-    confirm===false &&  <div>
-                <ul className='pb-4' onClick={() => closeearlyaccess(false)}>
-                    <li>
-                        <MobileMenuClose></MobileMenuClose>
-                        <MobileMenuClose></MobileMenuClose>
-                        <MobileMenuClose></MobileMenuClose>
-                    </li>
-                </ul>
+        {
+            confirm===false &&  <div>
+                        <ul className='pb-4' onClick={() => closeearlyaccess(false)}>
+                            <li>
+                                <MobileMenuClose></MobileMenuClose>
+                                <MobileMenuClose></MobileMenuClose>
+                                <MobileMenuClose></MobileMenuClose>
+                            </li>
+                        </ul>
 
-            <FirstText className='text-w font-display'>Get Early Access</FirstText>
-            <SecondText className='text-b5 font-display'>Sign up to get early access on updates on our products </SecondText>
+                    <FirstText className='text-w font-display'>Get Early Access</FirstText>
+                    <SecondText className='text-b5 font-display'>Sign up to get early access on updates on our products </SecondText>
 
-            <form onSubmit={handleSave}>
-                <FirstLabel className='text-b4 font-display'>First name <Span className='text-main'>*</Span></FirstLabel>
-                <Input className='font-body' erros={undefined} type="text" placeholder='Enter your first name' onChange={e => setNameLabel(e.target.value)} value={nameLabel} ></Input>
-            
-                <FirstLabel className={erros ? 'text-red-600 font-display' :'text-b4 font-display'}>Email address <Span className={erros ? 'text-red-600' :'text-main'}>*</Span></FirstLabel>
-                <Input className='font-body' erros={erros} placeholder='Enter email address' onChange={e => setEmailLabel(e.target.value)} value={emailLabel}></Input>
-                <p className='text-red-600 pt-2 ml-6 pb-11 font-body disabled:'>{error}</p>
+                    <form onSubmit={handleSave}>
+                        <FirstLabel className='text-b4 font-display'>First name <Span className='text-main'>*</Span></FirstLabel>
+                        <Input className='font-body' erros={undefined} type="text" placeholder='Enter your first name' onChange={e => setNameLabel(e.target.value)} value={nameLabel} ></Input>
+                    
+                        <FirstLabel className={erros ? 'text-red-600 font-display' :'text-b4 font-display'}>Email address <Span className={erros ? 'text-red-600' :'text-main'}>*</Span></FirstLabel>
+                        <Input className='font-body' erros={erros} placeholder='Enter email address' onChange={e => setEmailLabel(e.target.value)} value={emailLabel}></Input>
+                        <p className='text-red-600 pt-2 ml-6 pb-11 font-body disabled:'>{error}</p>
 
-                <Button type="submit" className="text-w border-main font-body">
-                    Submit
-                </Button>
-                
-            </form>
-        </div>
-}
+                        {
+                            (nameLabel && emailLabel ) ? 
+                            (    <Button type="submit" className="text-w bg-main font-body">
+                                    Submit
+                                </Button>) 
+                                : 
+                            (
+                                <Button type="submit" className="text-w bg-b3 font-body" disabled={true}>
+                                    Submit
+                                </Button>
+                            )
+                        }
+                        
+                    </form>
+                </div>
+        }
         {
             confirm===true && <div className='text-w text-center'>
 
@@ -214,7 +219,7 @@ const EarlyAccess = ({closeearlyaccess }) => {
                 <Image src='/images/confirmation.png' width={100} height={92} alt="logo" />
             </div>
 
-            <h2 className='w-2/3 m-auto text-lg'>
+            <h2 className='w-2/3 m-auto text-lg pb-36 font-body font-extrabold'>
                 Your response has been received, check your email to confirm your email address
             </h2>
         </div>
