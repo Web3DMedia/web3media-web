@@ -74,11 +74,10 @@ export const ProjectsDiv= styled.div`
 
 
    @media screen and (max-width: 376px){
-      /* background-color: red; */
       width: 100%;
-      margin:0 auto;
-      padding-left: 0px;
-      padding-right: 25px;
+      margin:20px auto;
+      padding-left: 10px;
+      padding-right: 0px;
    }
 
    @media screen and (max-width: 365px){
