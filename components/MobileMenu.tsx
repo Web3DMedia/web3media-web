@@ -165,8 +165,8 @@ const MobileMenu = ({ closemenu, slide, }) => {
                 <li className='flex flex-col pb-4'>
                     <MobileNavNumber>02</MobileNavNumber>
                     <MobileNav>
-                        <ScrollLink to="projects" spy={true} smooth={true} offset={-20} duration={900} onClick={() => closemenu(false)}>
-                            Projects
+                        <ScrollLink to="products" spy={true} smooth={true} offset={-20} duration={900} onClick={() => closemenu(false)}>
+                            Products
                         </ScrollLink>
                     </MobileNav>
                 </li>
