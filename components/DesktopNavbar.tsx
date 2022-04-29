@@ -5,6 +5,7 @@ import {Link as ScrollLink, animateScroll as scroll} from 'react-scroll';
 
 //components
 import MobileMenu from '../components/MobileMenu'
+import EarlyAccess from '../components/EarlyAccess';
 
 const Navbar = styled.nav`
     border-bottom: 0.5px solid var(--B2);
@@ -28,7 +29,7 @@ const Li = styled.li`
     line-height: 17px;
     color: var(--B6);
     border-left: 0.5px solid var(--B2);
-    padding: 47px 44px;
+    padding: 36px 44px;
     cursor: pointer;
     text-transform: uppercase;
     &:hover {
@@ -79,6 +80,7 @@ const HamMenu = styled.div`
 `
 const DesktopNavbar = () => {
     const [showmenu, setShowmenu] = useState(false);
+    const [showearlyaccess, setShowEarlyAccess] = useState<boolean>(false)
     return (
         <Navbar className='flex justify-between items-center relative'>
             <div className='px-10 lg:px-14 xl:px-20' >
@@ -86,7 +88,7 @@ const DesktopNavbar = () => {
             </div>
 
             <ul className='flex font-display'>
-                <Li>Early Access</Li>
+                <Li onClick={() => setShowEarlyAccess(true)}>Early Access</Li>
                 <Li>
                     <ScrollLink to="projects" spy={true} smooth={true} offset={-20} duration={900}>
                         Projects
@@ -104,6 +106,9 @@ const DesktopNavbar = () => {
                 </Li>
             </ul>
 
+            {
+                showearlyaccess &&    <EarlyAccess closeearlyaccess={setShowEarlyAccess}></EarlyAccess>
+            }
             <MobileMenu slide={showmenu} closemenu={setShowmenu}></MobileMenu>
             
         </Navbar>
