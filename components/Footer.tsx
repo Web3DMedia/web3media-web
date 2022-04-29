@@ -1,8 +1,10 @@
+import { useState } from 'react'
 import Image from 'next/image'
 import Logo from '../public/images/logo.svg'
 import Link from 'next/link'
 import ArrowVector from '../public/images/small-arrow.svg'
 import {FaTwitter, FaInstagram, FaLinkedinIn} from 'react-icons/fa'
+import EarlyAccess from '../components/EarlyAccess';
 import {animateScroll as scroll} from 'react-scroll';
 import styled from 'styled-components'
 
@@ -28,10 +30,21 @@ const Separator = styled.div`
    height:20px;
 `
 const Footer = () => {
+       const [showearlyaccess, setShowEarlyAccess] = useState<boolean>(false)
+
+      const openModal = () => {
+        setShowEarlyAccess(true)
+    }
    const toggleHome = () => {
       scroll.scrollToTop()
    }
    return (
+<>
+
+                 {
+                showearlyaccess && 
+                <EarlyAccess closeearlyaccess={setShowEarlyAccess}></EarlyAccess>
+            }
       <FooterContainer className="text-white py-5 px-2 mt-[100px] lg:px-5 lg:mt-[150px] xl:mt-[200px] relative w-full h-full z-[2]">
          <TopSeperator/>
          <div className="flex items-center justify-between pl-2 md:pl-5 lg:px-5">
@@ -73,7 +86,7 @@ const Footer = () => {
                <a className="flex items-center justify-between text-lg my-3 font-normal">Legal. <span><Image src={ArrowVector} alt="img"/></span></a>
             </Link>
             <Link href="/">
-               <a className="flex items-center justify-between text-lg my-3 font-normal">Early access. <span><Image src={ArrowVector} alt="img"/></span></a>
+               <a className="flex items-center justify-between text-lg my-3 font-normal" onClick={openModal}>Early access. <span><Image src={ArrowVector} alt="img"/></span></a>
             </Link>
          </div>
          <div className="flex items-center justify-center w-full lg:hidden my-6">
@@ -102,7 +115,7 @@ const Footer = () => {
          <div className="my-5 w-full flex items-center justify-center lg:hidden sm:my-6">
             <p className="font-normal text-sm text-[#C4C4C4]"> &copy;2022 Web3D Media Inc. All rights reserved</p>
          </div>
-      </FooterContainer>
+      </FooterContainer></>
    )
 }
 

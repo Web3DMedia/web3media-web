@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const AboutSectionContainer = styled.section`
     @media (max-width: 600px) {
-        margin-top:100px;
+        padding-top:100px;
         padding-bottom: 80px;
     }
 `
@@ -114,7 +114,7 @@ const AboutSection = () => {
         </div>
         <div className='flex flex-col md:flex-row m-auto'>
         <Text>
-            We are on a mission to help these categories of <WhiteText>creative ninjas </WhiteText> 
+            We are on a mission to help <WhiteText>creative ninjas </WhiteText> 
             scale in the endeavours and take their place in the <WhiteText>universe.</WhiteText>
         </Text>
         
