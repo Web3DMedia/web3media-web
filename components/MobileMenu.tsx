@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
 import Link from 'next/link'
+import EarlyAccess from '../components/EarlyAccess';
 import {Link as ScrollLink} from 'react-scroll';
 
 const MobileMenuContainer = styled.div<{slide:boolean}>`
@@ -125,10 +126,23 @@ const CircleTextSpan = styled.span`
         transform-origin: 0 35px;
     }
 `
-const MobileMenu = ({ closemenu, slide }) => {
+const MobileMenu = ({ closemenu, slide, }) => {
     const text = 'Demonstrating the principle of value for skills --'
+    
+    const [showearlyaccess, setShowEarlyAccess] = useState<boolean>(false)
+
+    const openModal = () => {
+        closemenu(false)
+        setShowEarlyAccess(true)
+    }
     return (
-        <MobileMenuContainer slide={slide} className='p-8 text-left absolute block top-0 w-full overflow-hidden md:text-center xl:hidden'>
+
+     <>
+           {
+                showearlyaccess && 
+                <EarlyAccess closeearlyaccess={setShowEarlyAccess}></EarlyAccess>
+            }
+            <MobileMenuContainer slide={slide} className='p-8 text-left absolute block top-0 w-full overflow-hidden md:text-center xl:hidden'>
             <div className='flex justify-between items-center'>
                 <div>
                     <Image src='/images/logo.svg' width={58.84} height={24} alt="logo" className='hidden filter grayscale' />
@@ -146,7 +160,7 @@ const MobileMenu = ({ closemenu, slide }) => {
             <ul className='pt-20 pb-20 md:pt-24 md:pb-32'>
                 <li className='flex flex-col pb-4'>
                     <MobileNavNumber>01</MobileNavNumber>
-                    <MobileNav  onClick={() => closemenu(false)}>Early Access</MobileNav>
+                    <MobileNav  onClick={openModal}>Early Access</MobileNav>
                 </li>
                 <li className='flex flex-col pb-4'>
                     <MobileNavNumber>02</MobileNavNumber>
@@ -208,6 +222,7 @@ const MobileMenu = ({ closemenu, slide }) => {
                 </CircleText>
             </Circle>
         </MobileMenuContainer>
+        </>
     )
 }
 
