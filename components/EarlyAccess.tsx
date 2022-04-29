@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
+import Image from 'next/image'
 
 const EarlyAccessContainer = styled.div`
         background: rgba(0, 0, 0, 0.6);
@@ -67,6 +68,8 @@ const SecondText = styled.h2`
 const FirstLabel = styled.p`
     margin: -10px 10px 0px 20px;
     padding: 0 5px;
+    font-size: 14px;
+    line-height: 15px;
     background: black;
     border: none;
     z-index:2;
@@ -83,6 +86,9 @@ const Input = styled.input<{erros:boolean}>`
     height: 56px;
     margin-bottom: 43px;
     border-radius:16px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 800;
     padding-left: 17px; 
     background: transparent;
     border: ${({erros}) => erros ? '2px solid red' :  '2px solid var(--B2)'};
@@ -92,7 +98,7 @@ const Input = styled.input<{erros:boolean}>`
         margin-bottom: 0px;
     }
     ::placeholder {
-        color: ${({erros}) => erros ? 'red' :  'var(--W)'};
+        color: ${({erros}) => erros ? 'red' :  'var(--B4)'};
     }
     :-webkit-autofill,
     :-webkit-autofill:hover,
@@ -129,6 +135,7 @@ const EarlyAccess = ({closeearlyaccess }) => {
     const [nameLabel, setNameLabel] = useState('')
     const [emailLabel, setEmailLabel] = useState('')
 
+    const [confirm, setConfirm] = useState(false)
     const [erros, setErrors] = useState(false)
     const [error, setError] = useState("")
     const handleSave = (e) => {
@@ -136,9 +143,9 @@ const EarlyAccess = ({closeearlyaccess }) => {
         if (emailLabel === "") {
         setError('please enter a valid email address')
         setErrors(true)
-        setErrors(false)
         return true
         } else {
+        setConfirm(true)
         setError('')
         setNameLabel('')
         setEmailLabel('')
@@ -148,6 +155,8 @@ const EarlyAccess = ({closeearlyaccess }) => {
     return (
     <EarlyAccessContainer>
         <EarlyAccessInnerContainer>
+{
+    confirm===false &&  <div>
                 <ul className='pb-4' onClick={() => closeearlyaccess(false)}>
                     <li>
                         <MobileMenuClose></MobileMenuClose>
@@ -172,6 +181,28 @@ const EarlyAccess = ({closeearlyaccess }) => {
                 </Button>
                 
             </form>
+        </div>
+}
+        {
+            confirm===true && <div className='text-w text-center'>
+
+                <ul className='pb-24' onClick={() => closeearlyaccess(false)}>
+                    <li>
+                        <MobileMenuClose></MobileMenuClose>
+                        <MobileMenuClose></MobileMenuClose>
+                        <MobileMenuClose></MobileMenuClose>
+                    </li>
+                </ul>
+
+            <div className='pb-20'>
+                <Image src='/images/confirmation.png' width={100} height={92} alt="logo" />
+            </div>
+
+            <h2 className='w-2/3 m-auto text-lg'>
+                Your response has been received, check your email to confirm your email address
+            </h2>
+        </div>
+        }
         </EarlyAccessInnerContainer>
     </EarlyAccessContainer>
     )
