@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 const AboutSectionContainer = styled.section`
     @media (max-width: 600px) {
+        margin-top:100px;
         padding-bottom: 80px;
     }
 `
