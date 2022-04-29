@@ -1,7 +1,7 @@
 import styled, {keyframes} from 'styled-components'
 import Image from 'next/image'
 const slider = keyframes`
-  0% { left: 0; }
+  0% { left: 0%; }
   100% { left: -100%; }
 `
 const BackingSlider = styled.div`
@@ -51,7 +51,7 @@ display: block;
 top: 18%;
 width: 150%;
 position: absolute;
-animation: ${slider} 10s linear infinite;
+animation: ${slider} 17s linear infinite;
  transition: animation 0.5s ease-in-out
 }`
 
@@ -72,7 +72,7 @@ const SlideImageContainer = styled.div`
 const SlideImageOne = styled.span`
 @media (max-width: 550px) {
   float: left;
-  width: 50%;
+  width: 45%;
 }
 `
 const Slider = () => {
@@ -107,6 +107,21 @@ const Slider = () => {
     <SlideImageOne className='sm:hidden'>
 
 
+      <SlideImageContainer className='w-226 h-42 lg:w-186 lg:h-62 xl:w-125 xl:h-92'>
+        <Image src='/images/polygonstudios.png'  width={175} height={92} alt="Polygon Studios" objectFit='contain'></Image>
+      </SlideImageContainer>
+
+      <SlideImageContainer className='w-226 h-42 lg:w-186 lg:h-62 xl:w-254 xl:h-92'>
+        <Image src='/images/polygon.png'  width={240} height={92} alt="Polygon" objectFit='contain'></Image>
+      </SlideImageContainer>
+
+      <SlideImageContainer className='w-226 h-42 lg:w-186 lg:h-62 xl:w-254 xl:h-92'>
+        <Image src='/images/crevatal.png'  width={254} height={92} alt="Crevatal" objectFit='contain'></Image>
+      </SlideImageContainer>
+
+      <SlideImageContainer className='w-126 h-42 lg:w-186 lg:h-62 xl:w-254 xl:h-92'>
+        <Image src='/images/designers-dao.png'  width={265} height={92} alt="Designers DAO" objectFit='contain'></Image>
+      </SlideImageContainer>
       <SlideImageContainer className='w-226 h-42 lg:w-186 lg:h-62 xl:w-125 xl:h-92'>
         <Image src='/images/polygonstudios.png'  width={175} height={92} alt="Polygon Studios" objectFit='contain'></Image>
       </SlideImageContainer>

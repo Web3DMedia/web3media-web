@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import Image from 'next/image'
 import styled from 'styled-components'
 
 const EarlyAccessContainer = styled.div`
@@ -13,6 +12,7 @@ const EarlyAccessContainer = styled.div`
         left:0;
 `
 const EarlyAccessInnerContainer = styled.div`
+    border: 2px solid #211F1F;
     background: url(/images/background.png), black;
     background-size: 500px;
     border-radius:16px;
@@ -118,9 +118,11 @@ const Button = styled.button`
     width:476px;
     height: 47px;
     margin-top: 5px;
-    background: black;
-    border: 2px solid var(--Main);
+    background: var(--B3);
     border-radius:16px;
+    :hover {
+        background: var(--Main)
+    }
     @media (max-width: 550px) {
         width: 310px;
     }
