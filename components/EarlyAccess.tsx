@@ -142,62 +142,68 @@ const EarlyAccess = ({closeearlyaccess }) => {
     const [erros, setErrors] = useState(false)
     const [error, setError] = useState("")
 
-    console.log('====================================');
-    console.log("33");
-    console.log('====================================');
     const handleSave = (e: { preventDefault: () => void }) => {
         e.preventDefault()
-        if(emailLabel && nameLabel) {
-            setConfirm(true)
-
-        }
-        else {
+        if (emailLabel === "") {
             setError('please enter a valid email address')
             setErrors(true)
-        } 
-        setNameLabel('')
-        setEmailLabel('')
+            return true
+        } else {
+            setConfirm(true)
+            setError('')
+            setNameLabel('')
+            setEmailLabel('')
+            
+
+            fetch('/api/mail', { 
+                method: 'POST',
+                body: JSON.stringify({name:nameLabel,email:emailLabel}),
+                headers:{
+                    'Content-Type': 'application/json',
+                }
+            })
+        }   
     }
     return (
     <EarlyAccessContainer>
         <EarlyAccessInnerContainer>
-{
-    confirm===false &&  <div>
-                <ul className='pb-4' onClick={() => closeearlyaccess(false)}>
-                    <li>
-                        <MobileMenuClose></MobileMenuClose>
-                        <MobileMenuClose></MobileMenuClose>
-                        <MobileMenuClose></MobileMenuClose>
-                    </li>
-                </ul>
+        {
+            confirm===false &&  <div>
+                        <ul className='pb-4' onClick={() => closeearlyaccess(false)}>
+                            <li>
+                                <MobileMenuClose></MobileMenuClose>
+                                <MobileMenuClose></MobileMenuClose>
+                                <MobileMenuClose></MobileMenuClose>
+                            </li>
+                        </ul>
 
-            <FirstText className='text-w font-display'>Get Early Access</FirstText>
-            <SecondText className='text-b5 font-display'>Sign up to get early access on updates on our products </SecondText>
+                    <FirstText className='text-w font-display'>Get Early Access</FirstText>
+                    <SecondText className='text-b5 font-display'>Sign up to get early access on updates on our products </SecondText>
 
-            <form onSubmit={handleSave}>
-                <FirstLabel className='text-b4 font-display'>First name <Span className='text-main'>*</Span></FirstLabel>
-                <Input className='font-body' erros={undefined} type="text" placeholder='Enter your first name' onChange={(e) => setNameLabel(e.target.value)} value={nameLabel} ></Input>
-            
-                <FirstLabel className={erros ? 'text-red-600 font-display' :'text-b4 font-display'}>Email address <Span className={erros ? 'text-red-600' :'text-main'}>*</Span></FirstLabel>
-                <Input className='font-body' erros={erros} placeholder='Enter email address' onChange={(e) => setEmailLabel(e.target.value)} value={emailLabel}></Input>
-                <p className='text-red-600 pt-2 ml-6 pb-11 font-body disabled:'>{error}</p>
+                    <form onSubmit={handleSave}>
+                        <FirstLabel className='text-b4 font-display'>First name <Span className='text-main'>*</Span></FirstLabel>
+                        <Input className='font-body' erros={undefined} type="text" placeholder='Enter your first name' onChange={e => setNameLabel(e.target.value)} value={nameLabel} ></Input>
+                    
+                        <FirstLabel className={erros ? 'text-red-600 font-display' :'text-b4 font-display'}>Email address <Span className={erros ? 'text-red-600' :'text-main'}>*</Span></FirstLabel>
+                        <Input className='font-body' erros={erros} placeholder='Enter email address' onChange={e => setEmailLabel(e.target.value)} value={emailLabel}></Input>
+                        <p className='text-red-600 pt-2 ml-6 pb-11 font-body disabled:'>{error}</p>
 
-                {
-                    (nameLabel && emailLabel ) ? 
-                    (    <Button type="submit" className="text-w bg-main font-body">
-                            Submit
-                        </Button>) 
-                        : 
-                    (
-                        <Button type="submit" className="text-w bg-b3 font-body" disabled={true}>
-                            Submit
-                        </Button>
-                    )
-                }
-                
-            </form>
-        </div>
-}
+                        {
+                            (nameLabel && emailLabel ) ? 
+                            (    <Button type="submit" className="text-w bg-main font-body">
+                                    Submit
+                                </Button>) 
+                                : 
+                            (
+                                <Button type="submit" className="text-w bg-b3 font-body" disabled={true}>
+                                    Submit
+                                </Button>
+                            )
+                        }
+                        
+                    </form>
+                </div>
+        }
         {
             confirm===true && <div className='text-w text-center'>
 
