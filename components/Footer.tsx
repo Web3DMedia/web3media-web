@@ -55,8 +55,8 @@ const Footer = () => {
                   </div>
                </div>
                <div className='items-center hidden lg:flex'>
-                  <Link href="/">
-                     <a target="_blank">
+                  <Link href="/legal">
+                     <a>
                         <span className="mx-4 cursor-pointer lg:text-sm xl:text-base text-[#C4C4C4] font-normal">Legal</span>
                      </a>
                   </Link>
@@ -82,7 +82,7 @@ const Footer = () => {
             </div>
 
             <div className="flex flex-col my-5 lg:hidden px-2 md:px-5">
-               <Link href="/">
+               <Link href='/legal'>
                   <a className="flex items-center justify-between text-lg my-3 font-normal">Legal. <span><Image src={ArrowVector} alt="img"/></span></a>
                </Link>
                <Link href="/">
