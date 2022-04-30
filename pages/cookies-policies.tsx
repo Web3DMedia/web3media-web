@@ -8,9 +8,10 @@ import Footer from "../components/Footer"
 import Container from "../components/Container"
 import styled from 'styled-components'
 
-export default function privacypolicy () {
+export default function cookiespolicies () {
   return (
-    <div className='font-body'>
+    <div>
+        <div className='font-body'>
         <DesktopNavbar></DesktopNavbar>
 
          <div className='px-8 pt-8 md:px-24 lg:px-48'>
@@ -20,13 +21,14 @@ export default function privacypolicy () {
                         <h1 className='text-w underline text-lg'>Home </h1>
                     </a>
                 </Link>
-                <h1 className='text-b4 text-lg'>/ Privacy policy</h1>
+                <h1 className='text-b4 text-lg'>/ Cookie policies</h1>
             </div>
          </div>
 
         <Container>
             <Footer></Footer>
         </Container>
+    </div>
     </div>
   )
 }

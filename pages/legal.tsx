@@ -1,4 +1,3 @@
-import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -29,7 +28,7 @@ const Mesh = styled.div`
     height: 650px;
     position: absolute;
     left: 50%;
-    top:420px;
+    top:400px;
     transform: translate(-50%, -50%);
     opacity: 0.14;
     background: radial-gradient(36.28% 36.28% at 50% 50%, #FD8AFD 0%, rgba(222, 28, 28, 0) 100%),
@@ -69,12 +68,14 @@ width:65%;
 const LegalItem = styled.div`
 border: 2px solid #2D2C2C;
 box-sizing: border-box;
+z-index:3;
 border-radius: 16px;
 padding:29px 33px 41px 34px;
 margin-right: 17px;
 width:269px;
 height: 226px;
-    @media (max-width: 1024px) {
+cursor:pointer;
+@media (max-width: 1024px) {
         margin-bottom: 17px;
     }
     @media (max-width: 550px) { 
@@ -82,17 +83,22 @@ height: 226px;
         margin:0 auto 25px;
     }
 `
-const LegalItemText = styled.h2`
+const LegalItemText = styled.h1`
 padding-top:40px;
 font-weight: 400;
 font-size: 28px;
 line-height: 32px;
+cursor:pointer;
+    &:hover {
+    background-image: linear-gradient(135deg, #FF6EFF 5%, #0AB7F6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    }
     @media (max-width: 1024px) {
     font-size: 20px;
     line-height: 32px;
-    }
-    @media (max-width: 550px) {
-    
     }
 `
 export default function legal() {
@@ -118,25 +124,33 @@ export default function legal() {
             <Mesh></Mesh>
 
             <div className='block justify-center md:flex-wrap md:flex pt-24'>
-                <LegalItem>
-                    <Image src="/images/legal-document.png" width={44} height={51} alt="legal document"/>
-                    <LegalItemText className='text-b5'>Privacy policy</LegalItemText>
-                </LegalItem>
+                <Link href='/privacy-policy' passHref>
+                    <LegalItem>
+                        <Image src="/images/legal-document.png" width={44} height={51} alt="legal document"/>
+                        <LegalItemText className='text-b5'>Privacy policy</LegalItemText>
+                    </LegalItem>
+                </Link>
 
-                <LegalItem>
-                    <Image src="/images/legal-document.png" width={44} height={51} alt="legal document"/>
-                    <LegalItemText className='text-b5'>Terms of service</LegalItemText>
-                </LegalItem>
+                <Link href='/terms-of-service' passHref>
+                    <LegalItem>
+                        <Image src="/images/legal-document.png" width={44} height={51} alt="legal document"/>
+                        <LegalItemText className='text-b5'>Terms of service</LegalItemText>
+                    </LegalItem>
+                </Link>
 
-                <LegalItem>
-                    <Image src="/images/legal-document.png" width={44} height={51} alt="legal document"/>
-                    <LegalItemText className='text-b5'>Cookies policies</LegalItemText>
-                </LegalItem>
+                <Link href='/cookies-policies' passHref>
+                    <LegalItem>
+                        <Image src="/images/legal-document.png" width={44} height={51} alt="legal document"/>
+                        <LegalItemText className='text-b5'>Cookies policies</LegalItemText>
+                    </LegalItem>
+                </Link>
 
-                <LegalItem>
+                <Link href='/disclaimer-notice' passHref>
+                    <LegalItem>
                     <Image src="/images/legal-document.png" width={44} height={51} alt="legal document"/>
                     <LegalItemText className='text-b5'>Disclaimer notice</LegalItemText>
                 </LegalItem>
+                </Link>
             </div>
         
         </div>
