@@ -3,6 +3,7 @@ import cn from "classnames"
 import styled from "styled-components"
 import Image from "next/image"
 import { Spinner } from "./Spinner"
+import { RiCloseLine } from "react-icons/ri"
 
 const EarlyAccessContainer = styled.div`
   background: rgba(0, 0, 0, 0.6);
@@ -35,24 +36,28 @@ const EarlyAccessInnerContainer = styled.div`
   }
 `
 const MobileMenuClose = styled.div`
-  display: flex;
-  position: absolute;
-  right: 30px;
-  float: right;
-  top: 50px;
-  width: 21px;
-  height: 2px;
-  cursor: pointer;
-  padding: 0px;
-  background: var(--B4);
-  &:nth-child(2) {
-    opacity: 0;
-  }
-  &:nth-child(1) {
-    transform: translateY(-12px) rotate(-45deg);
-  }
-  &:nth-child(3) {
-    transform: translateY(-12px) rotate(45deg);
+  span {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 20px;
+    height: 2px;
+    cursor: pointer;
+    padding: 0px;
+    background: var(--B4);
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:nth-child(1) {
+      transform: translateY(-12px) rotate(-45deg);
+    }
+
+    &:nth-child(3) {
+      transform: translateY(-12px) rotate(45deg);
+    }
   }
 `
 const FirstText = styled.h6`
@@ -147,48 +152,41 @@ const EarlyAccess = ({ closeearlyaccess }) => {
   const [error, setError] = useState("")
 
   const handleSave = (e: { preventDefault: () => void }) => {
-    console.log("Clicking")
     e.preventDefault()
 
-    if (emailLabel === "") {
-      setError("please enter a valid email address")
+    if (emailLabel.trim() === "" || nameLabel.trim() === "") {
+      setError("Please all fields are required")
       setErrors(true)
       return true
-    } else {
-      setLoading(true)
-      //   fetch("/api/mail", {
-      //     method: "POST",
-      //     body: JSON.stringify({ name: nameLabel, email: emailLabel }),
-      //     headers: {
-      //       "Content-Type": "application/json"
-      //     }
-      //   })
-      //     .then(() => {
-      //     setConfirm(true)
-      //     setError("")
-      //     setNameLabel("")
-      //     setEmailLabel("")
-      // })
-      //     .finally(() => {
-      //       setLoading(false)
-      //     })
     }
+
+    setLoading(true)
+    fetch("/api/mail", {
+      method: "POST",
+      body: JSON.stringify({ name: nameLabel, email: emailLabel }),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+      .then(() => {
+        setConfirm(true)
+        setError("")
+        setNameLabel("")
+        setEmailLabel("")
+      })
+      .finally(() => {
+        setLoading(false)
+      })
   }
 
-  const isValid = nameLabel && emailLabel
+  const isValid = Boolean(nameLabel) && Boolean(emailLabel)
 
   return (
     <EarlyAccessContainer>
       <EarlyAccessInnerContainer>
         {confirm === false && (
-          <div>
-            <ul className="pb-4" onClick={() => closeearlyaccess(false)}>
-              <li>
-                <MobileMenuClose></MobileMenuClose>
-                <MobileMenuClose></MobileMenuClose>
-                <MobileMenuClose></MobileMenuClose>
-              </li>
-            </ul>
+          <div className="">
+            <CloseButton onClick={() => closeearlyaccess(false)} />
 
             <FirstText className="font-display text-w">
               Get Early Access
@@ -208,14 +206,14 @@ const EarlyAccess = ({ closeearlyaccess }) => {
                 placeholder="Enter your first name"
                 onChange={e => setNameLabel(e.target.value)}
                 value={nameLabel}
-              ></Input>
+              />
 
               <FirstLabel
                 className={
                   erros ? "font-display text-red-600" : "font-display text-b4"
                 }
               >
-                Email address{" "}
+                Email address
                 <Span className={erros ? "text-red-600" : "text-main"}>*</Span>
               </FirstLabel>
               <Input
@@ -224,7 +222,7 @@ const EarlyAccess = ({ closeearlyaccess }) => {
                 placeholder="Enter email address"
                 onChange={e => setEmailLabel(e.target.value)}
                 value={emailLabel}
-              ></Input>
+              />
               <p className="disabled: ml-6 pt-2 pb-11 font-body text-red-600">
                 {error}
               </p>
@@ -232,10 +230,10 @@ const EarlyAccess = ({ closeearlyaccess }) => {
               <Button
                 type="submit"
                 className={cn(
-                  loading || Boolean(isValid) ? "bg-main" : "bg-b3",
+                  isValid ? "bg-main" : "bg-b3",
                   "font-body text-w"
                 )}
-                disabled={loading || Boolean(isValid)}
+                disabled={loading || !isValid}
               >
                 <span className="relative flex items-center justify-center space-x-4">
                   {!loading ? (
@@ -251,13 +249,7 @@ const EarlyAccess = ({ closeearlyaccess }) => {
 
         {confirm === true && (
           <div className="text-center text-w">
-            <ul className="pb-24" onClick={() => closeearlyaccess(false)}>
-              <li>
-                <MobileMenuClose></MobileMenuClose>
-                <MobileMenuClose></MobileMenuClose>
-                <MobileMenuClose></MobileMenuClose>
-              </li>
-            </ul>
+            <CloseButton onClick={() => closeearlyaccess(false)} />
 
             <div className="pb-20">
               <Image
@@ -286,4 +278,15 @@ const EarlyAccess = ({ closeearlyaccess }) => {
     </EarlyAccessContainer>
   )
 }
+
+const CloseButton = ({ onClick }) => {
+  return (
+    <span className="absolute top-0 right-0 p-4" onClick={onClick}>
+      <button className="relative inline-flex h-12 w-12 items-center justify-center">
+        <RiCloseLine size={30} className="text-b3" />
+      </button>
+    </span>
+  )
+}
+
 export default EarlyAccess
