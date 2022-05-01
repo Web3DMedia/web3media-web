@@ -78,100 +78,128 @@ const Span = styled.span`
     line-height: 15px:
     z-index:2;
 `
-const Input = styled.input<{erros:boolean}>`
-    width: 476px;
-    height: 56px;
-    margin-bottom: 43px;
-    border-radius:16px;
-    padding-left: 17px; 
-    background: transparent;
-    border: ${({erros}) => erros ? '2px solid red' :  '2px solid var(--B2)'};
-    color: ${({erros}) => erros ? 'red' :  'var(--W)'};
-    opacity:1;
-    &:nth-child(4) {
-        margin-bottom: 0px;
-    }
-    ::placeholder {
-        color: ${({erros}) => erros ? 'red' :  'var(--W)'};
-    }
-    :-webkit-autofill,
-    :-webkit-autofill:hover,
-    :-webkit-autofill:focus,
-    :-webkit-autofill:active {
-  transition: background 5000s ease-in-out 0s;
-  -webkit-text-fill-color: var(--W) !important;
-}
-    @media (max-width: 550px) {
-        width: 310px;
-    }
-    @media (max-width: 340px) {
-        width: 300px;
-    }
+const Input = styled.input<{ erros: boolean }>`
+  width: 100%;
+  height: 56px;
+  margin-bottom: 43px;
+  border-radius: 16px;
+  padding-left: 17px;
+  background: transparent;
+  border: ${({ erros }) => (erros ? "2px solid red" : "2px solid var(--B2)")};
+  color: ${({ erros }) => (erros ? "red" : "var(--W)")};
+  opacity: 1;
+  &:nth-child(4) {
+    margin-bottom: 0px;
+  }
+  ::placeholder {
+    color: ${({ erros }) => (erros ? "red" : "var(--W)")};
+  }
+  :-webkit-autofill,
+  :-webkit-autofill:hover,
+  :-webkit-autofill:focus,
+  :-webkit-autofill:active {
+    transition: background 5000s ease-in-out 0s;
+    -webkit-text-fill-color: var(--W) !important;
+  }
 
+  @media (max-width: 550px) {
+    width: 310px;
+  }
+
+  @media (max-width: 340px) {
+    width: 300px;
+  }
 `
 const Button = styled.button`
-    width:476px;
-    height: 47px;
-    margin-top: 5px;
-    background: black;
-    border: 2px solid var(--Main);
-    border-radius:16px;
-    @media (max-width: 550px) {
-        width: 310px;
-    }
-    @media (max-width: 340px) {
-        width: 300px;
-    }
-`
-const EarlyAccess = ({closeearlyaccess }) => {
-    const [nameLabel, setNameLabel] = useState('')
-    const [emailLabel, setEmailLabel] = useState('')
-
-    const [erros, setErrors] = useState(false)
-    const [error, setError] = useState("")
-    const handleSave = (e) => {
-        e.preventDefault()
-        if (emailLabel === "") {
-        setError('please enter a valid email address')
-        setErrors(true)
-        setErrors(false)
-        return true
-        } else {
-        setError('')
-        setNameLabel('')
-        setEmailLabel('')
-        return false
-    }
+  width: 476px;
+  height: 47px;
+  margin-top: 5px;
+  background: black;
+  border: 2px solid var(--Main);
+  border-radius: 16px;
+  @media (max-width: 550px) {
+    width: 310px;
   }
-    return (
+  @media (max-width: 340px) {
+    width: 300px;
+  }
+`
+const EarlyAccess = ({ closeearlyaccess }) => {
+  const [nameLabel, setNameLabel] = useState("")
+  const [emailLabel, setEmailLabel] = useState("")
+
+  const [erros, setErrors] = useState(false)
+  const [error, setError] = useState("")
+
+  const handleSave = e => {
+    // e.preventDefault()
+    // if (emailLabel === "") {
+    //   setError("please enter a valid email address")
+    //   setErrors(true)
+    //   setErrors(false)
+    //   return true
+    // } else {
+    //   setError("")
+    //   setNameLabel("")
+    //   setEmailLabel("")
+    //   return false
+    // }
+  }
+
+  return (
     <EarlyAccessContainer>
-        <EarlyAccessInnerContainer>
-                <ul className='pb-4' onClick={() => closeearlyaccess(false)}>
-                    <li>
-                        <MobileMenuClose></MobileMenuClose>
-                        <MobileMenuClose></MobileMenuClose>
-                        <MobileMenuClose></MobileMenuClose>
-                    </li>
-                </ul>
+      <EarlyAccessInnerContainer>
+        <ul className="pb-4" onClick={() => closeearlyaccess(false)}>
+          <li>
+            <MobileMenuClose></MobileMenuClose>
+            <MobileMenuClose></MobileMenuClose>
+            <MobileMenuClose></MobileMenuClose>
+          </li>
+        </ul>
 
-            <FirstText className='text-w font-display'>Get Early Access</FirstText>
-            <SecondText className='text-b5 font-display'>Sign up to get early access on updates on our products </SecondText>
+        <FirstText className="font-display text-w">Get Early Access</FirstText>
+        <SecondText className="font-display text-b5">
+          Sign up to get early access on updates on our products
+        </SecondText>
 
-            <form onSubmit={handleSave}>
-                <FirstLabel className='text-b4 font-display'>First name <Span className='text-main'>*</Span></FirstLabel>
-                <Input className='font-body' erros={undefined} type="text" placeholder='Enter your first name' onChange={e => setNameLabel(e.target.value)} value={nameLabel} ></Input>
-            
-                <FirstLabel className={erros ? 'text-red-600 font-display' :'text-b4 font-display'}>Email address <Span className={erros ? 'text-red-600' :'text-main'}>*</Span></FirstLabel>
-                <Input className='font-body' erros={erros} placeholder='Enter email address' onChange={e => setEmailLabel(e.target.value)} value={emailLabel}></Input>
-                <p className='text-red-600 pt-2 ml-6 pb-11 font-body disabled:'>{error}</p>
+        <form onSubmit={handleSave}>
+          <FirstLabel className="font-display text-b4">
+            First name <Span className="text-main">*</Span>
+          </FirstLabel>
+          <Input
+            className="font-body placeholder:opacity-50"
+            erros={undefined}
+            type="text"
+            placeholder="Enter your first name"
+            onChange={e => setNameLabel(e.target.value)}
+            value={nameLabel}
+          ></Input>
 
-                <Button type="submit" className="text-w border-main font-body">
-                    Submit
-                </Button>
-                
-            </form>
-        </EarlyAccessInnerContainer>
+          <FirstLabel
+            className={
+              erros ? "font-display text-red-600" : "font-display text-b4"
+            }
+          >
+            Email address{" "}
+            <Span className={erros ? "text-red-600" : "text-main"}>*</Span>
+          </FirstLabel>
+          <Input
+            className="font-body placeholder:opacity-50"
+            erros={erros}
+            placeholder="Enter email address"
+            onChange={e => setEmailLabel(e.target.value)}
+            value={emailLabel}
+          />
+          <p className="disabled: ml-6 pt-2 pb-11 font-body text-red-600">
+            {error}
+          </p>
+
+          <Button type="submit" className="border-main font-body text-w">
+            Submit
+          </Button>
+        </form>
+      </EarlyAccessInnerContainer>
     </EarlyAccessContainer>
-    )
+  )
 }
 export default EarlyAccess
