@@ -85,9 +85,7 @@ const Footer = () => {
                <Link href='/legal'>
                   <a className="flex items-center justify-between text-lg my-3 font-normal">Legal. <span><Image src={ArrowVector} alt="img"/></span></a>
                </Link>
-               <Link href="/">
                   <a className="flex items-center justify-between text-lg my-3 font-normal" onClick={() => setShowEarlyAccess(true)}>Early access. <span><Image src={ArrowVector} alt="img"/></span></a>
-               </Link>
             </div>
             <div className="flex items-center justify-center w-full lg:hidden my-6">
                <div className="mr-2 h-9 w-9 bg-zinc-600 rounded-full flex items-center justify-center">
