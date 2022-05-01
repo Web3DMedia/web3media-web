@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <div className=" font-body">
       <Head>
-        <title>Web3Media</title>
+        <title>Web3Media Home</title>
         <meta
           name="description"
           content="Empowering and providing financial freedom for web3 designers, artists, blockchain talents, and creative minds"
