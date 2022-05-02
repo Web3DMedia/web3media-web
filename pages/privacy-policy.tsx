@@ -46,6 +46,26 @@ list-style: disc;
 list-style-position: inside;
 margin-left:20px;
 `
+const Mesh = styled.div`
+    width: 724px;
+    height: 650px;
+    position: absolute;
+    left: 50%;
+    top:400px;
+    transform: translate(-50%, -50%);
+    opacity: 0.14;
+    background: radial-gradient(36.28% 36.28% at 50% 50%, #FD8AFD 0%, rgba(222, 28, 28, 0) 100%),
+    radial-gradient(36.28% 36.28% at 50% 50%, rgba(41, 39, 160, 0.26) 0%, rgba(41, 39, 160, 0) 100%),
+    radial-gradient(36.28% 36.28% at 50% 50%, rgba(201, 129, 56, 0.47) 0%, rgba(255, 202, 148, 0) 100%);
+    @media (max-width: 1024px) {
+      top:400px;
+    }
+    @media (max-width: 550px) {
+      top: 400px;
+      width: 382px;
+      height: 442px;
+    }
+`
 export default function privacypolicy () {
   return (
     <div className='font-body'>
@@ -59,7 +79,7 @@ export default function privacypolicy () {
 
         <DesktopNavbar></DesktopNavbar>
 
-        <PrivacyPolicyPage className='text-w'>
+        <PrivacyPolicyPage className='text-b4'>
             <div className='px-8 pt-8 md:px-24 lg:px-48'>
                 <div className='flex'>
                     <Link href='/legal'>
@@ -70,7 +90,7 @@ export default function privacypolicy () {
                     <h1 className='text-b4 text-lg'>/ Privacy policy</h1>
                 </div>
 
-            
+                <Mesh></Mesh>
                 <div className='pt-20'>
                     <h1 className='text-6xl font-bold'>Privacy Policy</h1>
                     <p className='text-xl text-b5 pt-8 pb-20'>Updated at 2022-04-28</p>
@@ -105,6 +125,7 @@ export default function privacypolicy () {
                 </Paragraph>
             </TextContainer>
 
+            
             <TextContainer>
                 <Headings>What Information Do We Collect</Headings>
                 <Paragraph>We collect information from you when you visit our website, register on our site, place an order, subscribe to our newsletter, respond to a survey or fill out a form.</Paragraph>
