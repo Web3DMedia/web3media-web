@@ -43,7 +43,7 @@ const Footer = () => {
          {
             showearlyaccess && <EarlyAccess closeearlyaccess={setShowEarlyAccess}></EarlyAccess>
          }
-         <FooterContainer className="text-white py-5 px-2 mt-[100px] lg:px-5 lg:mt-[150px] xl:mt-[200px] relative w-full h-full z-[2]">
+         <FooterContainer className="text-white py-5 px-2 pt-[100px] lg:px-5 lg:pt-[150px] xl:pt-[200px] relative w-full h-full z-[2]">
             <TopSeperator/>
             <div className="flex items-center justify-between pl-2 md:pl-5 lg:px-5">
                <div className="flex items-center">
