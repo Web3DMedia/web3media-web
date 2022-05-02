@@ -53,7 +53,7 @@ export default function cookiespolicies () {
         <div className='font-body'>
         <DesktopNavbar></DesktopNavbar>
 
-        <CookiesPolicyPage className='text-w'>
+        <CookiesPolicyPage className='text-b4'>
             <div className='px-8 pt-8 md:px-24 lg:px-48'>
                 <div className='flex'>
                     <Link href='/legal'>
