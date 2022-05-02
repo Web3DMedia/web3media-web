@@ -18,17 +18,27 @@ import Link from 'next/link'
 import ProjectBtnIcon from '../public/images/project-btn-icon.svg'
 
 const RightArrowBtn = styled.div<{onHover: boolean}>`
+   z-index: 10;
+   width:50px;
+   height:50px;
    position: absolute;
    display: flex;
-   transition: .5s ease-in-out opacity;
-   opacity: ${props => props.onHover ? 1 : 0};
-   justify-content: center;
    align-items: center;
-   z-index: 5;
-   right: -60px;
+   justify-content: center;
+   right: -120px;
    top: 60%;
    transform: translateY(-50%);
    cursor: pointer;
+   transition: .5s ease-in-out opacity;
+   opacity: ${props => props.onHover ? 1 : 0};
+
+   @media screen and (max-width: 1920px) {
+      right: -70px;
+   }
+
+   @media screen and (max-width: 1024px) {
+      right: -20px;
+   }
 
    @media screen and (max-width: 768px) {
       right: -10px;
@@ -42,17 +52,27 @@ const RightArrowBtn = styled.div<{onHover: boolean}>`
 `
 
 const LeftArrowBtn = styled.div<{onHover: boolean}>`
+   z-index: 10;
+   width:50px;
+   height:50px;
    position: absolute;
    display: flex;
-   transition: .5s ease-in-out opacity;
-   opacity: ${props => props.onHover ? 1 : 0};
-   justify-content: center;
    align-items: center;
-   z-index: 5;
-   left: -60px;
+   justify-content: center;
+   left: -120px;
    top: 60%;
    transform: translateY(-50%);
    cursor: pointer;
+   transition: .5s ease-in-out opacity;
+   opacity: ${props => props.onHover ? 1 : 0};
+
+   @media screen and (max-width: 1920px) {
+      left: -70px;
+   }
+
+   @media screen and (max-width: 1024px) {
+      left: -20px;
+   }
 
    @media screen and (max-width: 768px) {
       left: -10px;
@@ -102,6 +122,16 @@ const ProjectSection = () => {
                Explore some of our web3 products
             </h2>
          </div>
+
+         <LeftArrowBtn onHover={projectHover} onClick={() => handleClick('left')}>
+            <Image src={CircleGraident} alt="img" width={60} height={60} className="relative"/>
+            <FaLongArrowAltLeft fontSize={25} className="text-white absolute"/>
+         </LeftArrowBtn>
+
+         <RightArrowBtn onHover={projectHover} onClick={() => handleClick('right')}>
+            <Image src={CircleGraident} alt="img" width={60} height={60} className="relative"/>
+            <FaLongArrowAltRight fontSize={25} className="text-white absolute"/>
+         </RightArrowBtn>
 
          <ProjectsDiv ref={projectsRef}>
             <Card
@@ -202,7 +232,7 @@ const ProjectSection = () => {
             >
                <ImageContainer className="z-[4] bg-black">
                   <Image
-                     src='/images/rocketImage.png'
+                     src='/images/rocketImage.jpg'
                      alt="card image"
                      layout='fill'
                      loading='lazy'
