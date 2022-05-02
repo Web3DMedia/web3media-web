@@ -61,7 +61,7 @@ export default function cookiespolicies () {
                             <h1 className='text-w underline text-lg'>Home </h1>
                         </a>
                     </Link>
-                    <h1 className='text-b4 text-lg'>/ Cookie policies</h1>
+                    <h1 className='text-b4 text-lg'>/ Cookie Policies</h1>
                 </div>
  
                 <div className='pt-20'>
