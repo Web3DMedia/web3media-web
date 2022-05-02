@@ -23,7 +23,11 @@ export default function Home() {
 
 const  [cookies, setCookies] = useState<Boolean>(false)
 useEffect(() => {
-  setCookies(true)
+  if (localStorage.getItem("cookies") === 'true'){
+    setCookies(false)
+  } else {
+    setCookies(true)
+  }
 }, [])
 
   return (

@@ -30,6 +30,10 @@ border-radius: 16px;
 }
 `
 const CookieBanner = ({ closecookies }) => {
+    const acceptCookies = () => {
+        closecookies(false)
+        localStorage.setItem('cookies', 'true')
+    }
     return (
         <CookieBannerContainer className='font-body'>
             <div className="text-w md:flex justify-between align-middle">
@@ -41,7 +45,7 @@ const CookieBanner = ({ closecookies }) => {
                 </Link>
 
                 </h1>
-                <Button className='text-w md:text-base md:text-main font-semibold text-lg' onClick={() => closecookies(false)}>Accept</Button>
+                <Button className='text-w md:text-base md:text-main font-semibold text-lg' onClick={acceptCookies}>Accept</Button>
             </div>
         </CookieBannerContainer>
     )
