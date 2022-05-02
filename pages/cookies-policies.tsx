@@ -197,7 +197,7 @@ export default function cookiespolicies () {
                     Don't hesitate to contact us if you have any questions.
                         <ul>
                             <Paragraphlist>
-                                Via Email: <a href="mailto:info@web3d.media">info@web3d.media</a>
+                                Via Email: <a href="mailto:hello@web3d.media">hello@web3d.media</a>
                             </Paragraphlist>
                         </ul>
                     </Paragraph>
