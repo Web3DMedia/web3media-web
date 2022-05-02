@@ -115,7 +115,7 @@ const AboutSection = () => {
         <div className='flex flex-col md:flex-row m-auto'>
         <Text>
             We are on a mission to help <WhiteText>creative ninjas </WhiteText> 
-            scale in the endeavours and take their place in the <WhiteText>universe.</WhiteText>
+            scale in their endeavours and take their place in the <WhiteText>universe.</WhiteText>
         </Text>
         
         <Circle>

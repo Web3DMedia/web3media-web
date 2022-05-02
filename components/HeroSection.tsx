@@ -3,6 +3,8 @@ import styled, { keyframes } from 'styled-components'
 import Image from 'next/image'
 import Link from 'next/link'
 import {Link as ScrollLink} from 'react-scroll';
+//components
+import Slider from '../components/Slider'
 
 const HeroContainer = styled.div`
     background: url(/images/background.png);
@@ -367,6 +369,7 @@ const HeroSection = () => {
           <SocialLinks> <SocialCircle></SocialCircle> </SocialLinks>
         </SocialContainer>
       </div>
+      <Slider></Slider>
     </HeroContainer>
   )
 }

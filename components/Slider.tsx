@@ -5,11 +5,7 @@ const slider = keyframes`
   100% { left: -100%; }
 `
 const BackingSlider = styled.div`
-background: url(/images/background.png);
-background-size: 500px;
 padding-bottom:105px;
-background-position: center;
-background-repeat: none;
 box-sizing: border-box;
 overflow: hidden;
 position: relative;

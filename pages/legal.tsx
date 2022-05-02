@@ -117,8 +117,8 @@ export default function legal() {
         <LegalPage>
             <div className='px-8 md:px-24 lg:px-48'>
             <FirstText className='text-w'>Web3D Media Legal</FirstText>
-            <SecondText className='text-b5'>Web3d media takes your privacy 
-            serious and is committed to ensuring a smooth experience.
+            <SecondText className='text-b5'>Web3D media takes your privacy 
+            seriously and is committed to ensuring a smooth experience.
             The documents below are details of how Web3d media manages your data</SecondText>
 
             <Mesh></Mesh>
