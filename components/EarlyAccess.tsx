@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import axios from "axios"
 import cn from "classnames"
 import styled from "styled-components"
 import Image from "next/image"
@@ -15,6 +16,7 @@ const EarlyAccessContainer = styled.div`
   top: 0;
   left: 0;
 `
+
 const EarlyAccessInnerContainer = styled.div`
   border: 2px solid #211f1f;
   background: url(/images/background.png), black;
@@ -153,6 +155,7 @@ const EarlyAccess = ({ closeearlyaccess }) => {
 
   const handleSave = (e: { preventDefault: () => void }) => {
     e.preventDefault()
+    setError("")
 
     if (emailLabel.trim() === "" || nameLabel.trim() === "") {
       setError("Please all fields are required")
@@ -161,18 +164,18 @@ const EarlyAccess = ({ closeearlyaccess }) => {
     }
 
     setLoading(true)
-    fetch("/api/mail", {
-      method: "POST",
-      body: JSON.stringify({ name: nameLabel, email: emailLabel }),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
+    axios
+      .post("/api/mail", { name: nameLabel, email: emailLabel })
       .then(() => {
         setConfirm(true)
         setError("")
         setNameLabel("")
         setEmailLabel("")
+      })
+      .catch(() => {
+        setError(
+          "Sorry, we are unable to sign you up at this time. Please try again later"
+        )
       })
       .finally(() => {
         setLoading(false)
@@ -223,9 +226,8 @@ const EarlyAccess = ({ closeearlyaccess }) => {
                 onChange={e => setEmailLabel(e.target.value)}
                 value={emailLabel}
               />
-              <p className="disabled: ml-6 pt-2 pb-11 font-body text-red-600">
-                {error}
-              </p>
+
+              <p className="pt-6 pb-12 font-body text-red-600">{error}</p>
 
               <Button
                 type="submit"
@@ -282,8 +284,8 @@ const EarlyAccess = ({ closeearlyaccess }) => {
 const CloseButton = ({ onClick }) => {
   return (
     <span className="absolute top-0 right-0 p-4" onClick={onClick}>
-      <button className="relative inline-flex h-12 w-12 items-center justify-center">
-        <RiCloseLine size={30} className="text-b3" />
+      <button className="group relative inline-flex h-12 w-12 items-center justify-center">
+        <RiCloseLine size={30} className="text-b3 group-hover:text-main" />
       </button>
     </span>
   )
