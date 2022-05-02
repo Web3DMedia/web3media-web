@@ -6,6 +6,7 @@ import {Link as ScrollLink, animateScroll as scroll} from 'react-scroll';
 //components
 import MobileMenu from '../components/MobileMenu'
 import EarlyAccess from '../components/EarlyAccess';
+import Link from 'next/link';
 
 const Navbar = styled.nav`
     border-bottom: 0.5px solid var(--B2);
@@ -84,7 +85,11 @@ const DesktopNavbar = () => {
     return (
         <Navbar className='flex justify-between items-center relative'>
             <div className='px-10 lg:px-14 xl:px-20' >
-                <Image src='/images/logo.svg' width={76} height={31} alt="logo" />
+                <Link href="/">
+                    <a>
+                        <Image src='/images/logo.svg' width={76} height={31} alt="logo" />
+                    </a>
+                </Link>
             </div>
 
             <ul className='flex font-display'>
