@@ -53,6 +53,17 @@ export default function cookiespolicies () {
         <div className='font-body'>
         <DesktopNavbar></DesktopNavbar>
 
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://web3d.media" />
+        <meta property="og:title" content="Web3D Media Cookie Policies" />
+        <meta property="og:description" content="Empowering and providing financial freedom for web3 designers, artists, blockchain talents, and creative minds" />
+        <meta property="og:image" content="/images/meta-image.jpg" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://web3d.media" />
+        <meta property="twitter:title" content="Web3D Media Cookie Policies" />
+        <meta property="twitter:description" content="Empowering and providing financial freedom for web3 designers, artists, blockchain talents, and creative minds"/>
+        <meta property="twitter:image" content="/images/meta-image.jpg"></meta>
         <CookiesPolicyPage className='text-b4'>
             <div className='px-8 pt-8 md:px-24 lg:px-48'>
                 <div className='flex'>
