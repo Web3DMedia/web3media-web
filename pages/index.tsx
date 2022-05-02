@@ -10,7 +10,7 @@ import WavePinkStar from "../components/WavePinkStar"
 import DesktopNavbar from "../components/DesktopNavbar"
 import HeroSection from "../components/HeroSection"
 import AboutSection from "../components/AboutSection"
-import Slider from '../components/Slider'
+
 
 import { MeshWrapper, ProjectsUnderLay } from "../styles/ProjectSection"
 import { TeamUnderlayMesh } from "../styles/TeameMemberStyles"
@@ -32,7 +32,6 @@ export default function Home() {
       <DesktopNavbar></DesktopNavbar>
       <HeroSection></HeroSection>
 
-      <Slider></Slider>
       <MeshWrapper>
         <Container>
           <AboutSection></AboutSection>
