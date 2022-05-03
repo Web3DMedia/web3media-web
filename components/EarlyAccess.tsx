@@ -95,11 +95,15 @@ const Input = styled.input<{erros:boolean}>`
     font-size: 16px;
     line-height: 24px;
     font-weight: 800;
+    outline:none;
     padding-left: 17px; 
     background: transparent;
     border: ${({erros}) => erros ? '2px solid red' :  '2px solid var(--B2)'};
     color: ${({erros}) => erros ? 'red' :  'var(--W)'};
     opacity:1;
+    &:focus {
+        border: 2px solid var(--W);
+    }
     &:nth-child(4) {
         margin-bottom: 0px;
     }
