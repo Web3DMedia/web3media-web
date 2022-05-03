@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import styled from 'styled-components'
 
@@ -13,8 +14,7 @@ z-index:6;
 @media (max-width: 750px) {
 border-radius: 0px;
 width: 348px;
-height: 201px;
-padding: 35px 24px 0;
+padding: 25px 24px;
 }`
 const Button = styled.button`
 margin-bottom:35px;
@@ -34,8 +34,15 @@ const CookieBanner = ({ closecookies }) => {
         closecookies(false)
         localStorage.setItem('cookies', 'true')
     }
+    const declineCookies = () => {
+        closecookies(false)
+        localStorage.setItem('cookies', 'false')
+    }
     return (
         <CookieBannerContainer className='font-body'>
+            <div className='flex justify-end md:justify-start pb-8 ' onClick={declineCookies}>
+                <Image src='/images/close-icon.png'  width={10} height={10} alt="Polygon Studios" objectFit='contain' className='cursor-pointer'></Image>
+            </div>
             <div className="text-w md:flex justify-between align-middle">
                 <h1 className='text-black text-lg md:w-4/6'>This website uses cookies to ensure you get the best experience on our website.
                 <Link href='/cookies-policies'>
