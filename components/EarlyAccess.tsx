@@ -251,7 +251,7 @@ const EarlyAccess = ({ closeearlyaccess }) => {
               onClick={() => closeearlyaccess(false)}
             />
           </div>
-        )}
+        }
       </EarlyAccessInnerContainer>
     </EarlyAccessContainer>
   )
