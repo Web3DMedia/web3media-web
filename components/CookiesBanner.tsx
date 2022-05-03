@@ -11,16 +11,16 @@ position: fixed;
 bottom: 50px;
 left:20px;
 z-index:6;
-@media (max-width: 600px) {
+@media (max-width: 640px) {
 border-radius: 0px;
 width: 320px;
-padding: 45px 24px;
+padding: 25px 24px;
 }`
 const Button = styled.button`
 color: var(--Main);
 margin-bottom:50px;
 border-bottom:2px solid var(--Main);
-@media (max-width: 750px) {
+@media (max-width: 640px) {
 width:100%;
 background: var(--Main);
 color: var(--W)
