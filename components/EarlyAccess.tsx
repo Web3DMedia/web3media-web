@@ -79,15 +79,15 @@ const SecondText = styled.h2`
   }
 `
 const FirstLabel = styled.p`
-  margin: -10px 10px 0px 20px;
-  padding: 0 5px;
-  font-weight: 800;
-  font-size: 14px;
-  line-height: 15px;
-  background: black;
-  border: none;
-  z-index: 2;
-  position: absolute;
+    margin: -7px 10px 0px 15px;
+    padding: 0 5px;
+    font-weight:800;
+    font-size: 14px;
+    line-height: 15px;
+    background: black;
+    border: none;
+    z-index:2;
+    position:absolute;
 `
 const Span = styled.span`
   font-weight: 400;
@@ -95,43 +95,43 @@ const Span = styled.span`
   line-height: 15px;
   z-index: 2;
 `
-const Input = styled.input<{ erros: boolean }>`
-  width: 476px;
-  height: 56px;
-  margin-bottom: 43px;
-  border-radius: 16px;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 800;
-  padding-left: 17px;
-  background: transparent;
-  border: ${({ erros }) => (erros ? "2px solid red" : "2px solid var(--B2)")};
-  color: ${({ erros }) => (erros ? "red" : "var(--W)")};
-  opacity: 1;
-  &:nth-child(4) {
-    margin-bottom: 0px;
-  }
-  ::placeholder {
-    color: ${({ erros }) => (erros ? "red" : "var(--B3)")};
-    font-weight: 200;
-  }
-  :-webkit-autofill,
-  :-webkit-autofill:hover,
-  :-webkit-autofill:focus,
-  :-webkit-autofill:active {
-    transition: background 5000s ease-in-out 0s;
-    -webkit-text-fill-color: var(--W) !important;
-  }
-  @media (max-width: 550px) {
-    width: 310px;
-  }
-  @media (max-width: 340px) {
-    width: 300px;
-  }
-
-  @media (max-width: 340px) {
-    width: 300px;
-  }
+const Input = styled.input<{erros:boolean}>`
+    width: 476px;
+    height: 56px;
+    margin-bottom: 43px;
+    border-radius:16px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 800;
+    outline:none;
+    padding-left: 17px; 
+    background: transparent;
+    border: ${({erros}) => erros ? '2px solid red' :  '2px solid var(--B2)'};
+    color: ${({erros}) => erros ? 'red' :  'var(--W)'};
+    opacity:1;
+    &:focus {
+        border: 2px solid var(--W);
+    }
+    &:nth-child(4) {
+        margin-bottom: 0px;
+    }
+    ::placeholder {
+        color: ${({erros}) => erros ? 'red' :  'var(--B3)'};
+        font-weight: 200;
+    }
+    :-webkit-autofill,
+    :-webkit-autofill:hover,
+    :-webkit-autofill:focus,
+    :-webkit-autofill:active {
+      transition: background 5000s ease-in-out 0s;
+      -webkit-text-fill-color: var(--W) !important;
+    }
+    @media (max-width: 550px) {
+        width: 310px;
+    }
+    @media (max-width: 340px) {
+        width: 300px;
+    }
 `
 const Button = styled.button`
   width: 476px;
@@ -186,85 +186,61 @@ const EarlyAccess = ({ closeearlyaccess }) => {
 
   return (
     <EarlyAccessContainer>
-      <EarlyAccessInnerContainer>
-        {confirm === false && (
-          <div className="">
-            <CloseButton onClick={() => closeearlyaccess(false)} />
+        <EarlyAccessInnerContainer>
+        {
+            confirm===false &&  <div>
+                        <ul className='pb-4' onClick={() => closeearlyaccess(false)}>
+                            <li>
+                                <MobileMenuClose></MobileMenuClose>
+                                <MobileMenuClose></MobileMenuClose>
+                                <MobileMenuClose></MobileMenuClose>
+                            </li>
+                        </ul>
 
-            <FirstText className="font-display text-w">
-              Get Early Access
-            </FirstText>
-            <SecondText className="font-display text-b5">
-              Sign up to get early access on updates on our products{" "}
-            </SecondText>
+                    <FirstText className='text-w font-display'>Get Early Access</FirstText>
+                    <SecondText className='text-b5 font-display'>Sign up to get early access on updates on our products </SecondText>
 
-            <form onSubmit={handleSave}>
-              <FirstLabel className="font-display text-b4">
-                First name <Span className="text-main">*</Span>
-              </FirstLabel>
-              <Input
-                className="font-body"
-                erros={undefined}
-                type="text"
-                placeholder="Enter your first name"
-                onChange={e => setNameLabel(e.target.value)}
-                value={nameLabel}
-              />
+                    <form onSubmit={handleSave}>
+                        <FirstLabel className='text-b4 font-body'>First name <Span className='text-main'>*</Span></FirstLabel>
+                        <Input className='font-body' erros={undefined} type="text" placeholder='Enter your first name' onChange={e => setNameLabel(e.target.value)} value={nameLabel} ></Input>
+                    
+                        <FirstLabel className={erros ? 'text-red-600 font-body' :'text-b4 font-display'}>Email address <Span className={erros ? 'text-red-600' :'text-main'}>*</Span></FirstLabel>
+                        <Input className='font-body' erros={erros} placeholder='Enter email address' onChange={e => setEmailLabel(e.target.value)} value={emailLabel}></Input>
+                        <p className='text-red-600 pt-2 ml-6 pb-11 font-body disabled:'>{error}</p>
 
-              <FirstLabel
-                className={
-                  erros ? "font-display text-red-600" : "font-display text-b4"
-                }
-              >
-                Email address
-                <Span className={erros ? "text-red-600" : "text-main"}>*</Span>
-              </FirstLabel>
-              <Input
-                className="font-body"
-                erros={erros}
-                placeholder="Enter email address"
-                onChange={e => setEmailLabel(e.target.value)}
-                value={emailLabel}
-              />
+                        {
+                            (nameLabel && emailLabel ) ? 
+                            (    <Button type="submit" className="text-w bg-main font-body">
+                                    Submit
+                                </Button>) 
+                                : 
+                            (
+                                <Button type="submit" className="text-w bg-b3 font-body" disabled={true}>
+                                    Submit
+                                </Button>
+                            )
+                        }
+                        
+                    </form>
+                </div>
+        }
+        {
+            confirm===true && <div className='text-w text-center'>
 
-              <p className="pt-6 pb-12 font-body text-red-600">{error}</p>
+                <ul className='pb-24' onClick={() => closeearlyaccess(false)}>
+                    <li>
+                        <MobileMenuClose></MobileMenuClose>
+                        <MobileMenuClose></MobileMenuClose>
+                        <MobileMenuClose></MobileMenuClose>
+                    </li>
+                </ul>
 
-              <Button
-                type="submit"
-                className={cn(
-                  isValid ? "bg-main" : "bg-b3",
-                  "font-body text-w"
-                )}
-                disabled={loading || !isValid}
-              >
-                <span className="relative flex items-center justify-center space-x-4">
-                  {!loading ? (
-                    <span>Submit</span>
-                  ) : (
-                    <Spinner size={28} className="inline-block" />
-                  )}
-                </span>
-              </Button>
-            </form>
-          </div>
-        )}
-
-        {confirm === true && (
-          <div className="text-center text-w">
-            <CloseButton onClick={() => closeearlyaccess(false)} />
-
-            <div className="pb-20">
-              <Image
-                src="/images/confirmation.png"
-                width={100}
-                height={92}
-                alt="logo"
-              />
+            <div className='pb-20'>
+                <Image src='/images/confirmation.png' width={100} height={92} alt="logo" />
             </div>
 
-            <h2 className="m-auto w-2/3 pb-36 font-body text-lg font-extrabold">
-              Your response has been received, check your email to confirm your
-              email address
+            <h2 className='w-2/3 m-auto text-lg pb-36 font-body font-extrabold'>
+                One more step to activate your superpower. Check your inbox and confirm your email address.
             </h2>
 
             <Image
