@@ -220,7 +220,7 @@ const EarlyAccess = ({closeearlyaccess }) => {
             </div>
 
             <h2 className='w-2/3 m-auto text-lg pb-36 font-body font-extrabold'>
-                Your response has been received, check your email to confirm your email address
+                One more step to activate your superpower. Check your inbox and confirm your email address.
             </h2>
 
             <Image src='/images/close-confirm.png' width={156} height={56} alt="close confirmation" onClick={() => closeearlyaccess(false)}/>
