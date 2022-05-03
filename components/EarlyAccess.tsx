@@ -236,7 +236,7 @@ const EarlyAccess = ({ closeearlyaccess }) => {
                 </ul>
 
             <div className='pb-20'>
-                <Image src='/images/confirmation.png' width={100} height={92} alt="logo" />
+                <Image src='/images/confirmanimation.png' width={100} height={92} alt="logo" />
             </div>
 
             <h2 className='w-2/3 m-auto text-lg pb-36 font-body font-extrabold'>
@@ -251,7 +251,7 @@ const EarlyAccess = ({ closeearlyaccess }) => {
               onClick={() => closeearlyaccess(false)}
             />
           </div>
-        )}
+        }
       </EarlyAccessInnerContainer>
     </EarlyAccessContainer>
   )
