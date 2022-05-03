@@ -37,18 +37,16 @@ const EarlyAccessInnerContainer = styled.div`
     padding: 52px 20px;
   }
 `
-const MobileMenuClose = styled.div`
-  span {
+const MobileMenuClose = styled.span`
     display: flex;
     position: absolute;
-    right: 0px;
-    top: 0px;
+    right: 20px;
+    top: 45px;
     width: 20px;
     height: 2px;
     cursor: pointer;
     padding: 0px;
     background: var(--B4);
-
     &:nth-child(2) {
       opacity: 0;
     }
@@ -60,7 +58,6 @@ const MobileMenuClose = styled.div`
     &:nth-child(3) {
       transform: translateY(-12px) rotate(45deg);
     }
-  }
 `
 const FirstText = styled.h6`
   font-weight: 800;

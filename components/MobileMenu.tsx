@@ -12,7 +12,7 @@ const MobileMenuContainer = styled.div<{slide:boolean}>`
         background: rgba(0, 0, 0, 0.6);
         backdrop-filter: blur(40px);
         height: 100vh;
-        z-index: 7;
+        z-index: 20;
         width:100%;
         position: fixed;
         overflow-y: scroll;

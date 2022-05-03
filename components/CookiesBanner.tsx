@@ -10,7 +10,7 @@ padding: 25px 40px;
 position: fixed;
 bottom: 50px;
 left:20px;
-z-index:6;
+z-index:19;
 @media (max-width: 640px) {
 border-radius: 0px;
 width: 320px;
@@ -43,15 +43,15 @@ const CookieBanner = ({ closecookies }) => {
     return (
         <CookieBannerContainer className='font-body'>
             <div className='flex justify-end sm:justify-start pb-8 ' onClick={declineCookies}>
-                <Image src='/images/close-icon.png'  width={10} height={10} alt="Polygon Studios" objectFit='contain' className='cursor-pointer'></Image>
+                <Image src='/images/close-icon.png' width={10} height={10} alt="Polygon Studios" objectFit='contain' className='cursor-pointer'></Image>
             </div>
             <div className="text-w sm:flex justify-between align-middle">
                 <h1 className='text-black text-base sm:w-4/6'>This website uses cookies to ensure you get the best experience on our website.
-                <Link href='/cookies-policies'>
-                    <a>
-                        <h1 className='text-main underline font-semibold pt-4 pb-6 md:pt-0'>Learn more</h1>
-                    </a>
-                </Link>
+                    <Link href='/cookies-policies'>
+                        <a>
+                            <h1 className='text-main underline font-semibold pt-4 pb-6 md:pt-0'>Learn more</h1>
+                        </a>
+                    </Link>
 
                 </h1>
                 <Button className='md:text-base font-semibold text-lg' onClick={acceptCookies}>Accept</Button>
