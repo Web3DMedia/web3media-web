@@ -71,7 +71,7 @@ const SecondText = styled.h2`
     }
 `
 const FirstLabel = styled.p`
-    margin: -10px 10px 0px 20px;
+    margin: -7px 10px 0px 15px;
     padding: 0 5px;
     font-weight:800;
     font-size: 14px;
@@ -181,10 +181,10 @@ const EarlyAccess = ({closeearlyaccess }) => {
                     <SecondText className='text-b5 font-display'>Sign up to get early access on updates on our products </SecondText>
 
                     <form onSubmit={handleSave}>
-                        <FirstLabel className='text-b4 font-display'>First name <Span className='text-main'>*</Span></FirstLabel>
+                        <FirstLabel className='text-b4 font-body'>First name <Span className='text-main'>*</Span></FirstLabel>
                         <Input className='font-body' erros={undefined} type="text" placeholder='Enter your first name' onChange={e => setNameLabel(e.target.value)} value={nameLabel} ></Input>
                     
-                        <FirstLabel className={erros ? 'text-red-600 font-display' :'text-b4 font-display'}>Email address <Span className={erros ? 'text-red-600' :'text-main'}>*</Span></FirstLabel>
+                        <FirstLabel className={erros ? 'text-red-600 font-body' :'text-b4 font-display'}>Email address <Span className={erros ? 'text-red-600' :'text-main'}>*</Span></FirstLabel>
                         <Input className='font-body' erros={erros} placeholder='Enter email address' onChange={e => setEmailLabel(e.target.value)} value={emailLabel}></Input>
                         <p className='text-red-600 pt-2 ml-6 pb-11 font-body disabled:'>{error}</p>
 
