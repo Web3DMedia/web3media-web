@@ -17,6 +17,7 @@ const SubcriptionContianer = styled.div`
    width: 556px;
    height: 571px;
    background: url(/images/background.png), black;
+   background-size: 500px;
    border: 2px solid #211F1F;
    box-sizing: border-box;
    border-radius: 16px;
