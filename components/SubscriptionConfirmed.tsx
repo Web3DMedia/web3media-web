@@ -48,11 +48,6 @@ const DivSeperator = styled.div`
 `
 
 const TextDiv = styled.div`
-   a{
-      font-style: normal;
-      line-height: 19px;
-      margin-top: 44px;
-   }
    p{
       font-style: normal;
       font-weight: 400;
