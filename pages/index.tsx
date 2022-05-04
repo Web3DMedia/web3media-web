@@ -18,10 +18,17 @@ import { TeamUnderlayMesh } from "../styles/TeameMemberStyles"
 import ProjectContainer from "../components/ProjectContainer"
 
 import CookieBanner from "../components/CookiesBanner"
+import SubscriptionConfirmed from "../components/SubscriptionConfirmed"
 
 export default function Home() {
 
-const  [cookies, setCookies] = useState<Boolean>(false)
+  const [cookies, setCookies] = useState<Boolean>(false)
+  const [subcriptionConfirmed, setSubscriptionConfirmed] = useState<Boolean>(true)
+
+  const closeSubscriptionModal = () => {
+    setSubscriptionConfirmed(false)
+  }
+
 useEffect(() => {
   if (localStorage.getItem("cookies") === 'true'){
     setCookies(false)
@@ -30,25 +37,33 @@ useEffect(() => {
   }
 }, [])
 
+  useEffect(() => {
+    if(JSON.parse(localStorage.getItem("subscribe")) === true){
+      setSubscriptionConfirmed(true)
+    } else{
+      setSubscriptionConfirmed(false)
+    }
+  },[])
+
   return (
     <div className=" font-body">
       <Head>
         <title>Web3Media Home</title>
         <meta
           name="description"
-          content="Empowering and providing financial freedom for web3 designers, artists, blockchain talents, and creative minds"/>
+          content="Creating, building and developing animations and creators resources for the new web."/>
         <link rel="icon" href="/images/logo.svg" />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://web3d.media" />
         <meta property="og:title" content="Web3D Media" />
-        <meta property="og:description" content="Empowering and providing financial freedom for web3 designers, artists, blockchain talents, and creative minds" />
+        <meta property="og:description" content="Creating, building and developing animations and creators resources for the new web." />
         <meta property="og:image" content="/images/meta-image.jpg" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://web3d.media" />
         <meta property="twitter:title" content="Web3D Media" />
-        <meta property="twitter:description" content="Empowering and providing financial freedom for web3 designers, artists, blockchain talents, and creative minds"/>
+        <meta property="twitter:description" content="Creating, building and developing animations and creators resources for the new web."/>
         <meta property="twitter:image" content="/images/meta-image.jpg"></meta>
       </Head>
       {
@@ -74,6 +89,9 @@ useEffect(() => {
         <Footer></Footer>
         <TeamUnderlayMesh/>
       </Container>
+      {
+        subcriptionConfirmed && <SubscriptionConfirmed closeSubscriptionModal={closeSubscriptionModal}></SubscriptionConfirmed>
+      }
     </div>
   )
 }

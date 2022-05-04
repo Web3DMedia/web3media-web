@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 import Image from 'next/image'
 import styled from 'styled-components'
 import {Link as ScrollLink, animateScroll as scroll} from 'react-scroll';
@@ -81,7 +82,18 @@ const HamMenu = styled.div`
 `
 const DesktopNavbar = () => {
     const [showmenu, setShowmenu] = useState(false);
-    const [showearlyaccess, setShowEarlyAccess] = useState<boolean>(false)
+    const [showearlyaccess, setShowEarlyAccess] = useState<boolean>(false);
+    const [cookieNav, setCookieNav] = useState<boolean>(false);
+    const router = useRouter()
+
+    useEffect(() => {
+        const changeDisplay = () => {
+            if(router.asPath !== '/'){
+                setCookieNav(true)
+            }
+        }
+        changeDisplay();
+    },[router])
     return (
         <Navbar className='flex justify-between items-center relative'>
             <div className='px-10 lg:px-14 xl:px-20' >
@@ -95,14 +107,34 @@ const DesktopNavbar = () => {
             <ul className='flex font-display'>
                 <Li onClick={() => setShowEarlyAccess(true)}>Early Access</Li>
                 <Li>
-                    <ScrollLink to="products" spy={true} smooth={true} offset={-20} duration={900}>
-                        Products
-                    </ScrollLink>
+                    {
+                        cookieNav ?
+                            (
+                                <Link href='/'>
+                                    <a>Products</a>
+                                </Link>
+                            ):
+                            (
+                                <ScrollLink to="products" spy={true} smooth={true} offset={-20} duration={600}>
+                                    Products
+                                </ScrollLink>
+                            )
+                    }
                 </Li>
                 <Li>
-                    <ScrollLink to="teams" spy={true} smooth={true} offset={-20} duration={900}>
-                        Team
-                    </ScrollLink>
+                    {
+                        cookieNav ?
+                            (
+                                <Link href='/'>
+                                    <a>Teams</a>
+                                </Link>
+                            ):
+                            (
+                                <ScrollLink to="teams" spy={true} smooth={true} offset={-20} duration={600}>
+                                    Teams
+                                </ScrollLink>
+                            )
+                    }
                 </Li>
                 <Li onClick={() => setShowmenu(true)}>
                     <HamMenu></HamMenu>

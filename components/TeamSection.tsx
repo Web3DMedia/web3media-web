@@ -45,7 +45,7 @@ const TeamSection = () => {
                <h3 className="mt-1 text-white text-[14px] lg:text-[16px] leading-[14px] sm:leading-4">Design</h3>
             </div>
 
-            <div className="flex flex-col items-center w-28 h-20 absolute bottom-4 -left-1 sm:-bottom-16 lg:-bottom-5 sm:left-auto">
+            <div className="flex flex-col items-center w-28 h-20 absolute bottom-4 -left-1 sm:-bottom-16 lg:-bottom-14 sm:left-auto">
                <Image src={AnimationIcon} alt="icon"/>
                <h3 className="mt-1 text-white text-[14px] lg:text-[16px] leading-[14px] sm:leading-4">Animation</h3>
             </div>

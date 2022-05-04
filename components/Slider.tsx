@@ -72,6 +72,14 @@ const SlideImageOne = styled.span`
   width: 45%;
 }
 `
+const SlideImageTwo = styled.span`
+display:none;
+@media (max-width: 550px) {
+  display:flex;
+  float: left;
+  width: 45%;
+}
+`
 const Slider = () => {
   return ( 
 <BackingSlider>
@@ -101,7 +109,7 @@ const Slider = () => {
     </SlideImageOne>
 
     
-    <SlideImageOne className='sm:hidden'>
+    <SlideImageTwo>
 
 
       <SlideImageContainer className='w-226 h-42 lg:w-186 lg:h-62 xl:w-125 xl:h-92'>
@@ -135,7 +143,7 @@ const Slider = () => {
         <Image src='/images/designers-dao.png'  width={265} height={92} alt="Designers DAO" objectFit='contain'></Image>
       </SlideImageContainer>
 
-    </SlideImageOne>
+    </SlideImageTwo>
 
     </SliderInnerContainer>
   </SliderContainer>
