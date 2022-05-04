@@ -168,6 +168,7 @@ const EarlyAccess = ({ closeearlyaccess }) => {
         setError("")
         setNameLabel("")
         setEmailLabel("")
+        localStorage.setItem('subscribe', 'true')
       })
       .catch(() => {
         setError(
