@@ -26,6 +26,7 @@ export default function Home() {
 
   const closeSubscriptionModal = () => {
     setSubscriptionConfirmed(false)
+    window.location.search = ""
   }
 
   useEffect(() => {
