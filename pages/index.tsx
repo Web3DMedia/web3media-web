@@ -1,5 +1,6 @@
 import Head from "next/head"
 import { useState, useEffect } from "react"
+import { useRouter } from 'next/router'
 
 //components
 import Container from "../components/Container"
@@ -11,6 +12,7 @@ import WavePinkStar from "../components/WavePinkStar"
 import DesktopNavbar from "../components/DesktopNavbar"
 import HeroSection from "../components/HeroSection"
 import AboutSection from "../components/AboutSection"
+import SubscriptionConfirmed from "../components/SubscriptionConfirmed"
 
 
 import { MeshWrapper, ProjectsUnderLay } from "../styles/ProjectSection"
@@ -21,30 +23,33 @@ import CookieBanner from "../components/CookiesBanner"
 import SubscriptionConfirmed from "../components/SubscriptionConfirmed"
 
 export default function Home() {
-
-  const [cookies, setCookies] = useState<Boolean>(false)
-  const [subcriptionConfirmed, setSubscriptionConfirmed] = useState<Boolean>(true)
-
-  const closeSubscriptionModal = () => {
-    setSubscriptionConfirmed(false)
-  }
-
-useEffect(() => {
-  if (localStorage.getItem("cookies") === 'true'){
-    setCookies(false)
-  } else {
-    setCookies(true)
-  }
-}, [])
+  const  [cookies, setCookies] = useState<Boolean>(false)
+  const [subcriptionConfirmed, setSubscriptionConfirmed] = useState<Boolean>(false)
+  const router = useRouter()
 
   useEffect(() => {
-    if(JSON.parse(localStorage.getItem("subscribe")) === true){
-      setSubscriptionConfirmed(true)
-    } else{
-      setSubscriptionConfirmed(false)
+    if (localStorage.getItem("cookies") === 'true'){
+      setCookies(false)
+    } else {
+      setCookies(true)
     }
+  }, [])
+
+  useEffect(() => {
+    const checkSubscription = () => {
+      const searchParams = new URLSearchParams(window.location.search)
+      searchParams.get("verifeid")
+      setSubscriptionConfirmed(true)
+    }
+
+    checkSubscription()
   },[])
 
+    const closeSubscriptionModal = () => {
+      setSubscriptionConfirmed(false)
+    }
+
+    const metaLink = process.env.NEXT_PUBLIC_BASE_URL
   return (
     <div className=" font-body">
       <Head>
@@ -64,7 +69,7 @@ useEffect(() => {
         <meta property="twitter:url" content="https://web3d.media" />
         <meta property="twitter:title" content="Web3D Media" />
         <meta property="twitter:description" content="Creating, building and developing animations and creators resources for the new web."/>
-        <meta property="twitter:image" content="/images/meta-image.jpg"></meta>
+        <meta property="twitter:image" content={`${metaLink}/images/meta-image.jpg`}></meta>
       </Head>
       {
         cookies && <CookieBanner closecookies={setCookies}></CookieBanner>
