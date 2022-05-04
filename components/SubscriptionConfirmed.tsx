@@ -6,7 +6,6 @@ import Gif from '../public/images/subcribe-gif.gif'
 import Image from 'next/image'
 import Link from 'next/link'
 
-
 const SubcriptionBody = styled.div`
    background: rgba(0, 0, 0, 0.6);
    backdrop-filter: blur(40px);
@@ -18,10 +17,16 @@ const SubcriptionContianer = styled.div`
    width: 556px;
    height: 571px;
    background: url(/images/background.png), black;
+   background-size: 500px;
    border: 2px solid #211F1F;
    box-sizing: border-box;
    border-radius: 16px;
    text-align: center;
+
+   @media (max-width: 550px) {
+    width: 350px;
+    padding: 52px 20px;
+  }
 ` 
 
 const ModalClose = styled.div`
@@ -123,4 +128,4 @@ const SubscriptionConfirmed = ({closeSubscriptionModal}) => {
    )
 }
 
-export default SubscriptionConfirmed
+export default SubscriptionConfirmed 
