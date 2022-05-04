@@ -20,6 +20,7 @@ import { TeamUnderlayMesh } from "../styles/TeameMemberStyles"
 import ProjectContainer from "../components/ProjectContainer"
 
 import CookieBanner from "../components/CookiesBanner"
+import SubscriptionConfirmed from "../components/SubscriptionConfirmed"
 
 export default function Home() {
   const  [cookies, setCookies] = useState<Boolean>(false)
