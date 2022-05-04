@@ -44,7 +44,7 @@ export default async function mailHandler(req, res) {
     },
     dynamic_template_data: {
       name: body.name,
-      verificationLink: process.env.NEXT_PUBLIC_BASE_URL + `/api/verify/${code}`
+      verificationLink: `${process.env.NEXT_PUBLIC_BASE_URL}/api/verifyMail?verification-code=${code}`
     },
     templateId: process.env.EMAIL_TEMPLATE_ID
   }
@@ -52,11 +52,11 @@ export default async function mailHandler(req, res) {
   return await mail
     .send(msg)
     //   return Promise.reject()
-    .then(() =>
+    .then(() => {
       res.status(200).json({
         message: "Signed up successfully"
       })
-    )
+    })
     .catch(err => {
       console.error(err.response.body.errors, {
         SENDGRID_API_KEY: process.env.SENDGRID_API_KEY,

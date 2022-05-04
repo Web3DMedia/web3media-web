@@ -1,9 +1,13 @@
 import { Client } from "@sendgrid/client"
+import { verifyUser } from "../../libs/supabase"
+
+const redirectTo = (res, url, message) => {
+  res.status(302).setHeader("Location", url).json({
+    message
+  })
+}
 
 export default async function verifyMailHandler(req, res) {
-  const client = new Client()
-  client.setApiKey(process.env.SENDGRID_API_KEY)
-
   if (!(req.method === "GET"))
     return res.status(404).json({
       message: "Resource not found!"
@@ -15,13 +19,29 @@ export default async function verifyMailHandler(req, res) {
     })
   }
 
+  const unverified = () =>
+    redirectTo(
+      res,
+      process.env.NEXT_PUBLIC_BASE_URL + "?verified=false",
+      "Email verification failed!"
+    )
+
+  const client = new Client()
+  client.setApiKey(process.env.SENDGRID_API_KEY)
+
+  const user = await verifyUser({
+    code: req.query["verification-code"] || ""
+  }).catch(err => {
+    console.error("Verify failed!", err.message)
+    return unverified()
+  })
+
   const data = {
     list_ids: [process.env.SENDGRID_CONTACT_LIST_ID],
     contacts: [
       {
-        first_name: "Ryan",
-        last_name: "Kio",
-        email: "ryan39@lee-young.com"
+        first_name: user.name,
+        email: user.email
       }
     ]
   }
@@ -36,13 +56,13 @@ export default async function verifyMailHandler(req, res) {
     // @ts-ignore
     .request(request)
     .then(() => {
-      return res.status(200).json({ status: true, message: "Email verified" })
+      return redirectTo(
+        res,
+        process.env.NEXT_PUBLIC_BASE_URL + "?verified=true",
+        "Verification success"
+      )
     })
     .catch(err => {
-      console.info(JSON.stringify(err))
-      return res.status(400).json({
-        status: false,
-        message: "Email verification failed!"
-      })
+      return unverified()
     })
 }

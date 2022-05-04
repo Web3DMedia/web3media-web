@@ -42,7 +42,7 @@ const findUserBy = async (record: Record<string, string>) => {
 }
 
 export const verifyUser = async ({ code }: { code: string }) => {
-  await findUserBy({ code })
+  await findUserBy({ code, status: Verification.Unverified })
   const { data, error } = await supabase
     .from(AdoptersTable)
     .update({
@@ -52,5 +52,5 @@ export const verifyUser = async ({ code }: { code: string }) => {
 
   if (error) throw error
 
-  return data
+  return data[0]
 }
