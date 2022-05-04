@@ -1,6 +1,5 @@
 import Head from "next/head"
-import { useState, useEffect } from "react"
-import { useRouter } from 'next/router'
+import { useState, useEffect, useLayoutEffect } from "react"
 
 //components
 import Container from "../components/Container"
@@ -21,31 +20,28 @@ import CookieBanner from "../components/CookiesBanner"
 import SubscriptionConfirmed from "../components/SubscriptionConfirmed"
 
 export default function Home() {
-  const  [cookies, setCookies] = useState<Boolean>(false)
-  const [subcriptionConfirmed, setSubscriptionConfirmed] = useState<Boolean>(false)
-  const router = useRouter()
+  const [cookies, setCookies] = useState<Boolean>(false)
+  const [subcriptionConfirmed, setSubscriptionConfirmed] =
+    useState<Boolean>(false)
+
+  const closeSubscriptionModal = () => {
+    setSubscriptionConfirmed(false)
+  }
 
   useEffect(() => {
-    if (localStorage.getItem("cookies") === 'true'){
+    if (localStorage.getItem("cookies") === "true") {
       setCookies(false)
     } else {
       setCookies(true)
     }
   }, [])
 
-  useEffect(() => {
-    const checkSubscription = () => {
-      const searchParams = new URLSearchParams(window.location.search)
-      searchParams.get("verifeid")
+  useLayoutEffect(() => {
+    const searchParam = new URLSearchParams(window.location.search)
+    if (searchParam.get("verified") === "true") {
       setSubscriptionConfirmed(true)
     }
-
-    checkSubscription()
-  },[])
-
-    const closeSubscriptionModal = () => {
-      setSubscriptionConfirmed(false)
-    }
+  }, [])
 
   return (
     <div className=" font-body">
@@ -53,24 +49,29 @@ export default function Home() {
         <title>Web3Media Home</title>
         <meta
           name="description"
-          content="Creating, building and developing animations and creators resources for the new web."/>
+          content="Creating, building and developing animations and creators resources for the new web."
+        />
         <link rel="icon" href="/images/logo.svg" />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://web3d.media" />
         <meta property="og:title" content="Web3D Media" />
-        <meta property="og:description" content="Creating, building and developing animations and creators resources for the new web." />
+        <meta
+          property="og:description"
+          content="Creating, building and developing animations and creators resources for the new web."
+        />
         <meta property="og:image" content="/images/meta-image.jpg" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://web3d.media" />
         <meta property="twitter:title" content="Web3D Media" />
-        <meta property="twitter:description" content="Creating, building and developing animations and creators resources for the new web."/>
-        <meta property="twitter:image" content="images/meta-image.jpg"></meta>
+        <meta
+          property="twitter:description"
+          content="Creating, building and developing animations and creators resources for the new web."
+        />
+        <meta property="twitter:image" content="/images/meta-image.jpg"></meta>
       </Head>
-      {
-        cookies && <CookieBanner closecookies={setCookies}></CookieBanner>
-      }
+      {cookies && <CookieBanner closecookies={setCookies}></CookieBanner>}
       <DesktopNavbar></DesktopNavbar>
       <HeroSection></HeroSection>
 
@@ -89,11 +90,13 @@ export default function Home() {
       <Container>
         <TeamSection></TeamSection>
         <Footer></Footer>
-        <TeamUnderlayMesh/>
+        <TeamUnderlayMesh />
       </Container>
-      {
-        subcriptionConfirmed && <SubscriptionConfirmed closeSubscriptionModal={closeSubscriptionModal}></SubscriptionConfirmed>
-      }
+      {subcriptionConfirmed && (
+        <SubscriptionConfirmed
+          closeSubscriptionModal={closeSubscriptionModal}
+        ></SubscriptionConfirmed>
+      )}
     </div>
   )
 }
