@@ -47,7 +47,6 @@ export default function Home() {
       setSubscriptionConfirmed(false)
     }
 
-    const metaLink = process.env.NEXT_PUBLIC_BASE_URL
   return (
     <div className=" font-body">
       <Head>
@@ -67,7 +66,7 @@ export default function Home() {
         <meta property="twitter:url" content="https://web3d.media" />
         <meta property="twitter:title" content="Web3D Media" />
         <meta property="twitter:description" content="Creating, building and developing animations and creators resources for the new web."/>
-        <meta property="twitter:image" content={`${metaLink}/images/meta-image.jpg`}></meta>
+        <meta property="twitter:image" content="images/meta-image.jpg"></meta>
       </Head>
       {
         cookies && <CookieBanner closecookies={setCookies}></CookieBanner>
