@@ -72,7 +72,7 @@ export default function termsofservice () {
             </Head>
             <DesktopNavbar></DesktopNavbar>
 
-            <TermsOfServiceePage className='text-b4'>
+            <TermsOfServiceePage className='text-b4 pt-32'>
                 <div className='px-8 pt-8 md:px-24 lg:px-48'>
                     <div className='flex'>
                         <Link href='/legal'>

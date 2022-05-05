@@ -134,7 +134,7 @@ export default function legal() {
       </Head>
         <DesktopNavbar></DesktopNavbar>
         
-        <LegalPage>
+        <LegalPage className='pt-32'>
             <div className='px-8 md:px-24 lg:px-48'>
             <FirstText className='text-w'>Web3D Media Legal</FirstText>
             <SecondText className='text-b5'>Web3D media takes your privacy 
