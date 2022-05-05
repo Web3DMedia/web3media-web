@@ -96,7 +96,7 @@ const DesktopNavbar = () => {
     },[router])
     return (
 <div>
-            <div className='fixed w-full z-30'>
+            <div className='lg:fixed lg:w-full lg:z-30'>
             <Navbar className='flex justify-between items-center relative'>
             <div className='px-4 sm:px-10 lg:px-14 xl:px-20' >
                 <Link href="/">
