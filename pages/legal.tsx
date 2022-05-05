@@ -78,9 +78,14 @@ cursor:pointer;
 @media (max-width: 1024px) {
         margin-bottom: 17px;
     }
-    @media (max-width: 550px) { 
-        width:70%;
+    @media (max-width: 768px) { 
+        padding:20px 33px 20px 34px;
+        display:flex;
+        justify-content:left;
+        align-items:center;
+        width:100%;
         margin:0 auto 25px;
+        height: 100px;
     }
 `
 const LegalItemText = styled.h1`
@@ -99,6 +104,9 @@ cursor:pointer;
     @media (max-width: 1024px) {
     font-size: 20px;
     line-height: 32px;
+    }
+    @media (max-width: 768px) { 
+        padding: 0px 0 0 20px;
     }
 `
 export default function legal() {
@@ -138,28 +146,28 @@ export default function legal() {
             <div className='block justify-center md:flex-wrap md:flex pt-24'>
                 <Link href='/privacy-policy' passHref>
                     <LegalItem>
-                        <Image src="/images/legal-document.png" width={44} height={51} alt="legal document"/>
+                        <Image src="/images/privacy-image.png" width={44} height={51} objectFit="contain" alt="legal document"/>
                         <LegalItemText className='text-b5'>Privacy policy</LegalItemText>
                     </LegalItem>
                 </Link>
 
                 <Link href='/terms-of-service' passHref>
                     <LegalItem>
-                        <Image src="/images/legal-document.png" width={44} height={51} alt="legal document"/>
+                        <Image src="/images/terms-image.png" width={44} height={51} objectFit="contain" alt="legal document"/>
                         <LegalItemText className='text-b5'>Terms of service</LegalItemText>
                     </LegalItem>
                 </Link>
 
                 <Link href='/cookies-policies' passHref>
                     <LegalItem>
-                        <Image src="/images/legal-document.png" width={44} height={51} alt="legal document"/>
+                        <Image src="/images/cookies-image.png" width={44} height={51} objectFit="contain" alt="legal document"/>
                         <LegalItemText className='text-b5'>Cookies policies</LegalItemText>
                     </LegalItem>
                 </Link>
 
                 <Link href='/disclaimer-notice' passHref>
                     <LegalItem>
-                    <Image src="/images/legal-document.png" width={44} height={51} alt="legal document"/>
+                    <Image src="/images/disclaimer-image.png" width={44} height={51} objectFit="contain" alt="legal document"/>
                     <LegalItemText className='text-b5'>Disclaimer notice</LegalItemText>
                 </LegalItem>
                 </Link>
