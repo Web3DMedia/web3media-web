@@ -96,10 +96,10 @@ const DesktopNavbar = () => {
     },[router])
     return (
         <Navbar className='flex justify-between items-center relative'>
-            <div className='px-10 lg:px-14 xl:px-20' >
+            <div className='px-4 sm:px-10 lg:px-14 xl:px-20' >
                 <Link href="/">
                     <a>
-                        <Image src='/images/logo.svg' width={76} height={31} alt="logo" />
+                        <Image src='/images/new-logo.jpg' width={96} height={31} alt="logo" objectFit='contain' />
                     </a>
                 </Link>
             </div>
