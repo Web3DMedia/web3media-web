@@ -39,28 +39,6 @@ const EarlyAccessInnerContainer = styled.div`
     padding: 52px 20px;
   }
 `
-const MobileMenuClose = styled.span`
-    display: flex;
-    position: absolute;
-    right: 20px;
-    top: 45px;
-    width: 20px;
-    height: 2px;
-    cursor: pointer;
-    padding: 0px;
-    background: var(--B4);
-    &:nth-child(2) {
-      opacity: 0;
-    }
-
-    &:nth-child(1) {
-      transform: translateY(-12px) rotate(-45deg);
-    }
-
-    &:nth-child(3) {
-      transform: translateY(-12px) rotate(45deg);
-    }
-`
 const FirstText = styled.h6`
   font-weight: 800;
   font-size: 36px;
@@ -202,15 +180,8 @@ const EarlyAccess = ({ closeearlyaccess }) => {
     <EarlyAccessContainer>
         <EarlyAccessInnerContainer>
         {
-            confirm===false &&  <div>
-                        <ul className='pb-4' onClick={() => closeearlyaccess(false)}>
-                            <li>
-                                <MobileMenuClose></MobileMenuClose>
-                                <MobileMenuClose></MobileMenuClose>
-                                <MobileMenuClose></MobileMenuClose>
-                            </li>
-                        </ul>
-
+            confirm===false &&  <div> 
+              <CloseButton onClick={() => closeearlyaccess(false)}></CloseButton>
                     <FirstText className='text-w font-display'>Get Early Access</FirstText>
                     <SecondText className='text-b5 font-display'>Sign up to get early access on updates on our products </SecondText>
 
@@ -240,14 +211,7 @@ const EarlyAccess = ({ closeearlyaccess }) => {
         }
         {
             confirm===true && <div className='text-w text-center'>
-
-                <ul className='pb-24' onClick={() => closeearlyaccess(false)}>
-                    <li className="cursor-pointer">
-                        <MobileMenuClose></MobileMenuClose>
-                        <MobileMenuClose></MobileMenuClose>
-                        <MobileMenuClose></MobileMenuClose>
-                    </li>
-                </ul>
+              <CloseButton onClick={() => closeearlyaccess(false)}></CloseButton>
 
             <GifDiv ref={container}>
             </GifDiv>
