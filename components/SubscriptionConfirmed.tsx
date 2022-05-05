@@ -1,10 +1,9 @@
 import styled from 'styled-components'
 import {MdOutlineClose} from 'react-icons/md'
-import {BsTwitter, BsInstagram} from 'react-icons/bs'
-import {FaLinkedinIn} from 'react-icons/fa'
-import Gif from '../public/images/subcribe-gif.gif'
-import Image from 'next/image'
+import {BsTwitter} from 'react-icons/bs'
 import Link from 'next/link'
+import lottie from 'lottie-web'
+import {useEffect, useRef} from 'react'
 
 const SubcriptionBody = styled.div`
    background: rgba(0, 0, 0, 0.6);
@@ -46,8 +45,8 @@ const GifWrapper = styled.div`
 `
 
 const DivSeperator = styled.div`
-   border: 4px solid;
-   border-image-source: radial-gradient(50% 50% at 50% 50%, #818181 0%, rgba(129, 129, 129, 0) 100%);
+   background: #818181;
+   height: .1px;
    margin: 44px auto 0;
    max-width: 208px;
 `
@@ -63,16 +62,46 @@ const TextDiv = styled.div`
 
 
 const ShareDiv = styled.div`
-   margin-top: 44px;
+   margin-top: 40px;
    h2{
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 28px;
-      line-height: 15px;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 19px;
+      margin-bottom: 20px;
+   }
+
+   p{ 
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #D3D3D3;
+   }
+
+   button{
+      display: flex;
+      background: rgba(10, 183, 246, 1);
+      border-radius: 8px;
+      margin: 20px auto;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 24px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
    }
 `
 
 const SubscriptionConfirmed = ({closeSubscriptionModal}) => {
+   const container = useRef(null)
+   useEffect(() => {
+      lottie.loadAnimation({
+         container: container.current,
+         renderer: 'svg',
+         loop:true,
+         autoplay: true,
+         animationData: require('../assets/lottie/success.json')
+      })
+   }, [])
    return (
       <SubcriptionBody className="fixed top-0 left-0 h-screen w-full text-white flex items-center justify-center">
          <SubcriptionContianer className="relative pt-[80px]">
@@ -80,8 +109,7 @@ const SubscriptionConfirmed = ({closeSubscriptionModal}) => {
                <MdOutlineClose fontSize={24}/>
             </ModalClose>
             <div className="">
-               <GifWrapper>
-                  <Image src={Gif} alt="gif"layout='fill'/>
+               <GifWrapper ref={container}>
                </GifWrapper>
                <TextDiv>
                   <h2 className="text-xl font-normal mt-[24px]">Superpower activated</h2>
@@ -91,36 +119,16 @@ const SubscriptionConfirmed = ({closeSubscriptionModal}) => {
                </TextDiv>
                <DivSeperator />
                <ShareDiv>
-                  <div className="font-medium text-[20px]">
+                  <h2 className="text-white">Your first mission</h2>
+                  <p>Share and help others join with the button below</p>
+                  <button className="text-white">
+                     <BsTwitter className="mr-[10px]" fontSize={22}/>
                      <Link href="https://twitter.com/intent/tweet?text=Just%20signed%20up%20for%20early%20access%20to%20%40web3dmedia%27s%20products.%0A%0ASign%20up%20here%20%F0%9F%91%87%0Ahttps%3A//web3d.media/?utm_source=twitter%26utm_medium=share%2Blink%26utm_id=early%2Baccess%20">
-                        <a target="_blank" className="text-[#C4C4C4]">
-                           Share
+                        <a target="_blank">
+                           Share on Twitter
                         </a>
                      </Link>
-                  </div>
-                  <div className="flex w-full items-center justify-center mt-[28px]">
-                     <div className="text-[#D3D3D3] mr-[15px] cursor-pointer">
-                        <Link href="https://twitter.com/web3Dmedia">
-                           <a target="_blank">
-                              <BsTwitter fontSize={30}/>
-                           </a>
-                        </Link>
-                     </div>
-                     <div className="text-[#D3D3D3] mx-[15px] cursor-pointer">
-                        <Link href="https://www.instagram.com/web3d.media/">
-                           <a target="_blank">
-                              <BsInstagram fontSize={30}/>
-                           </a>
-                        </Link>
-                     </div>
-                     <div className="text-[#D3D3D3] ml-[15px] cursor-pointer">
-                        <Link href="https://www.linkedin.com/company/web3dmedia">
-                           <a target="_blank">
-                              <FaLinkedinIn fontSize={30}/>
-                           </a>
-                        </Link>
-                     </div>
-                  </div>
+                  </button>
                </ShareDiv>
             </div>
          </SubcriptionContianer>
