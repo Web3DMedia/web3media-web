@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Image from 'next/image'
-import Logo from '../public/images/new-logo.jpg'
+import Logo from '../public/images/new-logo-removebg.png'
 import Link from 'next/link'
 import ArrowVector from '../public/images/small-arrow.svg'
 import {FaTwitter, FaInstagram, FaLinkedinIn} from 'react-icons/fa'

@@ -95,11 +95,12 @@ const DesktopNavbar = () => {
         changeDisplay();
     },[router])
     return (
-        <Navbar className='flex justify-between items-center relative'>
+        <div className='fixed w-full z-30`'>
+            <Navbar className='flex justify-between items-center relative'>
             <div className='px-4 sm:px-10 lg:px-14 xl:px-20' >
                 <Link href="/">
                     <a>
-                        <Image src='/images/new-logo.jpg' width={96} height={31} alt="logo" objectFit='contain' />
+                        <Image src='/images/new-logo-removebg.png' width={96} height={31} alt="logo" objectFit='contain' />
                     </a>
                 </Link>
             </div>
@@ -149,6 +150,7 @@ const DesktopNavbar = () => {
             <MobileMenu slide={showmenu} closemenu={setShowmenu}></MobileMenu>
             
         </Navbar>
+        </div>
     )
 }
 
