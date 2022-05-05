@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Image from 'next/image'
-import Logo from '../public/images/logo.svg'
+import Logo from '../public/images/new-logo.jpg'
 import Link from 'next/link'
 import ArrowVector from '../public/images/small-arrow.svg'
 import {FaTwitter, FaInstagram, FaLinkedinIn} from 'react-icons/fa'
@@ -48,7 +48,7 @@ const Footer = () => {
             <div className="flex items-center justify-between pl-2 md:pl-5 lg:px-5">
                <div className="flex items-center">
                   <div className="cursor-pointer mr-5" onClick={toggleHome}>
-                     <Image src={Logo} alt="logo" />
+                     <Image src={Logo} width={76} height={31} alt="logo" />
                   </div>
                   <div className="w-full items-center justify-center hidden lg:flex">
                      <p className="font-normal text-sm text-[#C4C4C4]"> &copy;2022 Web3D Media Inc. All rights reserved</p>
