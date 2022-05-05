@@ -23,7 +23,7 @@ border-bottom:2px solid var(--Main);
 @media (max-width: 640px) {
 width:100%;
 background: var(--Main);
-color: var(--W)
+color: var(--W);
 margin-top: 34px;
 margin-bottom:0px;
 border-bottom: none;
