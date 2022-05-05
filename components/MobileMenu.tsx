@@ -12,7 +12,7 @@ const MobileMenuContainer = styled.div<{slide:boolean}>`
         background: rgba(0, 0, 0, 0.6);
         backdrop-filter: blur(40px);
         height: 100vh;
-        z-index: 20;
+        z-index: 120;
         width:100%;
         position: fixed;
         overflow-y: scroll;
@@ -145,7 +145,7 @@ const MobileMenu = ({ closemenu, slide, }) => {
             <MobileMenuContainer slide={slide} className='p-8 text-left absolute block top-0 w-full overflow-hidden md:text-center xl:hidden'>
             <div className='flex justify-between items-center'>
                 <div>
-                    <Image src='/images/new-logo.jpg' width={58} height={24} alt="logo" objectFit='contain' className='hidden filter grayscale' />
+                    <Image src='/images/new-logo-removebg.png' width={58} height={24} alt="logo" objectFit='contain' className='hidden filter grayscale' />
                 </div>
 
                 <ul onClick={() => closemenu(false)}>

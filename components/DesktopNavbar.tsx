@@ -11,7 +11,7 @@ import Link from 'next/link';
 
 const Navbar = styled.nav`
     border-bottom: 0.5px solid var(--B2);
-    background: url(/images/background.png);
+    background: black;
     background-size: 500px;
     background-position: center;
     background-repeat: none;
@@ -95,11 +95,13 @@ const DesktopNavbar = () => {
         changeDisplay();
     },[router])
     return (
-        <Navbar className='flex justify-between items-center relative'>
+<div>
+            <div className='lg:fixed lg:w-full lg:z-30'>
+            <Navbar className='flex justify-between items-center relative'>
             <div className='px-4 sm:px-10 lg:px-14 xl:px-20' >
                 <Link href="/">
                     <a>
-                        <Image src='/images/new-logo.jpg' width={96} height={31} alt="logo" objectFit='contain' />
+                        <Image src='/images/new-logo-removebg.png' width={96} height={31} alt="logo" objectFit='contain' />
                     </a>
                 </Link>
             </div>
@@ -146,9 +148,11 @@ const DesktopNavbar = () => {
             {
                 showearlyaccess &&    <EarlyAccess closeearlyaccess={setShowEarlyAccess}></EarlyAccess>
             }
-            <MobileMenu slide={showmenu} closemenu={setShowmenu}></MobileMenu>
-            
         </Navbar>
+        </div>
+        
+            <MobileMenu slide={showmenu} closemenu={setShowmenu}></MobileMenu>
+</div>
     )
 }
 
