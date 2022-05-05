@@ -20,6 +20,7 @@ export default async function mailHandler(req, res) {
   }).catch(err => {
     console.error(err.message)
     if (err.message.includes("User already exist"))
+      
       res.status(400).json({
         message:
           "Already signed up. Please check your email inbox for a confirmation email",
