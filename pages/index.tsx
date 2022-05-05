@@ -1,5 +1,5 @@
 import Head from "next/head"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useLayoutEffect } from "react"
 
 //components
 import Container from "../components/Container"
@@ -12,23 +12,37 @@ import DesktopNavbar from "../components/DesktopNavbar"
 import HeroSection from "../components/HeroSection"
 import AboutSection from "../components/AboutSection"
 
-
 import { MeshWrapper, ProjectsUnderLay } from "../styles/ProjectSection"
 import { TeamUnderlayMesh } from "../styles/TeameMemberStyles"
 import ProjectContainer from "../components/ProjectContainer"
 
 import CookieBanner from "../components/CookiesBanner"
+import SubscriptionConfirmed from "../components/SubscriptionConfirmed"
 
 export default function Home() {
+  const [cookies, setCookies] = useState<Boolean>(false)
+  const [subcriptionConfirmed, setSubscriptionConfirmed] =
+    useState<Boolean>(false)
 
-const  [cookies, setCookies] = useState<Boolean>(false)
-useEffect(() => {
-  if (localStorage.getItem("cookies") === 'true'){
-    setCookies(false)
-  } else {
-    setCookies(true)
+  const closeSubscriptionModal = () => {
+    setSubscriptionConfirmed(false)
+    window.location.search = ""
   }
-}, [])
+
+  useEffect(() => {
+    if (localStorage.getItem("cookies") === "true") {
+      setCookies(false)
+    } else {
+      setCookies(true)
+    }
+  }, [])
+
+  useLayoutEffect(() => {
+    const searchParam = new URLSearchParams(window.location.search)
+    if (searchParam.get("verified") === "true") {
+      setSubscriptionConfirmed(true)
+    }
+  }, [])
 
   return (
     <div className=" font-body">
@@ -36,24 +50,29 @@ useEffect(() => {
         <title>Web3Media Home</title>
         <meta
           name="description"
-          content="Empowering and providing financial freedom for web3 designers, artists, blockchain talents, and creative minds"/>
+          content="Creating, building and developing animations and creators resources for the new web."
+        />
         <link rel="icon" href="/images/logo.svg" />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://web3d.media" />
         <meta property="og:title" content="Web3D Media" />
-        <meta property="og:description" content="Empowering and providing financial freedom for web3 designers, artists, blockchain talents, and creative minds" />
+        <meta
+          property="og:description"
+          content="Creating, building and developing animations and creators resources for the new web."
+        />
         <meta property="og:image" content="/images/meta-image.jpg" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://web3d.media" />
         <meta property="twitter:title" content="Web3D Media" />
-        <meta property="twitter:description" content="Empowering and providing financial freedom for web3 designers, artists, blockchain talents, and creative minds"/>
+        <meta
+          property="twitter:description"
+          content="Creating, building and developing animations and creators resources for the new web."
+        />
         <meta property="twitter:image" content="/images/meta-image.jpg"></meta>
       </Head>
-      {
-        cookies && <CookieBanner closecookies={setCookies}></CookieBanner>
-      }
+      {cookies && <CookieBanner closecookies={setCookies}></CookieBanner>}
       <DesktopNavbar></DesktopNavbar>
       <HeroSection></HeroSection>
 
@@ -72,8 +91,13 @@ useEffect(() => {
       <Container>
         <TeamSection></TeamSection>
         <Footer></Footer>
-        <TeamUnderlayMesh/>
+        <TeamUnderlayMesh />
       </Container>
+      {subcriptionConfirmed && (
+        <SubscriptionConfirmed
+          closeSubscriptionModal={closeSubscriptionModal}
+        ></SubscriptionConfirmed>
+      )}
     </div>
   )
 }
