@@ -8,20 +8,17 @@ import Footer from "../components/Footer"
 import Container from "../components/Container"
 import styled from 'styled-components'
 
-const LegalPage = styled.div`
-    background: url(/images/background.png);
+const Legalpagecontainer = styled.div`
+    background: url(/images/background1.png);
     overflow:hidden;
-    background-size: 500px;
+    background-size: 1000px;
     background-position: center;
     background-repeat: none;
     @media (max-width: 1024px) {
         border: none;
-        background-size: 500px;
     }
-    @media (max-width: 550px) {
-        border: none;
-        background-size: 300px;
-    }
+`
+const LegalPage = styled.div`
 `
 const Mesh = styled.div`
     width: 724px;
@@ -132,8 +129,9 @@ export default function legal() {
         <meta property="twitter:description" content="Empowering and providing financial freedom for web3 designers, artists, blockchain talents, and creative minds"/>
         <meta property="twitter:image" content="/images/meta-image.jpg"></meta>
       </Head>
-        <DesktopNavbar></DesktopNavbar>
         
+        <Legalpagecontainer>
+            <DesktopNavbar></DesktopNavbar>
         <LegalPage className='pt-32'>
             <div className='px-8 md:px-24 lg:px-48'>
             <FirstText className='text-w'>Web3D Media Legal</FirstText>
@@ -181,6 +179,7 @@ export default function legal() {
             <Footer></Footer>
         </Container>
 
+        </Legalpagecontainer>
     
     </div>
   )
