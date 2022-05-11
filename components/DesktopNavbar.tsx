@@ -29,6 +29,12 @@ const NavbarTwo = styled.nav`
     border-bottom: 0.5px solid var(--B2);
     @media (max-width: 1024px) {
     border: none;
+     background-size: 500px;
+  }
+    @media (max-width: 550px) {
+    border: none;
+    background-size: 300px;
+  }
 `
 const Li = styled.li`
     list-style: none;
@@ -59,14 +65,16 @@ const Li = styled.li`
     display: none;
     border: none;
         &:last-child {
-            padding: 30px 0px 30px 34px;
             display: block;
+            padding: 10px 0px 30px 34px;y
+            
         }
     }
     @media (max-width: 550px) {
         &:last-child {
-            padding: 20px 0px 20px 34px;
             display: block;
+            padding: 20px 0px 20px 34px;
+            
         }
     }
 `
@@ -87,21 +95,25 @@ const HamMenu = styled.div`
     }
 `
 const DesktopNavbar = () => {
-    const [scroll, setScroll] = useState(false)
+    const [scrollY, setScrollY] = useState(0)
     const [showmenu, setShowmenu] = useState(false);
     const [showearlyaccess, setShowEarlyAccess] = useState<boolean>(false);
     const [cookieNav, setCookieNav] = useState<boolean>(false);
     const router = useRouter()
 
-        const scrollbg = () => {
-            if(window.scrollY > 0) {
-                setScroll(true)
-            } else {
-                setScroll(false)
-            }
-        }
-         window.addEventListener('scroll', scrollbg);
+    useEffect(() => {
+        const handleScroll = () => {
+        setScrollY(window.scrollY);
+        };
 
+        handleScroll();
+
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+        window.removeEventListener("scroll", handleScroll);
+        };
+
+    }, []);
 
     useEffect(() => {
         const changeDisplay = () => {
@@ -114,7 +126,7 @@ const DesktopNavbar = () => {
     return (
         <div>
             <div className='fixed w-full z-30'>
-                { scroll ? (<NavbarTwo className='flex justify-between items-center relative'>
+                { scrollY > 0 ? (<NavbarTwo className='flex justify-between items-center relative'>
             <div className='px-4 sm:px-10 lg:px-14 xl:px-20' >
                 <Link href="/">
                     <a>
