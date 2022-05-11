@@ -783,3 +783,36 @@ export const ThirdMemberTwo = styled.div<{filterState:boolean}>`
       }
    }
 `
+
+export const HeaderP = styled.p`
+   line-height: 38px;
+   font-size: 28px;
+   color: #C4C4C4;
+
+   @media screen and (max-width: 1024px){
+      font-size: 24px;
+      line-height: 32px;
+   }
+
+   @media screen and (max-width: 550px){
+      font-size: 18px;
+      line-height: 26px;
+   }
+`
+
+export const AccessBtn = styled.button`
+   cursor: pointer;
+   position: relative;
+   z-index: 10;
+   background-image: linear-gradient(#000,#000), linear-gradient(135deg, #FF6EFF 0%, #0AB7F6 100%);
+   background-origin: border-box;
+   background-clip: padding-box, border-box;
+   border-radius: 10px;
+   border: 2px solid transparent;
+   color: #D3D3D3;
+   width: 200px;
+   height: 52px;
+   padding:1px;
+   font-size: 16px;
+   margin-top: 60px;
+`

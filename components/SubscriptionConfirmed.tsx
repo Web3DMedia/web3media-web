@@ -123,7 +123,7 @@ const SubscriptionConfirmed = ({closeSubscriptionModal}) => {
                   <p>Share and help others join with the button below</p>
                   <button className="text-white">
                      <BsTwitter className="mr-[10px]" fontSize={22}/>
-                     <Link href="https://twitter.com/intent/tweet?text=Just%20signed%20up%20for%20early%20access%20to%20%40web3dmedia%27s%20products.%0A%0ASign%20up%20here%20%F0%9F%91%87%0Ahttps%3A//web3d.media/?utm_source=twitter%26utm_medium=share%2Blink%26utm_id=early%2Baccess%20">
+                     <Link href="https://clicktotweet.com/Xeoe2">
                         <a target="_blank">
                            Share on Twitter
                         </a>
