@@ -167,7 +167,7 @@ export default function legal() {
 
                 <Link href='/disclaimer-notice' passHref>
                     <LegalItem>
-                    <Image src="/images/disclaimer-image.png" width={44} height={51} objectFit="contain" alt="legal document"/>
+                    <Image src="/images/disclaimer-notice-image.png" width={44} height={51} objectFit="contain" alt="legal document"/>
                     <LegalItemText className='text-b5'>Disclaimer notice</LegalItemText>
                 </LegalItem>
                 </Link>
