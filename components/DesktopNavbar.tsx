@@ -54,7 +54,7 @@ const Li = styled.li`
     border: none;
         &:last-child {
             display: block;
-            padding: 10px 0px 30px 34px;y
+            padding: 10px 0px 30px 34px;
             
         }
     }
@@ -129,7 +129,11 @@ const DesktopNavbar = () => {
             </div>
 
             <ul className='flex font-display'>
-                <Li onClick={() => setShowEarlyAccess(true)}>Early Access</Li>
+                <Li>
+                    <Link href='/early-access'>
+                        <a>Early Access</a>
+                    </Link>
+                </Li>
                 <Li>
                     {
                         cookieNav ?

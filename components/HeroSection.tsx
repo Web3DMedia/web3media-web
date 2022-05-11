@@ -238,8 +238,7 @@ const SecondHeadingText = styled.h1`
         padding-bottom: 20px;
     }
 `
-const Button = styled.button`
-`
+
 const ThirdHeadingText = styled.p`
   font-weight: 400;
   font-size: 28px;
@@ -302,6 +301,21 @@ const SocialCircle = styled.div`
     width: 1px;
     border-radius: 50%;
 `
+
+const OurSuperPowersBtn = styled.button`
+  cursor: pointer;
+  position: relative;
+  background-image: linear-gradient(#000,#000), linear-gradient(135deg, #FF6EFF 0%, #0AB7F6 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  color: #D3D3D3;
+  width: 200px;
+  height: 52px;
+  padding:1px;
+  font-size: 16px;
+`
 const HeroSection = () => {
   return (
     <HeroContainer className="pt-32">
@@ -321,14 +335,11 @@ const HeroSection = () => {
             Creating, building and developing animations and creators resources for the new web.
           </ThirdHeadingText>
 
-            <Button>
-              <ScrollLink to="products" spy={true} smooth={true} offset={-20} duration={900}>
-                <div className="cursor-pointer flex justify-center m-auto hover:scale-105 transition-transform w-122 h-14 lg:w-139 lg:h-19 2xl:w-228 xl:h-47 duration-700 ">
-                    <Image src='/images/our-superpowers-btn.svg' width={228} height={47} alt="logo" />
-                </div>
-              </ScrollLink>
-              
-            </Button>
+          <OurSuperPowersBtn>
+            <ScrollLink to="products" spy={true} smooth={true} offset={-20} duration={900}>
+              Our Superpowers
+            </ScrollLink>
+          </OurSuperPowersBtn>
 
         </div>
         </HeroSectionContainer>

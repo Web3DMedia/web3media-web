@@ -59,7 +59,7 @@ margin-left:20px;
 `
 
 export default function cookiespolicies () {
-  return (
+    return (
     <div>
         <div className='font-body'>
 
