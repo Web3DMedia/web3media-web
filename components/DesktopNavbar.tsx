@@ -66,7 +66,7 @@ const Li = styled.li`
     border: none;
         &:last-child {
             display: block;
-            padding: 10px 0px 30px 34px;y
+            padding: 10px 0px 30px 34px;
             
         }
     }
@@ -136,7 +136,11 @@ const DesktopNavbar = () => {
             </div>
 
             <ul className='flex font-display'>
-                <Li onClick={() => setShowEarlyAccess(true)}>Early Access</Li>
+                <Li>
+                    <Link href='/early-access'>
+                        <a>Early Access</a>
+                    </Link>
+                </Li>
                 <Li>
                     {
                         cookieNav ?
@@ -175,7 +179,7 @@ const DesktopNavbar = () => {
             </ul>
 
             {
-                showearlyaccess &&    <EarlyAccess closeearlyaccess={setShowEarlyAccess}></EarlyAccess>
+                showearlyaccess &&  <EarlyAccess closeearlyaccess={setShowEarlyAccess}></EarlyAccess>
             }
         </NavbarTwo>
 ) : (<Navbar  className='flex justify-between items-center relative'>
@@ -188,7 +192,11 @@ const DesktopNavbar = () => {
             </div>
 
             <ul className='flex font-display'>
-                <Li onClick={() => setShowEarlyAccess(true)}>Early Access</Li>
+                <Li>
+                    <Link href='/early-access'>
+                        <a>Early Access</a>
+                    </Link>
+                </Li>
                 <Li>
                     {
                         cookieNav ?

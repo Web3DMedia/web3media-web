@@ -4,27 +4,18 @@ import DesignIcon from '../public/images/design-icon.svg'
 import AnimationIcon from '../public/images/animation-icon.svg'
 import ManagementIcon from '../public/images/management-icon.svg'
 import TeamMembers from './TeamMembers'
-import { TeamSectionDiv } from '../styles/TeameMemberStyles'
+import { 
+   TeamSectionDiv, 
+   HeaderP,
+   AccessBtn,
+} from '../styles/TeameMemberStyles'
 import SectionText from './SectionText'
-import styled from 'styled-components'
+import EarlyAccess from './EarlyAccess'
+import { useState } from 'react'
 
-const HeaderP = styled.p`
-   line-height: 38px;
-   font-size: 28px;
-   color: #C4C4C4;
 
-   @media screen and (max-width: 1024px){
-      font-size: 24px;
-      line-height: 32px;
-   }
-
-   @media screen and (max-width: 550px){
-      font-size: 18px;
-      line-height: 26px;
-   }
-`
 const TeamSection = () => {
-
+   const [showearlyaccess, setShowEarlyAccess] = useState<boolean>(false);
    return (
       <TeamSectionDiv id="teams">
          <div className="pt-4 w-full">
@@ -59,6 +50,14 @@ const TeamSection = () => {
 
             <TeamMembers/>
          </div>
+         <div className="flex items-center justify-center mt-[100px] w-full">
+            <AccessBtn onClick={() => setShowEarlyAccess(true)}>
+               Get Early Access
+            </AccessBtn>
+         </div>
+         {
+            showearlyaccess && <EarlyAccess closeearlyaccess={setShowEarlyAccess}></EarlyAccess>
+         }
       </TeamSectionDiv>
    )
 }

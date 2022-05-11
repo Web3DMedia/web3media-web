@@ -7,13 +7,16 @@ import { Spinner } from "./Spinner"
 import { RiCloseLine } from "react-icons/ri"
 import lottie from 'lottie-web'
 import {useEffect, useRef} from 'react'
+import {
+
+} from '../styles/EarlyAccessStyles'
 
 const EarlyAccessContainer = styled.div`
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(40px);
   height: 100vh;
   position: fixed;
-  z-index: 7;
+  z-index: 20;
   width: 100%;
   top: 0;
   left: 0;

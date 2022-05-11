@@ -138,7 +138,7 @@ const MobileMenu = ({ closemenu, slide, }) => {
     return (
 
      <>
-           {
+        {
                 showearlyaccess && 
                 <EarlyAccess closeearlyaccess={setShowEarlyAccess}></EarlyAccess>
             }
@@ -160,7 +160,11 @@ const MobileMenu = ({ closemenu, slide, }) => {
             <ul className='pt-20 pb-20 md:pt-24 md:pb-32'>
                 <li className='flex flex-col pb-4'>
                     <MobileNavNumber>01</MobileNavNumber>
-                    <MobileNav  onClick={openModal}>Early Access</MobileNav>
+                    <MobileNav >
+                        <Link href='/early-access'>
+                            <a>Early Access</a>
+                        </Link>
+                    </MobileNav>
                 </li>
                 <li className='flex flex-col pb-4'>
                     <MobileNavNumber>02</MobileNavNumber>
