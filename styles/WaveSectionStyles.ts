@@ -4,7 +4,7 @@ export const WaveContainer = styled.div`
    height: 250px;
    border: none;
    position: relative;
-   background-image: url(/images/wave.svg), url(/images/background.png) !important;
+   background-image: url(/images/wave.svg) !important;
    background-size: 100%, 500px;
    background-repeat: no-repeat, repeat;
    background-position: center, left top;
@@ -27,7 +27,7 @@ export const PinkContainer = styled.div`
    height: 250px;
    border: none;
    position: relative;
-   background-image: url(/images/background.png), url(/images/wave.svg);
+   background-image: url(/images/wave.svg);
    background-size: 500px, 100%;
    background-repeat: repeat, no-repeat;
    background-position: center bottom,center;

@@ -9,27 +9,15 @@ import MobileMenu from '../components/MobileMenu'
 import EarlyAccess from '../components/EarlyAccess';
 import Link from 'next/link';
 
-const Navbar = styled.nav`
+const Navbar = styled.nav<{headertransparent:boolean}>`
+    background: ${({headertransparent}) => headertransparent ? 'transparent' : 'black'};
     border-bottom: 0.5px solid var(--B2);
-    background: url(/images/background.png);
     background-size: 500px;
     background-position: center;
     background-repeat: none;
     @media (max-width: 1024px) {
     border: none;
     background-size: 500px;
-  }
-    @media (max-width: 550px) {
-    border: none;
-    background-size: 300px;
-  }
-`
-const NavbarTwo = styled.nav`
-    background: black;
-    border-bottom: 0.5px solid var(--B2);
-    @media (max-width: 1024px) {
-    border: none;
-     background-size: 500px;
   }
     @media (max-width: 550px) {
     border: none;
@@ -95,7 +83,7 @@ const HamMenu = styled.div`
     }
 `
 const DesktopNavbar = () => {
-    const [scrollY, setScrollY] = useState(0)
+    const [headertransparent, setHeaderTransparent] = useState<boolean>(true)
     const [showmenu, setShowmenu] = useState(false);
     const [showearlyaccess, setShowEarlyAccess] = useState<boolean>(false);
     const [cookieNav, setCookieNav] = useState<boolean>(false);
@@ -103,7 +91,12 @@ const DesktopNavbar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-        setScrollY(window.scrollY);
+            const currentScroll = window.scrollY
+            if (currentScroll > 0) {
+                setHeaderTransparent(false)
+            } else {
+                setHeaderTransparent(true)
+            }
         };
 
         handleScroll();
@@ -126,63 +119,7 @@ const DesktopNavbar = () => {
     return (
         <div>
             <div className='fixed w-full z-30'>
-                { scrollY > 0 ? (<NavbarTwo className='flex justify-between items-center relative'>
-            <div className='px-4 sm:px-10 lg:px-14 xl:px-20' >
-                <Link href="/">
-                    <a>
-                        <Image src='/images/new-logo-removebg.png' width={96} height={31} alt="logo" objectFit='contain' />
-                    </a>
-                </Link>
-            </div>
-
-            <ul className='flex font-display'>
-                <Li>
-                    <Link href='/early-access'>
-                        <a>Early Access</a>
-                    </Link>
-                </Li>
-                <Li>
-                    {
-                        cookieNav ?
-                            (
-                                <Link href='/'>
-                                    <a>Products</a>
-                                </Link>
-                            ):
-                            (
-                                <ScrollLink to="products" spy={true} smooth={true} offset={-20} duration={600}>
-                                    Products
-                                </ScrollLink>
-                            )
-                    }
-                </Li>
-                <Li>
-                    {
-                        cookieNav ?
-                            (
-                                <Link href='/'>
-                                    <a>Teams</a>
-                                </Link>
-                            ):
-                            (
-                                <ScrollLink to="teams" spy={true} smooth={true} offset={-20} duration={600}>
-                                    Teams
-                                </ScrollLink>
-                            )
-                    }
-                </Li>
-                <Li onClick={() => setShowmenu(true)}>
-                    <HamMenu></HamMenu>
-                    <HamMenu></HamMenu>
-                    <HamMenu></HamMenu>
-                </Li>
-            </ul>
-
-            {
-                showearlyaccess &&  <EarlyAccess closeearlyaccess={setShowEarlyAccess}></EarlyAccess>
-            }
-        </NavbarTwo>
-) : (<Navbar  className='flex justify-between items-center relative'>
+                <Navbar className='flex justify-between items-center relative' headertransparent={headertransparent}>
             <div className='px-4 sm:px-10 lg:px-14 xl:px-20' >
                 <Link href="/">
                     <a>
@@ -238,7 +175,6 @@ const DesktopNavbar = () => {
                 showearlyaccess &&    <EarlyAccess closeearlyaccess={setShowEarlyAccess}></EarlyAccess>
             }
         </Navbar>
-)}
             </div>
         
             <MobileMenu slide={showmenu} closemenu={setShowmenu}></MobileMenu>

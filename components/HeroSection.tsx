@@ -7,7 +7,6 @@ import {Link as ScrollLink} from 'react-scroll';
 import Slider from '../components/Slider'
 
 const HeroContainer = styled.div`
-    background: url(/images/background.png);
     background-size: 500px;
     background-position: center;
     background-repeat: none;
