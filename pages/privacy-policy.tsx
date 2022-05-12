@@ -9,20 +9,17 @@ import Footer from "../components/Footer"
 import Container from "../components/Container"
 import styled from 'styled-components'
 
-const PrivacyPolicyPage = styled.div`
-    background: url(/images/background.png);
+const Privacypolicycontainer = styled.div`
+    background: url(/images/background1.png);
     overflow:hidden;
-    background-size: 500px;
+    background-size: 1000px;
     background-position: center;
     background-repeat: none;
     @media (max-width: 1024px) {
         border: none;
-        background-size: 500px;
     }
-    @media (max-width: 550px) {
-        border: none;
-        background-size: 300px;
-    }
+`
+const PrivacyPolicyPage = styled.div`
 `
 const TextContainer = styled.div`
 padding-top:60px;
@@ -89,7 +86,8 @@ export default function privacypolicy () {
         <meta property="twitter:image" content="/images/meta-image.jpg"></meta>
         </Head>
 
-        <DesktopNavbar></DesktopNavbar>
+        <Privacypolicycontainer>
+            <DesktopNavbar></DesktopNavbar>
 
         <PrivacyPolicyPage className='text-b4 pt-32'>
             <div className='px-8 pt-8 md:px-24 lg:px-48'>
@@ -430,6 +428,7 @@ export default function privacypolicy () {
         <Container>
             <Footer></Footer>
         </Container>
+        </Privacypolicycontainer>
     </div>
   )
 }

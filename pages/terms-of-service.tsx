@@ -8,7 +8,16 @@ import DesktopNavbar from "../components/DesktopNavbar"
 import Footer from "../components/Footer"
 import Container from "../components/Container"
 import styled from 'styled-components'
-
+const Termsofservicecontainer = styled.div`
+    background: url(/images/background1.png);
+    overflow:hidden;
+    background-size: 1000px;
+    background-position: center;
+    background-repeat: none;
+    @media (max-width: 1024px) {
+        border: none;
+    }
+`
 const TermsOfServiceePage = styled.div`
     background: url(/images/background.png);
     overflow:hidden;
@@ -70,7 +79,9 @@ export default function termsofservice () {
         <meta property="twitter:description" content="Empowering and providing financial freedom for web3 designers, artists, blockchain talents, and creative minds"/>
         <meta property="twitter:image" content="/images/meta-image.jpg"></meta>
             </Head>
-            <DesktopNavbar></DesktopNavbar>
+        
+        <Termsofservicecontainer>
+                <DesktopNavbar></DesktopNavbar>
 
             <TermsOfServiceePage className='text-b4 pt-32'>
                 <div className='px-8 pt-8 md:px-24 lg:px-48'>
@@ -132,6 +143,7 @@ export default function termsofservice () {
         <Container>
             <Footer></Footer>
         </Container>
+        </Termsofservicecontainer>
     </div>
   )
 }

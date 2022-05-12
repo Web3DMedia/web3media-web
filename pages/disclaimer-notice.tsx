@@ -10,6 +10,16 @@ import Footer from "../components/Footer"
 import Container from "../components/Container"
 import styled from 'styled-components'
 
+const Disclaimernoticepagecontainer = styled.div`
+    background: url(/images/background1.png);
+    overflow:hidden;
+    background-size: 1000px;
+    background-position: center;
+    background-repeat: none;
+    @media (max-width: 1024px) {
+        border: none;
+    }
+`
 const DisclaimerNoticePage = styled.div`
     background: url(/images/background.png);
     overflow:hidden;
@@ -58,7 +68,7 @@ export default function disclaimernotice () {
             name="description"
             content="Empowering and providing financial freedom for web3 designers, artists, blockchain talents, and creative minds"/>
             <link rel="icon" href="/images/logo.svg" />
-s
+
                     <meta property="og:type" content="website" />
         <meta property="og:url" content="https://web3d.media" />
         <meta property="og:title" content="Web3D Media Disclaimer Notice" />
@@ -71,7 +81,8 @@ s
         <meta property="twitter:description" content="Empowering and providing financial freedom for web3 designers, artists, blockchain talents, and creative minds"/>
         <meta property="twitter:image" content="/images/meta-image.jpg"></meta>
         </Head>
-        <DesktopNavbar></DesktopNavbar>
+        <Disclaimernoticepagecontainer>
+            <DesktopNavbar></DesktopNavbar>
 
         <DisclaimerNoticePage className='text-b4 pt-32'>
             
@@ -187,6 +198,8 @@ s
         <Container>
             <Footer></Footer>
         </Container>
-    </div>
+
+        </Disclaimernoticepagecontainer>
+            </div>
   )
 }

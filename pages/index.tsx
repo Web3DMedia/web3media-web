@@ -18,7 +18,20 @@ import ProjectContainer from "../components/ProjectContainer"
 
 import CookieBanner from "../components/CookiesBanner"
 import SubscriptionConfirmed from "../components/SubscriptionConfirmed"
+import styled from "styled-components"
 
+const Homepage = styled.div`
+    background: url(/images/background1.png);
+    background-size: 1000px;
+    background-position: center;
+    background-repeat: none;
+    @media (max-width: 1024px) {
+        border: none;
+    }
+    @media (max-width: 550px) {
+        border: none;
+    }
+`
 export default function Home() {
   const [cookies, setCookies] = useState<Boolean>(false)
   const [subcriptionConfirmed, setSubscriptionConfirmed] =
@@ -72,7 +85,9 @@ export default function Home() {
         />
         <meta property="twitter:image" content="/images/meta-image.jpg"></meta>
       </Head>
-      {cookies && <CookieBanner closecookies={setCookies}></CookieBanner>}
+      
+      <Homepage>
+        {cookies && <CookieBanner closecookies={setCookies}></CookieBanner>}
       <DesktopNavbar></DesktopNavbar>
       <HeroSection></HeroSection>
 
@@ -98,6 +113,7 @@ export default function Home() {
           closeSubscriptionModal={closeSubscriptionModal}
         ></SubscriptionConfirmed>
       )}
+      </Homepage>
     </div>
   )
 }

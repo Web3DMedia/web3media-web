@@ -518,50 +518,50 @@ export const FirstMemberFive = styled.div<{filterState:boolean}>`
    }
 `
 
-export const FirstMemberSix = styled.div<{filterState:boolean}>`
-   width:100%;
-   height: 100%;
-   border-radius: 100%;
-   position: absolute;
-   animation-name: ${moveMemberOne};
-   animation-duration: 10s;
-   animation-iteration-count: infinite;
-   animation-fill-mode: linear;
-   animation-delay: 1s;
+// export const FirstMemberSix = styled.div<{filterState:boolean}>`
+//    width:100%;
+//    height: 100%;
+//    border-radius: 100%;
+//    position: absolute;
+//    animation-name: ${moveMemberOne};
+//    animation-duration: 10s;
+//    animation-iteration-count: infinite;
+//    animation-fill-mode: linear;
+//    animation-delay: 1s;
 
 
-   &::before{
-      content: "";
-      position: absolute;
-      width: 60px;
-      height: 60px;
-      top: 20%;
-      left: 87%;
-      border-radius: 50%;
-      background-image: url(/images/team/fatima.png);
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
-      filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
-      transition: ease-in-out 2s filter ;
-      animation-name: ${moveImageClockwise};
-      animation-duration: 10s;
-      animation-iteration-count: infinite;
-      animation-fill-mode: both;
-      animation-delay: 1s;
+//    &::before{
+//       content: "";
+//       position: absolute;
+//       width: 60px;
+//       height: 60px;
+//       top: 20%;
+//       left: 87%;
+//       border-radius: 50%;
+//       background-image: url(/images/team/fatima.png);
+//       background-size: contain;
+//       background-repeat: no-repeat;
+//       background-position: center;
+//       -webkit-filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"}; /* Safari 6.0 - 9.0 */
+//       filter: ${({filterState}) => filterState ? "grayscale(100%)":"grayscale(0)"};
+//       transition: ease-in-out 2s filter ;
+//       animation-name: ${moveImageClockwise};
+//       animation-duration: 10s;
+//       animation-iteration-count: infinite;
+//       animation-fill-mode: both;
+//       animation-delay: 1s;
 
-      @media screen and (max-width:1024px){
-         width: 50.27px;
-         height: 51.08px;
-      }
+//       @media screen and (max-width:1024px){
+//          width: 50.27px;
+//          height: 51.08px;
+//       }
 
-      @media screen and (max-width:640px){
-         height: 31.84px;
-         width: 31.27px;
-      }
-   }
-`
+//       @media screen and (max-width:640px){
+//          height: 31.84px;
+//          width: 31.27px;
+//       }
+//    }
+// `
 
 export const SecondMemberOne = styled.div<{filterState:boolean}>`
    width:100%;
