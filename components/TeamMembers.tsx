@@ -11,7 +11,6 @@ import {
    FirstMemberThree,
    FirstMemberFour,
    FirstMemberFive,
-   FirstMemberSix,
    SecondMemberOne,
    SecondMemberTwo,
    SecondMemberThree,
@@ -33,7 +32,7 @@ const TeamMembers = () => {
             <FirstMemberThree filterState={myState}/>
             <FirstMemberFour filterState={myState}/>
             <FirstMemberFive filterState={myState}/>
-            <FirstMemberSix filterState={myState}/>
+            {/* <FirstMemberSix filterState={myState}/> */}
          </FirstTeamDiv>
          <SecondTeamDiv>
             <SecondMemberOne filterState={myState}/>
