@@ -83,7 +83,7 @@ export default function Home() {
           property="twitter:description"
           content="Creating, building and developing animations and creators resources for the new web."
         />
-        <meta property="twitter:image" content="/public/images/meta-image.jpg"></meta>
+        <meta property="twitter:image" content="/images/meta-image.jpg"></meta>
       </Head>
       
       <Homepage>

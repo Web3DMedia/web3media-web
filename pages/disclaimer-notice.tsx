@@ -59,7 +59,7 @@ margin-left:20px;
 `
 
 export default function disclaimernotice () {
-  return (
+    return (
         <div className='font-body'>
 
         <Head>
