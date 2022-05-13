@@ -61,7 +61,7 @@ export default function Home() {
           property="og:description"
           content="Creating, building and developing animations and creators resources for the new web."
         />
-        <meta property="og:image" media="/images/meta-image.jpg" />
+        <meta property="og:image" content="/images/meta-image.jpg" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://web3d.media" />
@@ -70,7 +70,7 @@ export default function Home() {
           property="twitter:description"
           content="Creating, building and developing animations and creators resources for the new web."
         />
-        <meta property="twitter:image" media="/images/meta-image.jpg"></meta>
+        <meta property="twitter:image" content="/public/images/meta-image.jpg"></meta>
       </Head>
       {cookies && <CookieBanner closecookies={setCookies}></CookieBanner>}
       <DesktopNavbar></DesktopNavbar>
