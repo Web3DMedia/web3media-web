@@ -70,20 +70,21 @@ export default function privacypolicy () {
             <title>Web3Media Privacy Policy</title>
             <meta
             name="description"
-            content="Empowering and providing financial freedom for web3 designers, artists, blockchain talents, and creative minds"/>
+            content="Creating, building and developing animations and creators resources for the new web."/>
             <link rel="icon" href="/images/logo.svg" />
 
-                    <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://web3d.media" />
-        <meta property="og:title" content="Web3D Media Privacy Policy" />
-        <meta property="og:description" content="Empowering and providing financial freedom for web3 designers, artists, blockchain talents, and creative minds" />
-        <meta property="og:image" content="/images/meta-image.jpg" />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://web3d.media" />
+            <meta property="og:title" content="Web3D Media Privacy Policy" />
+            <meta property="og:description" content="Creating, building and developing animations and creators resources for the new web." />
+            <meta property="og:image" content="/images/meta-image.jpg" />
 
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://web3d.media" />
-        <meta property="twitter:title" content="Web3D Media Privacy Policy" />
-        <meta property="twitter:description" content="Empowering and providing financial freedom for web3 designers, artists, blockchain talents, and creative minds"/>
-        <meta property="twitter:image" content="/images/meta-image.jpg"></meta>
+            <meta property="twitter:type" content="website" />
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content="https://web3d.media" />
+                <meta property="twitter:title" content="Web3D Media Privacy Policy" />
+                <meta property="twitter:description" content="Creating, building and developing animations and creators resources for the new web."/>
+                <meta property="twitter:image" content="/images/meta-image.jpg"></meta>
         </Head>
 
         <Privacypolicycontainer>
