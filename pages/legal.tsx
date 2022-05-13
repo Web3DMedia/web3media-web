@@ -72,6 +72,7 @@ margin-right: 17px;
 width:269px;
 height: 226px;
 cursor:pointer;
+        margin-bottom: 17px;
 @media (max-width: 1024px) {
         margin-bottom: 17px;
     }
