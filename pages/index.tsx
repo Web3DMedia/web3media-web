@@ -76,6 +76,7 @@ export default function Home() {
         />
         <meta property="og:image" content="/images/meta-image.jpg" />
 
+        <meta property="twitter:type" content="website" />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://web3d.media" />
         <meta property="twitter:title" content="Web3D Media" />
