@@ -156,10 +156,10 @@ const ProjectSection = () => {
                            Think Freepik, Iconscout or Lottiefiles for Web3
                         </p>
                      </CardBottomTop>
-                     <Link href="https://twitter.com/blocasset">
+                     <Link href="https://blocasset.com/">
                         <a className="cursor-pointer flex items-center mt-5 xl:hidden" target="_blank">
                            <Image src={ProjectBtnIcon} alt="btn icon" width={50} height={50}/>
-                           <h2 className="ml-4 text-[14px] xl:text-[16px] font-normal">Coming Soon</h2>
+                           <h2 className="ml-4 text-[14px] xl:text-[16px] font-normal">Visit site</h2>
                         </a>
                      </Link>
                   </div>
@@ -170,10 +170,10 @@ const ProjectSection = () => {
                            Think Freepik, Iconscout or Lottiefiles for Web3
                         </p>
                      </BottomContent>
-                     <Link href="https://twitter.com/blocasset">
+                     <Link href="https://blocasset.com/">
                         <a className="cursor-pointer flex items-center mt-5" target="_blank">
                            <Image src={ProjectBtnIcon} alt="btn icon" width={50} height={50}/>
-                           <h2 className="ml-4 text-[14px] xl:text-[16px] font-normal text-[#C4C4C4]">Coming Soon</h2>
+                           <h2 className="ml-4 text-[14px] xl:text-[16px] font-normal text-[#C4C4C4]">Visit Site</h2>
                         </a>
                      </Link>
                   </CardBottomDiv>
