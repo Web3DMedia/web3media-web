@@ -2,6 +2,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import images from '../assets/images/meta-image.jpg'
 
 //components
 import DesktopNavbar from "../components/DesktopNavbar"
@@ -75,14 +76,14 @@ s
         <meta property="og:url" content="https://web3d.media" />
         <meta property="og:title" content="Web3D Media Cookie Policies" />
         <meta property="og:description" content="Creating, building and developing animations and creators resources for the new web." />
-        <meta property="og:image" content="/images/meta-image.jpg" />
+        <meta property="og:image" content="https://web3d.media/images/meta-image.jpg" />
 
         <meta property="twitter:type" content="website" />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://web3d.media" />
         <meta property="twitter:title" content="Web3D Media Cookie Policies" />
         <meta property="twitter:description" content="Creating, building and developing animations and creators resources for the new web."/>
-        <meta property="twitter:image" content="/images/meta-image.jpg"></meta>
+        <meta property="twitter:image" content="https://web3d.media/images/meta-image.jpg"></meta>
         </Head>
 
         <Cookiescontainer>
