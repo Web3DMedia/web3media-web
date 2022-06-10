@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef } from "react"
 import lottie from 'lottie-web'
 import axios from "axios"
 import {
