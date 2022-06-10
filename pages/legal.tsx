@@ -46,7 +46,7 @@ font-weight: 800;
 font-size: 40px;
 line-height: 39px;
 margin: 28px 0px;
-    }
+    
     @media (max-width: 550px) {
         font-size: 30px;
         line-height: 29px;
@@ -122,13 +122,13 @@ export default function legal() {
         <meta property="og:url" content="https://web3d.media" />
         <meta property="og:title" content="Web3D Media Legal" />
         <meta property="og:description" content="Empowering and providing financial freedom for web3 designers, artists, blockchain talents, and creative minds" />
-        <meta property="og:image" content="/images/meta-image.jpg" />
+        <meta property="og:image" content="https://web3d.media/images/meta-image.jpg" />
         <meta property="twitter:type" content="website" />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://web3d.media" />
         <meta property="twitter:title" content="Web3D Media Legal" />
         <meta property="twitter:description" content="Empowering and providing financial freedom for web3 designers, artists, blockchain talents, and creative minds"/>
-        <meta property="twitter:image" content="/images/meta-image.jpg"></meta>
+        <meta property="twitter:image" content="https://web3d.media/images/meta-image.jpg"></meta>
       </Head>
         
         <Legalpagecontainer>

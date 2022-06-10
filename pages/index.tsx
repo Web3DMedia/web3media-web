@@ -74,7 +74,7 @@ export default function Home() {
           property="og:description"
           content="Creating, building and developing animations and creators resources for the new web."
         />
-        <meta property="og:image" content="/images/meta-image.jpg" />
+        <meta property="og:image" content="https://web3d.media/images/meta-image.jpg" />
 
         <meta property="twitter:type" content="website" />
         <meta property="twitter:card" content="summary_large_image" />
@@ -84,7 +84,7 @@ export default function Home() {
           property="twitter:description"
           content="Creating, building and developing animations and creators resources for the new web."
         />
-        <meta property="twitter:image" content="/images/meta-image.jpg"></meta>
+        <meta property="twitter:image" content="https://web3d.media/images/meta-image.jpg"></meta>
       </Head>
       
       <Homepage>
