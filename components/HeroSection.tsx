@@ -1,6 +1,5 @@
 import React from "react"
 import styled, { keyframes } from 'styled-components'
-import Image from 'next/image'
 import Link from 'next/link'
 import {Link as ScrollLink} from 'react-scroll';
 //components

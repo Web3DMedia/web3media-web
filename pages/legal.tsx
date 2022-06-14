@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -7,6 +6,7 @@ import DesktopNavbar from "../components/DesktopNavbar"
 import Footer from "../components/Footer"
 import Container from "../components/Container"
 import styled from 'styled-components'
+import MetaTag from '../components/MetaTag'
 
 const Legalpagecontainer = styled.div`
     background: url(/images/background1.png);
@@ -46,7 +46,7 @@ font-weight: 800;
 font-size: 40px;
 line-height: 39px;
 margin: 28px 0px;
-    }
+    
     @media (max-width: 550px) {
         font-size: 30px;
         line-height: 29px;
@@ -108,80 +108,62 @@ cursor:pointer;
     }
 `
 export default function legal() {
-  return (
+    return (
 
-    <div className='font-body'>
-        <Head>
-            <title>Web3Media Legal</title>
-            <meta
-            name="description"
-            content="Empowering and providing financial freedom for web3 designers, artists, blockchain talents, and creative minds"/>
-            <link rel="icon" href="/images/logo.svg" />
+        <div className='font-body'>
+            <MetaTag tagName='Legal'/>
+            
+            <Legalpagecontainer>
+                <DesktopNavbar></DesktopNavbar>
+            <LegalPage className='pt-32'>
+                <div className='px-8 md:px-24 lg:px-48'>
+                <FirstText className='text-w'>Web3D Media Legal</FirstText>
+                <SecondText className='text-b5'>Web3D media takes your privacy 
+                seriously and is committed to ensuring a smooth experience.
+                The documents below are details of how Web3d media manages your data</SecondText>
 
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://web3d.media" />
-        <meta property="og:title" content="Web3D Media Legal" />
-        <meta property="og:description" content="Empowering and providing financial freedom for web3 designers, artists, blockchain talents, and creative minds" />
-        <meta property="og:image" content="/images/meta-image.jpg" />
-        <meta property="twitter:type" content="website" />
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://web3d.media" />
-        <meta property="twitter:title" content="Web3D Media Legal" />
-        <meta property="twitter:description" content="Empowering and providing financial freedom for web3 designers, artists, blockchain talents, and creative minds"/>
-        <meta property="twitter:image" content="/images/meta-image.jpg"></meta>
-      </Head>
-        
-        <Legalpagecontainer>
-            <DesktopNavbar></DesktopNavbar>
-        <LegalPage className='pt-32'>
-            <div className='px-8 md:px-24 lg:px-48'>
-            <FirstText className='text-w'>Web3D Media Legal</FirstText>
-            <SecondText className='text-b5'>Web3D media takes your privacy 
-            seriously and is committed to ensuring a smooth experience.
-            The documents below are details of how Web3d media manages your data</SecondText>
+                <Mesh></Mesh>
 
-            <Mesh></Mesh>
+                <div className='block justify-center md:flex-wrap md:flex pt-24'>
+                    <Link href='/privacy-policy' passHref>
+                        <LegalItem>
+                            <Image src="/images/privacy-image.png" width={44} height={51} objectFit="contain" alt="legal document"/>
+                            <LegalItemText className='text-b5'>Privacy policy</LegalItemText>
+                        </LegalItem>
+                    </Link>
 
-            <div className='block justify-center md:flex-wrap md:flex pt-24'>
-                <Link href='/privacy-policy' passHref>
-                    <LegalItem>
-                        <Image src="/images/privacy-image.png" width={44} height={51} objectFit="contain" alt="legal document"/>
-                        <LegalItemText className='text-b5'>Privacy policy</LegalItemText>
+                    <Link href='/terms-of-service' passHref>
+                        <LegalItem>
+                            <Image src="/images/terms-image.png" width={44} height={51} objectFit="contain" alt="legal document"/>
+                            <LegalItemText className='text-b5'>Terms of service</LegalItemText>
+                        </LegalItem>
+                    </Link>
+
+                    <Link href='/cookies-policies' passHref>
+                        <LegalItem>
+                            <Image src="/images/cookies-image.png" width={44} height={51} objectFit="contain" alt="legal document"/>
+                            <LegalItemText className='text-b5'>Cookies policies</LegalItemText>
+                        </LegalItem>
+                    </Link>
+
+                    <Link href='/disclaimer-notice' passHref>
+                        <LegalItem>
+                        <Image src="/images/disclaimer-notice-image.png" width={44} height={51} objectFit="contain" alt="legal document"/>
+                        <LegalItemText className='text-b5'>Disclaimer notice</LegalItemText>
                     </LegalItem>
-                </Link>
-
-                <Link href='/terms-of-service' passHref>
-                    <LegalItem>
-                        <Image src="/images/terms-image.png" width={44} height={51} objectFit="contain" alt="legal document"/>
-                        <LegalItemText className='text-b5'>Terms of service</LegalItemText>
-                    </LegalItem>
-                </Link>
-
-                <Link href='/cookies-policies' passHref>
-                    <LegalItem>
-                        <Image src="/images/cookies-image.png" width={44} height={51} objectFit="contain" alt="legal document"/>
-                        <LegalItemText className='text-b5'>Cookies policies</LegalItemText>
-                    </LegalItem>
-                </Link>
-
-                <Link href='/disclaimer-notice' passHref>
-                    <LegalItem>
-                    <Image src="/images/disclaimer-notice-image.png" width={44} height={51} objectFit="contain" alt="legal document"/>
-                    <LegalItemText className='text-b5'>Disclaimer notice</LegalItemText>
-                </LegalItem>
-                </Link>
+                    </Link>
+                </div>
+            
             </div>
+
+            </LegalPage>
+            
+            <Container>
+                <Footer></Footer>
+            </Container>
+
+            </Legalpagecontainer>
         
         </div>
-
-        </LegalPage>
-        
-        <Container>
-            <Footer></Footer>
-        </Container>
-
-        </Legalpagecontainer>
-    
-    </div>
-  )
+    )
 }

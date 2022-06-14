@@ -1,4 +1,3 @@
-import Head from "next/head"
 import { useState, useEffect, useLayoutEffect } from "react"
 
 //components
@@ -19,6 +18,7 @@ import ProjectContainer from "../components/ProjectContainer"
 import CookieBanner from "../components/CookiesBanner"
 import SubscriptionConfirmed from "../components/SubscriptionConfirmed"
 import styled from "styled-components"
+import MetaTag from "../components/MetaTag"
 
 const Homepage = styled.div`
     background: url(/images/background1.png);
@@ -59,33 +59,7 @@ export default function Home() {
 
   return (
     <div className=" font-body">
-      <Head>
-        <title>Web3Media Home</title>
-        <meta
-          name="description"
-          content="Creating, building and developing animations and creators resources for the new web."
-        />
-        <link rel="icon" href="/images/logo.svg" />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://web3d.media" />
-        <meta property="og:title" content="Web3D Media" />
-        <meta
-          property="og:description"
-          content="Creating, building and developing animations and creators resources for the new web."
-        />
-        <meta property="og:image" content="/images/meta-image.jpg" />
-
-        <meta property="twitter:type" content="website" />
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://web3d.media" />
-        <meta property="twitter:title" content="Web3D Media" />
-        <meta
-          property="twitter:description"
-          content="Creating, building and developing animations and creators resources for the new web."
-        />
-        <meta property="twitter:image" content="/images/meta-image.jpg"></meta>
-      </Head>
+      <MetaTag tagName='Home'/>
       
       <Homepage>
         {cookies && <CookieBanner closecookies={setCookies}></CookieBanner>}
