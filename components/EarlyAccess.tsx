@@ -1,9 +1,6 @@
 import React, { useState, useEffect, useRef } from "react"
 import axios from "axios"
-import cn from "classnames"
-import styled from "styled-components"
 import Image from "next/image"
-import { Spinner } from "./Spinner"
 import { RiCloseLine } from "react-icons/ri"
 import lottie from 'lottie-web'
 import {
