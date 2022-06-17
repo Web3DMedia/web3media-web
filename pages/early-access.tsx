@@ -10,10 +10,10 @@ const earlyaccess = () => {
          <MetaTag tagName='Early Access'/>
          <DesktopNavbar></DesktopNavbar>
          <Container>
-            <div className="md:h-[70vh] pt-40 relative flex items-center flex-col">
+            <div className="md:h-full pt-40 relative flex items-center flex-col">
                <AccessSection/>
             </div>
-            <Footer></Footer>
+            <Footer paddingTop="pt-50"></Footer>
          </Container>
          
       </div>

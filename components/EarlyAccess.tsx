@@ -81,7 +81,7 @@ const EarlyAccess = ({ closeearlyaccess }) => {
 
                         {
                             (nameLabel && emailLabel ) ? 
-                            (    <Button type="submit" className="text-w bg-main font-body">
+                            (    <Button type="submit" className="text-w bg-main font-body cursor-pointer">
                                     Submit
                                 </Button>) 
                                 : 
