@@ -29,7 +29,10 @@ const Separator = styled.div`
    background-color: #C4C4C4;
    height:20px;
 `
-const Footer = () => {
+interface IProps {
+   paddingTop?: string;
+}
+const Footer = ({paddingTop}: IProps) => {
 
    const toggleHome = () => {
       scroll.scrollToTop()
@@ -43,7 +46,7 @@ const Footer = () => {
          {
             showearlyaccess && <EarlyAccess closeearlyaccess={setShowEarlyAccess}></EarlyAccess>
          }
-         <FooterContainer className="text-white py-5 px-2 pt-[100px] lg:px-5 lg:pt-[150px] xl:pt-[200px] relative w-full h-full z-[2]">
+         <FooterContainer className={`text-white py-5 px-2 pt-[100px] lg:px-5 lg:pt-[150px] xl:pt-[100px] relative w-full h-full z-[2]`}>
             <TopSeperator/>
             <div className="flex items-center justify-between pl-2 md:pl-5 lg:px-5">
                <div className="flex items-center">
