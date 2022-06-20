@@ -13,9 +13,8 @@ const earlyaccess = () => {
             <div className="md:h-full pt-40 relative flex items-center flex-col">
                <AccessSection/>
             </div>
-            <Footer paddingTop="pt-50"></Footer>
+            <Footer></Footer>
          </Container>
-         
       </div>
    )
 }
