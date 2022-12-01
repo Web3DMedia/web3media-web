@@ -66,7 +66,7 @@ const AccessSection = () => {
                <HeaderSubText className="text-[#D3D3D3] break-words text-center max-w-[409px] mx-auto">
                   Sign up to get updates and early/beta access to our products
                </HeaderSubText>
-               <Form className="h-full 4xl:pl-[30px] py-10" onSubmit={handleSubmit}>
+               <Form className="h-full 4xl:pl-[30px] py-10 z-40" onSubmit={handleSubmit}>
                   <div className="relative mb-5">
                      <Label className='text-b4 font-body'>First name <span>*</span></Label>
                      <Input className='font-body' erros={undefined} type="text" placeholder='Enter your name' onChange={e => setNameLabel(e.target.value)} value={nameLabel} />
@@ -76,17 +76,17 @@ const AccessSection = () => {
                      <Label className='text-b4 font-body'>Email <span>*</span></Label>
                      <Input className='font-body' erros={undefined} type="text" placeholder='Enter your email' onChange={e => setEmailLabel(e.target.value)} value={emailLabel} />
                   </div>
-                  <p className='text-red-600 break-words max-w-[450px] pb-5 font-body disabled:'>{error}</p>
+                  <p className='text-red-600 break-words max-w-[450px] pb-5 font-body'>{error}</p>
                   {
-                     (nameLabel && emailLabel )  
+                     (nameLabel && emailLabel )
                         ? ( 
-                           <Button type="submit" className="text-w bg-main font-body">
+                           <Button type="submit" className="text-w bg-main font-body cursor-pointer z-20" onClick={() => console.log('cliecked')}>
                               Submit
                            </Button>
                         ) 
                         : (
-                           <Button type="submit" className="text-w bg-b3 font-body" disabled={true}>
-                              Submit
+                           <Button type="submit" className="text-w bg-b3 font-body cursor-pointer " disabled={true}>
+                              Submit 
                            </Button>
                         )
                   }
