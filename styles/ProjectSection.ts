@@ -43,7 +43,7 @@ export const ProjectsUnderLay = styled.div`
 export const ProjectsDiv= styled.div`
    position: relative;
    width: 100%;
-   height: 650px;
+   height: 813px;
    display: flex;
    align-items: center;
    justify-content: flex-start;
@@ -62,76 +62,75 @@ export const ProjectsDiv= styled.div`
       height: 100%;
       justify-content: center;
       align-items: center;
+      overflow-x: unset;
    }
 
       @media screen and (max-width: 465px){
-         padding-left: 25px;
+         padding-left: 0px;
       }
 
    @media screen and (max-width: 395px){
-      padding-left: 20px;
+      padding-left: 0px;
    }
 
 
    @media screen and (max-width: 376px){
       width: 100%;
       margin:20px auto;
-      padding-left: 10px;
+      padding-left: 0px;
       padding-right: 0px;
    }
 
    @media screen and (max-width: 365px){
-      padding-right: 20px;
+      padding-right: 0px;
    }
 
    @media screen and (max-width: 360px){
-      padding-right: 15px;
+      padding-right: 0px;
    }
 `
 
 export const Card = styled.div`
-   cursor: pointer;
    color: #FFFFFF;
    position: relative;
-   margin: 0px 50px;
-   width: 720px;
+   margin: 0px 46px;
+   width: 100%;
    &:first-child{
       margin-left: 0px;
    }
 
    @media screen and (max-width: 768px){
       &:first-child{
-         margin: 0px auto;
+         margin: 30px 20px;
       } 
    }
 
    @media screen and (max-width: 640px){
-      width: 500px;
-      margin: 50px auto;
+      margin: 50px 0px;
    }
 
    @media screen and (max-width: 568px){
-      width: 350px;
-      margin: 40px auto;
+      width: 100%;
+      margin: 40px 0px;
    }
 
    @media screen and (max-width: 375px){
-      width: 300px;
-      margin: 40px auto;
+      width: 100%;
+      margin: 40px 0px;
+      padding: 0 20px 0 0;
    }
 `
 
 
 export const ImageContainer = styled.div`
    border-radius: 8px;
-   overflow: hidden;
    margin: 0px 0px;
-   width: 720px;
-   height: 423px;
+   width: 459px;
+   height: 558px;
    position: relative;
 
    @media screen and (max-width: 1024px){
-      width: 628px;
+      width: 459px;
    }
 
    @media screen and (max-width: 640px){
@@ -139,9 +138,12 @@ export const ImageContainer = styled.div`
    }
 
    @media screen and (max-width: 568px){
-      width: 335px;
+      width: 95%;
       height: 368px;
       margin: 0px 0px;
+   }
+   @media screen and (max-width: 365px){
+      width: 100%;
    }
 `
 
