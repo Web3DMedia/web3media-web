@@ -182,7 +182,7 @@ const ProjectSection = () => {
                            onMouseLeave={() => { setBlocassetHover(false) }}
                            className="mb-10"
                         >
-                           <ImageContainer className="z-[4] bg-black w-[200px] sm:w-[459px] sm:h-[558px] relative">
+                           <ImageContainer className="z-[4] bg-black relative">
                               <Image
                                  src='/images/container.svg'
                                  alt="card image"
