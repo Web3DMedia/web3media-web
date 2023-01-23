@@ -1,7 +1,7 @@
 import styled, {keyframes} from 'styled-components'
 
 export const AccessContainer = styled.div`
-   background-image:  url(/images/underlay-mesh.png);
+   background-image:  url(https://res.cloudinary.com/dqew5naa7/image/upload/v1674443228/underlay-mesh_x7kctd.png);
    background-repeat: no-repeat;
    background-position:  center left;
    background-size: contain;

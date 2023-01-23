@@ -3,9 +3,9 @@ import Image from 'next/image'
 import Logo from '../public/images/new-logo-removebg.png'
 import Link from 'next/link'
 import ArrowVector from '../public/images/small-arrow.svg'
-import {FaTwitter, FaInstagram, FaLinkedinIn} from 'react-icons/fa'
+import { FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 import EarlyAccess from '../components/EarlyAccess';
-import {animateScroll as scroll} from 'react-scroll';
+import { animateScroll as scroll } from 'react-scroll';
 import styled from 'styled-components'
 
 
@@ -32,7 +32,7 @@ const Separator = styled.div`
 interface IProps {
    paddingTop?: string;
 }
-const Footer = ({paddingTop}: IProps) => {
+const Footer = ({ paddingTop }: IProps) => {
 
    const toggleHome = () => {
       scroll.scrollToTop()
@@ -47,14 +47,14 @@ const Footer = ({paddingTop}: IProps) => {
             showearlyaccess && <EarlyAccess closeearlyaccess={setShowEarlyAccess}></EarlyAccess>
          }
          <FooterContainer className={`text-white py-5 px-2 pt-[100px] lg:px-5 lg:pt-[150px] xl:pt-[100px] relative w-full h-full z-[2]`}>
-            <TopSeperator/>
+            <TopSeperator />
             <div className="flex items-center justify-between pl-2 md:pl-5 lg:px-5">
                <div className="flex items-center">
                   <div className="cursor-pointer mr-5" onClick={toggleHome}>
                      <Image src={Logo} width={76} height={31} objectFit="cover" alt="logo" />
                   </div>
                   <div className="w-full items-center justify-center hidden lg:flex">
-                     <p className="font-normal text-sm text-[#C4C4C4]"> &copy;2022 Web3D Media Inc. All rights reserved</p>
+                     <p className="font-normal text-sm text-[#C4C4C4]"> &copy;2023 Web3D Media Inc. All rights reserved</p>
                   </div>
                </div>
                <div className='items-center hidden lg:flex'>
@@ -63,7 +63,7 @@ const Footer = ({paddingTop}: IProps) => {
                         <span className="mx-4 cursor-pointer lg:text-sm xl:text-base text-[#C4C4C4] font-normal">Legal</span>
                      </a>
                   </Link>
-                  <Separator/>
+                  <Separator />
                   <ul className="list-disc hidden sm:flex">
                      <Link href="https://www.instagram.com/web3d.media/">
                         <a target="_blank">
@@ -72,12 +72,12 @@ const Footer = ({paddingTop}: IProps) => {
                      </Link>
                      <Link href="https://twitter.com/web3Dmedia">
                         <a target="_blank">
-                           <li  className="mx-4 cursor-pointer font-normal lg:text-sm xl:text-base text-[#C4C4C4]">Twitter</li>
+                           <li className="mx-4 cursor-pointer font-normal lg:text-sm xl:text-base text-[#C4C4C4]">Twitter</li>
                         </a>
                      </Link>
                      <Link href="https://www.linkedin.com/company/web3dmedia">
                         <a target="_blank">
-                           <li  className="ml-4 cursor-pointer font-normal lg:text-sm xl:text-base text-[#C4C4C4]">Linkedin</li>
+                           <li className="ml-4 cursor-pointer font-normal lg:text-sm xl:text-base text-[#C4C4C4]">Linkedin</li>
                         </a>
                      </Link>
                   </ul>
@@ -86,35 +86,35 @@ const Footer = ({paddingTop}: IProps) => {
 
             <div className="flex flex-col my-5 lg:hidden px-2 md:px-5">
                <Link href='/legal'>
-                  <a className="flex items-center justify-between text-lg my-3 font-normal">Legal. <span><Image src={ArrowVector} alt="img"/></span></a>
+                  <a className="flex items-center justify-between text-lg my-3 font-normal">Legal. <span><Image src={ArrowVector} alt="img" /></span></a>
                </Link>
-                  <a className="flex items-center justify-between text-lg my-3 font-normal" onClick={() => setShowEarlyAccess(true)}>Early access. <span><Image src={ArrowVector} alt="img"/></span></a>
+               <a className="flex items-center justify-between text-lg my-3 font-normal" onClick={() => setShowEarlyAccess(true)}>Early access. <span><Image src={ArrowVector} alt="img" /></span></a>
             </div>
             <div className="flex items-center justify-center w-full lg:hidden my-6">
                <div className="mr-2 h-9 w-9 bg-zinc-600 rounded-full flex items-center justify-center">
                   <Link href="https://twitter.com/web3Dmedia">
                      <a target="_blank">
-                        <FaTwitter/>
+                        <FaTwitter />
                      </a>
                   </Link>
                </div>
                <div className="mx-2 h-9 w-9 bg-zinc-600 rounded-full flex items-center justify-center">
                   <Link href="https://www.instagram.com/web3d.media/">
                      <a target="_blank">
-                        <FaInstagram/>
+                        <FaInstagram />
                      </a>
                   </Link>
                </div>
                <div className="mx-2 h-9 w-9 bg-zinc-600 rounded-full flex items-center justify-center">
                   <Link href="https://www.linkedin.com/company/web3dmedia">
                      <a target="_blank">
-                        <FaLinkedinIn/>
+                        <FaLinkedinIn />
                      </a>
                   </Link>
                </div>
             </div>
             <div className="my-5 w-full flex items-center justify-center lg:hidden sm:my-6">
-               <p className="font-normal text-sm text-[#C4C4C4]"> &copy;2022 Web3D Media Inc. All rights reserved</p>
+               <p className="font-normal text-sm text-[#C4C4C4]"> &copy;2023 Web3D Media Inc. All rights reserved</p>
             </div>
          </FooterContainer>
       </>
