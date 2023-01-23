@@ -184,7 +184,7 @@ const ProjectSection = () => {
                         >
                            <ImageContainer className="z-[4] bg-black relative">
                               <Image
-                                 src='/images/container.svg'
+                                 src='/images/containers.svg'
                                  alt="card image"
                                  layout='fill'
                                  loading='lazy'
