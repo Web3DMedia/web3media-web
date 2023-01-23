@@ -213,7 +213,7 @@ export const BottomContent = styled.div`
 export const MeshWrapper = styled.div`
    width: 100%;
    height: 100%;
-   background: url(/images/underlay-mesh.png);
+   background: url(https://res.cloudinary.com/dqew5naa7/image/upload/v1674443228/underlay-mesh_x7kctd.png);
    background-size:  contain;
    background-position: left center bottom;
    background-repeat: no-repeat;

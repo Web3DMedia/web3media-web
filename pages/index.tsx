@@ -21,7 +21,7 @@ import styled from "styled-components"
 import MetaTag from "../components/MetaTag"
 
 const Homepage = styled.div`
-    background: url(/images/background1.png);
+    background: url(https://res.cloudinary.com/dqew5naa7/image/upload/v1674443228/background1_u8wll3.png);
     background-size: 1000px;
     background-position: center;
     background-repeat: none;
@@ -59,35 +59,35 @@ export default function Home() {
 
   return (
     <div className=" font-body">
-      <MetaTag tagName='Home'/>
-      
+      <MetaTag tagName='Home' />
+
       <Homepage>
         {cookies && <CookieBanner closecookies={setCookies}></CookieBanner>}
-      <DesktopNavbar></DesktopNavbar>
-      <HeroSection></HeroSection>
+        <DesktopNavbar></DesktopNavbar>
+        <HeroSection></HeroSection>
 
-      <MeshWrapper>
+        <MeshWrapper>
+          <Container>
+            <AboutSection></AboutSection>
+          </Container>
+          <WavePinkStar></WavePinkStar>
+          <ProjectContainer>
+            <ProjectsUnderLay></ProjectsUnderLay>
+            <ProjectSection></ProjectSection>
+          </ProjectContainer>
+          <WaveBlueStar></WaveBlueStar>
+        </MeshWrapper>
+
         <Container>
-          <AboutSection></AboutSection>
+          <TeamSection></TeamSection>
+          <Footer></Footer>
+          <TeamUnderlayMesh />
         </Container>
-        <WavePinkStar></WavePinkStar>
-        <ProjectContainer>
-          <ProjectsUnderLay></ProjectsUnderLay>
-          <ProjectSection></ProjectSection>
-        </ProjectContainer>
-        <WaveBlueStar></WaveBlueStar>
-      </MeshWrapper>
-
-      <Container>
-        <TeamSection></TeamSection>
-        <Footer></Footer>
-        <TeamUnderlayMesh />
-      </Container>
-      {subcriptionConfirmed && (
-        <SubscriptionConfirmed
-          closeSubscriptionModal={closeSubscriptionModal}
-        ></SubscriptionConfirmed>
-      )}
+        {subcriptionConfirmed && (
+          <SubscriptionConfirmed
+            closeSubscriptionModal={closeSubscriptionModal}
+          ></SubscriptionConfirmed>
+        )}
       </Homepage>
     </div>
   )

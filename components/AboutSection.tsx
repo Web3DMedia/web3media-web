@@ -106,34 +106,34 @@ const CircleTextSpan = styled.span`
 `
 const AboutSection = () => {
     const text = 'Demonstrating the principle of value for skills --'
-  return (
-    <AboutSectionContainer>
-        <div className='flex m-auto pb-12 xl:pb-12'>
-            <Image src='/images/vector-blue.png' width={40} height={40} alt="earth" />
-        </div>
-        <div className='flex flex-col md:flex-row m-auto'>
-        <Text>
-            We are on a mission to help <WhiteText>creative ninjas </WhiteText> 
-            scale in their endeavours and take their place in the <WhiteText>universe.</WhiteText>
-        </Text>
-        
-        <Circle>
-            <CircleImage>
-                <Image src='/images/earth.gif' width={100} height={100} alt="earth" />
-            </CircleImage>
-            <CircleText>
-                <p>
-                    {text.split('').map((char, i) => {
-                        return (
-                            <CircleTextSpan key={i} style={{ transform: `rotate(${i * 7}deg)` }}>{char}</CircleTextSpan>
-                        )
-                    })}
-                </p>
-            </CircleText>
-        </Circle>
-        </div>
-    </AboutSectionContainer>
-  )
+    return (
+        <AboutSectionContainer>
+            <div className='flex m-auto pb-12 xl:pb-12'>
+                <Image src='/images/vector-blue.png' width={40} height={40} alt="earth" />
+            </div>
+            <div className='flex flex-col md:flex-row m-auto'>
+                <Text>
+                    We are on a mission to help <WhiteText>creative ninjas </WhiteText>
+                    scale in their endeavours and take their place in the <WhiteText>universe.</WhiteText>
+                </Text>
+
+                <Circle>
+                    <CircleImage>
+                        <Image src='https://res.cloudinary.com/dqew5naa7/image/upload/v1674443229/earth_i6vnpo.gif' width={100} height={100} alt="earth" />
+                    </CircleImage>
+                    <CircleText>
+                        <p>
+                            {text.split('').map((char, i) => {
+                                return (
+                                    <CircleTextSpan key={i} style={{ transform: `rotate(${i * 7}deg)` }}>{char}</CircleTextSpan>
+                                )
+                            })}
+                        </p>
+                    </CircleText>
+                </Circle>
+            </div>
+        </AboutSectionContainer>
+    )
 }
 
 export default AboutSection
