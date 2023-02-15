@@ -62,6 +62,11 @@
   --B7:#D1D5DB;
   --W: #FFFFFF;
 }
+/* * {
+    background: black !important;
+        outline: #f00 2px solid !important;
+        color: white !important;
+} */
 *::-webkit-scrollbar {
   display: none;
 }
@@ -71,5 +76,6 @@ html{
 }
 body {
   background: var(--B1);
+  overflow-x:hidden;
 }
 

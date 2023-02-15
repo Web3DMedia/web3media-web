@@ -13,7 +13,7 @@ export const TeamUnderlayMesh = styled.div`
    left: 0;
    width: 100%;
    height: 100%;
-   background-image: url(/images/team-mesh.png), url(/images/underlay-mesh.png);
+   background-image: url(/images/team-mesh.png), url(https://res.cloudinary.com/dqew5naa7/image/upload/v1674443228/underlay-mesh_x7kctd.png);
    background-repeat: no-repeat, no-repeat;
    background-position: top right, center top;
    background-size: auto, auto;
