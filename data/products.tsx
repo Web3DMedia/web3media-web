@@ -11,7 +11,7 @@ const data = [
     {
         id: 2,
         name: "Blocasset",
-        bio: "Think Freepik, Iconscout or Lottiefiles for Web3",
+        bio: "At Blocasset, you can earn your first $1 in crypto or USD, build your portfolio and get hired by top recruiters.",
         image: "/images/bloccasset.svg",
         width: "134",
         height: "201",

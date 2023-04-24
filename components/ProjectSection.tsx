@@ -202,7 +202,7 @@ const ProjectSection = () => {
                            </ImageContainer>
                            <CardBottom>
                               <h1 className='text-[26px] leading-[46px] font-[800] pt-[23px]'>{prod.name}</h1>
-                              <p className='pt-[12px] pb-[16px] text-[18px] leading-[28px] font-[400] w-[85%] sm:w-[70%]'>{prod.bio}</p>
+                              <p className='pt-[12px] pb-[16px] text-[18px] leading-[28px] font-[400] w-[85%] sm:w-[80%]'>{prod.bio}</p>
                               <Link href={prod.link} passHref>
                                  <a target="_blank">
                                     <OurSuperPowersBtn>
