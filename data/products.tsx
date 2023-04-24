@@ -1,7 +1,7 @@
 const data = [
     {
         id: 1,
-        name: "Papaya Studios",
+        name: "Papayas Studios",
         bio: "Web3 focused audio-visual animation and manga studio",
         image: "/images/papaya.svg",
         width: "204",
