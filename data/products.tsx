@@ -31,10 +31,10 @@ const data = [
         id: 4,
         name: "DesignersDAO",
         bio: "Transitioning design talents, creators and UX researchers into the design ecosystem.",
-        image: "/images/Designers-DAO-logo-black.png",
+        image: "/images/Designers-DAO-logo-white.png",
         width: "134",
         height: "201",
-        link: "https://discord.gg/B5sBJPSeu9"
+        link: "https://twitter.com/designersdao?s=21"
     },
     {
         id: 5,
