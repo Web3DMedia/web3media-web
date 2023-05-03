@@ -79,3 +79,12 @@ body {
   overflow-x:hidden;
 }
 
+.grad-border {
+border: 4px solid transparent;
+    border-radius: 50px;
+    background:
+        linear-gradient(to right,),
+        linear-gradient(to right, red, blue);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+}
