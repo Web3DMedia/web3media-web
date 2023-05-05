@@ -12,7 +12,7 @@ import {
    BottomContent,
    ProjectsDiv
 } from '../styles/ProjectSection'
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import SectionText from './SectionText';
 import Link from 'next/link'
 import ProjectBtnIcon from '../public/images/project-btn-icon.svg'
@@ -125,6 +125,31 @@ const ProjectSection = () => {
       }
    }
 
+   const [outside, setOutsider] = useState<any>()
+   useEffect(() => {
+      if (typeof window !== 'undefined') {
+         const outsider = document.getElementById('outsider');
+         setOutsider(outsider)
+      }
+   }, []);
+
+
+   const distance = 300;
+
+   const scrollLft = () => {
+      outside?.scrollBy({
+         left: -distance,
+         behavior: 'smooth'
+      });
+   }
+
+   const scrollRight = () => {
+      outside?.scrollBy({
+         left: distance,
+         behavior: 'smooth'
+      });
+   }
+
    return (
       <ProjectWrapper
          id="products"
@@ -138,7 +163,15 @@ const ProjectSection = () => {
                   Explore some of our web3 products
                </h2>
             </div>
-            <h2 className='text-[#C4C4C4] text-[20px] leading-[32px] font-[400]'>Scroll &#8594;</h2>
+            {/* <h2 className='text-[#C4C4C4] text-[20px] leading-[32px] font-[400]'>Scroll &#8594;</h2> */}
+            <div className='flex justify-end mt-[56px] gap-[15px] text-[30px] pr-[50px]'>
+               <div className="w-[40px] h-[40px] relative cursor-pointer" onClick={scrollLft}>
+                  <Image src="/images/lefts.svg" layout='fill' alt="left" className='rounded-2xl' />
+               </div>
+               <div className="w-[40px] h-[40px] relative cursor-pointer" onClick={scrollRight}>
+                  <Image src="/images/right.svg" layout='fill' alt="left" className='rounded-2xl' />
+               </div>
+            </div>
          </div>
 
          {/* <LeftArrowBtn onHover={projectHover} onClick={() => handleClick('left')}>
@@ -151,10 +184,10 @@ const ProjectSection = () => {
             <FaLongArrowAltRight fontSize={25} className="text-white absolute" />
          </RightArrowBtn> */}
 
-         <ProjectsDiv ref={projectsRef}>
+         <ProjectsDiv ref={projectsRef} id="outsider">
             {
                data.map((prod) => {
-                  return (prod.id === 4 ? <div>
+                  return (prod.id === 5 ? <div>
                      <Card
                      >
                         <ImageContainer className="z-[4] bg-black">

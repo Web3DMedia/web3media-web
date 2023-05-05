@@ -403,7 +403,7 @@ export const FirstMemberThree = styled.div<{filterState:boolean}>`
       top: 89%;
       left: 25%;
       border-radius: 50%;
-      background-image: url(/images/team/seyi.png);
+      background-image: url(/images/team/nora.webp);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
@@ -493,7 +493,7 @@ export const FirstMemberFive = styled.div<{filterState:boolean}>`
       top: 55%;
       left: 92%;
       border-radius: 50%;
-      background-image: url(/images/team/daniel.png);
+      background-image: url(/images/team/joshua.webp);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
@@ -582,7 +582,7 @@ export const SecondMemberOne = styled.div<{filterState:boolean}>`
       top: 45%;
       left: -8%;
       border-radius: 50%;
-      background-image: url(/images/team/abel.png);
+      background-image: url(/images/team/martins.jpg);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
@@ -626,7 +626,7 @@ export const SecondMemberTwo = styled.div<{filterState:boolean}>`
       top: 85%;
       left: 60%;
       border-radius: 50%;
-      background-image: url(/images/team/ella.png);
+      background-image: url(/images/team/chiamaka.webp);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;

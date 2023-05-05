@@ -1,15 +1,6 @@
 const data = [
     {
         id: 1,
-        name: "Papayas Studios",
-        bio: "Web3 focused audio-visual animation and manga studio",
-        image: "/images/papaya.svg",
-        width: "204",
-        height: "201",
-        link: "https://papayas.studio/"
-    },
-    {
-        id: 2,
         name: "Blocasset",
         bio: "At Blocasset, you can earn your first $1 in crypto or USD, build your portfolio and get hired by top recruiters.",
         image: "/images/bloccasset.svg",
@@ -17,6 +8,16 @@ const data = [
         height: "201",
         link: "https://blocasset.com/?utm_source=web3d&utm_medium=referral"
     },
+    {
+        id: 2,
+        name: "Papayas Studios",
+        bio: "Web3 focused audio-visual animation and manga studio",
+        image: "/images/papaya.svg",
+        width: "204",
+        height: "201",
+        link: "https://papayas.studio/"
+    },
+
     {
         id: 3,
         name: "Blocathon",
@@ -28,6 +29,15 @@ const data = [
     },
     {
         id: 4,
+        name: "DesignersDAO",
+        bio: "Transitioning design talents, creators and UX researchers into the design ecosystem.",
+        image: "/images/Designers-DAO-logo-white.png",
+        width: "134",
+        height: "201",
+        link: "https://twitter.com/designersdao?s=21"
+    },
+    {
+        id: 5,
         name: "Coming soon",
         bio: "We have suites of digital blockchain products in the pipeline",
         image: "/images/papaya.svg",
